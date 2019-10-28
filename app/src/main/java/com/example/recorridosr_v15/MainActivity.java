@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         //bloquea la pantalla en modo vertical
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
+
+
     }
 
 

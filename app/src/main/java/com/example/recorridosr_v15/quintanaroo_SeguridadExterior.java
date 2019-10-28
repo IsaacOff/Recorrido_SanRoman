@@ -817,7 +817,11 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
             Intent ext = new Intent(this, com.example.recorridosr_v15.ViewPdf.class);
             startActivity(ext);
 
-            Toast.makeText(this, "Listo", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Listo_git", Toast.LENGTH_LONG).show();
+
+            //puto el que lo lea
+
+            Toast.makeText(this, "prueba de git", Toast.LENGTH_LONG).show();
 
         } catch (IOException e) {
             Toast.makeText(this,"NO SE PUDO GENERAR documento o Worker", Toast.LENGTH_LONG).show();
