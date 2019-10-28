@@ -819,7 +819,7 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
 
             Toast.makeText(this, "Listo_git", Toast.LENGTH_LONG).show();
 
-            //puto el que lo lea
+            //puto el que lo leagg
 
             Toast.makeText(this, "prueba de git", Toast.LENGTH_LONG).show();
 
