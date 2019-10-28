@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">RecorridoSR_v1.5</string>
+
+    <!--Nombres de ventanas -->
+    <string name="titulo">Campeche</string>
+    <string name="titulo1">Yucatan</string>
+    <string name="titulo2">Quintana roo</string>
+    <string name="titulo3">Tabasco</string>
+
+
+    <!--Quintana Roo -->
+    <!--Riesgos Externos -->
+    <string name="tv1">Tanques Elevados</string>
+    <string name="tv2">Torres de Alta Tension</string>
+    <string name="tv3">Antenas</string>
+    <string name="tv4">Postes de Electricidad</string>
+    <string name="tv5">Postes de Telefono</string>
+    <string name="tv6">Alumbrado Publico</string>
+    <string name="tv7">Transformadores de Electricidad</string>
+    <string name="tv8">Alcantarillas y Registros Abiertos</string>
+
+
+    <string name="tv9">Bardas, Mallas o Cercas, para delimitar territorial o contra robos</string>
+    <string name="tv10">Banquetas desniveladas</string>
+    <string name="tv11">Arboles viejos o grandes y ramas que puedan desgajarse</string>
+    <string name="tv12">Rampas para Autos</string>
+    <string name="tv13">Vias de Ferrocarril</string>
+    <string name="tv14">Calles con excesiva circulacion vehicular</string>
+    <string name="tv15">Calles sin pavimentar</string>
+    <string name="tv16">Calles con inclinacion pronunciada</string>
+    <string name="tv17">Calles cerradas al trafico de vehiculos</string>
+    <string name="tv18">Calles estrechas</string>
+    <string name="tv19">Carreteras</string>
+    <string name="tv20">Terrenos baldios</string>
+    <string name="tv21">Construcciones vecinas dañadas</string>
+    <string name="tv22">Construcciones vecinas muy altas</string>
+    <string name="tv23">Ventanales</string>
+    <string name="tv24">Anuncios volados</string>
+    <string name="tv25">Anuncios panoramicos</string>
+    <string name="tv26">Marquesinas</string>
+    <string name="tv27">Pretiles de balcones</string>
+    <string name="tv28">Gasolineras</string>
+    <string name="tv29">Depositos o Almacenes de Sustancias Toxicas Inflamables o Explosivas</string>
+    <string name="tv30">Industrias</string>
+    <string name="tv31">Cantinas, Bares o Salones</string>
+    <string name="tv32">Mercados</string>
+    <string name="tv33">Pasos a desnivel para vehiculos</string>
+    <string name="tv34">Pasos a desnivel para peatones</string>
+    <string name="tv35">Puentes elevados para peatones</string>
+    <string name="tv36">Terminales Aereas</string>
+    <string name="tv37">Terminales Terrestres</string>
+    <string name="tv38">Terminales Fluviales</string>
+
+
+</resources>

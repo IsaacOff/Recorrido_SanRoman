@@ -1,0 +1,1361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:stretchColumns="1">
+
+    <TableRow android:background="#128675">
+
+        <TextView
+            android:layout_column="0"
+            android:padding="0dip"
+            android:text="ELEMENTO DE RIESGO"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_column="2"
+            android:padding="0dip"
+            android:text="NIVEL DE RIESGO"
+            android:textColor="@android:color/white" />
+    </TableRow>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--- Tanques- 1  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv1"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+            <!--- Torres - 2-->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv2"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip"/>
+
+
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+            <!--- Antenas - 3-->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv3"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner3"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+            <!--- Postes de Elect - 4-->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv4"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner4"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+
+
+            <!--- Postes de Telefono - 5 -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv5"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner5"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+                </Spinner>
+
+            </TableRow>
+
+            <EditText
+                android:id="@+id/editText5"
+                android:layout_width="289dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+
+
+            <!--- Alumbrado publico - 6 -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv6"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner6"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText6"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+
+            <!--- Transformadores de electricidad - 7 -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv7"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner7"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText7"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+            <!--- Alcantarillas y registros abiertos- 8  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv8"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner8"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText8"
+                android:layout_width="289dp"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+
+            <!--- Bardas, Mallas o Cercas, para delimitar territorial o contra robos- 9  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv9"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner9"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText9"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+            <!--- Banquetas desniveladas- 10  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv10"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner10"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText10"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+            <!---   - 11  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv11"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner11"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText11"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+
+
+            <!---   - 12  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv12"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner12"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText12"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+            <!---   - 13  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv13"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner13"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText13"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+
+            <!---   - 14  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv14"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner14"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText14"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+            <!---   - 15  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv15"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner15"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText15"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+            <!---   - 16  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv16"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner16"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText16"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+            <!---   - 17  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv17"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner17"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText17"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+
+            <!---   - 18  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv18"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner18"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText18"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+            <!---  - 19  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv19"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner19"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText19"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+
+            <!---  - 20  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv20"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner20"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText20"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+
+
+
+            <!---   - 21  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv21"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner21"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText21"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+            <!---   - 22 -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv22"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner22"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText22"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+            <!---   - 23  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv23"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner23"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText23"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+            <!---   - 24  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv24"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner24"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText24"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+
+
+            <!---   - 25  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv25"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner25"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText25"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+
+            <!---   - 26  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv26"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner26"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText26"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+
+            <!---   - 27  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv27"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner27"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText27"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+
+            <!---   - 28  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv28"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner28"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText28"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+
+            <!---   - 29  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv29"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner29"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText29"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+
+            <!---   - 30  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv30"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner30"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText30"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+            <!---   - 31  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv31"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner31"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText31"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+
+            <!---   - 32  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv32"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner32"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText32"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+
+            <!---   - 33  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv33"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner33"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText33"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+            <!---   - 34  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView34"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv34"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner34"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText34"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+            <!---   - 35  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView35"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv35"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner35"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText35"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+            <!---   - 36  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView36"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv36"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner36"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText36"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+            <!---   - 37  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView37"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv37"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner37"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText37"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+            <!---   - 38  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/textView38"
+                    android:layout_width="247dp"
+                    android:layout_column="0"
+                    android:padding="2dip"
+                    android:text="@string/tv38"
+                    android:textColor="#000000" />
+
+                <Spinner
+                    android:id="@+id/spinner38"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+            <EditText
+                android:id="@+id/editText38"
+                android:layout_column="0"
+                android:layout_width="289dp"
+                android:layout_height="42dp"
+                android:ems="10"
+                android:hint="Area donde se ubica el riesgo"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+
+            <!--- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="onClick"
+                android:text="Enviar"
+                android:textSize="14sp">
+
+            </Button>
+
+
+
+
+        </TableLayout>
+
+    </ScrollView>
+
+</TableLayout>
