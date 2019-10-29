@@ -862,12 +862,12 @@ android:stretchColumns="1">
                  <!--- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 
-
                  <Button
                      android:id="@+id/button"
                      android:layout_width="match_parent"
                      android:layout_height="match_parent"
 
+                     android:onClick="onClick"
                      android:text="Guardar"
                      android:textSize="15sp">
 

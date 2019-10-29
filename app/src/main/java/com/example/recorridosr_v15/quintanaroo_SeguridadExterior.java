@@ -1,42 +1,24 @@
 package com.example.recorridosr_v15;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.FileProvider;
-
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.ActivityNotFoundException;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.content.pm.PackageManager;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
-
-import com.github.barteksc.pdfviewer.PDFView;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.PageSize;
-import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
 import com.itextpdf.tool.xml.XMLWorkerHelper;
-
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.StringReader;
-
 import static android.widget.Toast.LENGTH_SHORT;
 
 public class quintanaroo_SeguridadExterior extends AppCompatActivity{
@@ -53,28 +35,17 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
     static String htmlToPDF;
     static File directorio2;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quintana_roo__seguridad_exterior);
-
         this.setTitle("Seguridad Exterior Quintana Roo");
-
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        File directorio2 = com.example.recorridosr_v15.index_QuintanaRoo.GetFile();
-
+        directorio2 = new File(getIntent().getStringExtra("File"));
         if(directorio2 != null) {
             pdfFile = new File(directorio2.getPath(), "Reporte.pdf");
-            if (pdfFile.exists()) {
-                pdfFile.delete();
-                Toast.makeText(this,pdfFile.getPath(), Toast.LENGTH_LONG).show();
-            }
-        }else{
-            Toast.makeText(this, "No recibi carpeta", Toast.LENGTH_LONG).show();
         }
-
 
         //asignar EditText a las variables de aqui
         et1  = (EditText) findViewById(R.id.editText1);
@@ -116,8 +87,6 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
         et37 = (EditText) findViewById(R.id.editText37);
         et38 = (EditText) findViewById(R.id.editText38);
 
-
-
         //Ocultar EditText
         et1.setVisibility(View.GONE);
         et2.setVisibility(View.GONE);
@@ -158,8 +127,6 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
         et37.setVisibility(View.GONE);
         et38.setVisibility(View.GONE);
 
-
-
         //asigna los espiner del xml a los espiner aqui declarados
         spin1=(Spinner)findViewById(R.id.spinner1);
         spin2=(Spinner)findViewById(R.id.spinner2);
@@ -199,8 +166,6 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
         spin36=(Spinner)findViewById(R.id.spinner36);
         spin37=(Spinner)findViewById(R.id.spinner37);
         spin38=(Spinner)findViewById(R.id.spinner38);
-
-
 
         //crea el vector de String que contendra el spinner y lo carga en la variable adapter
         String [] opciones ={"Selecione:","ACEPTABLE","INTERMEDIO","ALTO","NINGUNO"};
@@ -287,17 +252,11 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
         mostrar(spin38, et38);
     }
 
-
-
-
-
-
     public void mostrar(Spinner x, final EditText o){
         x.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                // Toast.makeText(parent.getContext(), "seleccion"+ parent.getItemAtPosition(position).toString(), Toast.LENGTH_SHORT).show();
                 sel= parent.getItemAtPosition(position).toString();
 
                 switch( sel ) {
@@ -315,23 +274,16 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
                         o.setVisibility(View.GONE);
                         break;
                 }
-
-
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
             }
         });
-
     }
-
-
 
     public void onClick(View view){
         Boolean bandera=true;
-
 
         //selecciona lo que carga el spinner
         vector[0]   = spin1.getSelectedItem().toString();
@@ -373,18 +325,6 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
         vector[36]  = spin37.getSelectedItem().toString();
         vector[37]  = spin38.getSelectedItem().toString();
 
-
-
-        Toast.makeText(this,vector[4], Toast.LENGTH_LONG).show();
-
-
-        // vector[0] =((Spinner)findViewById(R.id.spinner)).getSelectedItem().toString();
-        //vector[1] =((Spinner)findViewById(R.id.spinner2)).getSelectedItem().toString();
-
-        //asigna lo del espinner al vector
-
-
-
         //Verificar si los editText contienen algo sino no los deja enviar
        if (et1.getVisibility() == View.VISIBLE) {
             if (et1.length() == 0) {
@@ -393,41 +333,35 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
         }
 
        if (et2.getVisibility() == View.VISIBLE) {
-
             if (et2.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et3.getVisibility() == View.VISIBLE) {
-
             if (et3.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et4.getVisibility() == View.VISIBLE) {
-
             if (et4.length() == 0) {
                 bandera = false; }
         }
 
        if (et5.getVisibility() == View.VISIBLE) {
-
             if (et5.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et6.getVisibility() == View.VISIBLE) {
-
             if (et6.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et7.getVisibility() == View.VISIBLE) {
-
             if (et7.length() == 0) {
                 bandera = false;
             }
@@ -440,220 +374,184 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
         }
 
        if (et9.getVisibility() == View.VISIBLE) {
-
             if (et9.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et10.getVisibility() == View.VISIBLE) {
-
             if (et10.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et11.getVisibility() == View.VISIBLE) {
-
             if (et11.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et12.getVisibility() == View.VISIBLE) {
-
             if (et12.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et13.getVisibility() == View.VISIBLE) {
-
             if (et13.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et14.getVisibility() == View.VISIBLE) {
-
             if (et14.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et15.getVisibility() == View.VISIBLE) {
-
             if (et15.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et16.getVisibility() == View.VISIBLE) {
-
             if (et16.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et17.getVisibility() == View.VISIBLE) {
-
             if (et17.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et18.getVisibility() == View.VISIBLE) {
-
             if (et18.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et19.getVisibility() == View.VISIBLE) {
-
             if (et19.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et20.getVisibility() == View.VISIBLE) {
-
             if (et20.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et21.getVisibility() == View.VISIBLE) {
-
             if (et21.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et22.getVisibility() == View.VISIBLE) {
-
             if (et22.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et23.getVisibility() == View.VISIBLE) {
-
             if (et23.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et24.getVisibility() == View.VISIBLE) {
-
             if (et24.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et25.getVisibility() == View.VISIBLE) {
-
             if (et25.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et26.getVisibility() == View.VISIBLE) {
-
             if (et26.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et27.getVisibility() == View.VISIBLE) {
-
             if (et27.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et28.getVisibility() == View.VISIBLE) {
-
             if (et28.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et29.getVisibility() == View.VISIBLE) {
-
             if (et29.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et30.getVisibility() == View.VISIBLE) {
-
             if (et30.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et31.getVisibility() == View.VISIBLE) {
-
             if (et31.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et32.getVisibility() == View.VISIBLE) {
-
             if (et32.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et33.getVisibility() == View.VISIBLE) {
-
             if (et33.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et34.getVisibility() == View.VISIBLE) {
-
             if (et34.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et35.getVisibility() == View.VISIBLE) {
-
             if (et35.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et36.getVisibility() == View.VISIBLE) {
-
             if (et36.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et37.getVisibility() == View.VISIBLE) {
-
             if (et37.length() == 0) {
                 bandera = false;
             }
         }
 
        if (et38.getVisibility() == View.VISIBLE) {
-
             if (et38.length() == 0) {
                 bandera = false;
             }
         }
-
-
-
-
-
-
 
         //////verifica que el vector no este en seleccione para poner enviar///////////////
         for(int i=0;i<top; i++  ){
@@ -662,17 +560,14 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
             }
         }
 
-
         if (bandera){
-            onClickReporteChetumal(view);
+            Reporte(view);
         }else{
             Toast.makeText(this, "REVISA LOS DATOS", LENGTH_SHORT).show();
         }
-
-
     }
 
-    public void onClickReporteChetumal(View v){
+    public void Reporte(View v){
         try {
             Document document = new Document(PageSize.A4);
             PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(pdfFile.getPath()));
@@ -682,11 +577,10 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
             //String htmlToPDF="<html><head></head><body><h1>Hola que tal</h1><p>Shalalala que pazo</p></body></html>";
             htmlToPDF="<html>" +
                     "<head>" +
-                    "<title>Ejercicios prácticos HTML5</title>" +
+                    "<title>Seguridad Exterior</title>" +
                     "</head>" +
                     "<body>" +
                     "<table border=\"1\" style=”width: 100%”>" +
-                    "<caption>Titulo de tabla</caption>" +
                     "<colgroup>" +
                     "<col style=\"width: 20%\"/>" +
                     "<col style=\"width: 40%\"/>" +
@@ -705,11 +599,6 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
                     "<th>Ninguno</th>" +
                     "</tr>" +
                     "</thead>" +
-                    /*"<tfoot>" +
-                    "<tr>" +
-                    "<td colspan=\"3\">Pie de tabla.</td>" +
-                    "</tr>" +
-                    "</tfoot>" +*/
                     "<tbody>";
 
             htmlToPDF = htmlToPDF +
@@ -732,54 +621,45 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
                     "<th>Postes de electricidad</th>";
             agregarColumna(vector[3], et4.getText().toString());
 
-
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Postes de teléfono</th>";
             agregarColumna(vector[4], et5.getText().toString());
-
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Alumbrado publico</th>";
             agregarColumna(vector[5], et6.getText().toString());
 
-
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Transformadires de electricidad</th>";
             agregarColumna(vector[6], et7.getText().toString());
-
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Alcantarillas y registros abiertos</th>";
             agregarColumna(vector[7], et8.getText().toString());
 
-
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Bardas, Mallas o cercas, para delimitacion territorial o contra robos</th>";
             agregarColumna(vector[8], et9.getText().toString());
-
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Banquetas desniveladas</th>";
             agregarColumna(vector[9], et10.getText().toString());
 
-
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Arboles viejos o grandes y ramas que pueden despegarse</th>";
             agregarColumna(vector[10], et11.getText().toString());
 
-
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Rampas para autos</th>";
             agregarColumna(vector[11], et12.getText().toString());
-
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
@@ -791,66 +671,55 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
                     "<th>Calles con excesiva circulación vehicular</th>";
             agregarColumna(vector[13], et14.getText().toString());
 
-
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Calles sin pavimentar</th>";
             agregarColumna(vector[14], et15.getText().toString());
-
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Calles con inclinacion pronunciada</th>";
             agregarColumna(vector[15], et16.getText().toString());
 
-
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Calles cerradas al trafico de vehiculos</th>";
             agregarColumna(vector[16], et17.getText().toString());
-
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Calles estrechas</th>";
             agregarColumna(vector[17], et18.getText().toString());
 
-
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Carreteras</th>";
             agregarColumna(vector[18], et19.getText().toString());
-
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Terrenos baldios</th>";
             agregarColumna(vector[19], et20.getText().toString());
 
-
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Construcciones vecinas dañadas</th>";
             agregarColumna(vector[20], et21.getText().toString());
-
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Construcciones vecinas muy altas</th>";
             agregarColumna(vector[21], et22.getText().toString());
 
-
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Ventanales</th>";
             agregarColumna(vector[22], et23.getText().toString());
 
-
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Anuncios volados</th>";
             agregarColumna(vector[23], et24.getText().toString());
-
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
@@ -862,37 +731,30 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
                     "<th>Marquesinas</th>";
             agregarColumna(vector[25], et26.getText().toString());
 
-
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Pretiles de balcones</th>";
             agregarColumna(vector[26], et27.getText().toString());
-
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Gasolineras</th>";
             agregarColumna(vector[27], et28.getText().toString());
 
-
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Depositos o almacenes de sustancias toxicas, inflamables o explosivas</th>";
             agregarColumna(vector[28], et29.getText().toString());
-
-
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Industrias</th>";
             agregarColumna(vector[29], et30.getText().toString());
 
-
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Cantinas, bares o Salones</th>";
             agregarColumna(vector[30], et31.getText().toString());
-
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
@@ -933,40 +795,23 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
                     "<tr>" +
                     "<th>Otros, especificar:</th>";
             agregarColumna(vector[38], et39.getText().toString());
- */
+            */
 
             htmlToPDF= htmlToPDF +"</tbody>" + "</table>" + "</body>" + "</html>";
-
 
             worker.parseXHtml(pdfWriter, document, new StringReader(htmlToPDF));
 
             document.close();
 
-
-                /*if (pdfFile.exists()) {
-                    Uri uri = Uri.fromFile(pdfFile);
-                    Intent intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setDataAndType(uri, "application/pdf");
-                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    try {
-                        this.startActivity(intent);
-                    } catch (ActivityNotFoundException e) {
-                        this.startActivity(new Intent(Intent.ACTION_VIEW, uri.parse("market://details?id=com.adobe.reader")));
-                        Toast.makeText(this.getApplicationContext(), "No cuentas con una aplicacion para visualizar pdf", Toast.LENGTH_LONG).show();
-                    }
-                } else {
-                    Toast.makeText(this.getApplicationContext(), "Archivo no encontrado", Toast.LENGTH_LONG).show();
-            }*/
-
-            Intent ext = new Intent(this, com.example.recorridosr_v15.ViewPdf.class);
-            startActivity(ext);
+            Intent intent = new Intent(this, com.example.recorridosr_v15.ViewPdf.class);
+            intent.putExtra("File", pdfFile.getPath());
+            startActivity(intent);
 
         } catch (IOException e) {
-            Toast.makeText(this,"NO SE PUDO GENERAR documento o Worker", Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"NO SE PUDO GENERAR EL DOCUMENTO", Toast.LENGTH_LONG).show();
             e.printStackTrace();
         } catch (DocumentException e) {
-            Toast.makeText(this,"NO SE PUDO GENERAR Documento", Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"NO SE PUDO GENERAR EL DOCUMENTO", Toast.LENGTH_LONG).show();
             e.printStackTrace();
         }
     }
@@ -1012,10 +857,6 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
                     "<td></td>" +
                     "<td></td>" +
                     "</tr>";
-
         }
-    }
-    public static File getFile(){
-        return pdfFile;
     }
 }

@@ -1,7 +1,6 @@
 package com.example.recorridosr_v15;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -11,36 +10,42 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
-
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.PageSize;
 import com.itextpdf.text.pdf.PdfWriter;
 import com.itextpdf.tool.xml.XMLWorkerHelper;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.StringReader;
-
 import static android.widget.Toast.LENGTH_SHORT;
 
 public class quintanaroo_RecursosCircundantes extends AppCompatActivity {
     private Spinner spin1, spin2, spin3, spin4, spin5, spin6, spin7, spin8, spin9, spin10, spin11, spin12, spin13, spin14, spin15, spin16;
     private Spinner spin17, spin18, spin19, spin20, spin21, spin22, spin23, spin24, spin25, spin26, spin27, spin28, spin29, spin30, spin31;
-    private Spinner spin32, spin33, spin34, spin35, spin36, spin37, spin38;
+    private Spinner spin32, spin33, spin34, spin35, spin36;
     private EditText  et1, et2,  et3,  et4,  et5,  et6,  et7,  et8,  et9, et10, et11, et12, et13, et14, et15, et16, et17, et18, et19, et20;
-    private EditText et21,et22, et23, et24, et25, et26, et27, et28, et29, et30, et31, et32, et33, et34, et35, et36, et37, et38;
+    private EditText et21,et22, et23, et24;
     private String sel;
+    private final int top=36;
+    String vector[] =new String[top];
+
+    static File pdfFile;
+    static String htmlToPDF;
+    static File directorio2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quintana_roo__recursos_circundantes);
-
         this.setTitle("Recursos Circundantes Quintana Roo");
-
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        directorio2 = new File(getIntent().getStringExtra("File"));
 
+        if(directorio2 != null) {
+            pdfFile = new File(directorio2.getPath(), "Reporte.pdf");
+        }
 
         //asignar EditText a las variables de aqui
         et1  = (EditText) findViewById(R.id.editText1);
@@ -68,8 +73,6 @@ public class quintanaroo_RecursosCircundantes extends AppCompatActivity {
         et23 = (EditText) findViewById(R.id.editText23);
         et24 = (EditText) findViewById(R.id.editText24);
 
-
-
         //Ocultar EditText
         et1.setVisibility(View.GONE);
         et2.setVisibility(View.GONE);
@@ -95,10 +98,6 @@ public class quintanaroo_RecursosCircundantes extends AppCompatActivity {
         et22.setVisibility(View.GONE);
         et23.setVisibility(View.GONE);
         et24.setVisibility(View.GONE);
-
-
-
-
 
         //asigna los espiner del xml a los espiner aqui declarados
         spin1 =(Spinner)findViewById(R.id.spinner1);
@@ -138,8 +137,6 @@ public class quintanaroo_RecursosCircundantes extends AppCompatActivity {
         spin35=(Spinner)findViewById(R.id.spinner35);
         spin36=(Spinner)findViewById(R.id.spinner36);
 
-
-
         //crea el vector de String que contendra el spinner y lo carga en la variable adapter
         String [] opciones ={"Selecione:","ACEPTABLE","INTERMEDIO","ALTO","NINGUNO"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, opciones);
@@ -147,10 +144,8 @@ public class quintanaroo_RecursosCircundantes extends AppCompatActivity {
         String [] opciones1 ={"Tiempo de Respuesta:","0-10 minutos","11-20 minutos","21-30 minutos","31-40 minutos","40-60 minutos"};
         ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, opciones1);
 
-        String [] opciones2 ={"Numero de telefono:", "911", "-"};
+        String [] opciones2 ={"911", "-"};
         ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, opciones2);
-
-
 
         //se asigna la variable adapter a cada espiner para mostrarle al usuario
         spin1.setAdapter(adapter);
@@ -201,9 +196,6 @@ public class quintanaroo_RecursosCircundantes extends AppCompatActivity {
         spin35.setAdapter(adapter1);
         spin36.setAdapter(adapter2);
 
-
-
-
         //Ocultar EditText
         spin2.setVisibility(View.GONE);
         spin3.setVisibility(View.GONE);
@@ -241,8 +233,6 @@ public class quintanaroo_RecursosCircundantes extends AppCompatActivity {
         spin35.setVisibility(View.GONE);
         spin36.setVisibility(View.GONE);
 
-
-
         //pasa parametros al spinner para mostrar
         mostrar(spin1, spin2, spin3, et1, et2);
         mostrar(spin4, spin5, spin6, et3, et4);
@@ -257,22 +247,15 @@ public class quintanaroo_RecursosCircundantes extends AppCompatActivity {
         mostrar(spin28, spin29, spin30, et19, et20);
         mostrar(spin31, spin32, spin33, et21, et22);
         mostrar(spin34, spin35, spin36, et23, et24);
-
-
     }
-
-
 
     public void mostrar(Spinner x, final Spinner mostrar1, final Spinner mostrar2, final EditText o, final EditText E){
         x.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                // Toast.makeText(parent.getContext(), "seleccion"+ parent.getItemAtPosition(position).toString(), Toast.LENGTH_SHORT).show();
                 sel= parent.getItemAtPosition(position).toString();
-
                 switch( sel ) {
-
                     case "ACEPTABLE":
                         o.setVisibility(View.VISIBLE);
                         E.setVisibility(View.VISIBLE);
@@ -298,8 +281,6 @@ public class quintanaroo_RecursosCircundantes extends AppCompatActivity {
                         mostrar2.setVisibility(View.GONE);
                         break;
                 }
-
-
             }
 
             @Override
@@ -307,11 +288,379 @@ public class quintanaroo_RecursosCircundantes extends AppCompatActivity {
 
             }
         });
-
     }
 
+    public void onClick(View view){
+        Boolean bandera=true;
 
+        //selecciona lo que carga el spinner
+        vector[0]   = spin1.getSelectedItem().toString();
+        vector[1]   = spin2.getSelectedItem().toString();
+        vector[2]   = spin3.getSelectedItem().toString();
+        vector[3]   = spin4.getSelectedItem().toString();
+        vector[4]   = spin5.getSelectedItem().toString();
+        vector[5]   = spin6.getSelectedItem().toString();
+        vector[6]   = spin7.getSelectedItem().toString();
+        vector[7]   = spin8.getSelectedItem().toString();
+        vector[8]   = spin9.getSelectedItem().toString();
+        vector[9]   = spin10.getSelectedItem().toString();
+        vector[10]  = spin11.getSelectedItem().toString();
+        vector[11]  = spin12.getSelectedItem().toString();
+        vector[12]  = spin13.getSelectedItem().toString();
+        vector[13]  = spin14.getSelectedItem().toString();
+        vector[14]  = spin15.getSelectedItem().toString();
+        vector[15]  = spin16.getSelectedItem().toString();
+        vector[16]  = spin17.getSelectedItem().toString();
+        vector[17]  = spin18.getSelectedItem().toString();
+        vector[18]  = spin19.getSelectedItem().toString();
+        vector[19]  = spin20.getSelectedItem().toString();
+        vector[20]  = spin21.getSelectedItem().toString();
+        vector[21]  = spin22.getSelectedItem().toString();
+        vector[22]  = spin23.getSelectedItem().toString();
+        vector[23]  = spin24.getSelectedItem().toString();
+        vector[24]  = spin25.getSelectedItem().toString();
+        vector[25]  = spin26.getSelectedItem().toString();
+        vector[26]  = spin27.getSelectedItem().toString();
+        vector[27]  = spin28.getSelectedItem().toString();
+        vector[28]  = spin29.getSelectedItem().toString();
+        vector[29]  = spin30.getSelectedItem().toString();
+        vector[30]  = spin31.getSelectedItem().toString();
+        vector[31]  = spin32.getSelectedItem().toString();
+        vector[32]  = spin33.getSelectedItem().toString();
+        vector[33]  = spin34.getSelectedItem().toString();
+        vector[34]  = spin35.getSelectedItem().toString();
+        vector[35]  = spin36.getSelectedItem().toString();
+
+        //Verificar si los editText contienen algo sino no los deja enviar
+        if (et1.getVisibility() == View.VISIBLE) {
+            if (et1.length() == 0) {
+                bandera = false;
+            }
+        }
+
+        if (et2.getVisibility() == View.VISIBLE) {
+            if (et2.length() == 0) {
+                bandera = false;
+            }
+        }
+
+        if (et3.getVisibility() == View.VISIBLE) {
+            if (et3.length() == 0) {
+                bandera = false;
+            }
+        }
+
+        if (et4.getVisibility() == View.VISIBLE) {
+            if (et4.length() == 0) {
+                bandera = false; }
+        }
+
+        if (et5.getVisibility() == View.VISIBLE) {
+            if (et5.length() == 0) {
+                bandera = false;
+            }
+        }
+
+        if (et6.getVisibility() == View.VISIBLE) {
+            if (et6.length() == 0) {
+                bandera = false;
+            }
+        }
+
+        if (et7.getVisibility() == View.VISIBLE) {
+            if (et7.length() == 0) {
+                bandera = false;
+            }
+        }
+
+        if (et8.getVisibility() == View.VISIBLE) {
+            if (et8.length() == 0) {
+                bandera = false;
+            }
+        }
+
+        if (et9.getVisibility() == View.VISIBLE) {
+            if (et9.length() == 0) {
+                bandera = false;
+            }
+        }
+
+        if (et10.getVisibility() == View.VISIBLE) {
+            if (et10.length() == 0) {
+                bandera = false;
+            }
+        }
+
+        if (et11.getVisibility() == View.VISIBLE) {
+            if (et11.length() == 0) {
+                bandera = false;
+            }
+        }
+
+        if (et12.getVisibility() == View.VISIBLE) {
+            if (et12.length() == 0) {
+                bandera = false;
+            }
+        }
+
+        if (et13.getVisibility() == View.VISIBLE) {
+            if (et13.length() == 0) {
+                bandera = false;
+            }
+        }
+
+        if (et14.getVisibility() == View.VISIBLE) {
+            if (et14.length() == 0) {
+                bandera = false;
+            }
+        }
+
+        if (et15.getVisibility() == View.VISIBLE) {
+            if (et15.length() == 0) {
+                bandera = false;
+            }
+        }
+
+        if (et16.getVisibility() == View.VISIBLE) {
+            if (et16.length() == 0) {
+                bandera = false;
+            }
+        }
+
+        if (et17.getVisibility() == View.VISIBLE) {
+            if (et17.length() == 0) {
+                bandera = false;
+            }
+        }
+
+        if (et18.getVisibility() == View.VISIBLE) {
+            if (et18.length() == 0) {
+                bandera = false;
+            }
+        }
+
+        if (et19.getVisibility() == View.VISIBLE) {
+            if (et19.length() == 0) {
+                bandera = false;
+            }
+        }
+
+        if (et20.getVisibility() == View.VISIBLE) {
+            if (et20.length() == 0) {
+                bandera = false;
+            }
+        }
+
+        if (et21.getVisibility() == View.VISIBLE) {
+            if (et21.length() == 0) {
+                bandera = false;
+            }
+        }
+
+        if (et22.getVisibility() == View.VISIBLE) {
+            if (et22.length() == 0) {
+                bandera = false;
+            }
+        }
+
+        if (et23.getVisibility() == View.VISIBLE) {
+            if (et23.length() == 0) {
+                bandera = false;
+            }
+        }
+
+        if (et24.getVisibility() == View.VISIBLE) {
+            if (et24.length() == 0) {
+                bandera = false;
+            }
+        }
+
+        //////verifica que el vector no este en seleccione para poner enviar///////////////
+        for(int i=0;i<top; i++  ){
+            if(vector[i]=="Selecione:"){
+                bandera= false;
+            }
+        }
+
+        if (bandera){
+            Reporte(view);
+        }else{
+            Toast.makeText(this, "REVISA LOS DATOS", LENGTH_SHORT).show();
+        }
+    }
+
+    public void Reporte(View v){
+        try {
+            Document document = new Document(PageSize.A4);
+            PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(pdfFile.getPath()));
+
+            document.open();
+            XMLWorkerHelper worker = XMLWorkerHelper.getInstance();
+
+            htmlToPDF="<html>" +
+                    "<head>" +
+                    "<title>Recursos Circundantes</title>" +
+                    "</head>" +
+                    "<body>" +
+                    "<table border=\"1\" style=”width: 100%”>" +
+                    "<colgroup>" +
+                    "<col style=\"width: 20%\"/>" +
+                    "<col style=\"width: 40%\"/>" +
+                    "<col style=\"width: 40%\"/>" +
+                    "</colgroup>" +
+                    "<thead>" +
+                    "<tr>" +
+                    "<th colspan=\"9\">RECURSOS CIRCUNDANTES</th>" +
+                    "</tr>" +
+                    "<tr>" +
+                    "<th>RECURSOS</th>" +
+                    "<th>Aceptable</th>" +
+                    "<th>Intermedio</th>" +
+                    "<th>Alto</th>" +
+                    "<th>Ninguno</th>" +
+                    "<th>Distancia aproximada al inmueble</th>" +
+                    "<th>Zona o área</th>" +
+                    "<th>Tiempo de respuesta</th>" +
+                    "<th>Numero de telefono</th>" +
+                    "</tr>" +
+                    "</thead>" +
+                    "<tbody>";
+
+            htmlToPDF = htmlToPDF +
+                    "<tr>" +
+                    "<th>Hospitales o clínicas</th>" ;
+            agregarColumna(vector[0], et1.getText().toString(), et2.getText().toString(),vector[1],vector[2]);
+
+            htmlToPDF = htmlToPDF +
+                    "<tr>" +
+                    "<th>Estaciones de bomberos</th>";
+            agregarColumna(vector[3], et3.getText().toString(), et4.getText().toString(),vector[4],vector[5]);
+
+            htmlToPDF = htmlToPDF +
+                    "<tr>" +
+                    "<th>Ambulancias</th>";
+            agregarColumna(vector[6], et5.getText().toString(), et6.getText().toString(),vector[7],vector[8]);
+
+            htmlToPDF = htmlToPDF +
+                    "<tr>" +
+                    "<th>Estación de policía</th>";
+            agregarColumna(vector[9], et7.getText().toString(), et8.getText().toString(),vector[10],vector[11]);
+
+            htmlToPDF = htmlToPDF +
+                    "<tr>" +
+                    "<th>Zonas militares</th>";
+            agregarColumna(vector[12], et9.getText().toString(), et10.getText().toString(),vector[13],vector[14]);
+
+            htmlToPDF = htmlToPDF +
+                    "<tr>" +
+                    "<th>Tiendas o bodegas comerciales</th>";
+            agregarColumna(vector[15], et11.getText().toString(), et12.getText().toString(),vector[16],vector[17]);
+
+            htmlToPDF = htmlToPDF +
+                    "<tr>" +
+                    "<th>Gimnasios y otros grandes espacios para protegerse</th>";
+            agregarColumna(vector[18], et13.getText().toString(), et14.getText().toString(),vector[19],vector[20]);
+
+            htmlToPDF = htmlToPDF +
+                    "<tr>" +
+                    "<th>Calles con poco trafico</th>";
+            agregarColumna(vector[21], et15.getText().toString(), et16.getText().toString(),vector[22],vector[23]);
+
+            htmlToPDF = htmlToPDF +
+                    "<tr>" +
+                    "<th>Parques o áreas verdes</th>";
+            agregarColumna(vector[24], et17.getText().toString(), et18.getText().toString(),vector[25],vector[26]);
+
+            htmlToPDF = htmlToPDF +
+                    "<tr>" +
+                    "<th>Terrenos baldíos en buen estado</th>";
+            agregarColumna(vector[27], et19.getText().toString(), et20.getText().toString(),vector[28],vector[29]);
+
+            htmlToPDF = htmlToPDF +
+                    "<tr>" +
+                    "<th>Fábricas o almacenes de bebidas o productos alimenticios</th>";
+            agregarColumna(vector[30], et21.getText().toString(), et22.getText().toString(),vector[31],vector[32]);
+
+            htmlToPDF = htmlToPDF +
+                    "<tr>" +
+                    "<th>Estaciones de radio o radioaficionados</th>";
+            agregarColumna(vector[33], et23.getText().toString(), et24.getText().toString(),vector[34],vector[35]);
+
+            htmlToPDF= htmlToPDF +"</tbody>" + "</table>" + "</body>" + "</html>";
+
+            worker.parseXHtml(pdfWriter, document, new StringReader(htmlToPDF));
+
+            document.close();
+
+            Intent intent = new Intent(this, com.example.recorridosr_v15.ViewPdf.class);
+            intent.putExtra("File", pdfFile.getPath());
+            startActivity(intent);
+
+        } catch (IOException e) {
+            Toast.makeText(this,"NO SE PUDO GENERAR EL DOCUMENTO", Toast.LENGTH_LONG).show();
+            e.printStackTrace();
+        } catch (DocumentException e) {
+            Toast.makeText(this,"NO SE PUDO GENERAR EL DOCUMENTO", Toast.LENGTH_LONG).show();
+            e.printStackTrace();
+        }
+    }
+
+    static void agregarColumna(String posicionX, String Distancia, String Zona, String Tiempo, String Tel){
+        if(posicionX.equals("ACEPTABLE")){
+            htmlToPDF=htmlToPDF +
+                    "<td>X</td>" +
+                    "<td></td>" +
+                    "<td></td>" +
+                    "<td></td>" +
+                    "<td>"+Distancia+"</td>" +
+                    "<td>"+Zona+"</td>" +
+                    "<td>"+Tiempo+"</td>" +
+                    "<td>"+Tel+"</td>" +
+                    "</tr>";
+        }else if (posicionX.equals("INTERMEDIO")){
+            htmlToPDF=htmlToPDF +
+                    "<td></td>" +
+                    "<td>X</td>" +
+                    "<td></td>" +
+                    "<td></td>" +
+                    "<td>"+Distancia+"</td>" +
+                    "<td>"+Zona+"</td>" +
+                    "<td>"+Tiempo+"</td>" +
+                    "<td>"+Tel+"</td>" +
+                    "</tr>";
+        }else if (posicionX.equals("ALTO")){
+            htmlToPDF=htmlToPDF +
+                    "<td></td>" +
+                    "<td></td>" +
+                    "<td>X</td>" +
+                    "<td></td>" +
+                    "<td>"+Distancia+"</td>" +
+                    "<td>"+Zona+"</td>" +
+                    "<td>"+Tiempo+"</td>" +
+                    "<td>"+Tel+"</td>" +
+                    "</tr>";
+        }else if (posicionX.equals("NINGUNO")){
+            htmlToPDF=htmlToPDF +
+                    "<td></td>" +
+                    "<td></td>" +
+                    "<td></td>" +
+                    "<td>X</td>" +
+                    "<td></td>" +
+                    "<td></td>" +
+                    "<td></td>" +
+                    "<td></td>" +
+                    "</tr>";
+        }else{
+            htmlToPDF=htmlToPDF +
+                    "<td></td>" +
+                    "<td></td>" +
+                    "<td></td>" +
+                    "<td></td>" +
+                    "<td></td>" +
+                    "<td></td>" +
+                    "<td></td>" +
+                    "<td></td>" +
+                    "</tr>";
+        }
+    }
 }
-
-
-

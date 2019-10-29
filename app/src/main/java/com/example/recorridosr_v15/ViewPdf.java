@@ -14,7 +14,7 @@ public class ViewPdf extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_pdf);
-        File pdfFile =  com.example.recorridosr_v15.quintanaroo_SeguridadExterior.getFile();
+        File pdfFile =  new File(getIntent().getStringExtra("File"));
         PDFView p = (PDFView)findViewById(R.id.pdfView);
         p.fromFile(pdfFile).load();
     }

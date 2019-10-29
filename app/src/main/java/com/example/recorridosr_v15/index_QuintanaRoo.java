@@ -1,12 +1,10 @@
 package com.example.recorridosr_v15;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
-
 import java.io.File;
 
 public class index_QuintanaRoo extends AppCompatActivity {
@@ -18,45 +16,36 @@ public class index_QuintanaRoo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.index__quintana_roo);
-
         this.setTitle(R.string.titulo2);
         //Pantalla en vertical
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        directorio2 = com.example.recorridosr_v15.carpetaempresa_quintanaRoo.GetFile();
-
-
-
+        directorio2 = new File(getIntent().getStringExtra("File"));
     }
-
-
 
     public void Exterior_quintana (View view){
         onClick(view, "Exterior");
         Intent ext = new Intent(this, quintanaroo_SeguridadExterior.class);
+        ext.putExtra("File", directorio.getPath());
         startActivity(ext);
     }
 
     public void Analisis_quintana (View view){
         onClick(view, "Analisis_de_recursos");
         Intent ext = new Intent(this, quintanaroo_AnalisisRecurso.class);
+        ext.putExtra("File", directorio.getPath());
         startActivity(ext);
     }
 
     public void Circundantes_quintana (View view){
         onClick(view, "Circundantes");
         Intent ext = new Intent(this, quintanaroo_RecursosCircundantes.class);
+        ext.putExtra("File", directorio.getPath());
         startActivity(ext);
     }
-    public void onClick(View v, String nombre){
-        //Toast.makeText(this,NombreS, Toast.LENGTH_LONG).show();
-        directorio = new File(directorio2.getPath(),nombre);
 
+    public void onClick(View v, String nombre){
+        directorio = new File(directorio2.getPath(),nombre);
         directorio.mkdir();
-        //File directorio = new File(getFilesDir(), NombreS);
-        //File folder = new File(Environment.getExternalStorageDirectory().toString() ,NombreS);getFilesDir()
-    }
-    static File GetFile (){
-        return directorio;
     }
 
 }
