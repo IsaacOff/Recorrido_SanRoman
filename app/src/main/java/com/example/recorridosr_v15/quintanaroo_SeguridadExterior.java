@@ -738,201 +738,201 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
                     "<th>Postes de teléfono</th>";
             agregarColumna(vector[4], et5.getText().toString());
 
-/*
+
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Alumbrado publico</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[5], et6.getText().toString());
 
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Transformadires de electricidad</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[6], et7.getText().toString());
 
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Alcantarillas y registros abiertos</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[7], et8.getText().toString());
 
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Bardas, Mallas o cercas, para delimitacion territorial o contra robos</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[8], et9.getText().toString());
 
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Banquetas desniveladas</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[9], et10.getText().toString());
 
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Arboles viejos o grandes y ramas que pueden despegarse</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[10], et11.getText().toString());
 
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Rampas para autos</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[11], et12.getText().toString());
 
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Vias de ferrocarril</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[12], et13.getText().toString());
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Calles con excesiva circulación vehicular</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[13], et14.getText().toString());
 
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Calles sin pavimentar</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[14], et15.getText().toString());
 
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Calles con inclinacion pronunciada</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[15], et16.getText().toString());
 
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Calles cerradas al trafico de vehiculos</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[16], et17.getText().toString());
 
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Calles estrechas</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[17], et18.getText().toString());
 
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Carreteras</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[18], et19.getText().toString());
 
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Terrenos baldios</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[19], et20.getText().toString());
 
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Construcciones vecinas dañadas</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[20], et21.getText().toString());
 
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Construcciones vecinas muy altas</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[21], et22.getText().toString());
 
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Ventanales</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[22], et23.getText().toString());
 
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Anuncios volados</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[23], et24.getText().toString());
 
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Anuncios panorámicos</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[24], et25.getText().toString());
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Marquesinas</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[25], et26.getText().toString());
 
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Pretiles de balcones</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[26], et27.getText().toString());
 
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Gasolineras</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[27], et28.getText().toString());
 
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Depositos o almacenes de sustancias toxicas, inflamables o explosivas</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[28], et29.getText().toString());
 
 
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Industrias</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[29], et30.getText().toString());
 
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Cantinas, bares o Salones</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[30], et31.getText().toString());
 
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Mercados</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[31], et32.getText().toString());
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Pasos a desnivel para vehiculos</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[32], et33.getText().toString());
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Pasos a desnivel para peatones</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[33], et34.getText().toString());
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Puentes elevados para peatones</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[34], et35.getText().toString());
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Terminales aéreas</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[35], et36.getText().toString());
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Terminales terrestres</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[36], et37.getText().toString());
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Terminales fluviales</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[37], et38.getText().toString());
 
-            htmlToPDF = htmlToPDF +
+            /*htmlToPDF = htmlToPDF +
                     "<tr>" +
                     "<th>Otros, especificar:</th>";
-            agregarColumna(dato.getText().toString(), "");
+            agregarColumna(vector[38], et39.getText().toString());
  */
 
             htmlToPDF= htmlToPDF +"</tbody>" + "</table>" + "</body>" + "</html>";
