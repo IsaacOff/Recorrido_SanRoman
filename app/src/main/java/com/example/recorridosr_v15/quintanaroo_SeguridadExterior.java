@@ -59,6 +59,8 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quintana_roo__seguridad_exterior);
 
+        this.setTitle("Seguridad Exterior Quintana Roo");
+
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         File directorio2 = com.example.recorridosr_v15.index_QuintanaRoo.GetFile();

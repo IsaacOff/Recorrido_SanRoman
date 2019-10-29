@@ -10,5 +10,8 @@ public class quintanaroo_AnalisisRecurso extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quintana_roo__analisis_recurso);
+
+        this.setTitle("Analisis de Recurso Quintana Roo");
+
     }
 }

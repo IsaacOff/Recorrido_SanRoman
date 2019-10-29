@@ -728,6 +728,7 @@ android:stretchColumns="1">
                          android:layout_column="0"
                          android:padding="3dip"
                          android:text="@string/tv60"
+                         android:layout_width="247dp"
                          android:textColor="#000000" />
 
                      <Spinner
@@ -744,11 +745,7 @@ android:stretchColumns="1">
 
                  <TableRow>
 
-                     <TextView
-                         android:layout_column="0"
-                         android:padding="3dip"
-                         android:text="@string/tv61"
-                         android:textColor="#000000" />
+
 
                      <Spinner
                          android:id="@+id/spinner32"
@@ -862,6 +859,19 @@ android:stretchColumns="1">
 
                  </EditText>
 
+                 <!--- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+                 <Button
+                     android:id="@+id/button"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+
+                     android:text="Guardar"
+                     android:textSize="15sp">
+
+                 </Button>
 
             </TableLayout>
 

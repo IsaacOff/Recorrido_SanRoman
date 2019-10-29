@@ -1000,6 +1000,7 @@
                 <TextView
                     android:id="@+id/textView29"
                     android:layout_width="247dp"
+                    android:layout_height="51dp"
                     android:layout_column="0"
                     android:padding="2dip"
                     android:text="@string/tv29"
@@ -1016,11 +1017,12 @@
                 </Spinner>
 
             </TableRow>
+
             <EditText
                 android:id="@+id/editText29"
-                android:layout_column="0"
                 android:layout_width="289dp"
-                android:layout_height="42dp"
+                android:layout_height="54dp"
+                android:layout_column="0"
                 android:ems="10"
                 android:hint="Area donde se ubica el riesgo"
                 android:inputType="textPersonName">
@@ -1346,7 +1348,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:onClick="onClick"
-                android:text="Enviar"
+                android:text="Guardar"
                 android:textSize="14sp">
 
             </Button>
