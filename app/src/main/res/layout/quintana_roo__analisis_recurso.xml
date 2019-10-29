@@ -6,4 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".quintanaroo_AnalisisRecurso">
 
+    <EditText
+        android:id="@+id/editText39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        tools:layout_editor_absoluteY="31dp" />
+
+    <EditText
+        android:id="@+id/editText40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="100dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

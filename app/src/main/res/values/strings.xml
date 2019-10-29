@@ -18,8 +18,6 @@
     <string name="tv6">Alumbrado Publico</string>
     <string name="tv7">Transformadores de Electricidad</string>
     <string name="tv8">Alcantarillas y Registros Abiertos</string>
-
-
     <string name="tv9">Bardas, Mallas o Cercas, para delimitar territorial o contra robos</string>
     <string name="tv10">Banquetas desniveladas</string>
     <string name="tv11">Arboles viejos o grandes y ramas que puedan desgajarse</string>
@@ -50,6 +48,27 @@
     <string name="tv36">Terminales Aereas</string>
     <string name="tv37">Terminales Terrestres</string>
     <string name="tv38">Terminales Fluviales</string>
+
+
+
+
+    <!--edit text libres del 40-49  -->
+
+
+    <!--Recursos circundantes -->
+    <string name="tv50">Hospitales o Clinicas</string>
+    <string name="tv51">Estaciones de bomberos</string>
+    <string name="tv52">Ambulancias</string>
+    <string name="tv53">Estacion de policias</string>
+    <string name="tv54">Zonas militares</string>
+    <string name="tv55">Tiendas o bodegas comerciales</string>
+    <string name="tv56">Gimnasios y otros espacios para protegerse</string>
+    <string name="tv57">Calles con poco trafico</string>
+    <string name="tv58">Parques o areas verdes</string>
+    <string name="tv59">Terrenos baldios en buen estado</string>
+    <string name="tv60">Fabricas o almacenes de bebidas</string>
+    <string name="tv61">o productos alimenticios</string>
+    <string name="tv62">Estaciones de radios o radioaficionados</string>
 
 
 </resources>

@@ -191,7 +191,7 @@
                 android:layout_column="0"
                 android:ems="10"
                 android:hint="Area donde se ubica el riesgo"
-                android:inputType="textPersonName">
+                android:inputType="text">
 
             </EditText>
 

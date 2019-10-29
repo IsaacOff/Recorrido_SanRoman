@@ -47,7 +47,7 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
     private EditText et21,et22, et23, et24, et25, et26, et27, et28, et29, et30, et31, et32, et33, et34, et35, et36, et37, et38;
 
     private String sel;
-    private final int top=5;
+    private final int top=38;
     String vector[] =new String[top];
     static File pdfFile;
     static String htmlToPDF;
@@ -164,7 +164,6 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
         spin3=(Spinner)findViewById(R.id.spinner3);
         spin4=(Spinner)findViewById(R.id.spinner4);
         spin5=(Spinner)findViewById(R.id.spinner5);
-
         spin6=(Spinner)findViewById(R.id.spinner6);
         spin7=(Spinner)findViewById(R.id.spinner7);
         spin8=(Spinner)findViewById(R.id.spinner8);
@@ -333,11 +332,47 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
 
 
         //selecciona lo que carga el spinner
-        vector[0]  = spin1.getSelectedItem().toString();
-        vector[1]  = spin2.getSelectedItem().toString();
-        vector[2]  = spin3.getSelectedItem().toString();
-        vector[3]  = spin4.getSelectedItem().toString();
-        vector[4]  = spin5.getSelectedItem().toString();
+        vector[0]   = spin1.getSelectedItem().toString();
+        vector[1]   = spin2.getSelectedItem().toString();
+        vector[2]   = spin3.getSelectedItem().toString();
+        vector[3]   = spin4.getSelectedItem().toString();
+        vector[4]   = spin5.getSelectedItem().toString();
+        vector[5]   = spin6.getSelectedItem().toString();
+        vector[6]   = spin7.getSelectedItem().toString();
+        vector[7]   = spin8.getSelectedItem().toString();
+        vector[8]   = spin9.getSelectedItem().toString();
+        vector[9]   = spin10.getSelectedItem().toString();
+        vector[10]  = spin11.getSelectedItem().toString();
+        vector[11]  = spin12.getSelectedItem().toString();
+        vector[12]  = spin13.getSelectedItem().toString();
+        vector[13]  = spin14.getSelectedItem().toString();
+        vector[14]  = spin15.getSelectedItem().toString();
+        vector[15]  = spin16.getSelectedItem().toString();
+        vector[16]  = spin17.getSelectedItem().toString();
+        vector[17]  = spin18.getSelectedItem().toString();
+        vector[18]  = spin19.getSelectedItem().toString();
+        vector[19]  = spin20.getSelectedItem().toString();
+        vector[20]  = spin21.getSelectedItem().toString();
+        vector[21]  = spin22.getSelectedItem().toString();
+        vector[22]  = spin23.getSelectedItem().toString();
+        vector[23]  = spin24.getSelectedItem().toString();
+        vector[24]  = spin25.getSelectedItem().toString();
+        vector[25]  = spin26.getSelectedItem().toString();
+        vector[26]  = spin27.getSelectedItem().toString();
+        vector[27]  = spin28.getSelectedItem().toString();
+        vector[28]  = spin29.getSelectedItem().toString();
+        vector[29]  = spin30.getSelectedItem().toString();
+        vector[30]  = spin31.getSelectedItem().toString();
+        vector[31]  = spin32.getSelectedItem().toString();
+        vector[32]  = spin33.getSelectedItem().toString();
+        vector[33]  = spin34.getSelectedItem().toString();
+        vector[34]  = spin35.getSelectedItem().toString();
+        vector[35]  = spin36.getSelectedItem().toString();
+        vector[36]  = spin37.getSelectedItem().toString();
+        vector[37]  = spin38.getSelectedItem().toString();
+
+
+
         Toast.makeText(this,vector[4], Toast.LENGTH_LONG).show();
 
 
@@ -348,170 +383,278 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
 
 
 
-
-        if (et1.getVisibility() == View.VISIBLE) {
+        //Verificar si los editText contienen algo sino no los deja enviar
+       if (et1.getVisibility() == View.VISIBLE) {
             if (et1.length() == 0) {
                 bandera = false;
             }
         }
 
-        if (et2.getVisibility() == View.VISIBLE) {
+       if (et2.getVisibility() == View.VISIBLE) {
 
             if (et2.length() == 0) {
                 bandera = false;
             }
         }
 
-        if (et3.getVisibility() == View.VISIBLE) {
+       if (et3.getVisibility() == View.VISIBLE) {
 
             if (et3.length() == 0) {
                 bandera = false;
             }
         }
 
-        if (et4.getVisibility() == View.VISIBLE) {
+       if (et4.getVisibility() == View.VISIBLE) {
 
             if (et4.length() == 0) {
                 bandera = false; }
         }
 
-        if (et5.getVisibility() == View.VISIBLE) {
+       if (et5.getVisibility() == View.VISIBLE) {
 
             if (et5.length() == 0) {
                 bandera = false;
             }
         }
 
+       if (et6.getVisibility() == View.VISIBLE) {
 
-      /*  if (f.getVisibility() == View.VISIBLE) {
-
-            if (f.length() == 0) {
-                bandera = false;
-            }
-        }
-        if (g.getVisibility() == View.VISIBLE) {
-
-            if (g.length() == 0) {
-                bandera = false;
-            }
-        }
-        if (h.getVisibility() == View.VISIBLE) {
-
-            if (h.length() == 0) {
-                bandera = false;
-            }
-        }
-        if (i.getVisibility() == View.VISIBLE) {
-
-            if (i.length() == 0) {
-                bandera = false;
-            }
-        }
-        if (j.getVisibility() == View.VISIBLE) {
-
-            if (j.length() == 0) {
-                bandera = false;
-            }
-        }
-        if (k.getVisibility() == View.VISIBLE) {
-
-            if (k.length() == 0) {
-                bandera = false;
-            }
-        }
-        if (m.getVisibility() == View.VISIBLE) {
-
-            if (m.length() == 0) {
-                bandera = false;
-            }
-        }
-        if (n.getVisibility() == View.VISIBLE) {
-
-            if (n.length() == 0) {
-                bandera = false;
-            }
-        }
-        if (l.getVisibility() == View.VISIBLE) {
-
-            if (l.length() == 0) {
-                bandera = false;
-            }
-        }
-        if (o.getVisibility() == View.VISIBLE) {
-
-            if (o.length() == 0) {
-                bandera = false;
-            }
-        }
-        if (p.getVisibility() == View.VISIBLE) {
-
-            if (p.length() == 0) {
-                bandera = false;
-            }
-        }
-        if (q.getVisibility() == View.VISIBLE) {
-
-            if (q.length() == 0) {
-                bandera = false;
-            }
-        }
-        if (r.getVisibility() == View.VISIBLE) {
-
-            if (r.length() == 0) {
-                bandera = false;
-            }
-        }
-        if (s.getVisibility() == View.VISIBLE) {
-
-            if (s.length() == 0) {
-                bandera = false;
-            }
-        }
-        if (t.getVisibility() == View.VISIBLE) {
-
-            if (t.length() == 0) {
-                bandera = false;
-            }
-        }
-        if (u.getVisibility() == View.VISIBLE) {
-
-            if (u.length() == 0) {
-                bandera = false;
-            }
-        }
-        if (v.getVisibility() == View.VISIBLE) {
-
-            if (v.length() == 0) {
-                bandera = false;
-            }
-        }
-        if (w.getVisibility() == View.VISIBLE) {
-
-            if (w.length() == 0) {
-                bandera = false;
-            }
-        }
-        if (x.getVisibility() == View.VISIBLE) {
-
-            if (x.length() == 0) {
-                bandera = false;
-            }
-        }
-        if (y.getVisibility() == View.VISIBLE) {
-
-            if (y.length() == 0) {
-                bandera = false;
-            }
-        }
-        if (z.getVisibility() == View.VISIBLE) {
-
-            if (z.length() == 0) {
+            if (et6.length() == 0) {
                 bandera = false;
             }
         }
 
-*/
-        for(int i=0;i<5; i++  ){
+       if (et7.getVisibility() == View.VISIBLE) {
+
+            if (et7.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et8.getVisibility() == View.VISIBLE) {
+            if (et8.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et9.getVisibility() == View.VISIBLE) {
+
+            if (et9.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et10.getVisibility() == View.VISIBLE) {
+
+            if (et10.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et11.getVisibility() == View.VISIBLE) {
+
+            if (et11.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et12.getVisibility() == View.VISIBLE) {
+
+            if (et12.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et13.getVisibility() == View.VISIBLE) {
+
+            if (et13.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et14.getVisibility() == View.VISIBLE) {
+
+            if (et14.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et15.getVisibility() == View.VISIBLE) {
+
+            if (et15.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et16.getVisibility() == View.VISIBLE) {
+
+            if (et16.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et17.getVisibility() == View.VISIBLE) {
+
+            if (et17.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et18.getVisibility() == View.VISIBLE) {
+
+            if (et18.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et19.getVisibility() == View.VISIBLE) {
+
+            if (et19.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et20.getVisibility() == View.VISIBLE) {
+
+            if (et20.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et21.getVisibility() == View.VISIBLE) {
+
+            if (et21.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et22.getVisibility() == View.VISIBLE) {
+
+            if (et22.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et23.getVisibility() == View.VISIBLE) {
+
+            if (et23.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et24.getVisibility() == View.VISIBLE) {
+
+            if (et24.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et25.getVisibility() == View.VISIBLE) {
+
+            if (et25.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et26.getVisibility() == View.VISIBLE) {
+
+            if (et26.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et27.getVisibility() == View.VISIBLE) {
+
+            if (et27.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et28.getVisibility() == View.VISIBLE) {
+
+            if (et28.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et29.getVisibility() == View.VISIBLE) {
+
+            if (et29.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et30.getVisibility() == View.VISIBLE) {
+
+            if (et30.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et31.getVisibility() == View.VISIBLE) {
+
+            if (et31.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et32.getVisibility() == View.VISIBLE) {
+
+            if (et32.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et33.getVisibility() == View.VISIBLE) {
+
+            if (et33.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et34.getVisibility() == View.VISIBLE) {
+
+            if (et34.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et35.getVisibility() == View.VISIBLE) {
+
+            if (et35.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et36.getVisibility() == View.VISIBLE) {
+
+            if (et36.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et37.getVisibility() == View.VISIBLE) {
+
+            if (et37.length() == 0) {
+                bandera = false;
+            }
+        }
+
+       if (et38.getVisibility() == View.VISIBLE) {
+
+            if (et38.length() == 0) {
+                bandera = false;
+            }
+        }
+
+
+
+
+
+
+
+        //////verifica que el vector no este en seleccione para poner enviar///////////////
+        for(int i=0;i<top; i++  ){
             if(vector[i]=="Selecione:"){
                 bandera= false;
             }

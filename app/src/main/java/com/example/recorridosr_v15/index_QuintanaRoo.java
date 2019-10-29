@@ -38,13 +38,13 @@ public class index_QuintanaRoo extends AppCompatActivity {
 
     public void Analisis_quintana (View view){
         onClick(view, "Analisis_de_recursos");
-        Intent ext = new Intent(this, index_Yucatan.class);
+        Intent ext = new Intent(this, quintanaroo_AnalisisRecurso.class);
         startActivity(ext);
     }
 
     public void Circundantes_quintana (View view){
         onClick(view, "Circundantes");
-        Intent ext = new Intent(this, index_Tabasco.class);
+        Intent ext = new Intent(this, quintanaroo_RecursosCircundantes.class);
         startActivity(ext);
     }
     public void onClick(View v, String nombre){
