@@ -70,5 +70,12 @@
     <string name="tv61">o productos alimenticios</string>
     <string name="tv62">Estaciones de radios o radioaficionados</string>
 
+    <!--Analisis de Recurso -->
+    <string name="tv65">El inmueble se ubica en :</string>
+    <string name="tv66">El inmueble cuenta con :</string>
+    <string name="tv67">Alrededor del inmueble se cuenta con :</string>
+    <string name="tv68">El inmueble esta cerca de :</string>
+
+
 
 </resources>

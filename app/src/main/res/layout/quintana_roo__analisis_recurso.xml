@@ -1,27 +1,534 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".quintanaroo_RecursosCircundantes"
+android:stretchColumns="1">
+
+<TableRow android:background="#128675">
+
+    <TextView
+        android:layout_column="0"
+        android:padding="3dip"
+        android:text="   TIPO DE ZONA    "
+        android:textColor="@android:color/white" />
+
+
+</TableRow>
+
+
+<ScrollView
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".quintanaroo_AnalisisRecurso">
+    android:layout_height="wrap_content">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/editText39"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteY="31dp" />
+        <!-- El inmueble se ubica en  -->
+        <TableRow android:layout_height="122dp">
 
-    <EditText
-        android:id="@+id/editText40"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="100dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:layout_width="178dp"
+                android:layout_height="40dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="@string/tv65"
+                android:textColor="#000000" />
+
+
+        </TableRow>
+
+
+        <TableRow android:layout_height="122dp">
+
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:padding="3dip">
+
+
+            </Spinner>
+        </TableRow>
+
+
+
+ <!--- /////////////////////////////////////////////////// -->
+
+
+        <TableRow android:background="#128675">
+
+            <TextView
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="   SERVICIOS"
+                android:textColor="@android:color/white"
+                />
+
+
+        </TableRow>
+
+
+
+        <!-- El inmueble cuenta con:  -->
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="@string/tv66"
+                android:textColor="#000000"
+                android:layout_width="200dp"
+                android:layout_height="45dp"/>
+
+        </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Agua"
+                android:textColor="#000000" />
+
+            <RadioGroup
+                android:id="@+id/Rg1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Si"
+                android:padding="8dp"/>
+
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:padding="8dp"/>
+            </RadioGroup>
+
+
+        </TableRow>
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Drenaje"
+                android:textColor="#000000" />
+
+
+
+            <RadioGroup
+                android:id="@+id/Rg2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Energia Electrica"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Telefono (Fijo / Movil)"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+<!--- /////////////////////////////////////////////////// -->
+
+
+
+
+
+        <!-- El inmueble cuenta con:  -->
+
+
+            <TextView
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="@string/tv67"
+                android:textColor="#000000"
+                android:layout_width="200dp"
+                android:layout_height="45dp"/>
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Alumbrado publico"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Calle Pavimentada"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Banquetas"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Guarniciones"
+                android:textColor="#000000" />
+
+            <RadioGroup
+                android:id="@+id/Rg8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+<!--- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+        <TableRow android:background="#128675">
+
+            <TextView
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="  INSTITUCIONES    "
+                android:textColor="@android:color/white" />
+
+
+        </TableRow>
+
+        <TextView
+            android:layout_column="0"
+            android:padding="3dip"
+            android:text="@string/tv68"
+            android:textColor="#000000"
+            android:layout_width="200dp"
+            android:layout_height="45dp"/>
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Servicios Medicos"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Bomberos"
+                android:textColor="#000000" />
+
+            <RadioGroup
+                android:id="@+id/Rg10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Seguridad Publica"
+                android:textColor="#000000" />
+
+            <RadioGroup
+                android:id="@+id/Rg11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+<!--- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="onClick"
+            android:text="Guardar"
+            android:textSize="15sp">
+
+        </Button>
+
+    </TableLayout>
+
+</ScrollView>
+
+</TableLayout>
