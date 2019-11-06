@@ -580,26 +580,28 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
                     "<title>Seguridad Exterior</title>" +
                     "</head>" +
                     "<body>" +
-                    "<table border=\"1\" style=”width: 100%”>" +
-                    "<colgroup>" +
-                    "<col style=\"width: 20%\"/>" +
-                    "<col style=\"width: 40%\"/>" +
-                    "<col style=\"width: 40%\"/>" +
-                    "</colgroup>" +
+                    "Seguridad Exterior"+
+                    "<TABLE border=\"1\" WIDTH=\"100%\" style=\"text-align:center;\">" +
+        /*"<colgroup>" +
+        "<col style=\"width: 20%\"/>" +
+        "<col style=\"width: 40%\"/>" +
+        "<col style=\"width: 40%\"/>" +
+        "</colgroup>" +*/
                     "<thead>" +
                     "<tr>" +
-                    "<th rowspan=\"2\">Elementos de riesgo</th>" +
-                    "<th colspan=\"4\">Nivel de riesgo</th>" +
-                    "<th rowspan=\"2\">Área donde se ubica el riesgo</th>" +
+                    "<th rowspan=\"2\" WIDTH=\"28%\">Elementos de riesgo</th>" +
+                    "<th colspan=\"4\" WIDTH=\"52%\">Nivel de riesgo</th>" +
+                    "<th rowspan=\"2\" WIDTH=\"20%\">Área donde se ubica el riesgo</th>" +
                     "</tr>" +
                     "<tr>" +
-                    "<th>Aceptable</th>" +
-                    "<th>Intermedio</th>" +
-                    "<th>Alto</th>" +
-                    "<th>Ninguno</th>" +
+                    "<th WIDTH=\"30%\">Aceptable</th>" +
+                    "<th WIDTH=\"30%\">Intermedio</th>" +
+                    "<th WIDTH=\"20%\">Alto</th>" +
+                    "<th WIDTH=\"20%\">Ninguno</th>" +
                     "</tr>" +
                     "</thead>" +
                     "<tbody>";
+
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +

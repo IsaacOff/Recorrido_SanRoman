@@ -202,12 +202,13 @@ public class quintanaroo_AnalisisRecurso extends AppCompatActivity {
                     "<title>Seguridad Exterior</title>" +
                     "</head>" +
                     "<body>" +
-                    "EL inmueble se úbica en:" +
-                    "<table border=\"1\" style=”width: 100%”>" +
-                    "<colgroup>" +
-                    "<col style=\"width: 20%\"/>" +
-                    "<col style=\"width: 40%\"/>" +
-                    "</colgroup>" +
+                    "<p>Analisis de Recurso</p>"+
+                    "<p><br/>El inmueble se úbica en:</p>" +
+                    "<TABLE border=\"1\" style=\"text-align:center;\">" +
+        /*"<colgroup>" +
+        "<col style=\"width: 20%\"/>" +
+        "<col style=\"width: 40%\"/>" +
+        "</colgroup>" +*/
                     "<thead>" +
                     "<tr>" +
                     "<th>Tipo de zona</th>" +
@@ -270,7 +271,7 @@ public class quintanaroo_AnalisisRecurso extends AppCompatActivity {
 
             htmlToPDF= htmlToPDF +"</tbody>" + "</table>" + "<p><br/>El inmueble cuenta con:</p>";
 
-            htmlToPDF=htmlToPDF+"<table border=\"1\" style=”width: 100%”>" +
+            htmlToPDF=htmlToPDF+"<table border=\"1\" style=\"text-align:center;\">" +
                     "<colgroup>" +
                     "<col style=\"width: 20%\"/>" +
                     "<col style=\"width: 40%\"/>" +
@@ -305,7 +306,7 @@ public class quintanaroo_AnalisisRecurso extends AppCompatActivity {
 
             htmlToPDF= htmlToPDF +"</tbody>" + "</table>" + "<p><br/>Alrededor del inmueble se cuenta con:</p>";
 
-            htmlToPDF=htmlToPDF+"<table border=\"1\" style=”width: 100%”>" +
+            htmlToPDF=htmlToPDF+"<table border=\"1\" style=\"text-align:center;\">" +
                     "<colgroup>" +
                     "<col style=\"width: 20%\"/>" +
                     "<col style=\"width: 40%\"/>" +
@@ -340,7 +341,7 @@ public class quintanaroo_AnalisisRecurso extends AppCompatActivity {
 
             htmlToPDF= htmlToPDF +"</tbody>" + "</table>" + "<p><br/>El inmueble está cerca de:</p>";
 
-            htmlToPDF=htmlToPDF+"<table border=\"1\" style=”width: 100%”>" +
+            htmlToPDF=htmlToPDF+"<table border=\"1\" style=\"text-align:center;\">" +
                     "<colgroup>" +
                     "<col style=\"width: 20%\"/>" +
                     "<col style=\"width: 40%\"/>" +

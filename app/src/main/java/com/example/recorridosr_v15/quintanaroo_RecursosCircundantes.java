@@ -502,26 +502,27 @@ public class quintanaroo_RecursosCircundantes extends AppCompatActivity {
                     "<title>Recursos Circundantes</title>" +
                     "</head>" +
                     "<body>" +
-                    "<table border=\"1\" style=”width: 100%”>" +
-                    "<colgroup>" +
-                    "<col style=\"width: 20%\"/>" +
-                    "<col style=\"width: 40%\"/>" +
-                    "<col style=\"width: 40%\"/>" +
-                    "</colgroup>" +
+                    "<p>Recursos Circundantes</p>"+
+                    "<TABLE border=\"1\" WIDTH=\"100%\" style=\"text-align:center;\">" +
+        /*"<colgroup>" +
+        "<col style=\"width: 20%\"/>" +
+        "<col style=\"width: 40%\"/>" +
+        "<col style=\"width: 40%\"/>" +
+        "</colgroup>" +*/
                     "<thead>" +
                     "<tr>" +
                     "<th colspan=\"9\">RECURSOS CIRCUNDANTES</th>" +
                     "</tr>" +
                     "<tr>" +
-                    "<th>RECURSOS</th>" +
-                    "<th>Aceptable</th>" +
-                    "<th>Intermedio</th>" +
-                    "<th>Alto</th>" +
-                    "<th>Ninguno</th>" +
-                    "<th>Distancia aproximada al inmueble</th>" +
-                    "<th>Zona o área</th>" +
-                    "<th>Tiempo de respuesta</th>" +
-                    "<th>Numero de telefono</th>" +
+                    "<th WIDTH=\"15%\">RECURSOS</th>" +
+                    "<th WIDTH=\"13%\">Aceptable</th>" +
+                    "<th WIDTH=\"13%\">Intermedio</th>" +
+                    "<th WIDTH=\"6%\">Alto</th>" +
+                    "<th WIDTH=\"11%\">Ninguno</th>" +
+                    "<th WIDTH=\"12%\">Distancia aproximada al inmueble</th>" +
+                    "<th WIDTH=\"8%\">Zona o área</th>" +
+                    "<th WIDTH=\"12%\">Tiempo de respuesta</th>" +
+                    "<th WIDTH=\"10%\">Numero de telefono</th>" +
                     "</tr>" +
                     "</thead>" +
                     "<tbody>";
@@ -538,7 +539,7 @@ public class quintanaroo_RecursosCircundantes extends AppCompatActivity {
 
             htmlToPDF = htmlToPDF +
                     "<tr>" +
-                    "<th>Ambulancias</th>";
+                    "<th>Ambulancia</th>";
             agregarColumna(vector[6], et5.getText().toString(), et6.getText().toString(),vector[7],vector[8]);
 
             htmlToPDF = htmlToPDF +
