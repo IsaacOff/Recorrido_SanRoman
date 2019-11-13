@@ -29,4 +29,5 @@ dependencies {
     implementation 'com.itextpdf:itextg:5.5.10'
     implementation 'com.itextpdf.tool:xmlworker:5.5.10'
     implementation 'com.github.barteksc:android-pdf-viewer:2.6.1'
+    implementation 'com.google.android.material:material:1.0.0'
 }

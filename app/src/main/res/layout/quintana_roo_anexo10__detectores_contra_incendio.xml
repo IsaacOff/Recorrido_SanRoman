@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".quintanaroo_anexo10_DetectoresContraIncendio"
+    android:stretchColumns="1">
+
+    <TableRow android:background="#128675">
+
+        <TextView
+            android:layout_column="0"
+            android:padding="3dip"
+            android:text="#NO."
+            android:textColor="@android:color/white" />
+
+
+
+
+    </TableRow>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Hospitales o clinicas  -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_width="87dp"
+                    android:layout_height="70dp"
+                    android:layout_column="0"
+                    android:background="#128675"
+                    android:padding="3dip"
+                    android:text="1"
+                    android:textColor="@android:color/white"
+                    android:textSize="48sp" />
+
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="221dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:padding="3dip">
+
+
+                </Spinner>
+
+            </TableRow>
+
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Area"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Energizado con:"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Colocado en:"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Ultima Revision:"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+
+
+
+            <!--- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+            <Button
+                android:id="@+id/button"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_width="30dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:onClick="OnClick"
+                android:text="Agregar"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="63dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:textSize="24sp" />
+
+
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="Guardar en pdf"
+                android:textSize="15sp">
+
+            </Button>
+
+
+        </TableLayout>
+
+    </ScrollView>
+
+</TableLayout>

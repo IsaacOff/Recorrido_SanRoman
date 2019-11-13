@@ -15,7 +15,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ViewPdf"></activity>
+        <activity android:name=".quintanaroo_anexo10_RecursosMateriales"></activity>
+        <activity android:name=".quintanaroo_anexo10_DetectoresContraIncendio" />
+        <activity android:name=".quintanaroo_anexo10_EquipoContraIncendio" />
+        <activity android:name=".quintanaroo_anexo10" />
+        <activity android:name=".ViewPdf" />
         <activity android:name=".carpetaempresa_tabasco" />
         <activity android:name=".carpetaempresa_campeche" />
         <activity android:name=".carpetaempresa_yucatan" />

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".quintanaroo_anexo10"
+    android:orientation="vertical"
+    android:padding="48dp">
+
+
+    <Button
+        android:id="@+id/button"
+        style="@android:style/Widget.Button.Inset"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:onClick="Equipo_Incendio"
+        android:text="Equipos contra incendios"
+        android:textSize="16sp">
+
+
+    </Button>
+
+
+    <Button
+        android:id="@+id/button2"
+        style="@android:style/Widget.Button.Inset"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:onClick="Detectores_Incendio"
+        android:text="Detectores contra incendios"
+        android:textSize="16sp">
+
+
+    </Button>
+
+    <Button
+        android:id="@+id/button3"
+        style="@android:style/Widget.Button.Inset"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:onClick="RecursosMateriales"
+        android:text="Inventario de recursos materiales"
+        android:textSize="16sp">
+
+
+    </Button>
+
+
+
+
+
+</LinearLayout>

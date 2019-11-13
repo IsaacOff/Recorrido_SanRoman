@@ -50,8 +50,6 @@
     <string name="tv38">Terminales Fluviales</string>
 
 
-
-
     <!--edit text libres del 40-49  -->
 
 
@@ -75,7 +73,6 @@
     <string name="tv66">El inmueble cuenta con :</string>
     <string name="tv67">Alrededor del inmueble se cuenta con :</string>
     <string name="tv68">El inmueble esta cerca de :</string>
-
 
 
 </resources>

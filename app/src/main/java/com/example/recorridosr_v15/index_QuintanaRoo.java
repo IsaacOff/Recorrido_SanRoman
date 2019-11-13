@@ -43,6 +43,14 @@ public class index_QuintanaRoo extends AppCompatActivity {
         startActivity(ext);
     }
 
+    public void Anexo10 (View view){
+        onClick(view, "Anexo10");
+        Intent ext = new Intent(this, quintanaroo_anexo10.class);
+        ext.putExtra("File", directorio.getPath());
+        startActivity(ext);
+    }
+
+
     public void onClick(View v, String nombre){
         directorio = new File(directorio2.getPath(),nombre);
         directorio.mkdir();
