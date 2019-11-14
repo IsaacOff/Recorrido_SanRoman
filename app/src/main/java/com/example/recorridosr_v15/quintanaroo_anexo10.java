@@ -8,8 +8,13 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 
+import java.io.File;
+
 
 public class quintanaroo_anexo10 extends AppCompatActivity {
+
+    static File directorio;
+    static File directorio2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,24 +22,37 @@ public class quintanaroo_anexo10 extends AppCompatActivity {
         setContentView(R.layout.quintana_roo_anexo10);
         this.setTitle("Anexo 10_ Quintana Roo");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        directorio2 = new File(getIntent().getStringExtra("File"));
     }
 
     public void Equipo_Incendio (View view){
-        Intent ext = new Intent(this, quintanaroo_anexo10_EquipoContraIncendio.class);
-        startActivity(ext);
+        onClick(view, "Equipo contra incendios");
+        Intent intent = new Intent(this, quintanaroo_anexo10_EquipoContraIncendio.class);
+        intent.putExtra("File", directorio.getPath());
+        startActivity(intent);
     }
 
 
     public void Detectores_Incendio (View view){
-        Intent ext = new Intent(this, quintanaroo_anexo10_DetectoresContraIncendio.class);
-        startActivity(ext);
+        onClick(view, "Dectectores de incendio");
+        Intent intent = new Intent(this, quintanaroo_anexo10_DetectoresContraIncendio.class);
+        intent.putExtra("File", directorio.getPath());
+        startActivity(intent);
     }
 
 
 
     public void RecursosMateriales (View view){
-        Intent ext = new Intent(this, quintanaroo_anexo10_RecursosMateriales.class);
-        startActivity(ext);
+        onClick(view, "Recursos materiales");
+        Intent intent = new Intent(this, quintanaroo_anexo10_RecursosMateriales.class);
+        intent.putExtra("File", directorio.getPath());
+        startActivity(intent);
+    }
+
+    public void onClick(View v, String nombre){
+        directorio = new File(directorio2.getPath(),nombre);
+        directorio.mkdir();
     }
 
 

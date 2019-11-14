@@ -43,7 +43,7 @@ public class quintanaroo_AnalisisRecurso extends AppCompatActivity {
 
         directorio2 = new File(getIntent().getStringExtra("File"));
         if(directorio2 != null) {
-            pdfFile = new File(directorio2.getPath(), "Reporte.pdf");
+            pdfFile = new File(directorio2.getPath(), "Analisis de recursos.pdf");
         }
 
         this.setTitle("Analisis de Recurso Quintana Roo");
@@ -191,7 +191,7 @@ public class quintanaroo_AnalisisRecurso extends AppCompatActivity {
 
     public void Reporte(View v){
         try {
-            Document document = new Document(PageSize.A4);
+            Document document = new Document(PageSize.LETTER);
             PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(pdfFile.getPath()));
 
             document.open();

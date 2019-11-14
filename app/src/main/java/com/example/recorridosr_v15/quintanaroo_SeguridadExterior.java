@@ -44,7 +44,7 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
 
         directorio2 = new File(getIntent().getStringExtra("File"));
         if(directorio2 != null) {
-            pdfFile = new File(directorio2.getPath(), "Reporte.pdf");
+            pdfFile = new File(directorio2.getPath(), "Seguridad exterior.pdf");
         }
 
         //asignar EditText a las variables de aqui
@@ -569,7 +569,7 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
 
     public void Reporte(View v){
         try {
-            Document document = new Document(PageSize.A4);
+            Document document = new Document(PageSize.LETTER);
             PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(pdfFile.getPath()));
 
             document.open();

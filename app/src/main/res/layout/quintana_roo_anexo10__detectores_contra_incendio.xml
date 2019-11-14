@@ -131,6 +131,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:text="Guardar en pdf"
+                android:onClick="OnClick2"
                 android:textSize="15sp">
 
             </Button>
