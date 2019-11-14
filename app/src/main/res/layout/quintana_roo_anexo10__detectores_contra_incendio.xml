@@ -95,9 +95,10 @@
                 android:layout_column="0"
                 android:ems="10"
                 android:hint="Ultima Revision:"
-                android:inputType="textPersonName">
+                android:inputType="date">
 
             </EditText>
+
 
 
 

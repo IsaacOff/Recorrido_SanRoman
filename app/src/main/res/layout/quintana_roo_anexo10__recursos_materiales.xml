@@ -1,9 +1,943 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".quintanaroo_anexo10_RecursosMateriales">
+    tools:context=".quintanaroo_anexo10_DetectoresContraIncendio"
+    android:stretchColumns="1">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TableRow android:background="#128675">
+
+        <TextView
+            android:layout_width="177dp"
+            android:layout_height="match_parent"
+            android:layout_column="0"
+            android:padding="3dip"
+            android:text="Recursos"
+            android:textColor="@android:color/white" />
+
+    </TableRow>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+        <!-- Botiquin  -->
+
+    <TableRow android:layout_height="122dp">
+
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="45dp"
+            android:layout_column="0"
+            android:padding="3dip"
+            android:text="Botiquin de primeros auxilios"
+            android:textColor="#000000" />
+
+        <RadioGroup
+            android:id="@+id/Rg1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Si" />
+
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="No" />
+        </RadioGroup>
+
+
+    </TableRow>
+
+    <TableRow android:layout_height="122dp">
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_column="1"
+            android:ems="10"
+            android:hint="Cantidad"
+            android:inputType="number" />
+    </TableRow>
+
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="254dp"
+            android:layout_height="56dp"
+            android:layout_column="0"
+            android:ems="10"
+            android:hint="Ubicacion:"
+            android:inputType="textPersonName"/>
+
+
+        <EditText
+                android:id="@+id/editText3"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones:"
+                android:inputType="textPersonName"/>
+
+
+
+
+
+
+          <!-- cascos -->
+
+
+            <TableRow android:layout_height="122dp">
+
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_column="0"
+                    android:padding="3dip"
+                    android:text="Cascos"
+                    android:textColor="#000000" />
+
+                <RadioGroup
+                    android:id="@+id/Rg2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Si" />
+
+                    <RadioButton
+                        android:id="@+id/rb4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="No" />
+                </RadioGroup>
+
+
+            </TableRow>
+
+            <TableRow android:layout_height="122dp">
+
+                <EditText
+                    android:id="@+id/editText4"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_column="1"
+                    android:ems="10"
+                    android:hint="Cantidad"
+                    android:inputType="number" />
+            </TableRow>
+
+
+            <EditText
+                android:id="@+id/editText5"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Ubicacion:"
+                android:inputType="textPersonName"/>
+
+
+            <EditText
+                android:id="@+id/editText6"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones:"
+                android:inputType="textPersonName"/>
+
+
+
+
+
+
+            <!-- chalecos -->
+
+
+            <TableRow android:layout_height="122dp">
+
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_column="0"
+                    android:padding="3dip"
+                    android:text="Chalecos"
+                    android:textColor="#000000" />
+
+                <RadioGroup
+                    android:id="@+id/Rg3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Si" />
+
+                    <RadioButton
+                        android:id="@+id/rb6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="No" />
+                </RadioGroup>
+
+
+            </TableRow>
+
+            <TableRow android:layout_height="122dp">
+
+                <EditText
+                    android:id="@+id/editText7"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_column="1"
+                    android:ems="10"
+                    android:hint="Cantidad"
+                    android:inputType="number" />
+            </TableRow>
+
+
+            <EditText
+                android:id="@+id/editText8"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Ubicacion:"
+                android:inputType="textPersonName"/>
+
+
+            <EditText
+                android:id="@+id/editText9"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones:"
+                android:inputType="textPersonName"/>
+
+
+
+
+
+            <!-- Brazaletes -->
+
+
+            <TableRow android:layout_height="122dp">
+
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_column="0"
+                    android:padding="3dip"
+                    android:text="Brazaletes"
+                    android:textColor="#000000" />
+
+                <RadioGroup
+                    android:id="@+id/Rg4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Si" />
+
+                    <RadioButton
+                        android:id="@+id/rb8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="No" />
+                </RadioGroup>
+
+
+            </TableRow>
+
+            <TableRow android:layout_height="122dp">
+
+                <EditText
+                    android:id="@+id/editText10"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_column="1"
+                    android:ems="10"
+                    android:hint="Cantidad"
+                    android:inputType="number" />
+            </TableRow>
+
+
+            <EditText
+                android:id="@+id/editText11"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Ubicacion:"
+                android:inputType="textPersonName"/>
+
+
+            <EditText
+                android:id="@+id/editText12"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones:"
+                android:inputType="textPersonName"/>
+
+
+
+
+
+
+
+            <!-- Botas -->
+
+
+            <TableRow android:layout_height="122dp">
+
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_column="0"
+                    android:padding="3dip"
+                    android:text="Botas"
+                    android:textColor="#000000" />
+
+                <RadioGroup
+                    android:id="@+id/Rg5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Si" />
+
+                    <RadioButton
+                        android:id="@+id/rb10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="No" />
+                </RadioGroup>
+
+
+            </TableRow>
+
+            <TableRow android:layout_height="122dp">
+
+                <EditText
+                    android:id="@+id/editText13"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_column="1"
+                    android:ems="10"
+                    android:hint="Cantidad"
+                    android:inputType="number" />
+            </TableRow>
+
+
+            <EditText
+                android:id="@+id/editText14"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Ubicacion:"
+                android:inputType="textPersonName"/>
+
+
+            <EditText
+                android:id="@+id/editText15"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones:"
+                android:inputType="textPersonName"/>
+
+
+
+
+
+
+            <!-- Banderillas -->
+
+
+            <TableRow android:layout_height="122dp">
+
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_column="0"
+                    android:padding="3dip"
+                    android:text="Banderillas"
+                    android:textColor="#000000" />
+
+                <RadioGroup
+                    android:id="@+id/Rg6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Si" />
+
+                    <RadioButton
+                        android:id="@+id/rb12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="No" />
+                </RadioGroup>
+
+
+            </TableRow>
+
+            <TableRow android:layout_height="122dp">
+
+                <EditText
+                    android:id="@+id/editText16"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_column="1"
+                    android:ems="10"
+                    android:hint="Cantidad"
+                    android:inputType="number" />
+            </TableRow>
+
+
+            <EditText
+                android:id="@+id/editText17"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Ubicacion:"
+                android:inputType="textPersonName"/>
+
+
+            <EditText
+                android:id="@+id/editText18"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones:"
+                android:inputType="textPersonName"/>
+
+
+
+
+            <!-- lamparas de emergencia -->
+
+
+            <TableRow android:layout_height="122dp">
+
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_column="0"
+                    android:padding="3dip"
+                    android:text="Lamparas de emergencia"
+                    android:textColor="#000000" />
+
+                <RadioGroup
+                    android:id="@+id/Rg7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Si" />
+
+                    <RadioButton
+                        android:id="@+id/rb14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="No" />
+                </RadioGroup>
+
+
+            </TableRow>
+
+            <TableRow android:layout_height="122dp">
+
+                <EditText
+                    android:id="@+id/editText19"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_column="1"
+                    android:ems="10"
+                    android:hint="Cantidad"
+                    android:inputType="number" />
+            </TableRow>
+
+
+            <EditText
+                android:id="@+id/editText20"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Ubicacion:"
+                android:inputType="textPersonName"/>
+
+
+            <EditText
+                android:id="@+id/editText21"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones:"
+                android:inputType="textPersonName"/>
+
+
+
+
+
+
+            <!-- Equipo de Zapa -->
+
+
+            <TableRow android:layout_height="122dp">
+
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_column="0"
+                    android:padding="3dip"
+                    android:text="Equipo de Zapa"
+                    android:textColor="#000000" />
+
+                <RadioGroup
+                    android:id="@+id/Rg8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Si" />
+
+                    <RadioButton
+                        android:id="@+id/rb16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="No" />
+                </RadioGroup>
+
+
+            </TableRow>
+
+            <TableRow android:layout_height="122dp">
+
+                <EditText
+                    android:id="@+id/editText22"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_column="1"
+                    android:ems="10"
+                    android:hint="Cantidad"
+                    android:inputType="number" />
+            </TableRow>
+
+
+            <EditText
+                android:id="@+id/editText23"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Ubicacion:"
+                android:inputType="textPersonName"/>
+
+
+            <EditText
+                android:id="@+id/editText24"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones:"
+                android:inputType="textPersonName"/>
+
+
+
+
+
+
+
+
+            <!-- Paro de emergencia -->
+
+
+            <TableRow android:layout_height="122dp">
+
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_column="0"
+                    android:padding="3dip"
+                    android:text="Paro de emergencia"
+                    android:textColor="#000000" />
+
+                <RadioGroup
+                    android:id="@+id/Rg9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Si" />
+
+                    <RadioButton
+                        android:id="@+id/rb18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="No" />
+                </RadioGroup>
+
+
+            </TableRow>
+
+            <TableRow android:layout_height="122dp">
+
+                <EditText
+                    android:id="@+id/editText25"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_column="1"
+                    android:ems="10"
+                    android:hint="Cantidad"
+                    android:inputType="number" />
+            </TableRow>
+
+
+            <EditText
+                android:id="@+id/editText26"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Ubicacion:"
+                android:inputType="textPersonName"/>
+
+
+            <EditText
+                android:id="@+id/editText27"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones:"
+                android:inputType="textPersonName"/>
+
+
+
+
+
+            <!-- hidrantes -->
+
+
+            <TableRow android:layout_height="122dp">
+
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_column="0"
+                    android:padding="3dip"
+                    android:text="Hidrantes"
+                    android:textColor="#000000" />
+
+                <RadioGroup
+                    android:id="@+id/Rg10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Si" />
+
+                    <RadioButton
+                        android:id="@+id/rb20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="No" />
+                </RadioGroup>
+
+
+            </TableRow>
+
+            <TableRow android:layout_height="122dp">
+
+                <EditText
+                    android:id="@+id/editText28"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_column="1"
+                    android:ems="10"
+                    android:hint="Cantidad"
+                    android:inputType="number" />
+            </TableRow>
+
+
+            <EditText
+                android:id="@+id/editText29"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Ubicacion:"
+                android:inputType="textPersonName"/>
+
+
+            <EditText
+                android:id="@+id/editText30"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones:"
+                android:inputType="textPersonName"/>
+
+
+
+
+
+            <!-- Alarma de emergencia -->
+
+            <TableRow android:layout_height="122dp">
+
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_column="0"
+                    android:padding="3dip"
+                    android:text="Alarma de emergencia"
+                    android:textColor="#000000" />
+
+                <RadioGroup
+                    android:id="@+id/Rg11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Si" />
+
+                    <RadioButton
+                        android:id="@+id/rb22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="No" />
+                </RadioGroup>
+
+
+            </TableRow>
+
+            <TableRow android:layout_height="122dp">
+
+                <EditText
+                    android:id="@+id/editText31"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_column="1"
+                    android:ems="10"
+                    android:hint="Cantidad"
+                    android:inputType="number" />
+            </TableRow>
+
+
+            <EditText
+                android:id="@+id/editText32"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Ubicacion:"
+                android:inputType="textPersonName"/>
+
+
+            <EditText
+                android:id="@+id/editText33"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones:"
+                android:inputType="textPersonName"/>
+
+
+
+
+
+
+            <!-- Alarma de emergencia -->
+
+            <TableRow android:layout_height="122dp">
+
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_column="0"
+                    android:padding="3dip"
+                    android:text="Megafono"
+                    android:textColor="#000000" />
+
+                <RadioGroup
+                    android:id="@+id/Rg12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Si" />
+
+                    <RadioButton
+                        android:id="@+id/rb24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="No" />
+                </RadioGroup>
+
+
+            </TableRow>
+
+            <TableRow android:layout_height="122dp">
+
+                <EditText
+                    android:id="@+id/editText34"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_column="1"
+                    android:ems="10"
+                    android:hint="Cantidad"
+                    android:inputType="number" />
+            </TableRow>
+
+
+            <EditText
+                android:id="@+id/editText35"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Ubicacion:"
+                android:inputType="textPersonName"/>
+
+
+            <EditText
+                android:id="@+id/editText36"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones:"
+                android:inputType="textPersonName"/>
+
+
+
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="Guardar en pdf"
+                android:onClick="OnClick"
+                android:textSize="15sp">
+
+            </Button>
+
+
+
+
+
+        </TableLayout>
+
+    </ScrollView>
+
+</TableLayout>
