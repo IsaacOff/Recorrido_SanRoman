@@ -254,7 +254,7 @@ public class quintanaroo_anexo10_DetectoresContraIncendio extends AppCompatActiv
                     "<td>"+revision+"</td>" +
                     "</tr>";
         }else{
-            htmlToPDF=htmlToPDF +
+            extintores=extintores +
                     "<tr>" +
                     "<td>"+numero+"</td>"+
                     "<td></td>" +

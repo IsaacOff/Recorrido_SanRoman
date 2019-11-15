@@ -2,6 +2,7 @@ package com.example.recorridosr_v15;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +10,17 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.PageSize;
+import com.itextpdf.text.pdf.PdfWriter;
+import com.itextpdf.tool.xml.XMLWorkerHelper;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.StringReader;
 
 import static android.widget.Toast.LENGTH_SHORT;
 
@@ -19,12 +31,20 @@ public class quintanaroo_anexo10_RecursosMateriales extends AppCompatActivity {
     private EditText  et1, et2,  et3,  et4,  et5,  et6,  et7,  et8,  et9, et10, et11, et12, et13, et14, et15, et16, et17, et18, et19, et20;
     private EditText et21,et22, et23, et24, et25, et26, et27, et28, et29, et30, et31, et32, et33, et34, et35, et36;
     String vector[][] = new String[12][4];
+    static File pdfFile;
+    static String htmlToPDF;
+    static File directorio2;
+    String titulos []={"Botiquin", "Cascos", "Chalecos", "Brazaletes", "Botas", "Banderillas", "Lamparas de emergencia", "Equipo de zapa", "Paro de emergencia", "Hidrantes", "Alarma de emergencia", "Megafono"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quintana_roo_anexo10__recursos_materiales);
 
+        directorio2 = new File(getIntent().getStringExtra("File"));
+        if(directorio2 != null) {
+            pdfFile = new File(directorio2.getPath(), "Recursos materiales.pdf");
+        }
 
         this.setTitle("Inventario de recursos materiales");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -724,7 +744,7 @@ public class quintanaroo_anexo10_RecursosMateriales extends AppCompatActivity {
             vector[11] [3]  = et36.getText().toString();
 
 
-            Toast.makeText(this, "Agregado con exito", LENGTH_SHORT).show();
+            Reporte(view);
 
         }else{
             Toast.makeText(this, "REVISA LOS DATOS", LENGTH_SHORT).show();
@@ -735,8 +755,82 @@ public class quintanaroo_anexo10_RecursosMateriales extends AppCompatActivity {
     }
 
 
+    public void Reporte(View v){
+        try {
+            Document document = new Document(PageSize.LETTER.rotate());
+            PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(pdfFile.getPath()));
+
+            document.open();
+            XMLWorkerHelper worker = XMLWorkerHelper.getInstance();
+            //String htmlToPDF="<html><head></head><body><h1>Hola que tal</h1><p>Shalalala que pazo</p></body></html>";
+            htmlToPDF="<html>" +
+                    "<head>" +
+                    "<title>Recursos materiales</title>" +
+                    "</head>" +
+                    "<body>" +
+                    "Recursos materiales"+
+                    "<TABLE border=\"1\" WIDTH=\"100%\" style=\"text-align:center;\">" +
+        /*"<colgroup>" +
+        "<col style=\"width: 20%\"/>" +
+        "<col style=\"width: 40%\"/>" +
+        "<col style=\"width: 40%\"/>" +
+        "</colgroup>" +*/
+                    "<thead>" +
+                    "<tr>" +
+                    "<th colspan=\"4\">Inventario de recursos materiales</th>" +
+                    "</tr>" +
+                    "<tr>" +
+                    "<th WIDTH=\"45%\">Equipo</th>" +
+                    "<th WIDTH=\"17%\">Cantidad</th>" +
+                    "<th WIDTH=\"18%\">Ubicación</th>" +
+                    "<th WIDTH=\"20%\">Observaciones</th>" +
+                    "</tr>" +
+                    "</thead>" +
+                    "<tbody>" ;
+
+                    for(int x=0; x<12;x++) {
+                        if (vector[x][0].equals("SI")) {
+                            agregarRenglon(titulos[x], vector[x][1], vector[x][2], vector[x][3]);
+                        }else{
+                            agregarRenglon(titulos[x], "0", "", "");
+                        }
+                    }
 
 
+            /*htmlToPDF = htmlToPDF +
+                    "<tr>" +
+                    "<th>Otros, especificar:</th>";
+            agregarColumna(vector[38], et39.getText().toString());
+            */
+
+            htmlToPDF= htmlToPDF +"</tbody>" + "</table>" + "</body>" + "</html>";
+
+            worker.parseXHtml(pdfWriter, document, new StringReader(htmlToPDF));
+
+            document.close();
+
+            Intent intent = new Intent(this, com.example.recorridosr_v15.ViewPdf.class);
+            intent.putExtra("File", pdfFile.getPath());
+            startActivity(intent);
+
+        } catch (IOException e) {
+            Toast.makeText(this,"NO SE PUDO GENERAR EL DOCUMENTO", Toast.LENGTH_LONG).show();
+            e.printStackTrace();
+        } catch (DocumentException e) {
+            Toast.makeText(this,"NO SE PUDO GENERAR EL DOCUMENTO", Toast.LENGTH_LONG).show();
+            e.printStackTrace();
+        }
+    }
+
+    static void agregarRenglon(String recurso, String cantidad, String ubicacion, String observaciones){
+            htmlToPDF=htmlToPDF +
+                    "<tr>" +
+                    "<td>"+recurso+"</td>"+
+                    "<td>"+cantidad+"</td>" +
+                    "<td>"+ubicacion+"</td>" +
+                    "<td>"+observaciones+"</td>" +
+                    "</tr>";
+    }
 
 
 }
