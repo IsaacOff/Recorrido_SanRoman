@@ -68,6 +68,12 @@ public class quintanaroo_anexo10_DetectoresContraIncendio extends AppCompatActiv
 
     }
 
+
+
+
+
+
+
     public void OnClick2 (View view){
         if(numero > 1){
             Reporte(view);
@@ -129,10 +135,6 @@ public class quintanaroo_anexo10_DetectoresContraIncendio extends AppCompatActiv
 
 
 
-        vector[1]   = et1.getText().toString();
-        vector[2]   = et2.getText().toString();
-        vector[3]   = et3.getText().toString();
-        vector[4]   = et4.getText().toString();
     }
 
     public void Reporte(View v){

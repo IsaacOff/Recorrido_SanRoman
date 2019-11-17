@@ -1,9 +1,410 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".quintanaroo_anexo10_EquipoContraIncendio">
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".quintanaroo_anexo10_EquipoContraIncendio"
+android:stretchColumns="1">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<TableRow android:background="#128675">
+
+    <TextView
+        android:layout_column="0"
+        android:padding="3dip"
+        android:text="#NO DE EXTINTOR"
+        android:textColor="@android:color/white" />
+
+
+
+
+</TableRow>
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Contador  -->
+        <TableRow android:layout_width="95dp">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_column="0"
+                android:background="#128675"
+                android:padding="3dip"
+                android:text="1"
+                android:textColor="@android:color/white"
+                android:textSize="48sp" />
+
+
+        </TableRow>
+
+
+
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:layout_column="1"
+                android:padding="3dip">
+
+            </Spinner>
+
+
+
+
+
+
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="254dp"
+            android:layout_height="56dp"
+            android:layout_column="0"
+            android:ems="10"
+            android:hint="Tipo de extintor"
+            android:inputType="textPersonName">
+
+        </EditText>
+
+
+
+
+
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_column="1"
+                android:padding="3dip">
+
+            </Spinner>
+
+
+
+
+
+
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="504dp"
+            android:layout_height="56dp"
+            android:layout_column="0"
+            android:ems="10"
+            android:hint="Capacidad en kg"
+            android:inputType="textPersonName">
+
+        </EditText>
+
+
+
+
+        <!-- P. hidros -->
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="P. hidros"
+                android:textColor="#000000" />
+
+            <RadioGroup
+                android:id="@+id/Rg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="Si" />
+
+                <RadioButton
+                    android:id="@+id/rb2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="No" />
+            </RadioGroup>
+
+
+        </TableRow>
+
+
+
+        <!-- valvula -->
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Valvula"
+                android:textColor="#000000" />
+
+            <RadioGroup
+                android:id="@+id/Rg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="Si" />
+
+                <RadioButton
+                    android:id="@+id/rb4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="No" />
+            </RadioGroup>
+
+
+        </TableRow>
+
+
+
+
+        <!-- Presion -->
+
+
+            <Spinner
+                android:id="@+id/spinner3"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_column="1"
+                android:padding="3dip">
+
+            </Spinner>
+
+
+
+
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="254dp"
+            android:layout_height="56dp"
+            android:layout_column="0"
+            android:ems="10"
+            android:hint="Presion"
+            android:inputType="textPersonName">
+
+        </EditText>
+
+
+
+
+
+        <!-- Valvula -->
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Valvula"
+                android:textColor="#000000" />
+
+            <RadioGroup
+                android:id="@+id/Rg3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="Si" />
+
+                <RadioButton
+                    android:id="@+id/rb6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="No" />
+            </RadioGroup>
+
+
+        </TableRow>
+
+
+
+        <!-- Boquilla -->
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Boquilla"
+                android:textColor="#000000" />
+
+            <RadioGroup
+                android:id="@+id/Rg4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="Si" />
+
+                <RadioButton
+                    android:id="@+id/rb8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="No" />
+            </RadioGroup>
+
+
+        </TableRow>
+
+
+
+
+        <!-- Etiqueta de Inspeccion -->
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="48dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Etiqueta de inspeciones"
+                android:textColor="#000000" />
+
+            <RadioGroup
+                android:id="@+id/Rg5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="Si" />
+
+                <RadioButton
+                    android:id="@+id/rb10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="No" />
+            </RadioGroup>
+
+
+        </TableRow>
+
+
+
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="254dp"
+            android:layout_height="56dp"
+            android:layout_column="0"
+            android:ems="10"
+            android:hint="Ubicacion"
+            android:inputType="textPersonName">
+
+        </EditText>
+
+
+
+        <EditText
+            android:id="@+id/editText5"
+            android:layout_width="254dp"
+            android:layout_height="56dp"
+            android:layout_column="0"
+            android:ems="10"
+            android:hint="Fecha de recarga"
+            android:inputType="date">
+
+        </EditText>
+
+
+
+
+
+
+
+
+
+
+        <!--- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+        <Button
+            android:id="@+id/button"
+            style="@android:style/Widget.Button.Inset"
+            android:layout_width="30dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            android:onClick="agregar"
+            android:text="Agregar"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="63dp"
+            android:layout_column="0"
+            android:padding="3dip"
+            android:textSize="24sp" />
+
+
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+
+            android:text="Guardar en pdf"
+            android:textSize="15sp">
+
+        </Button>
+
+
+    </TableLayout>
+
+</ScrollView>
+
+</TableLayout>
