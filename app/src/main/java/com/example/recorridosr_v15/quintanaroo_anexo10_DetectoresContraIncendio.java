@@ -30,10 +30,10 @@ public class quintanaroo_anexo10_DetectoresContraIncendio extends AppCompatActiv
     private int numero =1;
     String vector[] =new String[5];
     private EditText  et1, et2,  et3,  et4;
-    static File pdfFile;
-    static String htmlToPDF;
-    static File directorio2;
-    static String extintores;
+    private File pdfFile;
+    private String htmlToPDF;
+    private File directorio2;
+    private String detectores;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,7 +116,7 @@ public class quintanaroo_anexo10_DetectoresContraIncendio extends AppCompatActiv
             vector[3]   = et3.getText().toString();
             vector[4]   = et4.getText().toString();
 
-            agregarExtintor(numero, vector[0],vector[1],vector[2],vector[3],vector[4]);
+            agregarDetector(numero, vector[0],vector[1],vector[2],vector[3],vector[4]);
 
             numero++;
             TV1.setText(Integer.toString(numero));
@@ -174,7 +174,7 @@ public class quintanaroo_anexo10_DetectoresContraIncendio extends AppCompatActiv
                     "</tr>" +
                     "</thead>" +
                     "<tbody>" +
-                    extintores;
+                    detectores;
 
 
             /*htmlToPDF = htmlToPDF +
@@ -202,9 +202,9 @@ public class quintanaroo_anexo10_DetectoresContraIncendio extends AppCompatActiv
         }
     }
 
-    static void agregarExtintor(int numero, String tipo, String area, String energizado, String colocado, String revision){
+    void agregarDetector(int numero, String tipo, String area, String energizado, String colocado, String revision){
         if(tipo.equals("HUMO")){
-            extintores=extintores +
+            detectores = detectores +
                     "<tr>" +
                     "<td>"+numero+"</td>"+
                     "<td>X</td>" +
@@ -217,7 +217,7 @@ public class quintanaroo_anexo10_DetectoresContraIncendio extends AppCompatActiv
                     "<td>"+revision+"</td>" +
                     "</tr>";
         }else if (tipo.equals("FUEGO")){
-            extintores=extintores +
+            detectores = detectores +
                     "<tr>" +
                     "<td>"+numero+"</td>"+
                     "<td></td>" +
@@ -230,7 +230,7 @@ public class quintanaroo_anexo10_DetectoresContraIncendio extends AppCompatActiv
                     "<td>"+revision+"</td>" +
                     "</tr>";
         }else if (tipo.equals("GAS")){
-            extintores=extintores +
+            detectores = detectores +
                     "<tr>" +
                     "<td>"+numero+"</td>"+
                     "<td></td>" +
@@ -243,7 +243,7 @@ public class quintanaroo_anexo10_DetectoresContraIncendio extends AppCompatActiv
                     "<td>"+revision+"</td>" +
                     "</tr>";
         }else if (tipo.equals("SENSORES DE HUMO")){
-            extintores=extintores +
+            detectores = detectores +
                     "<tr>" +
                     "<td>"+numero+"</td>"+
                     "<td></td>" +
@@ -256,7 +256,7 @@ public class quintanaroo_anexo10_DetectoresContraIncendio extends AppCompatActiv
                     "<td>"+revision+"</td>" +
                     "</tr>";
         }else{
-            extintores=extintores +
+            detectores = detectores +
                     "<tr>" +
                     "<td>"+numero+"</td>"+
                     "<td></td>" +

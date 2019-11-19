@@ -2,6 +2,7 @@ package com.example.recorridosr_v15;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -15,6 +16,17 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.PageSize;
+import com.itextpdf.text.pdf.PdfWriter;
+import com.itextpdf.tool.xml.XMLWorkerHelper;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.StringReader;
+
 import static android.widget.Toast.LENGTH_SHORT;
 
 public class quintanaroo_anexo10_EquipoContraIncendio extends AppCompatActivity {
@@ -25,8 +37,12 @@ private EditText et1, et2, et3, et4, et5;
     private RadioGroup rg1, rg2, rg3, rg4,rg5;
     private TextView tv1;
     private String sel;
-private int numero =1;
+    private int numero =1;
 String vector[] =new String[13];
+    private File pdfFile;
+    private String htmlToPDF;
+    private String detectores;
+    private File directorio2;
 
 
 
@@ -35,6 +51,10 @@ String vector[] =new String[13];
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quintana_roo_anexo10__equipo_contra_incendio);
 
+        directorio2 = new File(getIntent().getStringExtra("File"));
+        if(directorio2 != null) {
+            pdfFile = new File(directorio2.getPath(), "Equipo contra incendio.pdf");
+        }
 
         tv1 = (TextView) findViewById(R.id.tv1);
 
@@ -218,9 +238,9 @@ String vector[] =new String[13];
         });
     }
 
-
-
-
+    public void onClick(View view){
+        Reporte(view);
+    }
 
     public void agregar(View view) {
         Boolean bandera= true;
@@ -300,10 +320,116 @@ String vector[] =new String[13];
             rg4.clearCheck();
             rg5.clearCheck();
 
+            agregarExtintor(vector);
 
             Toast.makeText(this, "Agregado con exito", LENGTH_SHORT).show();
         }else{
             Toast.makeText(this, "REVISA LOS DATOS", LENGTH_SHORT).show();
         }
     }
+
+    public void Reporte(View v){
+        try {
+            Document document = new Document(PageSize.LETTER.rotate());
+            PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(pdfFile.getPath()));
+
+            document.open();
+            XMLWorkerHelper worker = XMLWorkerHelper.getInstance();
+            //String htmlToPDF="<html><head></head><body><h1>Hola que tal</h1><p>Shalalala que pazo</p></body></html>";
+            htmlToPDF="<html>" +
+                    "<head>" +
+                    "<title>Equipo contra incendio</title>" +
+                    "</head>" +
+                    "<body>" +
+                    "Recursos materiales"+
+                    "<TABLE border=\"1\" WIDTH=\"100%\" style=\"text-align:center;\">" +
+        /*"<colgroup>" +
+        "<col style=\"width: 20%\"/>" +
+        "<col style=\"width: 40%\"/>" +
+        "<col style=\"width: 40%\"/>" +
+        "</colgroup>" +*/
+                    "<thead>" +
+                    "<tr>" +
+                    "<th colspan=\"4\">Equipo contra incendios</th>" +
+                    "</tr>" +
+                    "<tr>" +
+                    "<th WIDTH=\"4%\">No.</th>" +
+                    "<th WIDTH=\"8%\">Tipo</th>" +
+                    "<th WIDTH=\"8%\">Cap. KG</th>" +
+                    "<th WIDTH=\"9%\">P. Hidros</th>" +
+                    "<th WIDTH=\"7%\">Valvula</th>" +
+                    "<th WIDTH=\"7%\">Presion</th>" +
+                    "<th WIDTH=\"10%\">Manometro</th>" +
+                    "<th WIDTH=\"8%\">Boquilla</th>" +
+                    "<th WIDTH=\"9%\">Etiqueta de inspec.</th>" +
+                    "<th WIDTH=\"15%\">Ubicación</th>" +
+                    "<th WIDTH=\"15%\">Fecha de recarga</th>" +
+                    "</tr>" +
+                    "</thead>" +
+                    "<tbody>" +
+                    detectores;
+
+
+            /*htmlToPDF = htmlToPDF +
+                    "<tr>" +
+                    "<th>Otros, especificar:</th>";
+            agregarColumna(vector[38], et39.getText().toString());
+            */
+
+            htmlToPDF= htmlToPDF +"</tbody>" + "</table>" + "</body>" + "</html>";
+
+            worker.parseXHtml(pdfWriter, document, new StringReader(htmlToPDF));
+
+            document.close();
+
+            Intent intent = new Intent(this, com.example.recorridosr_v15.ViewPdf.class);
+            intent.putExtra("File", pdfFile.getPath());
+            startActivity(intent);
+
+        } catch (IOException e) {
+            Toast.makeText(this,"NO SE PUDO GENERAR EL DOCUMENTO", Toast.LENGTH_LONG).show();
+            e.printStackTrace();
+        } catch (DocumentException e) {
+            Toast.makeText(this,"NO SE PUDO GENERAR EL DOCUMENTO", Toast.LENGTH_LONG).show();
+            e.printStackTrace();
+        }
+    }
+
+    void agregarExtintor(String[] vector){
+        String tipo, capacidad, presion;
+
+        if (vector[0].equals("OTROS")){
+            tipo = vector[1];
+        }else{
+            tipo = vector[0];
+        }
+
+        if (vector[2].equals("OTROS")){
+            capacidad = vector[3];
+        }else{
+            capacidad = vector[2];
+        }
+
+        if (vector[6].equals("OTROS")){
+            presion = vector[7];
+        }else{
+            presion = vector[6];
+        }
+
+        detectores=detectores +
+                "<tr>" +
+                "<td>"+ (numero-1) +"</td>"+
+                "<td>"+tipo+"</td>" +
+                "<td>"+capacidad+"</td>" +
+                "<td>"+vector[4]+"</td>" +
+                "<td>"+vector[5]+"</td>" +
+                "<td>"+presion+"</td>" +
+                "<td>"+vector[8]+"</td>" +
+                "<td>"+vector[9]+"</td>" +
+                "<td>"+vector[10]+"</td>" +
+                "<td>"+vector[11]+"</td>" +
+                "<td>"+vector[12]+"</td>" +
+                "</tr>";
+    }
+
 }

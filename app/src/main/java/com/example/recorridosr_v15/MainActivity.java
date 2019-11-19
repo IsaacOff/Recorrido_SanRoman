@@ -25,21 +25,21 @@ public class MainActivity extends AppCompatActivity {
     //metodos para inicializar los index de cada estado
     public void campeche (View view){
         onClick(view, "Campeche");
-        Intent ext = new Intent(this, index_Campeche.class);
+        Intent ext = new Intent(this, carpetaempresa_campeche.class);
         ext.putExtra("File", directorio.getPath());
         startActivity(ext);
     }
 
     public void yucatan (View view){
         onClick(view, "Yucatan");
-        Intent ext = new Intent(this, index_Yucatan.class);
+        Intent ext = new Intent(this, carpetaempresa_yucatan.class);
         ext.putExtra("File", directorio.getPath());
         startActivity(ext);
     }
 
     public void tabasco (View view){
         onClick(view, "Tabasco");
-        Intent ext = new Intent(this, index_Tabasco.class);
+        Intent ext = new Intent(this, carpetaempresa_tabasco.class);
         ext.putExtra("File", directorio.getPath());
         startActivity(ext);
     }

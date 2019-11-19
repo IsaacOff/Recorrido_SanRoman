@@ -396,7 +396,7 @@ android:stretchColumns="1">
             android:id="@+id/button1"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-
+            android:onClick="onClick"
             android:text="Guardar en pdf"
             android:textSize="15sp">
 

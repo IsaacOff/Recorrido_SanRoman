@@ -30,11 +30,11 @@ public class quintanaroo_anexo10_RecursosMateriales extends AppCompatActivity {
     private RadioGroup rg1, rg2, rg3, rg4,rg5,rg6,rg7,rg8,rg9,rg10,rg11,rg12;
     private EditText  et1, et2,  et3,  et4,  et5,  et6,  et7,  et8,  et9, et10, et11, et12, et13, et14, et15, et16, et17, et18, et19, et20;
     private EditText et21,et22, et23, et24, et25, et26, et27, et28, et29, et30, et31, et32, et33, et34, et35, et36;
-    String vector[][] = new String[12][4];
-    static File pdfFile;
-    static String htmlToPDF;
-    static File directorio2;
-    String titulos []={"Botiquin", "Cascos", "Chalecos", "Brazaletes", "Botas", "Banderillas", "Lamparas de emergencia", "Equipo de zapa", "Paro de emergencia", "Hidrantes", "Alarma de emergencia", "Megafono"};
+    private String vector[][] = new String[12][4];
+    private File pdfFile;
+    private String htmlToPDF;
+    private File directorio2;
+    private String titulos []={"Botiquin", "Cascos", "Chalecos", "Brazaletes", "Botas", "Banderillas", "Lamparas de emergencia", "Equipo de zapa", "Paro de emergencia", "Hidrantes", "Alarma de emergencia", "Megafono"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -822,7 +822,7 @@ public class quintanaroo_anexo10_RecursosMateriales extends AppCompatActivity {
         }
     }
 
-    static void agregarRenglon(String recurso, String cantidad, String ubicacion, String observaciones){
+    void agregarRenglon(String recurso, String cantidad, String ubicacion, String observaciones){
             htmlToPDF=htmlToPDF +
                     "<tr>" +
                     "<td>"+recurso+"</td>"+

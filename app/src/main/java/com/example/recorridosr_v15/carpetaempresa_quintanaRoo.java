@@ -17,12 +17,12 @@ public class carpetaempresa_quintanaRoo extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        directorio2 = new File(getIntent().getStringExtra("File"));
         super.onCreate(savedInstanceState);
         setContentView(R.layout.carpetaempresa_quintana_roo);
         this.setTitle(R.string.titulo2);
         //Pantalla en vertical
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        directorio2 = new File(getIntent().getStringExtra("File"));
         et1  = (EditText) findViewById(R.id.editText);
     }
 

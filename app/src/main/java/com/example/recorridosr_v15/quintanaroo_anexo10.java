@@ -20,7 +20,7 @@ public class quintanaroo_anexo10 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quintana_roo_anexo10);
-        this.setTitle("Anexo 10_ Quintana Roo");
+        this.setTitle("Anexo 10");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         directorio2 = new File(getIntent().getStringExtra("File"));
