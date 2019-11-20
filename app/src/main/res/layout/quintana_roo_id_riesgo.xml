@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+tools:context=".quintanaroo_id_riesgo"
+android:orientation="vertical"
+android:padding="48dp">
+
+
+    <Button
+        android:id="@+id/button"
+        style="@android:style/Widget.Button.Inset"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:onClick="Riesgos_interno_quintana"
+        android:text="RIESGO INTERNO"
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/button2"
+        style="@android:style/Widget.Button.Inset"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:onClick="Riesgos_externo_quintana"
+        android:text="RIESGO EXTERNO"
+        android:textSize="16dp" />
+
+
+</LinearLayout>

@@ -51,6 +51,13 @@ public class index_QuintanaRoo extends AppCompatActivity {
     }
 
 
+
+    public void Id_Riesgo (View view){
+        Intent ext = new Intent(this, quintanaroo_id_riesgo.class);
+        startActivity(ext);
+    }
+
+
     public void onClick(View v, String nombre){
         directorio = new File(directorio2.getPath(),nombre);
         directorio.mkdir();

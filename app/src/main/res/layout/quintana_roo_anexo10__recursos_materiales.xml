@@ -14,7 +14,7 @@
             android:layout_height="match_parent"
             android:layout_column="0"
             android:padding="3dip"
-            android:text="Recursos"
+            android:text="Recursos o Materiales"
             android:textColor="@android:color/white" />
 
     </TableRow>
@@ -95,7 +95,7 @@
                 android:layout_height="56dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Observaciones:"
+                android:hint="Observaciones o Estado de conservacion:"
                 android:inputType="textPersonName"/>
 
 
@@ -170,7 +170,7 @@
                 android:layout_height="56dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Observaciones:"
+                android:hint="Observaciones o Estado de conservacion:"
                 android:inputType="textPersonName"/>
 
 
@@ -245,7 +245,7 @@
                 android:layout_height="56dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Observaciones:"
+                android:hint="Observaciones o Estado de conservacion:"
                 android:inputType="textPersonName"/>
 
 
@@ -319,7 +319,7 @@
                 android:layout_height="56dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Observaciones:"
+                android:hint="Observaciones o Estado de conservacion:"
                 android:inputType="textPersonName"/>
 
 
@@ -395,7 +395,7 @@
                 android:layout_height="56dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Observaciones:"
+                android:hint="Observaciones o Estado de conservacion:"
                 android:inputType="textPersonName"/>
 
 
@@ -470,7 +470,7 @@
                 android:layout_height="56dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Observaciones:"
+                android:hint="Observaciones o Estado de conservacion:"
                 android:inputType="textPersonName"/>
 
 
@@ -543,7 +543,7 @@
                 android:layout_height="56dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Observaciones:"
+                android:hint="Observaciones o Estado de conservacion:"
                 android:inputType="textPersonName"/>
 
 
@@ -618,7 +618,7 @@
                 android:layout_height="56dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Observaciones:"
+                android:hint="Observaciones o Estado de conservacion:"
                 android:inputType="textPersonName"/>
 
 
@@ -695,7 +695,7 @@
                 android:layout_height="56dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Observaciones:"
+                android:hint="Observaciones o  Estado de conservacion:"
                 android:inputType="textPersonName"/>
 
 
@@ -769,7 +769,7 @@
                 android:layout_height="56dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Observaciones:"
+                android:hint="Observaciones o Estado de conservacion:"
                 android:inputType="textPersonName"/>
 
 
@@ -842,7 +842,7 @@
                 android:layout_height="56dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Observaciones:"
+                android:hint="Observaciones o Estado de conservacion:"
                 android:inputType="textPersonName"/>
 
 
@@ -916,8 +916,594 @@
                 android:layout_height="56dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Observaciones:"
+                android:hint="Observaciones o Estado de conservacion:"
                 android:inputType="textPersonName"/>
+
+
+
+
+
+
+
+            <!-- Extintores -->
+
+            <TableRow android:layout_height="122dp">
+
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_column="0"
+                    android:padding="3dip"
+                    android:text="Extintores"
+                    android:textColor="#000000" />
+
+                <RadioGroup
+                    android:id="@+id/Rg13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Si" />
+
+                    <RadioButton
+                        android:id="@+id/rb26"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="No" />
+                </RadioGroup>
+
+
+            </TableRow>
+
+            <TableRow android:layout_height="122dp">
+
+                <EditText
+                    android:id="@+id/editText37"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_column="1"
+                    android:ems="10"
+                    android:hint="Cantidad"
+                    android:inputType="number" />
+            </TableRow>
+
+
+            <EditText
+                android:id="@+id/editText38"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Ubicacion:"
+                android:inputType="textPersonName"/>
+
+
+            <EditText
+                android:id="@+id/editText39"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones o Estado de conservacion:"
+                android:inputType="textPersonName"/>
+
+
+
+
+
+            <!-- Camillas -->
+
+            <TableRow android:layout_height="122dp">
+
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_column="0"
+                    android:padding="3dip"
+                    android:text="Camillas"
+                    android:textColor="#000000" />
+
+                <RadioGroup
+                    android:id="@+id/Rg14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb27"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Si" />
+
+                    <RadioButton
+                        android:id="@+id/rb28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="No" />
+                </RadioGroup>
+
+
+            </TableRow>
+
+            <TableRow android:layout_height="122dp">
+
+                <EditText
+                    android:id="@+id/editText40"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_column="1"
+                    android:ems="10"
+                    android:hint="Cantidad"
+                    android:inputType="number" />
+            </TableRow>
+
+
+            <EditText
+                android:id="@+id/editText41"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Ubicacion:"
+                android:inputType="textPersonName"/>
+
+
+            <EditText
+                android:id="@+id/editText42"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones o Estado de conservacion:"
+                android:inputType="textPersonName"/>
+
+
+
+
+
+
+
+            <!-- Otros 1 -->
+
+            <TableRow android:layout_height="122dp">
+
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_column="0"
+                    android:padding="3dip"
+                    android:text="Otros 1"
+                    android:textColor="#000000" />
+
+                <RadioGroup
+                    android:id="@+id/Rg15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb29"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Si" />
+
+                    <RadioButton
+                        android:id="@+id/rb30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="No" />
+                </RadioGroup>
+
+
+
+            </TableRow>
+
+
+
+            <EditText
+                android:id="@+id/editText43"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="ingresa el nombre del Recurso o Material:"
+                android:inputType="textPersonName"/>
+
+
+            <TableRow android:layout_height="122dp">
+
+                <EditText
+                    android:id="@+id/editText44"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_column="0"
+                    android:ems="10"
+                    android:hint="Cantidad"
+                    android:inputType="number" />
+            </TableRow>
+
+
+            <EditText
+                android:id="@+id/editText45"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Ubicacion:"
+                android:inputType="textPersonName"/>
+
+
+            <EditText
+                android:id="@+id/editText46"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones o Estado de conservacion:"
+                android:inputType="textPersonName"/>
+
+
+
+
+
+
+
+
+
+            <!-- Otros 2 -->
+
+            <TableRow android:layout_height="122dp">
+
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_column="0"
+                    android:padding="3dip"
+                    android:text="Otros 2"
+                    android:textColor="#000000" />
+
+                <RadioGroup
+                    android:id="@+id/Rg16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Si" />
+
+                    <RadioButton
+                        android:id="@+id/rb32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="No" />
+                </RadioGroup>
+
+
+
+            </TableRow>
+
+
+
+            <EditText
+                android:id="@+id/editText47"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="ingresa el nombre del Recurso o Material:"
+                android:inputType="textPersonName"/>
+
+
+            <TableRow android:layout_height="122dp">
+
+                <EditText
+                    android:id="@+id/editText48"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_column="0"
+                    android:ems="10"
+                    android:hint="Cantidad"
+                    android:inputType="number" />
+            </TableRow>
+
+
+            <EditText
+                android:id="@+id/editText49"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Ubicacion:"
+                android:inputType="textPersonName"/>
+
+
+            <EditText
+                android:id="@+id/editText50"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones o Estado de conservacion:"
+                android:inputType="textPersonName"/>
+
+
+
+
+
+
+            <!-- Otros 3 -->
+
+            <TableRow android:layout_height="122dp">
+
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_column="0"
+                    android:padding="3dip"
+                    android:text="Otros 3"
+                    android:textColor="#000000" />
+
+                <RadioGroup
+                    android:id="@+id/Rg17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Si" />
+
+                    <RadioButton
+                        android:id="@+id/rb34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="No" />
+                </RadioGroup>
+
+
+
+            </TableRow>
+
+
+
+            <EditText
+                android:id="@+id/editText51"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="ingresa el nombre del Recurso o Material:"
+                android:inputType="textPersonName"/>
+
+
+            <TableRow android:layout_height="122dp">
+
+                <EditText
+                    android:id="@+id/editText52"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_column="0"
+                    android:ems="10"
+                    android:hint="Cantidad"
+                    android:inputType="number" />
+            </TableRow>
+
+
+            <EditText
+                android:id="@+id/editText53"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Ubicacion:"
+                android:inputType="textPersonName"/>
+
+
+            <EditText
+                android:id="@+id/editText54"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones o Estado de conservacion:"
+                android:inputType="textPersonName"/>
+
+
+
+
+            <!-- Otros 4 -->
+
+            <TableRow android:layout_height="122dp">
+
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_column="0"
+                    android:padding="3dip"
+                    android:text="Otros 4"
+                    android:textColor="#000000" />
+
+                <RadioGroup
+                    android:id="@+id/Rg18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb35"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Si" />
+
+                    <RadioButton
+                        android:id="@+id/rb36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="No" />
+                </RadioGroup>
+
+
+
+            </TableRow>
+
+
+
+            <EditText
+                android:id="@+id/editText55"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="ingresa el nombre del Recurso o Material:"
+                android:inputType="textPersonName"/>
+
+
+            <TableRow android:layout_height="122dp">
+
+                <EditText
+                    android:id="@+id/editText56"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_column="0"
+                    android:ems="10"
+                    android:hint="Cantidad"
+                    android:inputType="number" />
+            </TableRow>
+
+
+            <EditText
+                android:id="@+id/editText57"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Ubicacion:"
+                android:inputType="textPersonName"/>
+
+
+            <EditText
+                android:id="@+id/editText58"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones o Estado de conservacion:"
+                android:inputType="textPersonName"/>
+
+
+
+
+            <!-- Otros 5 -->
+
+            <TableRow android:layout_height="122dp">
+
+                <TextView
+                    android:layout_width="170dp"
+                    android:layout_height="45dp"
+                    android:layout_column="0"
+                    android:padding="3dip"
+                    android:text="Otros 5"
+                    android:textColor="#000000" />
+
+                <RadioGroup
+                    android:id="@+id/Rg19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb37"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Si" />
+
+                    <RadioButton
+                        android:id="@+id/rb38"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="No" />
+                </RadioGroup>
+
+
+
+            </TableRow>
+
+
+
+            <EditText
+                android:id="@+id/editText59"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="ingresa el nombre del Recurso o Material:"
+                android:inputType="textPersonName"/>
+
+
+            <TableRow android:layout_height="122dp">
+
+                <EditText
+                    android:id="@+id/editText60"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_column="0"
+                    android:ems="10"
+                    android:hint="Cantidad"
+                    android:inputType="number" />
+            </TableRow>
+
+
+            <EditText
+                android:id="@+id/editText61"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Ubicacion:"
+                android:inputType="textPersonName"/>
+
+
+            <EditText
+                android:id="@+id/editText62"
+                android:layout_width="254dp"
+                android:layout_height="56dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones o Estado de conservacion:"
+                android:inputType="textPersonName"/>
+
+
+
 
 
 

@@ -39,6 +39,8 @@
         android:text="RECURSOS CIRCUNDANTES"
         android:textSize="16dp"/>
 
+
+
     <Button
         android:id="@+id/button4"
         style="@android:style/Widget.Button.Inset"
@@ -47,6 +49,17 @@
         android:layout_gravity="center"
         android:onClick="Anexo10"
         android:text="ANEXO 10"
+        android:textSize="16dp"/>
+
+
+    <Button
+        android:id="@+id/button5"
+        style="@android:style/Widget.Button.Inset"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:onClick="Id_Riesgo"
+        android:text="IDENTIFICACION DE RIESGOS"
         android:textSize="16dp"/>
 
 

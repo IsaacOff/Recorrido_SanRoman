@@ -27,10 +27,13 @@ import static android.widget.Toast.LENGTH_SHORT;
 public class quintanaroo_anexo10_RecursosMateriales extends AppCompatActivity {
 
     private RadioButton rb1, rb2, rb3, rb4, rb5, rb6, rb7, rb8, rb9, rb10, rb11, rb12, rb13, rb14, rb15, rb16, rb17, rb18,rb19,rb20, rb21, rb22, rb23, rb24 ;
-    private RadioGroup rg1, rg2, rg3, rg4,rg5,rg6,rg7,rg8,rg9,rg10,rg11,rg12;
+    private RadioButton rb25, rb26, rb27, rb28, rb29, rb30, rb31, rb32, rb33, rb34, rb35, rb36, rb37, rb38;
+    private RadioGroup rg1, rg2, rg3, rg4,rg5,rg6,rg7,rg8,rg9,rg10,rg11,rg12, rg13, rg14, rg15,rg16,rg17,rg18, rg19;
     private EditText  et1, et2,  et3,  et4,  et5,  et6,  et7,  et8,  et9, et10, et11, et12, et13, et14, et15, et16, et17, et18, et19, et20;
-    private EditText et21,et22, et23, et24, et25, et26, et27, et28, et29, et30, et31, et32, et33, et34, et35, et36;
-    private String vector[][] = new String[12][4];
+    private EditText et21,et22, et23, et24, et25, et26, et27, et28, et29, et30, et31, et32, et33, et34, et35, et36, et37, et38, et39, et40;
+    private EditText et41,et42, et43, et44, et45, et46, et47, et48, et49, et50, et51, et52, et53, et54, et55, et56, et57, et58, et59, et60, et61, et62;
+    private String vector[][] = new String[14][4];
+    private String vector2[][] = new String[5][5];
     private File pdfFile;
     private String htmlToPDF;
     private File directorio2;
@@ -98,6 +101,41 @@ public class quintanaroo_anexo10_RecursosMateriales extends AppCompatActivity {
         rb23 = (RadioButton) findViewById(R.id.rb23);
         rb24 = (RadioButton) findViewById(R.id.rb24);
 
+        rg13= (RadioGroup) findViewById(R.id.Rg13);
+        rb25 = (RadioButton) findViewById(R.id.rb25);
+        rb26 = (RadioButton) findViewById(R.id.rb26);
+
+        rg14= (RadioGroup) findViewById(R.id.Rg14);
+        rb27 = (RadioButton) findViewById(R.id.rb27);
+        rb28 = (RadioButton) findViewById(R.id.rb28);
+
+
+        ///otros
+
+        rg15= (RadioGroup) findViewById(R.id.Rg15);
+        rb29 = (RadioButton) findViewById(R.id.rb29);
+        rb30 = (RadioButton) findViewById(R.id.rb30);
+
+        /////
+
+        rg16= (RadioGroup) findViewById(R.id.Rg16);
+        rb31 = (RadioButton) findViewById(R.id.rb31);
+        rb32 = (RadioButton) findViewById(R.id.rb32);
+
+        rg17= (RadioGroup) findViewById(R.id.Rg17);
+        rb33 = (RadioButton) findViewById(R.id.rb33);
+        rb34 = (RadioButton) findViewById(R.id.rb34);
+
+        rg18= (RadioGroup) findViewById(R.id.Rg18);
+        rb35 = (RadioButton) findViewById(R.id.rb35);
+        rb36 = (RadioButton) findViewById(R.id.rb36);
+
+        rg19= (RadioGroup) findViewById(R.id.Rg19);
+        rb37 = (RadioButton) findViewById(R.id.rb37);
+        rb38 = (RadioButton) findViewById(R.id.rb38);
+
+
+
         //asigna los edit text a los et de aqui
         et1  = (EditText) findViewById(R.id.editText1);
         et2  = (EditText) findViewById(R.id.editText2);
@@ -135,6 +173,33 @@ public class quintanaroo_anexo10_RecursosMateriales extends AppCompatActivity {
         et34 = (EditText) findViewById(R.id.editText34);
         et35 = (EditText) findViewById(R.id.editText35);
         et36 = (EditText) findViewById(R.id.editText36);
+        et37 = (EditText) findViewById(R.id.editText37);
+        et38 = (EditText) findViewById(R.id.editText38);
+        et39 = (EditText) findViewById(R.id.editText39);
+        et40 = (EditText) findViewById(R.id.editText40);
+        et41 = (EditText) findViewById(R.id.editText41);
+        et42 = (EditText) findViewById(R.id.editText42);
+        et43 = (EditText) findViewById(R.id.editText43);
+        et44 = (EditText) findViewById(R.id.editText44);
+        et45 = (EditText) findViewById(R.id.editText45);
+        et46 = (EditText) findViewById(R.id.editText46);
+        et47 = (EditText) findViewById(R.id.editText47);
+        et48 = (EditText) findViewById(R.id.editText48);
+        et49 = (EditText) findViewById(R.id.editText49);
+        et50 = (EditText) findViewById(R.id.editText50);
+        et51 = (EditText) findViewById(R.id.editText51);
+        et52 = (EditText) findViewById(R.id.editText52);
+        et53 = (EditText) findViewById(R.id.editText53);
+        et54 = (EditText) findViewById(R.id.editText54);
+        et55 = (EditText) findViewById(R.id.editText55);
+        et56 = (EditText) findViewById(R.id.editText56);
+        et57 = (EditText) findViewById(R.id.editText57);
+        et58 = (EditText) findViewById(R.id.editText58);
+        et59 = (EditText) findViewById(R.id.editText59);
+        et60 = (EditText) findViewById(R.id.editText60);
+        et61 = (EditText) findViewById(R.id.editText61);
+        et62 = (EditText) findViewById(R.id.editText62);
+
 
 
         //Ocultar EditText
@@ -174,6 +239,33 @@ public class quintanaroo_anexo10_RecursosMateriales extends AppCompatActivity {
         et34.setVisibility(View.GONE);
         et35.setVisibility(View.GONE);
         et36.setVisibility(View.GONE);
+        et37.setVisibility(View.GONE);
+        et38.setVisibility(View.GONE);
+        et39.setVisibility(View.GONE);
+        et40.setVisibility(View.GONE);
+        et41.setVisibility(View.GONE);
+        et42.setVisibility(View.GONE);
+        et43.setVisibility(View.GONE);
+        et44.setVisibility(View.GONE);
+        et45.setVisibility(View.GONE);
+        et46.setVisibility(View.GONE);
+        et47.setVisibility(View.GONE);
+        et48.setVisibility(View.GONE);
+        et49.setVisibility(View.GONE);
+        et50.setVisibility(View.GONE);
+        et51.setVisibility(View.GONE);
+        et52.setVisibility(View.GONE);
+        et53.setVisibility(View.GONE);
+        et54.setVisibility(View.GONE);
+        et55.setVisibility(View.GONE);
+        et56.setVisibility(View.GONE);
+        et57.setVisibility(View.GONE);
+        et58.setVisibility(View.GONE);
+        et59.setVisibility(View.GONE);
+        et60.setVisibility(View.GONE);
+        et61.setVisibility(View.GONE);
+        et62.setVisibility(View.GONE);
+
 
 
 
@@ -478,6 +570,188 @@ public class quintanaroo_anexo10_RecursosMateriales extends AppCompatActivity {
 
 
 
+        rg13.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb25){
+
+                    vector[12][0]="SI";
+                    et37.setVisibility(View.VISIBLE);
+                    et38.setVisibility(View.VISIBLE);
+                    et39.setVisibility(View.VISIBLE);
+
+                }else if(checkedId==R.id.rb26) {
+
+                    vector[12][0]="NO";
+                    et37.setVisibility(View.GONE);
+                    et38.setVisibility(View.GONE);
+                    et39.setVisibility(View.GONE);
+
+
+                }
+
+            }
+        });
+
+
+
+
+
+
+
+        rg14.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb27){
+
+                    vector[13][0]="SI";
+                    et40.setVisibility(View.VISIBLE);
+                    et41.setVisibility(View.VISIBLE);
+                    et42.setVisibility(View.VISIBLE);
+
+                }else if(checkedId==R.id.rb28) {
+
+                    vector[13][0]="NO";
+                    et40.setVisibility(View.GONE);
+                    et41.setVisibility(View.GONE);
+                    et42.setVisibility(View.GONE);
+
+
+                }
+
+            }
+        });
+
+
+///////////otros
+
+        rg15.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb29){
+
+                    vector2[0][0]="SI";
+                    et43.setVisibility(View.VISIBLE);
+                    et44.setVisibility(View.VISIBLE);
+                    et45.setVisibility(View.VISIBLE);
+                    et46.setVisibility(View.VISIBLE);
+
+                }else if(checkedId==R.id.rb30) {
+
+                    vector2[0][0]="NO";
+                    et43.setVisibility(View.GONE);
+                    et44.setVisibility(View.GONE);
+                    et45.setVisibility(View.GONE);
+                    et46.setVisibility(View.GONE);
+
+
+                }
+
+            }
+        });
+
+
+        rg16.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb31){
+
+                    vector2[1][0]="SI";
+                    et47.setVisibility(View.VISIBLE);
+                    et48.setVisibility(View.VISIBLE);
+                    et49.setVisibility(View.VISIBLE);
+                    et50.setVisibility(View.VISIBLE);
+
+                }else if(checkedId==R.id.rb32) {
+
+                    vector2[1][0]="NO";
+                    et47.setVisibility(View.GONE);
+                    et48.setVisibility(View.GONE);
+                    et49.setVisibility(View.GONE);
+                    et50.setVisibility(View.GONE);
+
+                }
+
+            }
+        });
+
+
+        rg17.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb33){
+
+                    vector2[2][0]="SI";
+                    et51.setVisibility(View.VISIBLE);
+                    et52.setVisibility(View.VISIBLE);
+                    et53.setVisibility(View.VISIBLE);
+                    et54.setVisibility(View.VISIBLE);
+
+                }else if(checkedId==R.id.rb34) {
+
+                    vector2[2][0]="NO";
+                    et51.setVisibility(View.GONE);
+                    et52.setVisibility(View.GONE);
+                    et53.setVisibility(View.GONE);
+                    et54.setVisibility(View.GONE);
+
+                }
+
+            }
+        });
+
+
+
+        rg18.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb35){
+
+                    vector2[3][0]="SI";
+                    et55.setVisibility(View.VISIBLE);
+                    et56.setVisibility(View.VISIBLE);
+                    et57.setVisibility(View.VISIBLE);
+                    et58.setVisibility(View.VISIBLE);
+
+                }else if(checkedId==R.id.rb36) {
+
+                    vector2[3][0]="NO";
+                    et55.setVisibility(View.GONE);
+                    et56.setVisibility(View.GONE);
+                    et57.setVisibility(View.GONE);
+                    et58.setVisibility(View.GONE);
+
+                }
+
+            }
+        });
+
+
+
+        rg19.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb37){
+
+                    vector2[4][0]="SI";
+                    et59.setVisibility(View.VISIBLE);
+                    et60.setVisibility(View.VISIBLE);
+                    et61.setVisibility(View.VISIBLE);
+                    et62.setVisibility(View.VISIBLE);
+
+                }else if(checkedId==R.id.rb38) {
+
+                    vector2[4][0]="NO";
+                    et59.setVisibility(View.GONE);
+                    et60.setVisibility(View.GONE);
+                    et61.setVisibility(View.GONE);
+                    et62.setVisibility(View.GONE);
+
+                }
+
+            }
+        });
+
 
 
 
@@ -688,6 +962,154 @@ public class quintanaroo_anexo10_RecursosMateriales extends AppCompatActivity {
 
 
 
+        if( vector[12][0]=="SI"){
+
+            if (et37.length() == 0) {
+                bandera = false;
+            }
+
+            if (et38.length() == 0) {
+                bandera = false;
+            }
+
+            if (et39.length() == 0) {
+                bandera = false;
+            }
+
+
+        }
+
+
+
+        if( vector[13][0]=="SI"){
+
+            if (et40.length() == 0) {
+                bandera = false;
+            }
+
+            if (et41.length() == 0) {
+                bandera = false;
+            }
+
+            if (et42.length() == 0) {
+                bandera = false;
+            }
+
+
+        }
+
+///otros
+
+        if( vector2[0][0]=="SI"){
+
+            if (et43.length() == 0) {
+                bandera = false;
+            }
+
+            if (et44.length() == 0) {
+                bandera = false;
+            }
+
+            if (et45.length() == 0) {
+                bandera = false;
+            }
+            if (et46.length() == 0) {
+                bandera = false;
+            }
+
+
+        }
+
+
+
+        if( vector2[1][0]=="SI"){
+
+            if (et47.length() == 0) {
+                bandera = false;
+            }
+
+            if (et48.length() == 0) {
+                bandera = false;
+            }
+
+            if (et49.length() == 0) {
+                bandera = false;
+            }
+            if (et50.length() == 0) {
+                bandera = false;
+            }
+
+
+        }
+
+
+
+
+        if( vector2[2][0]=="SI"){
+
+            if (et51.length() == 0) {
+                bandera = false;
+            }
+
+            if (et52.length() == 0) {
+                bandera = false;
+            }
+
+            if (et53.length() == 0) {
+                bandera = false;
+            }
+            if (et54.length() == 0) {
+                bandera = false;
+            }
+
+
+        }
+
+
+
+
+        if( vector2[3][0]=="SI"){
+
+            if (et55.length() == 0) {
+                bandera = false;
+            }
+
+            if (et56.length() == 0) {
+                bandera = false;
+            }
+
+            if (et57.length() == 0) {
+                bandera = false;
+            }
+            if (et58.length() == 0) {
+                bandera = false;
+            }
+
+
+        }
+
+
+
+        if( vector2[4][0]=="SI"){
+
+            if (et59.length() == 0) {
+                bandera = false;
+            }
+
+            if (et60.length() == 0) {
+                bandera = false;
+            }
+
+            if (et61.length() == 0) {
+                bandera = false;
+            }
+            if (et62.length() == 0) {
+                bandera = false;
+            }
+
+
+        }
+
 
 
 
@@ -742,6 +1164,50 @@ public class quintanaroo_anexo10_RecursosMateriales extends AppCompatActivity {
             vector[11] [1]  = et34.getText().toString();
             vector[11] [2]  = et35.getText().toString();
             vector[11] [3]  = et36.getText().toString();
+
+
+            vector[12] [1]  = et37.getText().toString();
+            vector[12] [2]  = et38.getText().toString();
+            vector[12] [3]  = et39.getText().toString();
+
+            vector[13] [1]  = et40.getText().toString();
+            vector[13] [2]  = et41.getText().toString();
+            vector[13] [3]  = et42.getText().toString();
+
+//vector2
+            //rg15
+            vector2[0] [1]  = et43.getText().toString();
+            vector2[0] [2]  = et44.getText().toString();
+            vector2[0] [3]  = et45.getText().toString();
+            vector2[0] [4]  = et46.getText().toString();
+
+            //rg16
+            vector2[1] [1]  = et47.getText().toString();
+            vector2[1] [2]  = et48.getText().toString();
+            vector2[1] [3]  = et49.getText().toString();
+            vector2[1] [4]  = et50.getText().toString();
+
+            //rg17
+            vector2[2] [1]  = et51.getText().toString();
+            vector2[2] [2]  = et52.getText().toString();
+            vector2[2] [3]  = et53.getText().toString();
+            vector2[2] [4]  = et54.getText().toString();
+
+            //rg18
+            vector2[3] [1]  = et55.getText().toString();
+            vector2[3] [2]  = et56.getText().toString();
+            vector2[3] [3]  = et57.getText().toString();
+            vector2[3] [4]  = et58.getText().toString();
+
+            //rg19
+            vector2[4] [1]  = et59.getText().toString();
+            vector2[4] [2]  = et60.getText().toString();
+            vector2[4] [3]  = et61.getText().toString();
+            vector2[4] [4]  = et62.getText().toString();
+
+
+
+
 
 
             Reporte(view);

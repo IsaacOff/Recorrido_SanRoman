@@ -3,4 +3,9 @@
     <color name="colorPrimary">#fbb03b</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+
+
+    <color name="ET">#3260F5</color>
+    <color name="focus">#26F248</color>
 </resources>

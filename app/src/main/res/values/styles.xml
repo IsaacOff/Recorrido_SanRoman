@@ -8,4 +8,15 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+
+
+    <!--Campo de texto-->
+    <style name="EditText" parent="AppTheme">
+        <!-- cursor y línea normal-->
+        <item name="colorControlNormal">@color/ET</item>
+        <!-- cursor y línea con foco-->
+        <item name="colorControlActivated">@color/ET</item>
+    </style>
+
 </resources>
