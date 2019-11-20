@@ -37,7 +37,7 @@ public class quintanaroo_anexo10_RecursosMateriales extends AppCompatActivity {
     private File pdfFile;
     private String htmlToPDF;
     private File directorio2;
-    private String titulos []={"Botiquin", "Cascos", "Chalecos", "Brazaletes", "Botas", "Banderillas", "Lamparas de emergencia", "Equipo de zapa", "Paro de emergencia", "Hidrantes", "Alarma de emergencia", "Megafono"};
+    private String titulos []={"Botiquin", "Cascos", "Chalecos", "Brazaletes", "Botas", "Banderillas", "Lamparas de emergencia", "Equipo de zapa", "Paro de emergencia", "Hidrantes", "Alarma de emergencia", "Megafono", "Extintores","Camillas"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -1254,7 +1254,7 @@ public class quintanaroo_anexo10_RecursosMateriales extends AppCompatActivity {
                     "</thead>" +
                     "<tbody>" ;
 
-                    for(int x=0; x<12;x++) {
+                    for(int x=0; x<14;x++) {
                         if (vector[x][0].equals("SI")) {
                             agregarRenglon(titulos[x], vector[x][1], vector[x][2], vector[x][3]);
                         }else{
@@ -1262,6 +1262,11 @@ public class quintanaroo_anexo10_RecursosMateriales extends AppCompatActivity {
                         }
                     }
 
+                    for(int i=0; i<5;i++) {
+                        if (vector2[i][0].equals("SI")) {
+                            agregarRenglon(vector2[i][1],vector2[i][2],vector2[i][3],vector2[i][4]);
+                        }
+                    }
 
             /*htmlToPDF = htmlToPDF +
                     "<tr>" +
