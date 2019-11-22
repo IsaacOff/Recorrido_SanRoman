@@ -15,8 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".quintanaroo_id_riesgo_externo"></activity>
+        <activity android:name=".quintanaroo_id_riesgo_interno_escaleraservicio_2"></activity>
+        <activity android:name=".quintanaroo_id_riesgo_interno_estructura_1" />
         <activity android:name=".quintanaroo_id_riesgo_interno" />
+        <activity android:name=".quintanaroo_id_riesgo_externo" />
         <activity android:name=".quintanaroo_id_riesgo" />
         <activity android:name=".quintanaroo_anexo10_RecursosMateriales" />
         <activity android:name=".quintanaroo_anexo10_DetectoresContraIncendio" />

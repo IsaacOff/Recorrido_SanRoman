@@ -196,7 +196,7 @@ public class quintanaroo_RecursosCircundantes extends AppCompatActivity {
         spin35.setAdapter(adapter1);
         spin36.setAdapter(adapter2);
 
-        //Ocultar EditText
+        //Ocultar SPINNER
         spin2.setVisibility(View.GONE);
         spin3.setVisibility(View.GONE);
 
