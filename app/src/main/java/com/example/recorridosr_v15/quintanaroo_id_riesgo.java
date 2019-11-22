@@ -7,7 +7,12 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 
+import java.io.File;
+
 public class quintanaroo_id_riesgo extends AppCompatActivity {
+
+    static File directorio2;
+    static File directorio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,20 +21,29 @@ public class quintanaroo_id_riesgo extends AppCompatActivity {
 
         this.setTitle("Identificacion de Riesgos");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        directorio2 = new File(getIntent().getStringExtra("File"));
     }
 
 
     public void Riesgos_interno_quintana (View view){
+        onClick(view, "Riesgo interno");
         Intent intent = new Intent(this, quintanaroo_id_riesgo_interno.class);
+        intent.putExtra("File", directorio.getPath());
         startActivity(intent);
     }
 
 
 
     public void Riesgos_externo_quintana (View view){
+        onClick(view, "Riesgo Externo");
         Intent intent = new Intent(this, quintanaroo_id_riesgo_externo.class);
+        intent.putExtra("File", directorio.getPath());
         startActivity(intent);
     }
 
+    public void onClick(View v, String nombre){
+        directorio = new File(directorio2.getPath(), nombre);
+        directorio.mkdir();
+    }
 
 }

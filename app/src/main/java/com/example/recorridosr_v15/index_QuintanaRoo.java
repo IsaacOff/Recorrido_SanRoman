@@ -44,9 +44,8 @@ public class index_QuintanaRoo extends AppCompatActivity {
     }
 
     public void Anexo10 (View view){
-        onClick(view, "Anexo10");
         Intent ext = new Intent(this, quintanaroo_anexo10.class);
-        ext.putExtra("File", directorio.getPath());
+        ext.putExtra("File", directorio2.getPath());
         startActivity(ext);
     }
 
@@ -54,13 +53,14 @@ public class index_QuintanaRoo extends AppCompatActivity {
 
     public void Id_Riesgo (View view){
         Intent ext = new Intent(this, quintanaroo_id_riesgo.class);
+        ext.putExtra("File", directorio2.getPath());
         startActivity(ext);
     }
 
 
     public void onClick(View v, String nombre){
-        directorio = new File(directorio2.getPath(),nombre);
-        directorio.mkdir();
+            directorio = new File(directorio2.getPath(), nombre);
+            directorio.mkdir();
     }
 
 }
