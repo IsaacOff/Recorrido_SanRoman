@@ -1,9 +1,2173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".quintanaroo_id_riesgo_externo">
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".quintanaroo_id_riesgo_externo"
+android:stretchColumns="1">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<TableRow android:background="#128675">
+
+    <TextView
+
+        android:layout_height="30dp"
+        android:padding="3dip"
+        android:text="OTROS RIESGOS INTERNOS"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+
+</TableRow>
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <!--- /////////////////////////////////////////////////// -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_column="0"
+            android:padding="3dip"
+            android:text="  1.- Objetos que pueden caer:"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+
+        <!-- El inmueble cuenta con:  -->
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Lámparas"
+                android:textColor="#000000" />
+
+            <RadioGroup
+                android:id="@+id/Rg1"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+
+        </TableRow>
+
+
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="153dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Candiles"
+                android:textColor="#000000" />
+
+
+
+            <RadioGroup
+                android:id="@+id/Rg2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Bocinas"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Rejillas"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+
+
+
+        <!-- Iluminación artificial  -->
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Aparadores de Vidrio"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Canceles de vidrio"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Candelabros"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Plafones"
+                android:textColor="#000000" />
+
+            <RadioGroup
+                android:id="@+id/Rg8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <!--- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Entrepaños o repisas"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="213dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Cuadros"
+                android:textColor="#000000" />
+
+            <RadioGroup
+                android:id="@+id/Rg10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Espejos"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Líquidos tóxicos o inflamables"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="55dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Macetas y otros objetos colgantes"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <!--- /////////////////////////////////////////////////// -->
+        <TextView
+            android:layout_width="196dp"
+            android:layout_height="30dp"
+            android:layout_column="0"
+            android:padding="3dip"
+            android:text="  2.- Objetos que pueden deslizarse:"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+
+
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Escritorios"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Mesas"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Sillas"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Refrigeradores"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Cunas"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Camas"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Corralitos"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Sillas de ruedas"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb42"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Mobiliario y equipo para trasladar usuarios"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb43"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb44"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="55dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Y todos aquellos con ruedas"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb46"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+
+
+
+
+        <!--- /////////////////////////////////////////////////// -->
+        <TextView
+            android:layout_width="196dp"
+            android:layout_height="30dp"
+            android:layout_column="0"
+            android:padding="3dip"
+            android:text="  3.- Objetos que pueden volcar:"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Equipo de computo"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb47"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb48"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Libreros"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb49"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Roperos"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg26"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb51"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb52"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Lockers"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb53"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb54"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Archiveros"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb55"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb56"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Estantes no anclados"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg29"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb57"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb58"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Vitrinas"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb59"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb60"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Tanques de gas"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb61"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb62"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="65dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Subdivisiones de espacios no ligados al techo y piso"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb63"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb64"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <!--- /////////////////////////////////////////////////// -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_column="0"
+            android:padding="3dip"
+            android:text="  4.- Objetos que pueden ser tóxicos, inflamar y/o explotar:"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Recipientes o tanques con combustible"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb65"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb66"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Solventes (thiner, aguarrás) y otras semejantes"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg34"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb67"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb68"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Almacén de papel, cartón, entre otros"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg35"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb69"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb70"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Pinturas"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg36"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb71"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb72"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Líquidos para el control de fauna nociva"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg37"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb73"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb74"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Líquidos de limpieza"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg38"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb75"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb76"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="213dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Otros"
+                android:textColor="#000000" />
+
+            <RadioGroup
+                android:id="@+id/Rg39"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb77"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb78"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="especificar:"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
+
+
+
+
+
+
+        <!--- /////////////////////////////////////////////////// -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_column="0"
+            android:padding="3dip"
+            android:text="  5.- Objetos que pueden propiciar un incendio:"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Recipientes e instalaciones de gas"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg40"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb79"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb80"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Hornillas o parrillas eléctricas"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg41"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb81"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb82"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Cafeteras"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg42"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb83"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb84"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Contactos, apagadores, clavijas y cables en mal estado"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg43"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb85"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb86"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Hornos de microondas sin base o plato protector"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg44"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb87"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb88"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Velas y veladoras"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg45"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb89"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb90"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="213dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Aromatizantes eléctricos"
+                android:textColor="#000000" />
+
+            <RadioGroup
+                android:id="@+id/Rg46"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb91"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb92"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+
+        <!--- /////////////////////////////////////////////////// -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_column="0"
+            android:padding="3dip"
+            android:text="  6.- Objetos que pueden obstaculizar una evacuación:"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Tapetes"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg47"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb93"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb94"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Macetas"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg48"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb95"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb96"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Archiveros"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg49"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb97"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb98"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Pizarrones portátiles"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg50"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb99"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Muebles"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg51"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb101"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb102"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="65dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Cubetas, trapeadores, escobas, y todos aquellos que son dejados fuera de su lugar"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg52"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb103"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb104"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="213dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Juguetes"
+                android:textColor="#000000" />
+
+            <RadioGroup
+                android:id="@+id/Rg53"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb105"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb106"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="213dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Equipo y mobiliario"
+                android:textColor="#000000" />
+
+            <RadioGroup
+                android:id="@+id/Rg54"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb107"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb108"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="final_interno"
+            android:text="Guardar"
+            android:textSize="15sp">
+
+        </Button>
+
+    </TableLayout>
+
+</ScrollView>
+
+</TableLayout>

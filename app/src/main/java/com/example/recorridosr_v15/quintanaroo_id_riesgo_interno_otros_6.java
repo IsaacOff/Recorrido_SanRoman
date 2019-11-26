@@ -455,11 +455,11 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
                 if(checkedId==R.id.rb19){
 
                     vector[9]="SI";
-                    et1.setVisibility(View.VISIBLE);
+                  
 
                 }else if(checkedId==R.id.rb20) {
                     vector[9]="NO";
-                    et1.setVisibility(View.GONE);
+
 
 
                 }

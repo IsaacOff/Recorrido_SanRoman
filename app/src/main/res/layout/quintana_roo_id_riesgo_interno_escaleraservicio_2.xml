@@ -75,7 +75,7 @@ android:stretchColumns="1">
         <Spinner
             android:id="@+id/spinner1"
             android:layout_width="197dp"
-            android:layout_height="25dp"
+            android:layout_height="35dp"
             android:layout_column="0"
             android:padding="3dip">
 
@@ -125,7 +125,7 @@ android:stretchColumns="1">
             <Spinner
                 android:id="@+id/spinner2"
                 android:layout_width="197dp"
-                android:layout_height="25dp"
+                android:layout_height="35dp"
                 android:layout_column="0"
                 android:padding="3dip">
 
@@ -173,7 +173,7 @@ android:stretchColumns="1">
             <Spinner
                 android:id="@+id/spinner3"
                 android:layout_width="197dp"
-                android:layout_height="25dp"
+                android:layout_height="35dp"
                 android:layout_column="0"
                 android:padding="3dip">
 
@@ -220,7 +220,7 @@ android:stretchColumns="1">
             <Spinner
                 android:id="@+id/spinner4"
                 android:layout_width="197dp"
-                android:layout_height="25dp"
+                android:layout_height="35dp"
                 android:layout_column="0"
                 android:padding="3dip">
 
@@ -274,7 +274,7 @@ android:stretchColumns="1">
             <Spinner
                 android:id="@+id/spinner5"
                 android:layout_width="197dp"
-                android:layout_height="25dp"
+                android:layout_height="35dp"
                 android:layout_column="0"
                 android:padding="3dip">
 
@@ -340,7 +340,7 @@ android:stretchColumns="1">
             <Spinner
                 android:id="@+id/spinner6"
                 android:layout_width="197dp"
-                android:layout_height="25dp"
+                android:layout_height="35dp"
                 android:layout_column="0"
                 android:padding="3dip">
 
@@ -389,7 +389,7 @@ android:stretchColumns="1">
             <Spinner
                 android:id="@+id/spinner7"
                 android:layout_width="197dp"
-                android:layout_height="25dp"
+                android:layout_height="35dp"
                 android:layout_column="0"
                 android:padding="3dip">
 
@@ -435,7 +435,7 @@ android:stretchColumns="1">
             <Spinner
                 android:id="@+id/spinner8"
                 android:layout_width="197dp"
-                android:layout_height="25dp"
+                android:layout_height="35dp"
                 android:layout_column="0"
                 android:padding="3dip">
 
@@ -487,7 +487,7 @@ android:stretchColumns="1">
             <Spinner
                 android:id="@+id/spinner9"
                 android:layout_width="197dp"
-                android:layout_height="25dp"
+                android:layout_height="35dp"
                 android:layout_column="0"
                 android:padding="3dip">
 
@@ -534,7 +534,7 @@ android:stretchColumns="1">
             <Spinner
                 android:id="@+id/spinner10"
                 android:layout_width="197dp"
-                android:layout_height="25dp"
+                android:layout_height="35dp"
                 android:layout_column="0"
                 android:padding="3dip">
 
