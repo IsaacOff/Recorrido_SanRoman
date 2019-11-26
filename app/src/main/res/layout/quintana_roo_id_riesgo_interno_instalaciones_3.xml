@@ -445,7 +445,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:ems="10"
                 android:hint="ingrese de qué fecha:"
-                android:inputType="date" />
+                android:inputType="date"
+                android:textColor="#3260F5"/>
         </TableRow>
 
 
@@ -837,7 +838,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:ems="10"
                 android:hint="ingrese de qué fecha:"
-                android:inputType="date" />
+                android:inputType="date"
+                android:textColor="#3260F5"/>
         </TableRow>
 
 
@@ -972,7 +974,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:ems="10"
                 android:hint="Especifique:"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"/>
         </TableRow>
 
 

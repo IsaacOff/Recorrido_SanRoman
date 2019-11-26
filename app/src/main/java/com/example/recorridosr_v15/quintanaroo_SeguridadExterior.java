@@ -169,7 +169,7 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
 
         //crea el vector de String que contendra el spinner y lo carga en la variable adapter
         String [] opciones ={"Selecione:","ACEPTABLE","INTERMEDIO","ALTO","NINGUNO"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, opciones);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner_item_sanroman, opciones);
 
         //se asigna la variable adapter a cada espiner para mostrarle al usuario
         spin1.setAdapter(adapter);

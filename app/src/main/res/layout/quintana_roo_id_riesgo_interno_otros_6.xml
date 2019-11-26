@@ -1545,7 +1545,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:ems="10"
                 android:hint="especificar:"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"/>
         </TableRow>
 
 
