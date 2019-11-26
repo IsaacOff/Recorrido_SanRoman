@@ -27,7 +27,8 @@ public class quintanaroo_id_riesgo extends AppCompatActivity {
 
     public void Riesgos_interno_quintana (View view){
         onClick(view, "Riesgo interno");
-        Intent intent = new Intent(this, quintanaroo_id_riesgo_interno.class);
+        //Intent intent = new Intent(this, quintanaroo_id_riesgo_interno.class);
+        Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_escaleraservicio_2.class);
         intent.putExtra("File", directorio.getPath());
         startActivity(intent);
     }

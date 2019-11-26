@@ -11,6 +11,17 @@ package com.example.recorridosr_v15;
         import android.widget.RadioGroup;
         import android.widget.Toast;
 
+        import com.itextpdf.text.Document;
+        import com.itextpdf.text.DocumentException;
+        import com.itextpdf.text.PageSize;
+        import com.itextpdf.text.pdf.PdfWriter;
+        import com.itextpdf.tool.xml.XMLWorkerHelper;
+
+        import java.io.File;
+        import java.io.FileOutputStream;
+        import java.io.IOException;
+        import java.io.StringReader;
+
         import static android.widget.Toast.LENGTH_SHORT;
 
 
@@ -19,6 +30,9 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
     private RadioGroup rg1, rg2, rg3, rg4,rg5,rg6,rg7,rg8,rg9;
     private EditText et1;
     private String vector[]= new String[10];
+    static File pdfFile;
+    static File directorio2;
+    String tablaConcatenacion="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +42,10 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
         this.setTitle("Riesgo interno_chetumal");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
+        directorio2 = new File(getIntent().getStringExtra("File"));
+        if(directorio2 != null) {
+            pdfFile = new File(directorio2.getPath(), "Riesgo interno.pdf");
+        }
 
 
         //Asigna los Rg y rb del xml a los de aqui
@@ -276,8 +294,8 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
 
             Toast.makeText(this, "vamos al siguiente", LENGTH_SHORT).show();
 
-        interno_siguiente2(view);
-
+        //interno_siguiente2(view);
+            onClick(view);
 
         } else {
             Toast.makeText(this, "REVISA LOS DATOS", LENGTH_SHORT).show();
@@ -296,6 +314,154 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
 
 
 
+    public void onClick (View view){
 
+        try {
+            Document document = new Document(PageSize.LETTER);
+            PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(pdfFile.getPath()));
+
+            document.open();
+            XMLWorkerHelper worker = XMLWorkerHelper.getInstance();
+
+
+            tablaConcatenacion=
+                    "<html>" + "<body>" +
+
+                            "<TABLE border=\"1\" WIDTH=\"100%\">"+
+                            "<thead>"+
+                            "<tr>"+
+                            "<th colspan=\"4\" style=\"text-align:center;\">RIESGOS POR DAÑOS ESTRUCTURALES</th>"+
+                            "</tr>"+
+                            "<tr>" +
+                            "<th style=\"border: inset 0pt\" WIDTH=\"3%\"></th>" +
+                            "<th style=\"border: inset 0pt\" WIDTH=\"87%\"></th>" +
+                            "<th style=\"border: inset 0pt\" WIDTH=\"5%\"></th>" +
+                            "<th style=\"border: inset 0pt\" WIDTH=\"5%\"></th>" +
+                            "</tr>" +
+                            "</thead>"+
+                            "<tbody>"+
+
+                            "<tr>"+
+                            "<td colspan=\"4\" >Los aspectos de este apartado, se evaluaran <b>por simple apreciación visual.</b></td>"+
+                            "</tr>"+
+
+                            "<tr>" +
+                            "<td style=\"text-align:center;\">1</td>" +
+                            "<td>Presenta inclinación</td>";
+                            agregarRenglon(vector[0]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td style=\"text-align:center;\">2</td>" +
+                    "<td>Separación de elementos estructurales</td>";
+            agregarRenglon(vector[1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td style=\"text-align:center;\">3</td>" +
+                    "<td>Deformación de muros, columnas, losas o trabes</td>";
+            agregarRenglon(vector[2]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td style=\"text-align:center;\">4</td>" +
+                    "<td>Los muros presentan grietas</td>";
+            agregarRenglon(vector[3]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td style=\"text-align:center;\">5</td>" +
+                    "<td>Hundimiento del inmueble</td>";
+            agregarRenglon(vector[4]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td style=\"text-align:center;\">6</td>" +
+                    "<td>Grietas en el piso</td>";
+            agregarRenglon(vector[5]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td colspan=\"4\"><b>Nota:</b> Si respondió afirmativo en alguna de las cuestiones 1 a la 6, se requiere una evaluación detallada la cual será realizada por un experto en estructuras, quien emitirá un dictamen técnico correspondiente de acuerdo a la reglamentación local y normativa aplicable vigente.</td>"+
+                    "</tr>";
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td style=\"text-align:center;\">7</td>" +
+                    "<td>Existe filtración de agua</td>";
+            agregarRenglon(vector[6]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td style=\"text-align:center;\">8</td>" +
+                    "<td>Presenta daños en escaleras y rampas</td>";
+            agregarRenglon(vector[7]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td colspan=\"4\"><b>Nota:</b> Si respondió afirmativo en alguna de las cuestiones 1 a la 8, se requiere la atención inmediata para subsanar las deficiencias encontradas.</td>"+
+                    "</tr>";
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td style=\"text-align:center;\">9</td>" +
+                    "<td>Cuenta con dictamen técnico</td>";
+            agregarRenglon(vector[8]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td colspan=\"4\">De qué fecha: "+vector[9]+"</td>"+
+                    "</tr>";
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td colspan=\"4\"><b>Nota:</b> Si respondió afirmativo presentar copia del dictamen técnico.</td>"+
+                    "</tr>";
+
+            tablaConcatenacion=  tablaConcatenacion +
+                            "</tbody>"+
+                            "</table>"+
+
+                            "</body>" + "</html>";
+            //style='border: inset 0pt'
+
+
+
+            worker.parseXHtml(pdfWriter, document, new StringReader(tablaConcatenacion));
+
+            document.close();
+
+            Intent intent = new Intent(this, com.example.recorridosr_v15.ViewPdf.class);
+            intent.putExtra("File", pdfFile.getPath());
+            startActivity(intent);
+        } catch (IOException e) {
+            Toast.makeText(this,"NO SE PUDO GENERAR EL DOCUMENTO", Toast.LENGTH_LONG).show();
+            e.printStackTrace();
+        } catch (DocumentException e) {
+            Toast.makeText(this,"NO SE PUDO GENERAR EL DOCUMENTO", Toast.LENGTH_LONG).show();
+            e.printStackTrace();
+        }
+
+
+    }
+    public void agregarRenglon(String decision) {
+                if (decision.equals("SI")) {
+                    tablaConcatenacion= tablaConcatenacion +
+
+                            "<td style=\"background-color:Yellow; text-align:center;\">SI</td>" +
+                            "<td style=\"text-align:center;\">NO</td>" +
+                            "</tr>";
+                } else if(decision.equals("NO")){
+                    tablaConcatenacion= tablaConcatenacion +
+                            "<td style=\"text-align:center;\">SI</td>" +
+                            "<td style=\"background-color:Yellow; text-align:center;\">NO</td>" +
+                            "</tr>";
+                }else{
+                    tablaConcatenacion= tablaConcatenacion +
+                            "<td>SI</td>" +
+                            "<td>NO</td>" +
+                            "</tr>";
+                }
+    }
 }
 

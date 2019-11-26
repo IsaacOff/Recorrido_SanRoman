@@ -8,5 +8,4 @@
     android:textColor="#3260F5"
     android:layout_centerVertical="true"
     android:backgroundTint="@color/colorPrimary"
-    android:textColorHint="puto en que lo lea"
     xmlns:android="http://schemas.android.com/apk/res/android" />
