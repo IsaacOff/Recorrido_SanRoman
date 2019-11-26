@@ -3,8 +3,8 @@
 
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:textSize="18sp"
-    android:padding="5sp"
+    android:textSize="15sp"
+    android:padding="2sp"
     android:textColor="#3260F5"
     android:layout_centerVertical="true"
     android:backgroundTint="@color/colorPrimary"
