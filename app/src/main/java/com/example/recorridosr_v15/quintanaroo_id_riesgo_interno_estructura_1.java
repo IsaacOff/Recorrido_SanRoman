@@ -42,10 +42,9 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
         this.setTitle("Riesgo interno_chetumal");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        directorio2 = new File(getIntent().getStringExtra("File"));
-        if(directorio2 != null) {
-            pdfFile = new File(directorio2.getPath(), "Riesgo interno.pdf");
-        }
+        directorio2 = new File (getIntent().getStringExtra("File"));
+        System.out.println(directorio2.getPath());
+
 
 
         //Asigna los Rg y rb del xml a los de aqui
@@ -294,8 +293,8 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
 
             Toast.makeText(this, "vamos al siguiente", LENGTH_SHORT).show();
 
-        //interno_siguiente2(view);
-            onClick(view);
+        interno_siguiente2(view);
+            //onClick(view);
 
         } else {
             Toast.makeText(this, "REVISA LOS DATOS", LENGTH_SHORT).show();
@@ -309,6 +308,7 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
 
     public void interno_siguiente2 (View view){
         Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_escaleraservicio_2.class);
+        intent.putExtra("File", directorio2.getPath());
         startActivity(intent);
     }
 

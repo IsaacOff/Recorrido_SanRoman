@@ -13,6 +13,17 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.PageSize;
+import com.itextpdf.text.pdf.PdfWriter;
+import com.itextpdf.tool.xml.XMLWorkerHelper;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.StringReader;
+
 import static android.widget.Toast.LENGTH_SHORT;
 
 public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatActivity {
@@ -20,6 +31,10 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
     private RadioButton rb1, rb2, rb3, rb4, rb5, rb6, rb7, rb8, rb9, rb10, rb11, rb12, rb13, rb14, rb15, rb16, rb17, rb18,rb19,rb20;
     private RadioGroup rg1, rg2, rg3, rg4,rg5,rg6,rg7,rg8,rg9, rg10;
     String vector[][] =new String[10][2];
+    static File pdfFile;
+    static File directorio2;
+    String tablaConcatenacion="";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +42,9 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
 
         this.setTitle("Riesgo interno_chetumal");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        directorio2 = new File(getIntent().getStringExtra("File"));
+        System.out.println(directorio2.getPath());
 
         //Asigna los Rg y rb del xml a los de aqui
         rg1= (RadioGroup) findViewById(R.id.Rg1);
@@ -422,6 +440,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
         if (bandera) {
             Toast.makeText(this, "vamos al siguiente", LENGTH_SHORT).show();
             interno_siguiente3(view);
+            //onClick(view);
 
 
         } else {
@@ -436,13 +455,178 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
 
     public void interno_siguiente3 (View view){
         Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_instalaciones_3.class);
+        intent.putExtra("File", directorio2.getPath());
         startActivity(intent);
     }
 
+    public void onClick (View view){
+
+        try {
+            Document document = new Document(PageSize.LETTER);
+            PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(pdfFile.getPath()));
+
+            document.open();
+            XMLWorkerHelper worker = XMLWorkerHelper.getInstance();
+
+
+            tablaConcatenacion=
+                    "<html>" + "<body>" +
+
+                            "<TABLE border=\"1\" WIDTH=\"100%\">"+
+                            "<thead>"+
+                            "<tr>"+
+                            "<th colspan=\"6\" style=\"text-align:center;\">Descripción de las escaleras de servicio</th>"+
+                            "</tr>"+
+                            "<tr>" +
+                            "<th style=\"border: inset 0pt\" WIDTH=\"45%\"></th>" +
+                            "<th style=\"border: inset 0pt\" WIDTH=\"10%\"></th>" +
+                            "<th style=\"border: inset 0pt\" WIDTH=\"10%\"></th>" +
+                            "<th style=\"border: inset 0pt\" WIDTH=\"11%\"></th>" +
+                            "<th style=\"border: inset 0pt\" WIDTH=\"13%\"></th>" +
+                            "<th style=\"border: inset 0pt\" WIDTH=\"11%\"></th>" +
+                            "</tr>" +
+                            "</thead>"+
+                            "<tbody>"+
+
+                            "<tr>"+
+                            "<td rowspan=\"2\" style=\"text-align:center;\" >Descripcion</td>"+
+                            "<td rowspan=\"2\" colspan=\"2\" style=\"text-align:center;\" >Respuesta</td>"+
+                            "<td colspan=\"3\" style=\"text-align:center;\">Estado actual</td>"+
+                            "</tr>"+
+
+                            "<tr>"+
+                            "<td style=\"text-align:center;\">Bueno</td>"+
+                            "<td style=\"text-align:center;\">Regular</td>"+
+                            "<td style=\"text-align:center;\">Malo</td>"+
+                            "</tr>"+
+
+                            "<tr>" +
+                            "<td>Escaleras homogéneas</td>";
+            agregarRenglon(vector[0][0], vector[0][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>Cuenta con barandal</td>";
+            agregarRenglon(vector[1][0], vector[1][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>Cuenta con pasamanos</td>";
+            agregarRenglon(vector[2][0], vector[2][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>Cuenta con cinta antiderrapante</td>";
+            agregarRenglon(vector[3][0], vector[3][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>Iluminación artificial</td>";
+            agregarRenglon(vector[4][0], vector[4][1]);
+
+            tablaConcatenacion = tablaConcatenacion +
+                    "<tr>"+
+                    "<td rowspan=\"2\" style=\"text-align:center;\">Descripcion</td>"+
+                    "<td rowspan=\"2\" colspan=\"2\" style=\"text-align:center;\">Respuesta</td>"+
+                    "<td colspan=\"3\" style=\"text-align:center;\">Estado actual</td>"+
+                    "</tr>"+
+
+                    "<tr>"+
+                    "<td style=\"text-align:center;\">Bueno</td>"+
+                    "<td style=\"text-align:center;\">Regular</td>"+
+                    "<td style=\"text-align:center;\">Malo</td>"+
+                    "</tr>"+
+
+                    "<tr>" +
+                    "<td>Escaleras homogéneas</td>";
+            agregarRenglon(vector[5][0], vector[5][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>Cuenta con barandal</td>";
+            agregarRenglon(vector[6][0], vector[6][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>Cuenta con pasamanos</td>";
+            agregarRenglon(vector[7][0], vector[7][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>Cuenta con cinta antiderrapante</td>";
+            agregarRenglon(vector[8][0], vector[8][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>Iluminación artificial</td>";
+            agregarRenglon(vector[9][0], vector[9][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "</tbody>"+
+                    "</table>"+
+
+                    "</body>" + "</html>";
+            //style='border: inset 0pt'
 
 
 
+            worker.parseXHtml(pdfWriter, document, new StringReader(tablaConcatenacion));
+
+            document.close();
+
+            Intent intent = new Intent(this, com.example.recorridosr_v15.ViewPdf.class);
+            intent.putExtra("File", pdfFile.getPath());
+            startActivity(intent);
+        } catch (IOException e) {
+            Toast.makeText(this,"NO SE PUDO GENERAR EL DOCUMENTO", Toast.LENGTH_LONG).show();
+            e.printStackTrace();
+        } catch (DocumentException e) {
+            Toast.makeText(this,"NO SE PUDO GENERAR EL DOCUMENTO", Toast.LENGTH_LONG).show();
+            e.printStackTrace();
+        }
 
 
+    }
+    public void agregarRenglon(String decision, String estado) {
+        if (decision.equals("SI")) {
+            tablaConcatenacion= tablaConcatenacion +
+                    "<td style=\"background-color:Yellow; text-align:center;\">SI</td>" +
+                    "<td style=\"text-align:center;\">NO</td>" ;
+        } else if(decision.equals("NO")){
+            tablaConcatenacion= tablaConcatenacion +
+                    "<td style=\"text-align:center;\">SI</td>" +
+                    "<td style=\"background-color:Yellow; text-align:center;\">NO</td>" ;
+        }else{
+            tablaConcatenacion= tablaConcatenacion +
+            "<td >SI</td>" +
+                    "<td>NO</td>" ;
+        }
+
+        if (estado.equals("BUENO") && decision.equals("SI")){
+            tablaConcatenacion= tablaConcatenacion +
+                    "<td style=\"text-align:center;\">X</td>"+
+                    "<td></td>"+
+                    "<td></td>"+
+                    "</tr>";
+        } else if(estado.equals("REGULAR") && decision.equals("SI")){
+            tablaConcatenacion= tablaConcatenacion +
+                    "<td></td>"+
+                    "<td style=\"text-align:center;\">X</td>"+
+                    "<td></td>"+
+                    "</tr>";
+        } else if(estado.equals("MALO") && decision.equals("SI")){
+            tablaConcatenacion= tablaConcatenacion +
+                    "<td></td>"+
+                    "<td></td>"+
+                    "<td style=\"text-align:center;\">X</td>"+
+                    "</tr>";
+        }else{
+            tablaConcatenacion= tablaConcatenacion +
+                    "<td></td>"+
+                    "<td></td>"+
+                    "<td></td>"+
+                    "</tr>";
+        }
+    }
 
 }

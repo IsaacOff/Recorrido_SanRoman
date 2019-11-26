@@ -36,9 +36,6 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         directorio2 = new File(getIntent().getStringExtra("File"));
-        if(directorio2 != null) {
-            pdfFile = new File(directorio2.getPath(), "Riesgo interno.pdf");
-        }
 
         //asigna los edit text a los et de aqui
         et1 = (EditText) findViewById(R.id.editText1);
@@ -184,6 +181,7 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
 
     public void interno_estructura(View view) {
         Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_estructura_1.class);
+        intent.putExtra("File", directorio2.getPath());
         startActivity(intent);
     }
 
