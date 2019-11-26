@@ -170,8 +170,8 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
             vector[16] = et17.getText().toString();
 
             Toast.makeText(this, "Vamos al siguiente", Toast.LENGTH_LONG).show();
-            onClick(view);
-            //interno_estructura(view);
+            //onClick(view);
+            interno_estructura(view);
 
 
         } else {

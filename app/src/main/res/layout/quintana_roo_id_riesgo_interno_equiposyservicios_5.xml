@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".quintanaroo_id_riesgo_interno_equiposyservicios_5"
+android:stretchColumns="1">
+
+
+
+<TableRow android:background="#128675">
+
+    <TextView
+
+        android:layout_height="30dp"
+        android:padding="3dip"
+        android:text=" RIESGO POR DEFICIS EN LOS EQUIPOS Y SERV.DE EMERGENCIA"
+        android:textColor="@android:color/white" />
+
+
+</TableRow>
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <!--- /////////////////////////////////////////////////// -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_column="0"
+            android:padding="3dip"
+            android:text=" Evaluación del riesgo por la carencia, insuficiencia o inoperancia de los equipos y servicios de emergencia en el inmueble."
+            android:textColor="#000000" />
+
+
+        <!-- El inmueble cuenta con:  -->
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Sistema de alertamiento"
+                android:textColor="#000000" />
+
+            <RadioGroup
+                android:id="@+id/Rg1"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+
+        </TableRow>
+
+
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="153dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Sistema contra incendio"
+                android:textColor="#000000" />
+
+
+
+            <RadioGroup
+                android:id="@+id/Rg2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Extintores"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="243dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Equipo de protección personal para atención de emergencia"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+
+
+
+        <!-- Iluminación artificial  -->
+
+        <TableRow
+            android:layout_width="211dp"
+            android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="281dp"
+                android:layout_height="55dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Material y equipo para atención de emergencia"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="Si" />
+
+                <RadioButton
+                    android:id="@+id/rb10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="No" />
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Rutas de evacuación"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Salidas de emergencia"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Señalización"
+                android:textColor="#000000" />
+
+            <RadioGroup
+                android:id="@+id/Rg8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Brigadas de emergencia"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="213dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Sistemas de comunicación de emergencia"
+                android:textColor="#000000" />
+
+            <RadioGroup
+                android:id="@+id/Rg10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Zonas de seguridad y de conteo"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Servicios médicos o de primeros auxilios"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+
+
+        <!--- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="siguiente6"
+            android:text="siguiente"
+            android:textSize="15sp">
+
+        </Button>
+
+    </TableLayout>
+
+</ScrollView>
+
+</TableLayout>

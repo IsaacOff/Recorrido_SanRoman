@@ -43,7 +43,9 @@
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
-                    android:padding="3dip">
+                    android:padding="3dip"
+                    android:backgroundTint="#3260F5"
+                    android:prompt="@color/focus">
 
 
                 </Spinner>

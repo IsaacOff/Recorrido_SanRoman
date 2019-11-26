@@ -211,6 +211,7 @@ public class quintanaroo_SeguridadExterior extends AppCompatActivity{
         spin37.setAdapter(adapter);
         spin38.setAdapter(adapter);
 
+
         //pasa parametros al spinner para mostrar
         mostrar(spin1, et1);
         mostrar(spin2, et2);

@@ -2,6 +2,7 @@ package com.example.recorridosr_v15;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
@@ -83,7 +84,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
         spin10=(Spinner)findViewById(R.id.spinner10);
 
         //crea el vector de String que contendra el spinner y lo carga en la variable adapter
-        String [] opciones ={"Selecione:","BUENO","REGULAR","MALO"};
+        String [] opciones ={"Selecione el estado actual:","BUENO","REGULAR","MALO"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, opciones);
 
         //se asigna la variable adapter a cada espiner para mostrarle al usuario
@@ -330,7 +331,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
 
 
         if( vector[0][0]=="SI"){
-            if(vector[0][1]=="Selecione:"){
+            if(vector[0][1]=="Selecione el estado actual:"){
                 bandera= false;
             }
 
@@ -338,7 +339,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
 
 
         if( vector[1][0]=="SI"){
-            if(vector[1][1]=="Selecione:"){
+            if(vector[1][1]=="Selecione el estado actual:"){
                 bandera= false;
             }
 
@@ -349,14 +350,14 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
 
 
         if( vector[2][0]=="SI"){
-            if(vector[2][1]=="Selecione:"){
+            if(vector[2][1]=="Selecione el estado actual:"){
                 bandera= false;
             }
 
         }
 
         if( vector[3][0]=="SI"){
-            if(vector[3][1]=="Selecione:"){
+            if(vector[3][1]=="Selecione el estado actual:"){
                 bandera= false;
             }
 
@@ -365,7 +366,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
         }
 
         if( vector[4][0]=="SI"){
-            if(vector[4][1]=="Selecione:"){
+            if(vector[4][1]=="Selecione el estado actual:"){
                 bandera= false;
             }
 
@@ -373,21 +374,21 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
         }
 
         if( vector[5][0]=="SI"){
-            if(vector[5][1]=="Selecione:"){
+            if(vector[5][1]=="Selecione el estado actual:"){
                 bandera= false;
             }
 
         }
 
         if( vector[6][0]=="SI"){
-            if(vector[6][1]=="Selecione:"){
+            if(vector[6][1]=="Selecione el estado actual:"){
                 bandera= false;
             }
 
         }
 
         if( vector[7][0]=="SI"){
-            if(vector[7][1]=="Selecione:"){
+            if(vector[7][1]=="Selecione el estado actual:"){
                 bandera= false;
             }
 
@@ -395,7 +396,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
         }
 
         if( vector[8][0]=="SI"){
-            if(vector[8][1]=="Selecione:"){
+            if(vector[8][1]=="Selecione el estado actual:"){
                 bandera= false;
             }
 
@@ -403,18 +404,24 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
         }
 
         if( vector[9][0]=="SI"){
-            if(vector[9][1]=="Selecione:"){
+            if(vector[9][1]=="Selecione el estado actual:"){
                 bandera= false;
             }
 
 
         }
 
+        for(int i=0;i<10; i++  ){
+            if(vector[i][0]==null){
+                bandera= false;
+            }
+        }
+
 
 
         if (bandera) {
             Toast.makeText(this, "vamos al siguiente", LENGTH_SHORT).show();
-
+            interno_siguiente3(view);
 
 
         } else {
@@ -424,6 +431,15 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
 
 
     }
+
+
+
+    public void interno_siguiente3 (View view){
+        Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_instalaciones_3.class);
+        startActivity(intent);
+    }
+
+
 
 
 

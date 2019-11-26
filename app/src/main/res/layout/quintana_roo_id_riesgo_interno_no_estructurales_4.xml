@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".quintanaroo_id_riesgo_interno_noEstructurales_4"
+android:stretchColumns="1">
+
+
+
+<TableRow android:background="#128675">
+
+    <TextView
+
+        android:layout_height="30dp"
+        android:padding="3dip"
+        android:text=" RIESGOS POR ELEMENTOS NO ESTRUCTURALES"
+        android:textColor="@android:color/white" />
+
+
+</TableRow>
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <!--- /////////////////////////////////////////////////// -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_column="0"
+            android:padding="3dip"
+            android:text=" Riesgo por las condiciones de inseguridad que existe en :"
+            android:textColor="#000000" />
+
+
+        <!-- El inmueble cuenta con:  -->
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Anaqueles y/o estantería"
+                android:textColor="#000000" />
+
+            <RadioGroup
+                android:id="@+id/Rg1"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+
+        </TableRow>
+
+
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="153dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Vidrios"
+                android:textColor="#000000" />
+
+
+
+            <RadioGroup
+                android:id="@+id/Rg2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Antenas"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Plafones"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+
+
+
+        <!-- Iluminación artificial  -->
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Lámparas"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Elevadores"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Cancelería"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Puertas y ventanas"
+                android:textColor="#000000" />
+
+            <RadioGroup
+                android:id="@+id/Rg8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Elementos suspendidos"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="213dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Muros falsos"
+                android:textColor="#000000" />
+
+            <RadioGroup
+                android:id="@+id/Rg10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+        <!--- /////////////////////////////////////////////////// -->
+
+
+        <TextView
+            android:background="#128675"
+            android:layout_width="224dp"
+            android:layout_height="30dp"
+            android:padding="3dip"
+            android:text=" RIESGOS POR ACABADOS DEL INMUEBLE "
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_column="0"
+            android:padding="3dip"
+            android:text=" Riesgo por las condiciones de inseguridad que presentan los   acabados del inmueble :"
+            android:textColor="#000000" />
+
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Lambrines"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Recubrimiento de material incombustible"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Recubrimiento de material combustible"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Pisos y desniveles"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Pisos falsos"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Losetas y azulejos"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+
+        <!--- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="siguiente5"
+            android:text="siguiente"
+            android:textSize="15sp">
+
+        </Button>
+
+    </TableLayout>
+
+</ScrollView>
+
+</TableLayout>

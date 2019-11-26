@@ -1,29 +1,31 @@
 package com.example.recorridosr_v15;
 
-        import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
-        import android.content.Intent;
-        import android.content.pm.ActivityInfo;
-        import android.os.Bundle;
-        import android.view.View;
-        import android.widget.EditText;
-        import android.widget.RadioButton;
-        import android.widget.RadioGroup;
-        import android.widget.Toast;
+import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
-        import static android.widget.Toast.LENGTH_SHORT;
+import static android.widget.Toast.LENGTH_SHORT;
 
+public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatActivity {
+    private RadioButton rb1, rb2, rb3, rb4, rb5, rb6, rb7, rb8, rb9, rb10, rb11, rb12, rb13, rb14, rb15, rb16, rb17, rb18,rb19,rb20;
+    private RadioButton rb21, rb22, rb23, rb24, rb25, rb26, rb27, rb28, rb29, rb30, rb31, rb32;
+    private RadioGroup rg1, rg2, rg3, rg4,rg5,rg6,rg7,rg8,rg9, rg10, rg11, rg12,rg13, rg14, rg15,rg16;
+    String vector[]=new String[16];
 
-public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivity {
-    private RadioButton rb1, rb2, rb3, rb4, rb5, rb6, rb7, rb8, rb9, rb10, rb11, rb12, rb13, rb14, rb15, rb16, rb17, rb18,rb19,rb20, rb21, rb22, rb23, rb24 ;
-    private RadioGroup rg1, rg2, rg3, rg4,rg5,rg6,rg7,rg8,rg9;
-    private EditText et1;
-    private String vector[]= new String[10];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.quintana_roo_id_riesgo_interno_estructura_1);
+        setContentView(R.layout.quintana_roo_id_riesgo_interno_no_estructurales_4);
+
+
 
         this.setTitle("Riesgo interno_chetumal");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -67,12 +69,34 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
         rb17 = (RadioButton) findViewById(R.id.rb17);
         rb18 = (RadioButton) findViewById(R.id.rb18);
 
-        //asigna los edit text a los et de aqui
-        et1 = (EditText) findViewById(R.id.editText1);
+        rg10= (RadioGroup) findViewById(R.id.Rg10);
+        rb19 = (RadioButton) findViewById(R.id.rb19);
+        rb20 = (RadioButton) findViewById(R.id.rb20);
 
+        rg11= (RadioGroup) findViewById(R.id.Rg11);
+        rb21 = (RadioButton) findViewById(R.id.rb21);
+        rb22 = (RadioButton) findViewById(R.id.rb22);
 
-        //Ocultar EditText
-        et1.setVisibility(View.GONE);
+        rg12= (RadioGroup) findViewById(R.id.Rg12);
+        rb23 = (RadioButton) findViewById(R.id.rb23);
+        rb24 = (RadioButton) findViewById(R.id.rb24);
+
+        rg13= (RadioGroup) findViewById(R.id.Rg13);
+        rb25 = (RadioButton) findViewById(R.id.rb25);
+        rb26 = (RadioButton) findViewById(R.id.rb26);
+
+        rg14= (RadioGroup) findViewById(R.id.Rg14);
+        rb27 = (RadioButton) findViewById(R.id.rb27);
+        rb28 = (RadioButton) findViewById(R.id.rb28);
+
+        rg15= (RadioGroup) findViewById(R.id.Rg15);
+        rb29 = (RadioButton) findViewById(R.id.rb29);
+        rb30 = (RadioButton) findViewById(R.id.rb30);
+
+        rg16= (RadioGroup) findViewById(R.id.Rg16);
+        rb31 = (RadioButton) findViewById(R.id.rb31);
+        rb32 = (RadioButton) findViewById(R.id.rb32);
+
 
         rg1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -228,13 +252,13 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
                 if(checkedId==R.id.rb17){
 
                     vector[8]="SI";
-                    et1.setVisibility(View.VISIBLE);
+
 
 
                 }else if(checkedId==R.id.rb18) {
 
                     vector[8]="NO";
-                    et1.setVisibility(View.GONE);
+
 
 
                 }
@@ -244,39 +268,161 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
 
 
 
+
+
+
+        ///otro9-18
+
+
+        rg10.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb19){
+
+                    vector[9]="SI";
+
+                }else if(checkedId==R.id.rb20) {
+                    vector[9]="NO";
+
+
+                }
+
+            }
+        });
+
+
+        rg11.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb21){
+
+                    vector[10]="SI";
+
+                }else if(checkedId==R.id.rb22) {
+
+                    vector[10]="NO";
+
+
+                }
+
+            }
+        });
+
+
+        rg12.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb23){
+                    vector[11]="SI";
+
+
+                }else if(checkedId==R.id.rb24) {
+
+                    vector[11]="NO";
+
+
+                }
+
+            }
+        });
+
+
+        rg13.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb25){
+
+                    vector[12]="SI";
+
+
+                }else if(checkedId==R.id.rb26) {
+
+                    vector[12]="NO";
+
+                }
+
+            }
+        });
+
+
+        rg14.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb27){
+
+                    vector[13]="SI";
+
+
+                }else if(checkedId==R.id.rb28) {
+
+                    vector[13]="NO";
+
+
+
+                }
+
+            }
+        });
+
+
+        rg15.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb29){
+
+                    vector[14]="SI";
+
+
+                }else if(checkedId==R.id.rb30) {
+
+                    vector[14]="NO";
+
+
+                }
+
+            }
+        });
+
+
+
+        rg16.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb31){
+
+                    vector[15]="SI";
+
+
+                }else if(checkedId==R.id.rb32) {
+
+                    vector[15]="NO";
+
+
+                }
+
+            }
+        });
+
+
     }
 
 
-
-
-
-    public void siguiente2(View view) {
+    public void siguiente5(View view) {
         Boolean bandera = true;
 
 
-        if( vector[8]=="SI"){
-
-            if (et1.length() == 0) {
-                bandera = false;
-            }
-
-        }
-
-        for(int i=0;i<7; i++  ){
+        for(int i=0;i<16; i++  ){
             if(vector[i]==null){
                 bandera= false;
             }
         }
 
 
-
         if (bandera) {
-            vector[9] = et1.getText().toString();
 
 
             Toast.makeText(this, "vamos al siguiente", LENGTH_SHORT).show();
-
-        interno_siguiente2(view);
+            interno_siguiente5(view);
 
 
         } else {
@@ -288,14 +434,10 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
 
 
 
-
-    public void interno_siguiente2 (View view){
-        Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_escaleraservicio_2.class);
+    public void interno_siguiente5 (View view){
+        Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_equiposyservicios_5.class);
         startActivity(intent);
     }
 
 
-
-
 }
-
