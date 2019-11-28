@@ -167,7 +167,7 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
             vector[16] = et17.getText().toString();
 
             Toast.makeText(this, "Vamos al siguiente", Toast.LENGTH_LONG).show();
-            //onClick(view);
+            onClick(view);
             interno_estructura(view);
 
 
@@ -182,17 +182,11 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
     public void interno_estructura(View view) {
         Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_estructura_1.class);
         intent.putExtra("File", directorio2.getPath());
+        intent.putExtra("documento", tablaConcatenacion);
         startActivity(intent);
     }
 
     public void onClick (View view){
-
-        try {
-            Document document = new Document(PageSize.LETTER);
-            PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(pdfFile.getPath()));
-            document.open();
-            XMLWorkerHelper worker = XMLWorkerHelper.getInstance();
-
 
         tablaConcatenacion=
                 "<html>" + "<body>" +
@@ -287,27 +281,16 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
                 "</tr>"+
 
                 "</tbody>"+
-                "</table>"+
-
-                        "</body>" + "</html>";
+                "</table>";
             //style='border: inset 0pt'
 
 
 
-            worker.parseXHtml(pdfWriter, document, new StringReader(tablaConcatenacion));
 
-            document.close();
+            //Intent intent = new Intent(this, com.example.recorridosr_v15.ViewPdf.class);
+            //intent.putExtra("File", pdfFile.getPath());
+            //startActivity(intent);
 
-            Intent intent = new Intent(this, com.example.recorridosr_v15.ViewPdf.class);
-            intent.putExtra("File", pdfFile.getPath());
-            startActivity(intent);
-        } catch (IOException e) {
-            Toast.makeText(this,"NO SE PUDO GENERAR EL DOCUMENTO", Toast.LENGTH_LONG).show();
-            e.printStackTrace();
-        } catch (DocumentException e) {
-            Toast.makeText(this,"NO SE PUDO GENERAR EL DOCUMENTO", Toast.LENGTH_LONG).show();
-            e.printStackTrace();
-        }
 
 
 }

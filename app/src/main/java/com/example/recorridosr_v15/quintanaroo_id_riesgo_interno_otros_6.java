@@ -1378,7 +1378,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (bandera) {
             vector2 = et1.getText().toString();
 
-
+            onClick(view);
             Toast.makeText(this, "Guardado con exito", LENGTH_SHORT).show();
 
 
@@ -1457,175 +1457,329 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
                     "<td>6</td>"+
                     "<td>Canceles de vidrio</td>";
             agregarRenglon(vector[5]);
-//_------------------------
+
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td></td>"+
-                    "<td>Anomalías en el tanque</td>";
+                    "<td>7</td>"+
+                    "<td>Candelabros</td>";
             agregarRenglon(vector[6]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td></td>"+
-                    "<td>Anomalías en tuberías</td>";
+                    "<td>8</td>"+
+                    "<td>Plafones</td>";
             agregarRenglon(vector[7]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td></td>"+
-                    "<td>Anomalías en la instalación del suministro de gas: Estufa, calentador de agua</td>";
+                    "<td>9</td>"+
+                    "<td>Entrepaños o repisas</td>";
             agregarRenglon(vector[8]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td></td>"+
-                    "<td>Cuenta con dictamen técnico de instalación gas</td>";
+                    "<td>10</td>"+
+                    "<td>Cuadros</td>";
             agregarRenglon(vector[9]);
 
             tablaConcatenacion=  tablaConcatenacion +
-                    "<tr>" ;
-
-            if(vector[9].equals("SI")) {
-                tablaConcatenacion=  tablaConcatenacion +
-                        "<td colspan=\"4\" >De qué fecha: <b>"+vector[10]+"</b></td>";
-            }else{
-                tablaConcatenacion=  tablaConcatenacion +
-                        "<td colspan=\"4\" >De qué fecha:</td>";
-            }
-
-            tablaConcatenacion=  tablaConcatenacion +
-                    "</tr>";
-
-            tablaConcatenacion =  tablaConcatenacion +
-                    "<tr>"+
-                    "<td colspan=\"4\"><b>Nota: </b> Si respondió afirmativo presentar copia del dictamen técnico.</td>"+
-                    "</tr>";
-
-            tablaConcatenacion =  tablaConcatenacion +
-                    "<tr>"+
-                    "<td>3.</td>"+
-                    "<td colspan=\"3\" >Instalación eléctrica</td>"+
-                    "</tr>"+
-
                     "<tr>" +
-                    "<td></td>"+
-                    "<td>Subestación (protegida y señalada)</td>";
+                    "<td>11</td>"+
+                    "<td>Espejos</td>";
+            agregarRenglon(vector[10]);
+
+
+            tablaConcatenacion =  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>12</td>"+
+                    "<td>Líquidos tóxicos o inflamables</td>";
             agregarRenglon(vector[11]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td></td>"+
-                    "<td>Tablero (con tapa y señalado)</td>";
+                    "<td>13</td>"+
+                    "<td>Macetas y otros objetos colgantes</td>";
             agregarRenglon(vector[12]);
+
+            tablaConcatenacion =  tablaConcatenacion +
+                    "<tr>"+
+                    "<td colspan=\"4\">Objetos que pueden deslizarse:</td>"+
+                    "</tr>";
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td></td>"+
-                    "<td>Cableado (entubado o empotrado)</td>";
+                    "<td>1</td>"+
+                    "<td>Escritorios</td>";
             agregarRenglon(vector[13]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td></td>"+
-                    "<td>Contactos (protegidos)</td>";
+                    "<td>2</td>"+
+                    "<td>Mesas</td>";
             agregarRenglon(vector[14]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td></td>"+
-                    "<td>Interruptores (con tapa protectora)</td>";
+                    "<td>3</td>"+
+                    "<td>Sillas</td>";
             agregarRenglon(vector[15]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td></td>"+
-                    "<td>Lámparas (funcionando)</td>";
+                    "<td>4</td>"+
+                    "<td>Refrigeradores</td>";
             agregarRenglon(vector[16]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td></td>"+
-                    "<td>Lámparas de emergencia (funcionando)</td>";
+                    "<td>5</td>"+
+                    "<td>Cunas</td>";
             agregarRenglon(vector[17]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td></td>"+
-                    "<td>Planta de emergencia</td>";
+                    "<td>6</td>"+
+                    "<td>Camas</td>";
             agregarRenglon(vector[18]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td></td>"+
-                    "<td>Cajas de distribución</td>";
+                    "<td>7</td>"+
+                    "<td>Corralitos</td>";
             agregarRenglon(vector[19]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td></td>"+
-                    "<td>Cuenta con dictamen técnico de instalación eléctrica</td>";
+                    "<td>8</td>"+
+                    "<td>Sillas de ruedas</td>";
             agregarRenglon(vector[20]);
 
             tablaConcatenacion=  tablaConcatenacion +
-                    "<tr>" ;
-
-            if(vector[20].equals("SI")) {
-                tablaConcatenacion=  tablaConcatenacion +
-                        "<td colspan=\"4\" >De qué fecha: <b>"+vector[21]+"</b></td>";
-            }else{
-                tablaConcatenacion=  tablaConcatenacion +
-                        "<td colspan=\"4\" >De qué fecha:</td>";
-            }
-
-            tablaConcatenacion=  tablaConcatenacion +
-                    "</tr>";
-
-            tablaConcatenacion =  tablaConcatenacion +
-                    "<tr>"+
-                    "<td colspan=\"4\"><b>Nota: </b> Si respondió afirmativo presentar copia del dictamen técnico.</td>"+
-                    "</tr>";
-
-            tablaConcatenacion =  tablaConcatenacion +
-                    "<tr>"+
-                    "<td>4.</td>"+
-                    "<td colspan=\"3\" >Instalación de aire acondicionado</td>"+
-                    "</tr>"+
-
                     "<tr>" +
-                    "<td></td>"+
-                    "<td>La instalación eléctrica se encuentra protegida</td>";
+                    "<td>9</td>"+
+                    "<td>Mobiliario y equipo para trasladar usuarios</td>";
+            agregarRenglon(vector[21]);
+
+            tablaConcatenacion =  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>10</td>"+
+                    "<td>Y todos aquellos con ruedas</td>";
             agregarRenglon(vector[22]);
 
+            tablaConcatenacion =  tablaConcatenacion +
+                    "<tr>"+
+                    "<td colspan=\"4\">Objetos que pueden volcar:</td>"+
+                    "</tr>";
+
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td></td>"+
-                    "<td>Cuenta con tierra física</td>";
+                    "<td>1</td>"+
+                    "<td>Equipo de computo</td>";
             agregarRenglon(vector[23]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td></td>"+
-                    "<td>Instalaciones especiales</td>";
+                    "<td>2</td>"+
+                    "<td>Libreros</td>";
             agregarRenglon(vector[24]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td></td>";
-            if(vector[24].equals("SI")) {
-                tablaConcatenacion=  tablaConcatenacion +
-                        "<td colspan=\"3\">Especifique: <b>" + vector[25] + "</b></td>";
-            }else{
-                tablaConcatenacion=  tablaConcatenacion +
-                        "<td colspan=\"3\">Especifique: </td>";
-            }
+                    "<td>3</td>"+
+                    "<td>Roperos</td>";
+            agregarRenglon(vector[25]);
+
             tablaConcatenacion=  tablaConcatenacion +
-                    "</tr>"+
+                    "<tr>" +
+                    "<td>4</td>"+
+                    "<td>Lockers</td>";
+            agregarRenglon(vector[26]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>5</td>"+
+                    "<td>Archiveros</td>";
+            agregarRenglon(vector[27]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>6</td>"+
+                    "<td>Estantes no anclados</td>";
+            agregarRenglon(vector[28]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>7</td>"+
+                    "<td>Vitrinas</td>";
+            agregarRenglon(vector[29]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>8</td>"+
+                    "<td>Tanques de gas</td>";
+            agregarRenglon(vector[30]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>9</td>"+
+                    "<td>Subdivisiones de espacios no ligados al techo y piso</td>";
+            agregarRenglon(vector[31]);
+
+            tablaConcatenacion=  tablaConcatenacion +
                     "<tr>"+
-                    "<td colspan=\"4\"><b>Nota: </b>\n" +
-                    "Si respondió afirmativo en alguna de las opciones de la cuestión 1., se requiere implementar medidas preventivas.\n" +
-                    "Si respondió afirmativo en alguna de las opciones de las cuestiones 2 a la 4, se requiere implementar medidas correctivas, además de los dictámenes técnicos correspondientes elaborados por una Unidad de Verificación o Perito Autorizado en la materia.\n</td>"+
+                    "<td colspan=\"4\">Objetos que pueden ser tóxicos, inflamar y/o explotar:</td>" +
                     "</tr>";
 
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>1</td>"+
+                    "<td>Recipientes o tanques con combustible</td>";
+            agregarRenglon(vector[32]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>2</td>"+
+                    "<td>Solventes (thiner, aguarrás) y otras semejantes</td>";
+            agregarRenglon(vector[33]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>3</td>"+
+                    "<td>Almacén de papel, cartón, entre otros</td>";
+            agregarRenglon(vector[34]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>4</td>"+
+                    "<td>Pinturas</td>";
+            agregarRenglon(vector[35]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>5</td>"+
+                    "<td>Líquidos para el control de fauna nociva</td>";
+            agregarRenglon(vector[36]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>6</td>"+
+                    "<td>Líquidos de limpieza</td>";
+            agregarRenglon(vector[37]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>7</td>"+
+                    "<td>Otros</td>";
+            agregarRenglon(vector[38]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td ></td>"+
+                    "<td colspan=\"3\">Especificar: <b>"+vector2+"</b></td>"+
+                    "</tr>";
+
+            //_------------------------------
+
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td colspan=\"4\"> Objetos que pueden propiciar un incendio:</td>"+
+                    "</tr>";
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>1</td>"+
+                    "<td>Recipientes e instalaciones de gas</td>";
+            agregarRenglon(vector[39]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>2</td>"+
+                    "<td>Hornillas o parrillas eléctricas</td>";
+            agregarRenglon(vector[40]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>3</td>"+
+                    "<td>Cafeteras</td>";
+            agregarRenglon(vector[41]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>4</td>"+
+                    "<td>Contactos, apagadores, clavijas y cables en mal estado</td>";
+            agregarRenglon(vector[42]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>5</td>"+
+                    "<td>Hornos de microondas sin base o plato protector</td>";
+            agregarRenglon(vector[43]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>6</td>"+
+                    "<td>Velas y veladoras</td>";
+            agregarRenglon(vector[44]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>7</td>"+
+                    "<td>Aromatizantes eléctricos</td>";
+            agregarRenglon(vector[45]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td colspan=\"4\">Objetos que pueden obstaculizar una evacuación:</td>"+
+                    "</tr>";
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>1</td>"+
+                    "<td>Tapetes</td>";
+            agregarRenglon(vector[46]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>2</td>"+
+                    "<td>Macetas</td>";
+            agregarRenglon(vector[47]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>3</td>"+
+                    "<td>Archiveros</td>";
+            agregarRenglon(vector[48]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>4</td>"+
+                    "<td>Pizarrones portátiles</td>";
+            agregarRenglon(vector[49]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>5</td>"+
+                    "<td>Muebles</td>";
+            agregarRenglon(vector[50]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>6</td>"+
+                    "<td>Cubetas, trapeadores, escobas, y todos aquellos que son dejados fuera de su lugar</td>";
+            agregarRenglon(vector[51]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>7</td>"+
+                    "<td>Juguetes</td>";
+            agregarRenglon(vector[52]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>8</td>"+
+                    "<td>Equipo y mobiliario</td>";
+            agregarRenglon(vector[53]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "</tbody>"+

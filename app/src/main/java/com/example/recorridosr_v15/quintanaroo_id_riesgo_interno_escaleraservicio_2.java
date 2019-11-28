@@ -34,6 +34,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
     static File pdfFile;
     static File directorio2;
     String tablaConcatenacion="";
+    String temporal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +45,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         directorio2 = new File(getIntent().getStringExtra("File"));
-        System.out.println(directorio2.getPath());
+        temporal = getIntent().getStringExtra("documento");
 
         //Asigna los Rg y rb del xml a los de aqui
         rg1= (RadioGroup) findViewById(R.id.Rg1);
@@ -440,7 +441,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
         if (bandera) {
             Toast.makeText(this, "vamos al siguiente", LENGTH_SHORT).show();
             interno_siguiente3(view);
-            //onClick(view);
+            onClick(view);
 
 
         } else {
@@ -456,21 +457,13 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
     public void interno_siguiente3 (View view){
         Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_instalaciones_3.class);
         intent.putExtra("File", directorio2.getPath());
+        intent.putExtra("documento", tablaConcatenacion);
         startActivity(intent);
     }
 
     public void onClick (View view){
 
-        try {
-            Document document = new Document(PageSize.LETTER);
-            PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(pdfFile.getPath()));
-
-            document.open();
-            XMLWorkerHelper worker = XMLWorkerHelper.getInstance();
-
-
-            tablaConcatenacion=
-                    "<html>" + "<body>" +
+            tablaConcatenacion= temporal+
 
                             "<TABLE border=\"1\" WIDTH=\"100%\">"+
                             "<thead>"+
@@ -563,27 +556,13 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
 
             tablaConcatenacion=  tablaConcatenacion +
                     "</tbody>"+
-                    "</table>"+
-
-                    "</body>" + "</html>";
+                    "</table>";
             //style='border: inset 0pt'
 
 
-
-            worker.parseXHtml(pdfWriter, document, new StringReader(tablaConcatenacion));
-
-            document.close();
-
-            Intent intent = new Intent(this, com.example.recorridosr_v15.ViewPdf.class);
-            intent.putExtra("File", pdfFile.getPath());
-            startActivity(intent);
-        } catch (IOException e) {
-            Toast.makeText(this,"NO SE PUDO GENERAR EL DOCUMENTO", Toast.LENGTH_LONG).show();
-            e.printStackTrace();
-        } catch (DocumentException e) {
-            Toast.makeText(this,"NO SE PUDO GENERAR EL DOCUMENTO", Toast.LENGTH_LONG).show();
-            e.printStackTrace();
-        }
+            //Intent intent = new Intent(this, com.example.recorridosr_v15.ViewPdf.class);
+            //intent.putExtra("File", pdfFile.getPath());
+            //startActivity(intent);
 
 
     }

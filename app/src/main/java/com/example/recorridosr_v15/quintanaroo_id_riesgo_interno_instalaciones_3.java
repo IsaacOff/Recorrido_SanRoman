@@ -36,6 +36,7 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
     static File pdfFile;
     static File directorio2;
     String tablaConcatenacion="";
+    String temporal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,9 +48,10 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         directorio2 = new File(getIntent().getStringExtra("File"));
-        //if(directorio2 != null) {
-          //  pdfFile = new File(directorio2.getPath(), "Instalaciones.pdf");
-        //}
+        temporal = getIntent().getStringExtra("documento");
+        if(directorio2 != null) {
+            pdfFile = new File(directorio2.getPath(), "Prueba.pdf");
+        }
         System.out.println(directorio2.getPath());
 
         //Asigna los Rg y rb del xml a los de aqui
@@ -663,8 +665,8 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
 
 
             Toast.makeText(this, "vamos al siguiente", LENGTH_SHORT).show();
-            //onClick(view);
-            interno_siguiente4(view);
+            onClick(view);
+            //interno_siguiente4(view);
 
 
         } else {
@@ -689,7 +691,7 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
             XMLWorkerHelper worker = XMLWorkerHelper.getInstance();
 
 
-            tablaConcatenacion=
+            tablaConcatenacion= temporal+
                     "<html>" + "<body>" +
 
                             "<TABLE border=\"1\" WIDTH=\"100%\">"+
