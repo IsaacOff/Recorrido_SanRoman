@@ -440,8 +440,8 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
 
         if (bandera) {
             Toast.makeText(this, "vamos al siguiente", LENGTH_SHORT).show();
-            interno_siguiente3(view);
             onClick(view);
+            interno_siguiente3(view);
 
 
         } else {
@@ -462,6 +462,8 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
     }
 
     public void onClick (View view){
+
+
 
             tablaConcatenacion= temporal+
 
@@ -519,6 +521,9 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
 
             tablaConcatenacion = tablaConcatenacion +
                     "<tr>"+
+                    "<th colspan=\"6\" style=\"text-align:center;\">Descripción de las escaleras de emergencia</th>"+
+                    "</tr>"+
+                    "<tr>"+
                     "<td rowspan=\"2\" style=\"text-align:center;\">Descripcion</td>"+
                     "<td rowspan=\"2\" colspan=\"2\" style=\"text-align:center;\">Respuesta</td>"+
                     "<td colspan=\"3\" style=\"text-align:center;\">Estado actual</td>"+
@@ -557,12 +562,6 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             tablaConcatenacion=  tablaConcatenacion +
                     "</tbody>"+
                     "</table>";
-            //style='border: inset 0pt'
-
-
-            //Intent intent = new Intent(this, com.example.recorridosr_v15.ViewPdf.class);
-            //intent.putExtra("File", pdfFile.getPath());
-            //startActivity(intent);
 
 
     }

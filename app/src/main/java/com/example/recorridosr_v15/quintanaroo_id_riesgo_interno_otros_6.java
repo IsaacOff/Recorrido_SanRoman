@@ -42,6 +42,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
     static File pdfFile;
     static File directorio2;
     String tablaConcatenacion="";
+    String temporal;
 
 
     @Override
@@ -55,8 +56,9 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         directorio2 = new File(getIntent().getStringExtra("File"));
+        temporal = getIntent().getStringExtra("documento");
         if(directorio2 != null) {
-          pdfFile = new File(directorio2.getPath(), "Otros.pdf");
+            pdfFile = new File(directorio2.getPath(), "prueba1.pdf");
         }
 
         //Asigna los Rg y rb del xml a los de aqui
@@ -1400,7 +1402,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
 
 
             tablaConcatenacion=
-                    "<html>" + "<body>" +
+                            temporal+
 
                             "<TABLE border=\"1\" WIDTH=\"100%\">"+
                             "<thead>"+
@@ -1786,8 +1788,6 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
                     "</table>"+
 
                     "</body>" + "</html>";
-            //style='border: inset 0pt'
-
 
 
             worker.parseXHtml(pdfWriter, document, new StringReader(tablaConcatenacion));

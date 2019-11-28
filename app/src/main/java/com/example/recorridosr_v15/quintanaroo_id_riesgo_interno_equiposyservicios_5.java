@@ -31,6 +31,7 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
     static File pdfFile;
     static File directorio2;
     String tablaConcatenacion="";
+    String temporal;
 
 
 
@@ -44,11 +45,7 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         directorio2 = new File(getIntent().getStringExtra("File"));
-        if(directorio2 != null) {
-            pdfFile = new File(directorio2.getPath(), "no estructurales.pdf");
-        }
-        System.out.println(directorio2.getPath());
-
+        temporal = getIntent().getStringExtra("documento");
 
 
         //Asigna los Rg y rb del xml a los de aqui
@@ -354,8 +351,8 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
 
 
             Toast.makeText(this, "vamos al siguiente", LENGTH_SHORT).show();
-            //interno_siguiente6(view);
             onClick(view);
+            interno_siguiente6(view);
 
 
 
@@ -370,22 +367,16 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
 
     public void interno_siguiente6 (View view){
         Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_otros_6.class);
+        intent.putExtra("File", directorio2.getPath());
+        intent.putExtra("documento", tablaConcatenacion);
         startActivity(intent);
     }
 
 
     public void onClick (View view){
 
-        try {
-            Document document = new Document(PageSize.LETTER);
-            PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(pdfFile.getPath()));
-
-            document.open();
-            XMLWorkerHelper worker = XMLWorkerHelper.getInstance();
-
-
             tablaConcatenacion=
-                    "<html>" + "<body>" +
+                    temporal+
 
                             "<TABLE border=\"1\" WIDTH=\"100%\">"+
                             "<thead>"+
@@ -486,27 +477,7 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
 
             tablaConcatenacion=  tablaConcatenacion +
                     "</tbody>"+
-                    "</table>"+
-
-                    "</body>" + "</html>";
-            //style='border: inset 0pt'
-
-
-
-            worker.parseXHtml(pdfWriter, document, new StringReader(tablaConcatenacion));
-
-            document.close();
-
-            Intent intent = new Intent(this, com.example.recorridosr_v15.ViewPdf.class);
-            intent.putExtra("File", pdfFile.getPath());
-            startActivity(intent);
-        } catch (IOException e) {
-            Toast.makeText(this,"NO SE PUDO GENERAR EL DOCUMENTO", Toast.LENGTH_LONG).show();
-            e.printStackTrace();
-        } catch (DocumentException e) {
-            Toast.makeText(this,"NO SE PUDO GENERAR EL DOCUMENTO", Toast.LENGTH_LONG).show();
-            e.printStackTrace();
-        }
+                    "</table>";
 
 
     }

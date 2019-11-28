@@ -33,6 +33,7 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
     static File pdfFile;
     static File directorio2;
     String tablaConcatenacion="";
+    String temporal;
 
 
     @Override
@@ -46,10 +47,7 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         directorio2 = new File(getIntent().getStringExtra("File"));
-        //if(directorio2 != null) {
-          //pdfFile = new File(directorio2.getPath(), "no estructurales.pdf");
-        //}
-        System.out.println(directorio2.getPath());
+        temporal = getIntent().getStringExtra("documento");
 
         //Asigna los Rg y rb del xml a los de aqui
         rg1= (RadioGroup) findViewById(R.id.Rg1);
@@ -442,7 +440,7 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
 
             Toast.makeText(this, "vamos al siguiente", LENGTH_SHORT).show();
             onClick(view);
-            //interno_siguiente5(view);
+            interno_siguiente5(view);
 
 
         } else {
@@ -456,21 +454,16 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
 
     public void interno_siguiente5 (View view){
         Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_equiposyservicios_5.class);
+        intent.putExtra("File", directorio2.getPath());
+        intent.putExtra("documento", tablaConcatenacion);
         startActivity(intent);
     }
 
     public void onClick (View view){
 
-        try {
-            Document document = new Document(PageSize.LETTER);
-            PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(pdfFile.getPath()));
-
-            document.open();
-            XMLWorkerHelper worker = XMLWorkerHelper.getInstance();
-
 
             tablaConcatenacion=
-                    "<html>" + "<body>" +
+                    temporal+
 
                             "<TABLE border=\"1\" WIDTH=\"100%\">"+
                             "<thead>"+
@@ -618,27 +611,8 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
 
             tablaConcatenacion=  tablaConcatenacion +
                     "</tbody>"+
-                    "</table>"+
+                    "</table>";
 
-                    "</body>" + "</html>";
-            //style='border: inset 0pt'
-
-
-
-            worker.parseXHtml(pdfWriter, document, new StringReader(tablaConcatenacion));
-
-            document.close();
-
-            Intent intent = new Intent(this, com.example.recorridosr_v15.ViewPdf.class);
-            intent.putExtra("File", pdfFile.getPath());
-            startActivity(intent);
-        } catch (IOException e) {
-            Toast.makeText(this,"NO SE PUDO GENERAR EL DOCUMENTO", Toast.LENGTH_LONG).show();
-            e.printStackTrace();
-        } catch (DocumentException e) {
-            Toast.makeText(this,"NO SE PUDO GENERAR EL DOCUMENTO", Toast.LENGTH_LONG).show();
-            e.printStackTrace();
-        }
 
 
     }

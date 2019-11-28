@@ -36,6 +36,9 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         directorio2 = new File(getIntent().getStringExtra("File"));
+        /*if(directorio2 != null) {
+            pdfFile = new File(directorio2.getPath(), "prueba1.pdf");
+        }*/
 
         //asigna los edit text a los et de aqui
         et1 = (EditText) findViewById(R.id.editText1);
@@ -187,7 +190,13 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
     }
 
     public void onClick (View view){
+        /*try {
+            Document document = new Document(PageSize.LETTER);
+            PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(pdfFile.getPath()));
 
+            document.open();
+            XMLWorkerHelper worker = XMLWorkerHelper.getInstance();
+*/
         tablaConcatenacion=
                 "<html>" + "<body>" +
 
@@ -283,6 +292,28 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
                 "</tbody>"+
                 "</table>";
             //style='border: inset 0pt'
+               /* "</body>" + "</html>";
+        //style='border: inset 0pt'
+
+
+
+        worker.parseXHtml(pdfWriter, document, new StringReader(tablaConcatenacion));
+
+        document.close();
+
+        Intent intent = new Intent(this, com.example.recorridosr_v15.ViewPdf.class);
+        intent.putExtra("File", pdfFile.getPath());
+        startActivity(intent);
+    } catch (IOException e) {
+        Toast.makeText(this,"NO SE PUDO GENERAR EL DOCUMENTO", Toast.LENGTH_LONG).show();
+        e.printStackTrace();
+    } catch (DocumentException e) {
+        Toast.makeText(this,"NO SE PUDO GENERAR EL DOCUMENTO", Toast.LENGTH_LONG).show();
+        e.printStackTrace();
+    }*/
+
+
+}
 
 
 
@@ -293,5 +324,4 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
 
 
 
-}
 }
