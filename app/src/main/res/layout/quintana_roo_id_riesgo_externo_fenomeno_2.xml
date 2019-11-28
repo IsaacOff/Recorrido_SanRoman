@@ -3,23 +3,8 @@
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context=".quintanaroo_id_riesgo_externo"
+tools:context=".quintanaroo_id_riesgo_externo_fenomeno_2"
 android:stretchColumns="1">
-
-
-
-<TableRow android:background="#128675">
-
-    <TextView
-
-        android:layout_height="30dp"
-        android:padding="3dip"
-        android:text="IDENT. DE RIESGOS EN EL ENTOR. INMEDIATO"
-        android:textColor="@android:color/white"
-        android:textSize="18sp" />
-
-
-</TableRow>
 
 
 <ScrollView
@@ -36,7 +21,7 @@ android:stretchColumns="1">
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:padding="3dip"
-            android:text="Se identificará la presencia de elementos de riesgo en el entorno inmediato (500 metros) del inmueble:"
+            android:text="De origen Químico-Tecnológico:"
             android:textColor="#000000"
             android:textSize="16sp" />
 
@@ -46,11 +31,11 @@ android:stretchColumns="1">
         <TableRow android:layout_height="122dp">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="208dp"
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Tanques elevados"
+                android:text="15.- Incendios"
                 android:textColor="#000000" />
 
             <RadioGroup
@@ -81,33 +66,14 @@ android:stretchColumns="1">
 
 
 
-            <EditText
-                android:id="@+id/editText1"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_column="0"
-                android:ems="10"
-                android:hint="Distancia aproximada del inmueble"
-                android:inputType="textPersonName"
-                android:textColor="#3260F5"
-                android:theme="@style/EditText"/>
-
-
-
-
-
-
-
-
-
         <TableRow android:layout_height="122dp">
 
             <TextView
                 android:layout_width="153dp"
-                android:layout_height="45dp"
+                android:layout_height="55dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Postes de energía eléctrica en mal estado"
+                android:text="Forestal"
                 android:textColor="#000000" />
 
 
@@ -135,16 +101,18 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
-        <EditText
-            android:id="@+id/editText2"
+
+
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
+            android:padding="3dip"
+            android:text="¿Qué se quemaría?"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+
 
 
 
@@ -153,11 +121,11 @@ android:stretchColumns="1">
         <TableRow android:layout_height="122dp">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="179dp"
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Torres con líneas de alta tensión"
+                android:text="Industrial"
                 android:textColor="#000000" />
 
 
@@ -185,27 +153,16 @@ android:stretchColumns="1">
 
         </TableRow>
 
-        <EditText
-            android:id="@+id/editText3"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
-
 
 
         <TableRow android:layout_height="122dp">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="199dp"
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Transformadores de energía eléctrica"
+                android:text="Gasolinera"
                 android:textColor="#000000" />
 
 
@@ -233,18 +190,6 @@ android:stretchColumns="1">
 
         </TableRow>
 
-        <EditText
-            android:id="@+id/editText4"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
-
-
 
 
 
@@ -256,11 +201,11 @@ android:stretchColumns="1">
         <TableRow android:layout_height="122dp">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="192dp"
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Inmuebles aledaños dañados"
+                android:text="Gasera"
                 android:textColor="#000000" />
 
 
@@ -288,16 +233,6 @@ android:stretchColumns="1">
 
         </TableRow>
 
-        <EditText
-            android:id="@+id/editText5"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
 
 
 
@@ -305,11 +240,11 @@ android:stretchColumns="1">
         <TableRow android:layout_height="122dp">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="118dp"
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Banquetas desniveladas"
+                android:text="Tlapalería"
                 android:textColor="#000000" />
 
 
@@ -336,17 +271,6 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
-        <EditText
-            android:id="@+id/editText6"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
-
 
 
         <TableRow android:layout_height="122dp">
@@ -356,7 +280,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Alcantarillas abiertas"
+                android:text="Mercado"
                 android:textColor="#000000" />
 
 
@@ -383,16 +307,8 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
-        <EditText
-            android:id="@+id/editText7"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
+
+
 
 
         <TableRow android:layout_height="122dp">
@@ -402,7 +318,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Árboles grandes que puedan caer"
+                android:text="Plaza comercial"
                 android:textColor="#000000" />
 
             <RadioGroup
@@ -428,22 +344,7 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
-        <EditText
-            android:id="@+id/editText8"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
 
-
-
-
-
-        <!--- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 
 
@@ -454,7 +355,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Calles muy transitadas"
+                android:text="Otros"
                 android:textColor="#000000" />
 
 
@@ -481,17 +382,20 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+
         <EditText
-            android:id="@+id/editText9"
+            android:id="@+id/editText1"
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="53dp"
             android:layout_column="0"
             android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
+            android:hint="Especificar:"
             android:inputType="textPersonName"
             android:textColor="#3260F5"
             android:theme="@style/EditText"/>
 
+
+        <!--- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 
 
@@ -500,10 +404,10 @@ android:stretchColumns="1">
 
             <TextView
                 android:layout_width="213dp"
-                android:layout_height="45dp"
+                android:layout_height="60dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Fábricas con instalaciones de Gas L.P."
+                android:text="16.-  Fuga o derrame de materiales químicos peligrosos"
                 android:textColor="#000000" />
 
             <RadioGroup
@@ -529,17 +433,31 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+
+
         <EditText
-            android:id="@+id/editText10"
+            android:id="@+id/editText2"
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="53dp"
             android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
+            android:ems="8"
+            android:hint="De qué manera una fuga o derrame de materiales químicos peligrosos podría afectarlo:"
             android:inputType="textPersonName"
             android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
+            android:textSize="14sp"
+            android:theme="@style/EditText" />
 
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_column="0"
+            android:ems="8"
+            android:hint="Cuál piensa usted que podría ser el lugar de origen:"
+            android:inputType="textPersonName"
+            android:textColor="#3260F5"
+            android:textSize="14sp"
+            android:theme="@style/EditText" />
 
 
 
@@ -550,7 +468,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Tanques de gas L.P."
+                android:text="17.-  Exposición a materiales radioactivos"
                 android:textColor="#000000" />
 
 
@@ -578,17 +496,6 @@ android:stretchColumns="1">
 
         </TableRow>
 
-        <EditText
-            android:id="@+id/editText11"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
-
 
 
         <TableRow>
@@ -598,7 +505,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Gasolineras y/o Gaseras"
+                android:text="18.-  Explosiones"
                 android:textColor="#000000" />
 
 
@@ -626,27 +533,16 @@ android:stretchColumns="1">
 
         </TableRow>
 
-        <EditText
-            android:id="@+id/editText12"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
-
 
 
         <TableRow>
 
             <TextView
                 android:layout_width="229dp"
-                android:layout_height="55dp"
+                android:layout_height="60dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Anuncios volados  o espectaculares"
+                android:text="19.-  Envenenamiento"
                 android:textColor="#000000" />
 
 
@@ -673,16 +569,18 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
-        <EditText
-            android:id="@+id/editText13"
+
+
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
+            android:padding="3dip"
+            android:text="De origen Hidrometeorológico"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+
 
 
         <TableRow>
@@ -692,7 +590,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Almacenes de sustancias peligrosas"
+                android:text="20.-  Inundación"
                 android:textColor="#000000" />
 
 
@@ -719,16 +617,6 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
-        <EditText
-            android:id="@+id/editText14"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
 
 
 
@@ -741,7 +629,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Fábricas"
+                android:text="Por Río"
                 android:textColor="#000000" />
 
 
@@ -768,16 +656,6 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
-        <EditText
-            android:id="@+id/editText15"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
 
 
 
@@ -788,7 +666,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Planta de PEMEX"
+                android:text="Por lago, laguna, presa"
                 android:textColor="#000000" />
 
 
@@ -815,17 +693,6 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
-        <EditText
-            android:id="@+id/editText16"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
-
 
         <TableRow>
 
@@ -834,7 +701,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Basureros"
+                android:text="Por lluvia"
                 android:textColor="#000000" />
 
 
@@ -862,16 +729,7 @@ android:stretchColumns="1">
 
         </TableRow>
 
-        <EditText
-            android:id="@+id/editText17"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
+
 
 
 
@@ -882,7 +740,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Vías del ferrocarril"
+                android:text="Por mar"
                 android:textColor="#000000" />
 
 
@@ -910,16 +768,6 @@ android:stretchColumns="1">
 
         </TableRow>
 
-        <EditText
-            android:id="@+id/editText18"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
 
 
 
@@ -931,7 +779,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Ríos y laderas"
+                android:text="21.-  Vientos fuertes"
                 android:textColor="#000000" />
 
 
@@ -959,17 +807,6 @@ android:stretchColumns="1">
 
         </TableRow>
 
-        <EditText
-            android:id="@+id/editText19"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
-
 
 
 
@@ -980,7 +817,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Costas"
+                android:text="22.-  Huracán"
                 android:textColor="#000000" />
 
 
@@ -1008,16 +845,6 @@ android:stretchColumns="1">
 
         </TableRow>
 
-        <EditText
-            android:id="@+id/editText20"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
 
 
         <TableRow android:layout_height="122dp">
@@ -1027,7 +854,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Presas"
+                android:text="23.-  Marea de tempestad"
                 android:textColor="#000000" />
 
 
@@ -1055,19 +882,6 @@ android:stretchColumns="1">
 
         </TableRow>
 
-        <EditText
-            android:id="@+id/editText21"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
-
-
-
 
 
 
@@ -1078,7 +892,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Otros:"
+                android:text="24.-  Tormenta eléctrica"
                 android:textColor="#000000" />
 
 
@@ -1105,17 +919,656 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
-        <EditText
-            android:id="@+id/editText22"
+
+
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="55dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="25.-  Lluvia torrencial"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb46"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+
+
+
+
+        <!--- /////////////////////////////////////////////////// -->
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="26.-  Tromba"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb47"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb48"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="27.-  Tornado"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb49"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="28.-  Tormenta de granizo"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg26"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb51"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb52"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="29.-  Helada"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb53"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb54"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="30.-  Nevada"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb55"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb56"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="31.-  Sequía"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg29"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb57"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb58"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="32.-  Temperaturas extremas"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb59"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb60"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_column="0"
-            android:ems="10"
-            android:hint="Especificar"
+            android:padding="3dip"
+            android:text="De origen Sanitario-Ecológico"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="33.-  Epidemia"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb61"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb62"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_column="0"
+            android:ems="8"
+            android:hint="A qué tipo de epidemia es vulnerable"
             android:inputType="textPersonName"
             android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
+            android:textSize="14sp"
+            android:theme="@style/EditText" />
 
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="34.-  Plaga"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb63"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb64"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+        <EditText
+            android:id="@+id/editText5"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_column="0"
+            android:ems="8"
+            android:hint="A qué tipo de plaga es vulnerable"
+            android:inputType="textPersonName"
+            android:textColor="#3260F5"
+            android:textSize="14sp"
+            android:theme="@style/EditText" />
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="35.-  Envenenamiento"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb65"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb66"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+        <EditText
+            android:id="@+id/editText6"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:layout_column="0"
+            android:ems="8"
+            android:hint="A qué tipo de envenenamiento es vulnerable"
+            android:inputType="textPersonName"
+            android:textColor="#3260F5"
+            android:textSize="14sp"
+            android:theme="@style/EditText" />
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="36.-  Contaminación"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg34"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb67"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb68"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Aire"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg35"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb69"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb70"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Agua"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg36"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb71"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb72"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Suelo"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg37"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb73"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb74"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Salud"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg38"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb75"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb76"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
 
 
 
@@ -1126,7 +1579,7 @@ android:stretchColumns="1">
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:onClick="externo1"
+
             android:text="Siguiente"
             android:textSize="15sp">
 

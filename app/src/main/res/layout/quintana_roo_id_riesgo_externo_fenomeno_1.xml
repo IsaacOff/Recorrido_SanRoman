@@ -3,7 +3,7 @@
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context=".quintanaroo_id_riesgo_externo"
+tools:context=".quintanaroo_id_riesgo_externo_fenomeno_1"
 android:stretchColumns="1">
 
 
@@ -14,7 +14,7 @@ android:stretchColumns="1">
 
         android:layout_height="30dp"
         android:padding="3dip"
-        android:text="IDENT. DE RIESGOS EN EL ENTOR. INMEDIATO"
+        android:text="FENÓMENOS PERTURBADORES"
         android:textColor="@android:color/white"
         android:textSize="18sp" />
 
@@ -36,7 +36,7 @@ android:stretchColumns="1">
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:padding="3dip"
-            android:text="Se identificará la presencia de elementos de riesgo en el entorno inmediato (500 metros) del inmueble:"
+            android:text="Elementos a evaluar:"
             android:textColor="#000000"
             android:textSize="16sp" />
 
@@ -46,11 +46,11 @@ android:stretchColumns="1">
         <TableRow android:layout_height="122dp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="45dp"
+                android:layout_width="208dp"
+                android:layout_height="55dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Tanques elevados"
+                android:text="1.- Accidentes aéreos, terrestres y fluviales"
                 android:textColor="#000000" />
 
             <RadioGroup
@@ -81,33 +81,14 @@ android:stretchColumns="1">
 
 
 
-            <EditText
-                android:id="@+id/editText1"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_column="0"
-                android:ems="10"
-                android:hint="Distancia aproximada del inmueble"
-                android:inputType="textPersonName"
-                android:textColor="#3260F5"
-                android:theme="@style/EditText"/>
-
-
-
-
-
-
-
-
-
         <TableRow android:layout_height="122dp">
 
             <TextView
                 android:layout_width="153dp"
-                android:layout_height="45dp"
+                android:layout_height="80dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Postes de energía eléctrica en mal estado"
+                android:text="Accidentes de vehículos que transportan materiales químicos peligrosos (explosiones, gas, cloro, gasolina, solventes, otros)."
                 android:textColor="#000000" />
 
 
@@ -135,16 +116,6 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
-        <EditText
-            android:id="@+id/editText2"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
 
 
 
@@ -153,11 +124,11 @@ android:stretchColumns="1">
         <TableRow android:layout_height="122dp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="45dp"
+                android:layout_width="179dp"
+                android:layout_height="80dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Torres con líneas de alta tensión"
+                android:text="Accidentes en donde se involucren vehículos terrestres de transporte de       pasajeros."
                 android:textColor="#000000" />
 
 
@@ -185,27 +156,16 @@ android:stretchColumns="1">
 
         </TableRow>
 
-        <EditText
-            android:id="@+id/editText3"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
-
 
 
         <TableRow android:layout_height="122dp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="45dp"
+                android:layout_width="199dp"
+                android:layout_height="60dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Transformadores de energía eléctrica"
+                android:text="Accidentes en donde se involucren vehículos aéreos."
                 android:textColor="#000000" />
 
 
@@ -233,18 +193,6 @@ android:stretchColumns="1">
 
         </TableRow>
 
-        <EditText
-            android:id="@+id/editText4"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
-
-
 
 
 
@@ -256,11 +204,11 @@ android:stretchColumns="1">
         <TableRow android:layout_height="122dp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="45dp"
+                android:layout_width="192dp"
+                android:layout_height="80dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Inmuebles aledaños dañados"
+                android:text="Accidentes en donde se involucren vehículos marítimos de transporte de carga."
                 android:textColor="#000000" />
 
 
@@ -288,16 +236,6 @@ android:stretchColumns="1">
 
         </TableRow>
 
-        <EditText
-            android:id="@+id/editText5"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
 
 
 
@@ -305,11 +243,11 @@ android:stretchColumns="1">
         <TableRow android:layout_height="122dp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="45dp"
+                android:layout_width="118dp"
+                android:layout_height="80dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Banquetas desniveladas"
+                android:text="Accidentes en donde se involucren vehículos marítimos de transportes de       pasajeros."
                 android:textColor="#000000" />
 
 
@@ -336,17 +274,6 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
-        <EditText
-            android:id="@+id/editText6"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
-
 
 
         <TableRow android:layout_height="122dp">
@@ -356,7 +283,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Alcantarillas abiertas"
+                android:text="Otros"
                 android:textColor="#000000" />
 
 
@@ -384,15 +311,21 @@ android:stretchColumns="1">
 
         </TableRow>
         <EditText
-            android:id="@+id/editText7"
+            android:id="@+id/editText1"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_column="0"
             android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
+            android:hint="Especificar:"
             android:inputType="textPersonName"
             android:textColor="#3260F5"
             android:theme="@style/EditText"/>
+
+
+
+
+
+
 
 
         <TableRow android:layout_height="122dp">
@@ -402,7 +335,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Árboles grandes que puedan caer"
+                android:text="2.- Terrorismo y sabotaje"
                 android:textColor="#000000" />
 
             <RadioGroup
@@ -428,16 +361,6 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
-        <EditText
-            android:id="@+id/editText8"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
 
 
 
@@ -454,7 +377,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Calles muy transitadas"
+                android:text="Robo"
                 android:textColor="#000000" />
 
 
@@ -481,19 +404,6 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
-        <EditText
-            android:id="@+id/editText9"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
-
-
-
 
 
         <TableRow android:layout_height="122dp">
@@ -503,7 +413,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Fábricas con instalaciones de Gas L.P."
+                android:text="Robo con violencia"
                 android:textColor="#000000" />
 
             <RadioGroup
@@ -529,17 +439,6 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
-        <EditText
-            android:id="@+id/editText10"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
-
 
 
 
@@ -550,7 +449,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Tanques de gas L.P."
+                android:text="Secuestro"
                 android:textColor="#000000" />
 
 
@@ -578,17 +477,6 @@ android:stretchColumns="1">
 
         </TableRow>
 
-        <EditText
-            android:id="@+id/editText11"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
-
 
 
         <TableRow>
@@ -598,7 +486,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Gasolineras y/o Gaseras"
+                android:text="Invasión de bienes inmuebles"
                 android:textColor="#000000" />
 
 
@@ -626,17 +514,6 @@ android:stretchColumns="1">
 
         </TableRow>
 
-        <EditText
-            android:id="@+id/editText12"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
-
 
 
         <TableRow>
@@ -646,7 +523,7 @@ android:stretchColumns="1">
                 android:layout_height="55dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Anuncios volados  o espectaculares"
+                android:text="Interrupción de vialidades"
                 android:textColor="#000000" />
 
 
@@ -673,16 +550,6 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
-        <EditText
-            android:id="@+id/editText13"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
 
 
         <TableRow>
@@ -692,7 +559,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Almacenes de sustancias peligrosas"
+                android:text="Sabotaje a los servicios públicos"
                 android:textColor="#000000" />
 
 
@@ -719,16 +586,6 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
-        <EditText
-            android:id="@+id/editText14"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
 
 
 
@@ -741,7 +598,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Fábricas"
+                android:text="Sabotaje a los servicios privados"
                 android:textColor="#000000" />
 
 
@@ -768,16 +625,6 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
-        <EditText
-            android:id="@+id/editText15"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
 
 
 
@@ -788,7 +635,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Planta de PEMEX"
+                android:text="Otros"
                 android:textColor="#000000" />
 
 
@@ -816,12 +663,12 @@ android:stretchColumns="1">
 
         </TableRow>
         <EditText
-            android:id="@+id/editText16"
+            android:id="@+id/editText2"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_column="0"
             android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
+            android:hint="Especificar:"
             android:inputType="textPersonName"
             android:textColor="#3260F5"
             android:theme="@style/EditText"/>
@@ -834,7 +681,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Basureros"
+                android:text="3.- Concentraciones masivas"
                 android:textColor="#000000" />
 
 
@@ -862,16 +709,7 @@ android:stretchColumns="1">
 
         </TableRow>
 
-        <EditText
-            android:id="@+id/editText17"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
+
 
 
 
@@ -882,7 +720,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Vías del ferrocarril"
+                android:text="Marchas y manifestaciones"
                 android:textColor="#000000" />
 
 
@@ -910,16 +748,6 @@ android:stretchColumns="1">
 
         </TableRow>
 
-        <EditText
-            android:id="@+id/editText18"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
 
 
 
@@ -931,7 +759,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Ríos y laderas"
+                android:text="Plantones y mítines"
                 android:textColor="#000000" />
 
 
@@ -959,17 +787,6 @@ android:stretchColumns="1">
 
         </TableRow>
 
-        <EditText
-            android:id="@+id/editText19"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
-
 
 
 
@@ -980,7 +797,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Costas"
+                android:text="Actos vandálicos"
                 android:textColor="#000000" />
 
 
@@ -1008,16 +825,6 @@ android:stretchColumns="1">
 
         </TableRow>
 
-        <EditText
-            android:id="@+id/editText20"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_column="0"
-            android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
-            android:inputType="textPersonName"
-            android:textColor="#3260F5"
-            android:theme="@style/EditText"/>
 
 
         <TableRow android:layout_height="122dp">
@@ -1027,7 +834,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Presas"
+                android:text="Otros"
                 android:textColor="#000000" />
 
 
@@ -1056,12 +863,12 @@ android:stretchColumns="1">
         </TableRow>
 
         <EditText
-            android:id="@+id/editText21"
+            android:id="@+id/editText3"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_column="0"
             android:ems="10"
-            android:hint="Distancia aproximada del inmueble"
+            android:hint="Especificar:"
             android:inputType="textPersonName"
             android:textColor="#3260F5"
             android:theme="@style/EditText"/>
@@ -1078,7 +885,7 @@ android:stretchColumns="1">
                 android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Otros:"
+                android:text="4.- Interrupción de servicios de origen Geológico"
                 android:textColor="#000000" />
 
 
@@ -1105,16 +912,484 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+
+
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="55dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="5.- Agrietamiento"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb46"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+
+
+
+
+        <!--- /////////////////////////////////////////////////// -->
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="6.- Hundimiento de terreno"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb47"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb48"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="7.- Deslave"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb49"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="8.- Deslizamiento de alud"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg26"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb51"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb52"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="9.- Erosión del suelo productivo"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb53"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb54"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="10.- Sobre explotación de fuentes de agua"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb55"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb56"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="11.- Sobre explotación de mantos freáticos"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg29"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb57"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb58"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="12.- Sismos o Terremotos"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb59"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb60"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Derrumbes de edificios aledaños"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb61"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb62"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Caída de torres de alta tensión"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb63"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb64"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text=" Maremotos o Tsunamis"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb65"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb66"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
+
+
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="229dp"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Otros"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Rg34"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb67"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb68"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
+
         <EditText
-            android:id="@+id/editText22"
+            android:id="@+id/editText4"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_column="0"
             android:ems="10"
-            android:hint="Especificar"
+            android:hint="Especificar:"
             android:inputType="textPersonName"
             android:textColor="#3260F5"
             android:theme="@style/EditText"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1126,7 +1401,7 @@ android:stretchColumns="1">
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:onClick="externo1"
+            android:onClick="externo2"
             android:text="Siguiente"
             android:textSize="15sp">
 

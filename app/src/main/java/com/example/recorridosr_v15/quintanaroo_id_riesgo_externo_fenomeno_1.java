@@ -13,24 +13,30 @@ import android.widget.Toast;
 
 import static android.widget.Toast.LENGTH_SHORT;
 
-public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
-    private RadioGroup rg1, rg2, rg3, rg4,rg5,rg6,rg7,rg8,rg9, rg10, rg11, rg12,rg13, rg14, rg15,rg16,rg17,rg18,rg19,rg20, rg21, rg22;
+public class quintanaroo_id_riesgo_externo_fenomeno_1 extends AppCompatActivity {
+    private RadioGroup rg1, rg2, rg3, rg4,rg5,rg6,rg7,rg8,rg9, rg10, rg11, rg12,rg13, rg14, rg15,rg16,rg17,rg18,rg19,rg20, rg21, rg22, rg23, rg24, rg25;
+    private RadioGroup rg26, rg27, rg28, rg29,rg30,rg31,rg32,rg33,rg34;
 
-    private RadioButton rb1,  rb2,  rb3,  rb4,  rb5,  rb6, rb7, rb8,  rb9, rb10, rb11, rb12, rb13,rb14, rb15, rb16, rb17, rb18, rb19, rb20;
+    private RadioButton  rb1,  rb2,  rb3,  rb4,  rb5,  rb6, rb7, rb8,  rb9, rb10, rb11, rb12, rb13,rb14, rb15, rb16, rb17, rb18, rb19, rb20;
     private RadioButton rb21, rb22, rb23, rb24, rb25, rb26,rb27,rb28, rb29, rb30, rb31, rb32, rb33,rb34, rb35, rb36, rb37, rb38, rb39, rb40;
-    private RadioButton rb41, rb42, rb43, rb44;
-    private EditText  et1, et2,  et3,  et4,  et5,  et6,  et7,  et8,  et9, et10, et11, et12, et13, et14, et15, et16, et17, et18, et19, et20;
-    private EditText et21,et22;
+    private RadioButton rb41, rb42, rb43, rb44, rb45, rb46,rb47,rb48, rb49, rb50, rb51, rb52, rb53,rb54, rb55, rb56, rb57, rb58, rb59, rb60;
+    private RadioButton rb61, rb62, rb63, rb64, rb65, rb66,rb67,rb68;
 
-    String vector[][] =new String[22][2];
+    private EditText et1, et2, et3, et4;
+
+    String vector[] =new String[38];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.quintana_roo_id_riesgo_externo);
+        setContentView(R.layout.quintana_roo_id_riesgo_externo_fenomeno_1);
 
-        this.setTitle("Riesgo Externo_chetumal");
+
+        this.setTitle("Riesgo Externo chetumal");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+
+
 
         //Asigna los Rg y rb del xml a los de aqui
         rg1= (RadioGroup) findViewById(R.id.Rg1);
@@ -121,6 +127,58 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
         rb43 = (RadioButton) findViewById(R.id.rb43);
         rb44 = (RadioButton) findViewById(R.id.rb44);
 
+        rg23= (RadioGroup) findViewById(R.id.Rg23);
+        rb45 = (RadioButton) findViewById(R.id.rb45);
+        rb46 = (RadioButton) findViewById(R.id.rb46);
+
+        ///////////modificar desde aqui
+
+        rg24= (RadioGroup) findViewById(R.id.Rg24);
+        rb47 = (RadioButton) findViewById(R.id.rb47);
+        rb48 = (RadioButton) findViewById(R.id.rb48);
+
+        rg25= (RadioGroup) findViewById(R.id.Rg25);
+        rb49 = (RadioButton) findViewById(R.id.rb49);
+        rb50 = (RadioButton) findViewById(R.id.rb50);
+
+        rg26= (RadioGroup) findViewById(R.id.Rg26);
+        rb51 = (RadioButton) findViewById(R.id.rb51);
+        rb52 = (RadioButton) findViewById(R.id.rb52);
+
+        rg27= (RadioGroup) findViewById(R.id.Rg27);
+        rb53 = (RadioButton) findViewById(R.id.rb53);
+        rb54 = (RadioButton) findViewById(R.id.rb54);
+
+        rg28= (RadioGroup) findViewById(R.id.Rg28);
+        rb55 = (RadioButton) findViewById(R.id.rb55);
+        rb56 = (RadioButton) findViewById(R.id.rb56);
+
+        rg29= (RadioGroup) findViewById(R.id.Rg29);
+        rb57 = (RadioButton) findViewById(R.id.rb57);
+        rb58 = (RadioButton) findViewById(R.id.rb58);
+
+        rg30= (RadioGroup) findViewById(R.id.Rg30);
+        rb59 = (RadioButton) findViewById(R.id.rb59);
+        rb60 = (RadioButton) findViewById(R.id.rb60);
+
+        rg31= (RadioGroup) findViewById(R.id.Rg31);
+        rb61 = (RadioButton) findViewById(R.id.rb61);
+        rb62 = (RadioButton) findViewById(R.id.rb62);
+
+        rg32= (RadioGroup) findViewById(R.id.Rg32);
+        rb63 = (RadioButton) findViewById(R.id.rb63);
+        rb64 = (RadioButton) findViewById(R.id.rb64);
+
+        rg33= (RadioGroup) findViewById(R.id.Rg33);
+        rb65 = (RadioButton) findViewById(R.id.rb65);
+        rb66 = (RadioButton) findViewById(R.id.rb66);
+
+        rg34= (RadioGroup) findViewById(R.id.Rg34);
+        rb67 = (RadioButton) findViewById(R.id.rb67);
+        rb68 = (RadioButton) findViewById(R.id.rb68);
+
+
+
 
 
         //asigna los edit text a los et de aqui Rg 39
@@ -128,25 +186,6 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
         et2  = (EditText) findViewById(R.id.editText2);
         et3  = (EditText) findViewById(R.id.editText3);
         et4  = (EditText) findViewById(R.id.editText4);
-        et5  = (EditText) findViewById(R.id.editText5);
-        et6  = (EditText) findViewById(R.id.editText6);
-        et7  = (EditText) findViewById(R.id.editText7);
-        et8  = (EditText) findViewById(R.id.editText8);
-        et9  = (EditText) findViewById(R.id.editText9);
-        et10 = (EditText) findViewById(R.id.editText10);
-        et11 = (EditText) findViewById(R.id.editText11);
-        et12 = (EditText) findViewById(R.id.editText12);
-        et13 = (EditText) findViewById(R.id.editText13);
-        et14 = (EditText) findViewById(R.id.editText14);
-        et15 = (EditText) findViewById(R.id.editText15);
-        et16 = (EditText) findViewById(R.id.editText16);
-        et17 = (EditText) findViewById(R.id.editText17);
-        et18 = (EditText) findViewById(R.id.editText18);
-        et19 = (EditText) findViewById(R.id.editText19);
-        et20 = (EditText) findViewById(R.id.editText20);
-        et21 = (EditText) findViewById(R.id.editText21);
-        et22 = (EditText) findViewById(R.id.editText22);
-
 
 
 
@@ -155,24 +194,11 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
         et2.setVisibility(View.GONE);
         et3.setVisibility(View.GONE);
         et4.setVisibility(View.GONE);
-        et5.setVisibility(View.GONE);
-        et6.setVisibility(View.GONE);
-        et7.setVisibility(View.GONE);
-        et8.setVisibility(View.GONE);
-        et9.setVisibility(View.GONE);
-        et10.setVisibility(View.GONE);
-        et11.setVisibility(View.GONE);
-        et12.setVisibility(View.GONE);
-        et13.setVisibility(View.GONE);
-        et14.setVisibility(View.GONE);
-        et15.setVisibility(View.GONE);
-        et16.setVisibility(View.GONE);
-        et17.setVisibility(View.GONE);
-        et18.setVisibility(View.GONE);
-        et19.setVisibility(View.GONE);
-        et20.setVisibility(View.GONE);
-        et21.setVisibility(View.GONE);
-        et22.setVisibility(View.GONE);
+
+
+
+
+
 
 
 
@@ -184,14 +210,10 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb1){
 
-                    vector[0][0]="SI";
-                    et1.setVisibility(View.VISIBLE);
-
+                    vector[0]="SI";
 
                 }else if(checkedId==R.id.rb2) {
-                    vector[0][0]="NO";
-                    et1.setVisibility(View.GONE);
-
+                    vector[0]="NO";
 
 
                 }
@@ -205,15 +227,11 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb3){
 
-                    vector[1][0]="SI";
-                    et2.setVisibility(View.VISIBLE);
-
+                    vector[1]="SI";
 
                 }else if(checkedId==R.id.rb4) {
 
-                    vector[1][0]="NO";
-                    et2.setVisibility(View.GONE);
-
+                    vector[1]="NO";
 
 
                 }
@@ -226,15 +244,12 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb5){
-                    vector[2][0]="SI";
-                    et3.setVisibility(View.VISIBLE);
+                    vector[2]="SI";
 
 
                 }else if(checkedId==R.id.rb6) {
 
-                    vector[2][0]="NO";
-                    et3.setVisibility(View.GONE);
-
+                    vector[2]="NO";
 
 
                 }
@@ -248,15 +263,12 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb7){
 
-                    vector[3][0]="SI";
-                    et4.setVisibility(View.VISIBLE);
+                    vector[3]="SI";
 
 
                 }else if(checkedId==R.id.rb8) {
 
-                    vector[3][0]="NO";
-                    et4.setVisibility(View.GONE);
-
+                    vector[3]="NO";
 
                 }
 
@@ -269,15 +281,12 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb9){
 
-                    vector[4][0]="SI";
-                    et5.setVisibility(View.VISIBLE);
+                    vector[4]="SI";
 
 
                 }else if(checkedId==R.id.rb10) {
 
-                    vector[4][0]="NO";
-                    et5.setVisibility(View.GONE);
-
+                    vector[4]="NO";
 
 
 
@@ -292,15 +301,12 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb11){
 
-                    vector[5][0]="SI";
-                    et6.setVisibility(View.VISIBLE);
+                    vector[5]="SI";
 
 
                 }else if(checkedId==R.id.rb12) {
 
-                    vector[5][0]="NO";
-                    et6.setVisibility(View.GONE);
-
+                    vector[5]="NO";
 
 
                 }
@@ -315,15 +321,14 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb13){
 
-                    vector[6][0]="SI";
-                    et7.setVisibility(View.VISIBLE);
+                    vector[6]="SI";
+                    et1.setVisibility(View.VISIBLE);
 
 
                 }else if(checkedId==R.id.rb14) {
 
-                    vector[6][0]="NO";
-                    et7.setVisibility(View.GONE);
-
+                    vector[6]="NO";
+                    et1.setVisibility(View.GONE);
 
 
                 }
@@ -337,14 +342,11 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb15){
 
-                    vector[7][0]="SI";
-                    et8.setVisibility(View.VISIBLE);
+                    vector[8]="SI";
 
                 }else if(checkedId==R.id.rb16) {
 
-                    vector[7][0]="NO";
-                    et8.setVisibility(View.GONE);
-
+                    vector[8]="NO";
 
 
                 }
@@ -358,16 +360,13 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb17){
 
-                    vector[8][0]="SI";
-                    et9.setVisibility(View.VISIBLE);
+                    vector[9]="SI";
 
 
 
                 }else if(checkedId==R.id.rb18) {
 
-                    vector[8][0]="NO";
-                    et9.setVisibility(View.GONE);
-
+                    vector[9]="NO";
 
 
 
@@ -384,14 +383,11 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb19){
 
-                    vector[9][0]="SI";
-                    et10.setVisibility(View.VISIBLE);
+                    vector[10]="SI";
 
 
                 }else if(checkedId==R.id.rb20) {
-                    vector[9][0]="NO";
-                    et10.setVisibility(View.GONE);
-
+                    vector[10]="NO";
 
 
 
@@ -406,14 +402,11 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb21){
 
-                    vector[10][0]="SI";
-                    et11.setVisibility(View.VISIBLE);
+                    vector[11]="SI";
 
                 }else if(checkedId==R.id.rb22) {
 
-                    vector[10][0]="NO";
-                    et11.setVisibility(View.GONE);
-
+                    vector[11]="NO";
 
 
                 }
@@ -426,15 +419,12 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb23){
-                    vector[11][0]="SI";
-                    et12.setVisibility(View.VISIBLE);
+                    vector[12]="SI";
 
 
                 }else if(checkedId==R.id.rb24) {
 
-                    vector[11][0]="NO";
-                    et12.setVisibility(View.GONE);
-
+                    vector[12]="NO";
 
 
                 }
@@ -448,15 +438,12 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb25){
 
-                    vector[12][0]="SI";
-                    et13.setVisibility(View.VISIBLE);
+                    vector[13]="SI";
 
 
                 }else if(checkedId==R.id.rb26) {
 
-                    vector[12][0]="NO";
-                    et13.setVisibility(View.GONE);
-
+                    vector[13]="NO";
 
                 }
 
@@ -469,14 +456,12 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb27){
 
-                    vector[13][0]="SI";
-                    et14.setVisibility(View.VISIBLE);
+                    vector[14]="SI";
 
 
                 }else if(checkedId==R.id.rb28) {
 
-                    vector[13][0]="NO";
-                    et14.setVisibility(View.GONE);
+                    vector[14]="NO";
 
 
 
@@ -491,15 +476,12 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb29){
 
-                    vector[14][0]="SI";
-                    et15.setVisibility(View.VISIBLE);
+                    vector[15]="SI";
 
 
                 }else if(checkedId==R.id.rb30) {
 
-                    vector[14][0]="NO";
-                    et15.setVisibility(View.GONE);
-
+                    vector[15]="NO";
 
 
                 }
@@ -514,16 +496,14 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb31){
 
-                    vector[15][0]="SI";
-                    et16.setVisibility(View.VISIBLE);
+                    vector[16]="SI";
+                    et2.setVisibility(View.VISIBLE);
 
 
                 }else if(checkedId==R.id.rb32) {
 
-                    vector[15][0]="NO";
-                    et16.setVisibility(View.GONE);
-
-
+                    vector[16]="NO";
+                    et2.setVisibility(View.GONE);
 
 
                 }
@@ -537,14 +517,11 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb33){
 
-                    vector[16][0]="SI";
-                    et17.setVisibility(View.VISIBLE);
+                    vector[18]="SI";
 
                 }else if(checkedId==R.id.rb34) {
 
-                    vector[16][0]="NO";
-                    et17.setVisibility(View.GONE);
-
+                    vector[18]="NO";
 
 
                 }
@@ -558,15 +535,12 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb35){
 
-                    vector[17][0]="SI";
-                    et18.setVisibility(View.VISIBLE);
+                    vector[19]="SI";
 
 
                 }else if(checkedId==R.id.rb36) {
 
-                    vector[17][0]="NO";
-                    et18.setVisibility(View.GONE);
-
+                    vector[19]="NO";
 
 
                 }
@@ -579,15 +553,12 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb37){
 
-                    vector[18][0]="SI";
-                    et19.setVisibility(View.VISIBLE);
+                    vector[20]="SI";
 
 
                 }else if(checkedId==R.id.rb38) {
 
-                    vector[18][0]="NO";
-                    et19.setVisibility(View.GONE);
-
+                    vector[20]="NO";
 
 
                 }
@@ -600,16 +571,13 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb39){
 
-                    vector[19][0]="SI";
-                    et20.setVisibility(View.VISIBLE);
+                    vector[21]="SI";
 
 
 
                 }else if(checkedId==R.id.rb40) {
 
-                    vector[19][0]="NO";
-                    et20.setVisibility(View.GONE);
-
+                    vector[21]="NO";
 
 
 
@@ -624,15 +592,14 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb41){
 
-                    vector[20][0]="SI";
-                    et21.setVisibility(View.VISIBLE);
+                    vector[22]="SI";
+                    et3.setVisibility(View.VISIBLE);
 
 
                 }else if(checkedId==R.id.rb42) {
 
-                    vector[20][0]="NO";
-                    et21.setVisibility(View.GONE);
-
+                    vector[22]="NO";
+                    et3.setVisibility(View.GONE);
 
 
                 }
@@ -645,14 +612,260 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb43){
 
-                    vector[21][0]="SI";
-                    et22.setVisibility(View.VISIBLE);
+                    vector[24]="SI";
 
 
                 }else if(checkedId==R.id.rb44) {
 
-                    vector[21][0]="NO";
-                    et22.setVisibility(View.GONE);
+                    vector[24]="NO";
+
+
+                }
+
+            }
+        });
+
+        rg23.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb45){
+
+                    vector[25]="SI";
+
+
+
+                }else if(checkedId==R.id.rb46) {
+
+                    vector[25]="NO";
+
+
+
+                }
+
+            }
+        });
+
+
+
+        //24-46
+
+
+        //Verificacion de los radiobutton
+
+
+        rg24.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb47){
+
+                    vector[26]="SI";
+
+                }else if(checkedId==R.id.rb48) {
+                    vector[26]="NO";
+
+
+                }
+
+            }
+        });
+
+
+        rg25.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb49){
+
+                    vector[27]="SI";
+
+                }else if(checkedId==R.id.rb50) {
+
+                    vector[27]="NO";
+
+
+                }
+
+            }
+        });
+
+
+        rg26.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb51){
+                    vector[28]="SI";
+
+
+                }else if(checkedId==R.id.rb52) {
+
+                    vector[28]="NO";
+
+
+                }
+
+            }
+        });
+
+
+        rg27.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb53){
+
+                    vector[29]="SI";
+
+
+                }else if(checkedId==R.id.rb54) {
+
+                    vector[29]="NO";
+
+                }
+
+            }
+        });
+
+
+        rg28.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb55){
+
+                    vector[30]="SI";
+
+
+                }else if(checkedId==R.id.rb56) {
+
+                    vector[30]="NO";
+
+
+
+                }
+
+            }
+        });
+
+
+        rg29.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb57){
+
+                    vector[31]="SI";
+
+
+                }else if(checkedId==R.id.rb58) {
+
+                    vector[31]="NO";
+
+
+                }
+
+            }
+        });
+
+
+
+        rg30.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb59){
+
+                    vector[32]="SI";
+
+
+                }else if(checkedId==R.id.rb60) {
+
+                    vector[32]="NO";
+
+
+                }
+
+            }
+        });
+
+///////////////////////////////////////////////////////
+        ///////////////////////
+        ///////////////////
+        ///////////////
+        ///////////
+        ///////////
+
+        rg31.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb61){
+
+                    vector[33]="SI";
+
+                }else if(checkedId==R.id.rb62) {
+
+                    vector[33]="NO";
+
+
+                }
+
+            }
+        });
+
+
+        rg32.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb63){
+
+                    vector[34]="SI";
+
+
+
+                }else if(checkedId==R.id.rb64) {
+
+                    vector[34]="NO";
+
+
+
+                }
+
+            }
+        });
+
+
+
+
+
+
+        ///otro9-18
+
+
+        rg33.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb65){
+
+                    vector[35]="SI";
+
+
+                }else if(checkedId==R.id.rb66) {
+                    vector[35]="NO";
+
+
+
+                }
+
+            }
+        });
+
+
+        rg34.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb67){
+
+                    vector[36]="SI";
+                    et4.setVisibility(View.VISIBLE);
+
+                }else if(checkedId==R.id.rb68) {
+
+                    vector[36]="NO";
+                    et4.setVisibility(View.GONE);
 
 
                 }
@@ -665,177 +878,82 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
 
 
 
-    public void externo_siguiente1(View view) {
+
+    public void externo_siguiente2(View view) {
         Boolean bandera = true;
 
 
-        for(int i=0;i<22; i++  ){
-            if(vector[i][0]==null){
+        for(int i=0;i<7; i++){
+            if(vector[i]==null){
                 bandera= false;
             }
         }
 
-        //Verificar si los editText contienen algo sino no los deja enviar
-        if (et1.getVisibility() == View.VISIBLE) {
+
+        for(int i=8;i<17; i++){
+            if(vector[i]==null){
+                bandera= false;
+            }
+        }
+
+        for(int i=18;i<23; i++){
+            if(vector[i]==null){
+                bandera= false;
+            }
+        }
+        for(int i=24;i<37; i++){
+            if(vector[i]==null){
+                bandera= false;
+            }
+        }
+
+
+
+        if( vector[6]=="SI"){
+
             if (et1.length() == 0) {
                 bandera = false;
             }
+
         }
 
-        if (et2.getVisibility() == View.VISIBLE) {
+        if( vector[16]=="SI"){
+
             if (et2.length() == 0) {
                 bandera = false;
             }
+
         }
 
-        if (et3.getVisibility() == View.VISIBLE) {
+
+        if( vector[22]=="SI"){
+
             if (et3.length() == 0) {
                 bandera = false;
             }
+
         }
 
-        if (et4.getVisibility() == View.VISIBLE) {
+
+        if( vector[36]=="SI"){
+
             if (et4.length() == 0) {
-                bandera = false; }
-        }
-
-        if (et5.getVisibility() == View.VISIBLE) {
-            if (et5.length() == 0) {
                 bandera = false;
             }
-        }
 
-        if (et6.getVisibility() == View.VISIBLE) {
-            if (et6.length() == 0) {
-                bandera = false;
-            }
-        }
-
-        if (et7.getVisibility() == View.VISIBLE) {
-            if (et7.length() == 0) {
-                bandera = false;
-            }
-        }
-
-        if (et8.getVisibility() == View.VISIBLE) {
-            if (et8.length() == 0) {
-                bandera = false;
-            }
-        }
-
-        if (et9.getVisibility() == View.VISIBLE) {
-            if (et9.length() == 0) {
-                bandera = false;
-            }
-        }
-
-        if (et10.getVisibility() == View.VISIBLE) {
-            if (et10.length() == 0) {
-                bandera = false;
-            }
-        }
-
-        if (et11.getVisibility() == View.VISIBLE) {
-            if (et11.length() == 0) {
-                bandera = false;
-            }
-        }
-
-        if (et12.getVisibility() == View.VISIBLE) {
-            if (et12.length() == 0) {
-                bandera = false;
-            }
-        }
-
-        if (et13.getVisibility() == View.VISIBLE) {
-            if (et13.length() == 0) {
-                bandera = false;
-            }
-        }
-
-        if (et14.getVisibility() == View.VISIBLE) {
-            if (et14.length() == 0) {
-                bandera = false;
-            }
-        }
-
-        if (et15.getVisibility() == View.VISIBLE) {
-            if (et15.length() == 0) {
-                bandera = false;
-            }
-        }
-
-        if (et16.getVisibility() == View.VISIBLE) {
-            if (et16.length() == 0) {
-                bandera = false;
-            }
-        }
-
-        if (et17.getVisibility() == View.VISIBLE) {
-            if (et17.length() == 0) {
-                bandera = false;
-            }
-        }
-
-        if (et18.getVisibility() == View.VISIBLE) {
-            if (et18.length() == 0) {
-                bandera = false;
-            }
-        }
-
-        if (et19.getVisibility() == View.VISIBLE) {
-            if (et19.length() == 0) {
-                bandera = false;
-            }
-        }
-
-        if (et20.getVisibility() == View.VISIBLE) {
-            if (et20.length() == 0) {
-                bandera = false;
-            }
-        }
-
-        if (et21.getVisibility() == View.VISIBLE) {
-            if (et21.length() == 0) {
-                bandera = false;
-            }
-        }
-
-        if (et22.getVisibility() == View.VISIBLE) {
-            if (et22.length() == 0) {
-                bandera = false;
-            }
         }
 
 
 
         if (bandera) {
-            vector[0] [1] = et1.getText().toString();
-            vector[1] [1] = et2.getText().toString();
-            vector[2] [1] = et3.getText().toString();
-            vector[3] [1] = et4.getText().toString();
-            vector[4] [1] = et5.getText().toString();
-            vector[5] [1] = et6.getText().toString();
-            vector[6] [1] = et7.getText().toString();
-            vector[7] [1] = et8.getText().toString();
-            vector[8] [1] = et9.getText().toString();
-            vector[9] [1] = et10.getText().toString();
-            vector[10][1] = et11.getText().toString();
-            vector[11][1] = et12.getText().toString();
-            vector[12][1] = et13.getText().toString();
-            vector[13][1] = et14.getText().toString();
-            vector[14][1] = et15.getText().toString();
-            vector[15][1] = et16.getText().toString();
-            vector[16][1] = et17.getText().toString();
-            vector[17][1] = et18.getText().toString();
-            vector[18][1] = et19.getText().toString();
-            vector[19][1] = et20.getText().toString();
-            vector[20][1] = et21.getText().toString();
-            vector[21][1] = et22.getText().toString();
+            vector[7] = et1.getText().toString();
+            vector[17] = et2.getText().toString();
+            vector[23] = et3.getText().toString();
+            vector[37] = et4.getText().toString();
 
 
-
-            Toast.makeText(this, "Listo vamos al siguiente", LENGTH_SHORT).show();
+            Toast.makeText(this, "Guardado con exito", LENGTH_SHORT).show();
+            externo2(view);
 
 
 
@@ -848,8 +966,8 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
 
 
 
-    public void externo1 (View view){
-        Intent intent = new Intent(this, quintanaroo_id_riesgo_externo_fenomeno_1.class);
+    public void externo2 (View view){
+        Intent intent = new Intent(this, quintanaroo_id_riesgo_externo_fenomeno_2.class);
         startActivity(intent);
     }
 
