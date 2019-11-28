@@ -49,9 +49,7 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
 
         directorio2 = new File(getIntent().getStringExtra("File"));
         temporal = getIntent().getStringExtra("documento");
-        if(directorio2 != null) {
-            pdfFile = new File(directorio2.getPath(), "Prueba.pdf");
-        }
+
         System.out.println(directorio2.getPath());
 
         //Asigna los Rg y rb del xml a los de aqui
@@ -692,7 +690,7 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
 
 
             tablaConcatenacion= temporal+
-                    "<html>" + "<body>" +
+
 
                             "<TABLE border=\"1\" WIDTH=\"100%\">"+
                             "<thead>"+
