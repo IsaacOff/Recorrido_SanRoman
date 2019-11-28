@@ -190,7 +190,6 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
         try {
             Document document = new Document(PageSize.LETTER);
             PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(pdfFile.getPath()));
-
             document.open();
             XMLWorkerHelper worker = XMLWorkerHelper.getInstance();
 

@@ -404,7 +404,7 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td style=\"text-align:center;\">9</td>" +
+                    "<td style=\"text-align:center;\"></td>" +
                     "<td>Cuenta con dictamen técnico</td>";
             agregarRenglon(vector[8]);
 

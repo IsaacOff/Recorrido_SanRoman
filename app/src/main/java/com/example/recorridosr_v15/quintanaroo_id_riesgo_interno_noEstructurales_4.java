@@ -11,6 +11,17 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.PageSize;
+import com.itextpdf.text.pdf.PdfWriter;
+import com.itextpdf.tool.xml.XMLWorkerHelper;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.StringReader;
+
 import static android.widget.Toast.LENGTH_SHORT;
 
 public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatActivity {
@@ -18,6 +29,10 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
     private RadioButton rb21, rb22, rb23, rb24, rb25, rb26, rb27, rb28, rb29, rb30, rb31, rb32;
     private RadioGroup rg1, rg2, rg3, rg4,rg5,rg6,rg7,rg8,rg9, rg10, rg11, rg12,rg13, rg14, rg15,rg16;
     String vector[]=new String[16];
+
+    static File pdfFile;
+    static File directorio2;
+    String tablaConcatenacion="";
 
 
     @Override
@@ -30,7 +45,11 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
         this.setTitle("Riesgo interno_chetumal");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-
+        directorio2 = new File(getIntent().getStringExtra("File"));
+        //if(directorio2 != null) {
+          //pdfFile = new File(directorio2.getPath(), "no estructurales.pdf");
+        //}
+        System.out.println(directorio2.getPath());
 
         //Asigna los Rg y rb del xml a los de aqui
         rg1= (RadioGroup) findViewById(R.id.Rg1);
@@ -422,7 +441,8 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
 
 
             Toast.makeText(this, "vamos al siguiente", LENGTH_SHORT).show();
-            interno_siguiente5(view);
+            onClick(view);
+            //interno_siguiente5(view);
 
 
         } else {
@@ -439,5 +459,207 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
         startActivity(intent);
     }
 
+    public void onClick (View view){
+
+        try {
+            Document document = new Document(PageSize.LETTER);
+            PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(pdfFile.getPath()));
+
+            document.open();
+            XMLWorkerHelper worker = XMLWorkerHelper.getInstance();
+
+
+            tablaConcatenacion=
+                    "<html>" + "<body>" +
+
+                            "<TABLE border=\"1\" WIDTH=\"100%\">"+
+                            "<thead>"+
+                            "<tr>"+
+                            "<td colspan=\"4\">RIESGOS POR ELEMENTOS NO ESTRUCTURALES</td>"+
+                            "</tr>"+
+                            "<tr>"+
+                            "<td colspan=\"4\">Riesgo por las <b>condiciones de inseguridad</b> que existe en :</td>"+
+                            "</tr>"+
+                            "<tr>" +
+
+                            "<th style=\"border: inset 0pt\" WIDTH=\"4%\"></th>" +
+                            "<th style=\"border: inset 0pt\" WIDTH=\"86%\"></th>" +
+                            "<th style=\"border: inset 0pt\" WIDTH=\"5%\"></th>" +
+                            "<th style=\"border: inset 0pt\" WIDTH=\"5%\"></th>" +
+
+                            "</tr>" +
+                            "</thead>"+
+                            "<tbody>"+
+
+                            "<tr>" +
+                            "<td>1</td>"+
+                            "<td>Anaqueles y/o estantería</td>";
+            agregarRenglon(vector[0]);
+
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>2</td>"+
+                    "<td>Vidrios</td>";
+            agregarRenglon(vector[1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>3</td>"+
+                    "<td>Antenas</td>";
+            agregarRenglon(vector[2]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>4</td>"+
+                    "<td>Plafones</td>";
+            agregarRenglon(vector[3]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>5</td>"+
+                    "<td>Lámparas</td>";
+            agregarRenglon(vector[4]);
+
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>6</td>"+
+                    "<td>Elevadores</td>";
+            agregarRenglon(vector[5]);
+
+            tablaConcatenacion =  tablaConcatenacion +
+                    "<tr>"+
+                    "<td colspan=\"4\"><b>Nota: </b>Si respondió afirmativo en alguna de las cuestiones 1 a la 6, se requiere implementar medidas correctivas.</td>"+
+                    "</tr>";
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>7</td>"+
+                    "<td>Cancelería</td>";
+            agregarRenglon(vector[6]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>8</td>"+
+                    "<td>Puertas y ventanas</td>";
+            agregarRenglon(vector[7]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>9</td>"+
+                    "<td>Elementos suspendidos</td>";
+            agregarRenglon(vector[8]);
+
+            tablaConcatenacion =  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>10</td>"+
+                    "<td>Muros falsos</td>";
+            agregarRenglon(vector[9]);
+
+            tablaConcatenacion =  tablaConcatenacion +
+                    "<tr>"+
+                    "<td colspan=\"4\"><b>Nota: </b>Si respondió afirmativo en alguna de las cuestiones 7 a la 10, se requiere implementar medidas preventivas.</td>"+
+                    "</tr>";
+
+            tablaConcatenacion =  tablaConcatenacion +
+                    "<tr>"+
+                    "<td colspan=\"4\">RIESGOS POR ACABADOS DEL INMUEBLE</td>"+
+                    "</tr>"+
+                    "<tr>"+
+                    "<td colspan=\"4\">Riesgo por las <b>condiciones de inseguridad</b> que presentan los acabados del inmueble :</td>"+
+                    "</tr>";
+
+            tablaConcatenacion =  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>1</td>"+
+                    "<td>Lambrines</td>";
+            agregarRenglon(vector[10]);
+
+            tablaConcatenacion =  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>2</td>"+
+                    "<td>Recubrimiento de material incombustible</td>";
+            agregarRenglon(vector[11]);
+
+            tablaConcatenacion =  tablaConcatenacion +
+                    "<tr>"+
+                    "<td colspan=\"4\"><b>Nota: </b>Si respondió afirmativo en alguna de las cuestiones 1 y  2, se requiere implementar medidas preventivas.</td>"+
+                    "</tr>";
+
+            tablaConcatenacion =  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>3</td>"+
+                    "<td>Recubrimiento de material combustible</td>";
+            agregarRenglon(vector[12]);
+
+            tablaConcatenacion =  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>4</td>"+
+                    "<td>Pisos y desniveles</td>";
+            agregarRenglon(vector[13]);
+
+            tablaConcatenacion =  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>5</td>"+
+                    "<td>Pisos falsos</td>";
+            agregarRenglon(vector[14]);
+
+            tablaConcatenacion =  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>6</td>"+
+                    "<td>Losetas y azulejos</td>";
+            agregarRenglon(vector[15]);
+
+            tablaConcatenacion =  tablaConcatenacion +
+                    "<tr>"+
+                    "<td colspan=\"4\"><b>Nota: </b>Si respondió afirmativo en alguna de las cuestiones 3 a la 6, se requiere implementar medidas correctivas.</td>"+
+                    "</tr>";
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "</tbody>"+
+                    "</table>"+
+
+                    "</body>" + "</html>";
+            //style='border: inset 0pt'
+
+
+
+            worker.parseXHtml(pdfWriter, document, new StringReader(tablaConcatenacion));
+
+            document.close();
+
+            Intent intent = new Intent(this, com.example.recorridosr_v15.ViewPdf.class);
+            intent.putExtra("File", pdfFile.getPath());
+            startActivity(intent);
+        } catch (IOException e) {
+            Toast.makeText(this,"NO SE PUDO GENERAR EL DOCUMENTO", Toast.LENGTH_LONG).show();
+            e.printStackTrace();
+        } catch (DocumentException e) {
+            Toast.makeText(this,"NO SE PUDO GENERAR EL DOCUMENTO", Toast.LENGTH_LONG).show();
+            e.printStackTrace();
+        }
+
+
+    }
+    public void agregarRenglon(String decision) {
+        if (decision.equals("SI")) {
+            tablaConcatenacion= tablaConcatenacion +
+                    "<td style=\"background-color:Yellow; text-align:center;\">SI</td>" +
+                    "<td style=\"text-align:center;\">NO</td>" +
+                    "</tr>";
+        } else if(decision.equals("NO")){
+            tablaConcatenacion= tablaConcatenacion +
+                    "<td style=\"text-align:center;\">SI</td>" +
+                    "<td style=\"background-color:Yellow; text-align:center;\">NO</td>" +
+                    "</tr>";
+        }else{
+            tablaConcatenacion= tablaConcatenacion +
+                    "<td >SI</td>" +
+                    "<td>NO</td>" +
+                    "</tr>";
+        }
+
+    }
 
 }
