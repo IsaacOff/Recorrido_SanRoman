@@ -1377,8 +1377,8 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
 
         if (bandera) {
             vector2 = et1.getText().toString();
-
             onClick(view);
+
             Toast.makeText(this, "Guardado con exito", LENGTH_SHORT).show();
 
 
