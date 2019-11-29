@@ -58,7 +58,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         directorio2 = new File(getIntent().getStringExtra("File"));
         temporal = getIntent().getStringExtra("documento");
         if(directorio2 != null) {
-            pdfFile = new File(directorio2.getPath(), "prueba1.pdf");
+            pdfFile = new File(directorio2.getPath(), "Riesgos Internos.pdf");
         }
 
         //Asigna los Rg y rb del xml a los de aqui

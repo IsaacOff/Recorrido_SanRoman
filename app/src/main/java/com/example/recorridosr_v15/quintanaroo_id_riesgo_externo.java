@@ -11,6 +11,17 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.PageSize;
+import com.itextpdf.text.pdf.PdfWriter;
+import com.itextpdf.tool.xml.XMLWorkerHelper;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.StringReader;
+
 import static android.widget.Toast.LENGTH_SHORT;
 
 public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
@@ -24,6 +35,10 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
 
     String vector[][] =new String[22][2];
 
+    String tablaConcatenacion="";
+    static File pdfFile;
+    static File directorio2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +46,11 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
 
         this.setTitle("Riesgo Externo_chetumal");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        directorio2 = new File(getIntent().getStringExtra("File"));
+        if(directorio2 != null) {
+            pdfFile = new File(directorio2.getPath(), "prueba1.pdf");
+        }
 
         //Asigna los Rg y rb del xml a los de aqui
         rg1= (RadioGroup) findViewById(R.id.Rg1);
@@ -834,7 +854,8 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
             vector[21][1] = et22.getText().toString();
 
 
-
+            onClick(view);
+            //externo1(view);
             Toast.makeText(this, "Listo vamos al siguiente", LENGTH_SHORT).show();
 
 
@@ -851,6 +872,207 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
     public void externo1 (View view){
         Intent intent = new Intent(this, quintanaroo_id_riesgo_externo_fenomeno_1.class);
         startActivity(intent);
+    }
+
+    public void onClick (View view){
+        try {
+            Document document = new Document(PageSize.LETTER);
+            PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(pdfFile.getPath()));
+
+            document.open();
+            XMLWorkerHelper worker = XMLWorkerHelper.getInstance();
+
+        tablaConcatenacion=
+                "<html>" + "<body>" +
+
+                        "<TABLE border=\"1\" WIDTH=\"100%\">"+
+                        "<thead>"+
+                        "<tr>"+
+                        "<th colspan=\"5\" style=\"text-align:center;\">RIESGOS EXTERNOS</th>"+
+
+                        "</tr>"+
+                        "<tr>" +
+                        "<th style=\"border: inset 0pt\" WIDTH=\"13%\"></th>" +
+                        "<th style=\"border: inset 0pt\" WIDTH=\"35%\"></th>" +
+                        "<th style=\"border: inset 0pt\" WIDTH=\"10%\"></th>" +
+                        "<th style=\"border: inset 0pt\" WIDTH=\"10%\"></th>" +
+                        "<th style=\"border: inset 0pt\" WIDTH=\"32%\"></th>" +
+                        "</tr>" +
+                        "</thead>"+
+                        "<tbody>"+
+
+                        "<tr>"+
+                        "<td colspan=\"5\" >Planos de localización: \n" +
+                        "Trazar el plano del entorno del inmueble donde, además de ubicar la instalación objeto de estudio, se indicará la siguiente:\n" +
+                        "La presentación se entregara de acuerdo al PLANO P3.\n </td>"+
+                        "</tr>"+
+
+                        "<tr>"+
+                        "<td>PLANO P3.</td>"+
+                        "<td colspan=\"4\">Ubicación del inmueble, indicando sus colindancias, los usos del suelo en un radio de 500 m; las vialidades, vías de acceso y otros predios circundantes, rasgos geográficos predominantes (lagunas, humedales, etc.), rasgos sociales importantes aledaños (escuelas, hospitales, gasolineras, mercados), Áreas Naturales Protegidas, Ordenamientos Ecológicos, Planes Directores y otros  agentes perturbadores de origen natural o humano que signifiquen riesgo para el inmueble y su población señalando claramente los distanciamientos a las mismas.</td>"+
+                        "</tr>"+
+
+                        "<tr>"+
+                        "<td colspan=\"5\">IDENTIFICACIÓN DE RIESGOS EN EL ENTORNO INMEDIATO</td>"+
+                        "</tr>"+
+
+                        "<tr>"+
+                        "<td colspan=\"5\">Se identificará la presencia de elementos de riesgo en el entorno inmediato (500 metros) del inmueble:</td>"+
+                        "</tr>"+
+
+                        "<tr>"+
+                        "<td colspan=\"4\">Elementos a evaluar</td>"+
+                        "<td colspan=\"1\">Distancia aproximada</td>"+
+                        "</tr>"+
+
+                        "<tr>"+
+                        "<td colspan=\"2\">Tanques elevados</td>";
+                        agregarRenglon(vector[0][0],vector[0][1]);
+
+            tablaConcatenacion= tablaConcatenacion+
+                    "<tr>"+
+                    "<td colspan=\"2\">Postes de energía eléctrica en mal estado</td>";
+            agregarRenglon(vector[1][0],vector[1][1]);
+
+            tablaConcatenacion= tablaConcatenacion+
+                    "<tr>"+
+                    "<td colspan=\"2\">Torres con líneas de alta tensión</td>";
+            agregarRenglon(vector[2][0],vector[2][1]);
+
+            tablaConcatenacion= tablaConcatenacion+
+                    "<tr>"+
+                    "<td colspan=\"2\">Transformadores de energía eléctrica</td>";
+            agregarRenglon(vector[3][0],vector[3][1]);
+
+            tablaConcatenacion= tablaConcatenacion+
+                    "<tr>"+
+                    "<td colspan=\"2\">Inmuebles aledaños dañados</td>";
+            agregarRenglon(vector[4][0],vector[4][1]);
+
+            tablaConcatenacion= tablaConcatenacion+
+                    "<tr>"+
+                    "<td colspan=\"2\">Banquetas desniveladas</td>";
+            agregarRenglon(vector[5][0],vector[5][1]);
+
+            tablaConcatenacion= tablaConcatenacion+
+                    "<tr>"+
+                    "<td colspan=\"2\">Alcantarillas abiertas</td>";
+            agregarRenglon(vector[6][0],vector[6][1]);
+
+            tablaConcatenacion= tablaConcatenacion+
+                    "<tr>"+
+                    "<td colspan=\"2\">Árboles grandes que puedan caer</td>";
+            agregarRenglon(vector[7][0],vector[7][1]);
+
+            tablaConcatenacion= tablaConcatenacion+
+                    "<tr>"+
+                    "<td colspan=\"2\">Calles muy transitadas</td>";
+            agregarRenglon(vector[8][0],vector[8][1]);
+
+            tablaConcatenacion= tablaConcatenacion+
+                    "<tr>"+
+                    "<td colspan=\"2\">Fábricas con instalaciones de Gas L.P.</td>";
+            agregarRenglon(vector[9][0],vector[9][1]);
+
+            tablaConcatenacion= tablaConcatenacion+
+                    "<tr>"+
+                    "<td colspan=\"2\">Tanques de gas L.P.</td>";
+            agregarRenglon(vector[10][0],vector[10][1]);
+
+            tablaConcatenacion= tablaConcatenacion+
+                    "<tr>"+
+                    "<td colspan=\"2\">Gasolineras y/o Gaseras</td>";
+            agregarRenglon(vector[11][0],vector[11][1]);
+
+            tablaConcatenacion= tablaConcatenacion+
+                    "<tr>"+
+                    "<td colspan=\"2\">Anuncios volados  o espectaculares</td>";
+            agregarRenglon(vector[12][0],vector[12][1]);
+
+            tablaConcatenacion= tablaConcatenacion+
+                    "<tr>"+
+                    "<td colspan=\"2\">Almacenes de sustancias peligrosas</td>";
+            agregarRenglon(vector[13][0],vector[13][1]);
+            tablaConcatenacion= tablaConcatenacion+
+                    "<tr>"+
+                    "<td colspan=\"2\">Fábricas</td>";
+            agregarRenglon(vector[14][0],vector[14][1]);
+            tablaConcatenacion= tablaConcatenacion+
+                    "<tr>"+
+                    "<td colspan=\"2\">Planta de PEMEX</td>";
+            agregarRenglon(vector[15][0],vector[15][1]);
+            tablaConcatenacion= tablaConcatenacion+
+                    "<tr>"+
+                    "<td colspan=\"2\">Basureros</td>";
+            agregarRenglon(vector[16][0],vector[16][1]);
+            tablaConcatenacion= tablaConcatenacion+
+                    "<tr>"+
+                    "<td colspan=\"2\">Vías del ferrocarril</td>";
+            agregarRenglon(vector[17][0],vector[17][1]);
+            tablaConcatenacion= tablaConcatenacion+
+                    "<tr>"+
+                    "<td colspan=\"2\">Ríos y laderas</td>";
+            agregarRenglon(vector[18][0],vector[18][1]);
+            tablaConcatenacion= tablaConcatenacion+
+                    "<tr>"+
+                    "<td colspan=\"2\">Costas</td>";
+            agregarRenglon(vector[19][0],vector[19][1]);
+            tablaConcatenacion= tablaConcatenacion+
+                    "<tr>"+
+                    "<td colspan=\"2\">Presas</td>";
+            agregarRenglon(vector[20][0],vector[20][1]);
+            tablaConcatenacion= tablaConcatenacion+
+                    "<tr>"+
+                    "<td colspan=\"2\">Otros, especificar</td>";
+            agregarRenglon(vector[21][0],vector[21][1]);
+
+            tablaConcatenacion= tablaConcatenacion+
+                        "</tbody>"+
+                        "</table>"+
+                        "</body>" +"</html>" ;
+
+
+
+        worker.parseXHtml(pdfWriter, document, new StringReader(tablaConcatenacion));
+
+        document.close();
+
+        Intent intent = new Intent(this, com.example.recorridosr_v15.ViewPdf.class);
+        intent.putExtra("File", pdfFile.getPath());
+        startActivity(intent);
+    } catch (IOException e) {
+        Toast.makeText(this,"NO SE PUDO GENERAR EL DOCUMENTO", Toast.LENGTH_LONG).show();
+        e.printStackTrace();
+    } catch (DocumentException e) {
+        Toast.makeText(this,"NO SE PUDO GENERAR EL DOCUMENTO", Toast.LENGTH_LONG).show();
+        e.printStackTrace();
+    }
+
+
+    }
+
+    public void agregarRenglon(String decision, String distancia) {
+        if (decision.equals("SI")) {
+            tablaConcatenacion= tablaConcatenacion +
+                    "<td style=\"background-color:Yellow; text-align:center;\">SI</td>" +
+                    "<td style=\"text-align:center;\">NO</td>" +
+                    "<td >"+distancia+"</td>"+
+                    "</tr>";
+
+        } else if(decision.equals("NO")){
+            tablaConcatenacion= tablaConcatenacion +
+                    "<td style=\"text-align:center;\">SI</td>" +
+                    "<td style=\"background-color:Yellow; text-align:center;\">NO</td>" +
+                    "<td ></td>"+
+                    "</tr>";
+        }else{
+            tablaConcatenacion= tablaConcatenacion +
+                    "<td style=\"text-align:center;\">SI</td>" +
+                    "<td style=\"text-align:center;\">NO</td>" +
+                    "<td ></td>"+
+                    "</tr>";
+        }
+
     }
 
 }

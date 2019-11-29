@@ -37,11 +37,11 @@ private EditText et1, et2, et3, et4, et5;
     private RadioGroup rg1, rg2, rg3, rg4,rg5;
     private TextView tv1;
     private String sel;
-    private int numero =1;
+    static private int numero =1;
 String vector[] =new String[13];
     private File pdfFile;
     private String htmlToPDF;
-    private String detectores;
+    static private String detectores;
     private File directorio2;
 
 
@@ -57,7 +57,7 @@ String vector[] =new String[13];
         }
 
         tv1 = (TextView) findViewById(R.id.tv1);
-
+        tv1.setText(Integer.toString(numero));
         //asigna los edit text a los et de aqui
         et1  = (EditText) findViewById(R.id.editText1);
         et2  = (EditText) findViewById(R.id.editText2);

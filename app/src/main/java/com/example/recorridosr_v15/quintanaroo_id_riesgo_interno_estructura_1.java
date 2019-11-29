@@ -5,6 +5,8 @@ package com.example.recorridosr_v15;
         import android.content.Intent;
         import android.content.pm.ActivityInfo;
         import android.os.Bundle;
+        import android.text.Editable;
+        import android.text.TextWatcher;
         import android.view.View;
         import android.widget.EditText;
         import android.widget.RadioButton;
@@ -29,7 +31,7 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
     private RadioButton rb1, rb2, rb3, rb4, rb5, rb6, rb7, rb8, rb9, rb10, rb11, rb12, rb13, rb14, rb15, rb16, rb17, rb18,rb19,rb20, rb21, rb22, rb23, rb24 ;
     private RadioGroup rg1, rg2, rg3, rg4,rg5,rg6,rg7,rg8,rg9;
     private EditText et1;
-    private String vector[]= new String[10];
+    static private String vector[]= {"","","","","","","","","",""};
     static File pdfFile;
     static File directorio2;
     String temporal;
@@ -92,6 +94,83 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
         //Ocultar EditText
         et1.setVisibility(View.GONE);
 
+        if(vector[0].equals("SI")){
+            rb1.setChecked(true);
+            rb2.setChecked(false);
+        }else if(vector[0].equals("NO")){
+            rb1.setChecked(false);
+            rb2.setChecked(true);
+        }
+
+        if(vector[1].equals("SI")){
+            rb3.setChecked(true);
+            rb4.setChecked(false);
+        }else if(vector[1].equals("NO")){
+            rb3.setChecked(false);
+            rb4.setChecked(true);
+        }
+
+        if(vector[2].equals("SI")){
+            rb5.setChecked(true);
+            rb6.setChecked(false);
+        }else if(vector[2].equals("NO")){
+            rb5.setChecked(false);
+            rb6.setChecked(true);
+        }
+
+        if(vector[3].equals("SI")){
+            rb7.setChecked(true);
+            rb8.setChecked(false);
+        }else if(vector[3].equals("NO")){
+            rb7.setChecked(false);
+            rb8.setChecked(true);
+        }
+
+        if(vector[4].equals("SI")){
+            rb9.setChecked(true);
+            rb10.setChecked(false);
+        }else if(vector[4].equals("NO")){
+            rb9.setChecked(false);
+            rb10.setChecked(true);
+        }
+
+        if(vector[5].equals("SI")){
+            rb11.setChecked(true);
+            rb12.setChecked(false);
+        }else if(vector[5].equals("NO")){
+            rb11.setChecked(false);
+            rb12.setChecked(true);
+        }
+
+        if(vector[6].equals("SI")){
+            rb13.setChecked(true);
+            rb14.setChecked(false);
+        }else if(vector[6].equals("NO")){
+            rb13.setChecked(false);
+            rb14.setChecked(true);
+        }
+
+        if(vector[7].equals("SI")){
+            rb15.setChecked(true);
+            rb16.setChecked(false);
+        }else if(vector[7].equals("NO")){
+            rb15.setChecked(false);
+            rb16.setChecked(true);
+        }
+
+        if(vector[8].equals("SI")){
+            rb17.setChecked(true);
+            rb18.setChecked(false);
+            et1.setVisibility(View.VISIBLE);
+        }else if(vector[8].equals("NO")){
+            rb17.setChecked(false);
+            rb18.setChecked(true);
+        }
+
+        if(!vector[9].equals("") && vector[9] != null){
+            et1.setText(vector[9]);
+        }
+
         rg1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -130,17 +209,16 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
         rg3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(checkedId==R.id.rb5){
-                    vector[2]="SI";
+                    if (checkedId == R.id.rb5) {
+                        vector[2] = "SI";
 
 
-                }else if(checkedId==R.id.rb6) {
+                    } else if (checkedId == R.id.rb6) {
 
-                    vector[2]="NO";
+                        vector[2] = "NO";
 
 
-                }
-
+                    }
             }
         });
 
@@ -260,12 +338,24 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
             }
         });
 
+        et1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[9]=et1.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
 
 
     }
-
-
-
 
 
     public void siguiente2(View view) {

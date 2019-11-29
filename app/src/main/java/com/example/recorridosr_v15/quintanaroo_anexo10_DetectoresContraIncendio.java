@@ -27,13 +27,13 @@ import static android.widget.Toast.LENGTH_SHORT;
 public class quintanaroo_anexo10_DetectoresContraIncendio extends AppCompatActivity {
     private Spinner spin1;
     private TextView TV1;
-    private int numero =1;
+    static private int numero =1;
     String vector[] =new String[5];
     private EditText  et1, et2,  et3,  et4;
     private File pdfFile;
     private String htmlToPDF;
     private File directorio2;
-    private String detectores;
+    static private String detectores;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +57,7 @@ public class quintanaroo_anexo10_DetectoresContraIncendio extends AppCompatActiv
         spin1.setAdapter(adapter);
 
         TV1=(TextView) findViewById(R.id.tv);
-
+        TV1.setText(Integer.toString(numero));
 
         et1  = (EditText) findViewById(R.id.editText1);
         et2  = (EditText) findViewById(R.id.editText2);

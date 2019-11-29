@@ -24,7 +24,7 @@ import java.io.IOException;
 import java.io.StringReader;
 
 import static android.widget.Toast.LENGTH_SHORT;
-
+//----------------------------------------------
 public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActivity {
     private RadioButton rb1, rb2, rb3, rb4, rb5, rb6, rb7, rb8, rb9, rb10, rb11, rb12, rb13, rb14, rb15, rb16, rb17, rb18,rb19,rb20;
     private RadioButton rb21, rb22, rb23, rb24, rb25, rb26, rb27, rb28, rb29, rb30, rb31, rb32, rb33, rb34, rb35, rb36, rb37, rb38,rb39,rb40;
