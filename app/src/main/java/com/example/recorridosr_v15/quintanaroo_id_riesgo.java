@@ -29,7 +29,6 @@ public class quintanaroo_id_riesgo extends AppCompatActivity {
         onClick(view, "Riesgo interno");
         //Intent intent = new Intent(this, quintanaroo_id_riesgo_interno.class);
         Intent intent = new Intent(this, quintanaroo_id_riesgo_interno.class);
-        intent.putExtra("File", directorio.getPath());
         startActivity(intent);
     }
 
@@ -38,13 +37,16 @@ public class quintanaroo_id_riesgo extends AppCompatActivity {
     public void Riesgos_externo_quintana (View view){
         onClick(view, "Riesgo Externo");
         Intent intent = new Intent(this, quintanaroo_id_riesgo_externo_fenomeno_1.class);
-        intent.putExtra("File", directorio.getPath());
         startActivity(intent);
     }
 
     public void onClick(View v, String nombre){
         directorio = new File(directorio2.getPath(), nombre);
         directorio.mkdir();
+    }
+
+    public static String file (){
+        return directorio.getPath();
     }
 
 }

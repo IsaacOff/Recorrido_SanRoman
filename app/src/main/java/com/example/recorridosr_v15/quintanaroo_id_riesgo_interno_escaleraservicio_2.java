@@ -35,7 +35,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
     static String vector2[] = {"", ""};
     static File pdfFile;
     static File directorio2;
-    String tablaConcatenacion="";
+    static String tablaConcatenacion="";
     String temporal;
 
     @Override
@@ -46,8 +46,6 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
         this.setTitle("Riesgo interno_chetumal");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        directorio2 = new File(getIntent().getStringExtra("File"));
-        temporal = getIntent().getStringExtra("documento");
 
         //Asigna los Rg y rb del xml a los de aqui
         rg1= (RadioGroup) findViewById(R.id.Rg1);
@@ -362,7 +360,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb21){
                     vector2[0]="SI";
-
+/*
                     if (vector[0][0].equals("SI")) {
                         //rb1.setChecked(true);
                         rb1.setChecked(true);
@@ -464,7 +462,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                         rb10.setChecked(true);
                     }
 
-
+*/
                 }else if(checkedId==R.id.rb22) {
                     vector2[0]="NO";
 
@@ -481,13 +479,23 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                     rb10.setChecked(false);
 
 
-
-
                     spin1.setVisibility(View.GONE);
                     spin2.setVisibility(View.GONE);
                     spin3.setVisibility(View.GONE);
                     spin4.setVisibility(View.GONE);
                     spin5.setVisibility(View.GONE);
+
+                    spin1.setSelection(0);
+                    spin2.setSelection(0);
+                    spin3.setSelection(0);
+                    spin4.setSelection(0);
+                    spin5.setSelection(0);
+
+                    for(int i = 0 ; i< 5;i++) {
+                        for(int x = 0 ; x< vector[i].length;x++) {
+                            vector[i][x]="";
+                        }
+                    }
 
 
                 }
@@ -638,7 +646,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb23){
                     vector2[1]="SI";
-
+/*
                     if(vector[5][1].equals("Selecione el estado actual:")){
                         spin6.setSelection(0);
                     }else if(vector[5][1].equals("BUENO")) {
@@ -733,7 +741,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                         rb19.setChecked(false);
                         rb20.setChecked(true);
                     }
-
+*/
 
                 }else if(checkedId==R.id.rb24) {
                     vector2[1]="NO";
@@ -756,6 +764,17 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                     spin9.setVisibility(View.GONE);
                     spin10.setVisibility(View.GONE);
 
+                    spin6.setSelection(0);
+                    spin7.setSelection(0);
+                    spin8.setSelection(0);
+                    spin9.setSelection(0);
+                    spin10.setSelection(0);
+
+                    for(int i = 5 ; i< 10;i++) {
+                        for(int x = 0 ; x< vector[i].length;x++) {
+                            vector[i][x]="";
+                        }
+                    }
 
                 }
 
@@ -1152,14 +1171,12 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
 
     public void interno_siguiente3 (View view){
         Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_instalaciones_3.class);
-        intent.putExtra("File", directorio2.getPath());
-        intent.putExtra("documento", tablaConcatenacion);
         startActivity(intent);
     }
 
-    public void onClick (View view){
+    public static String onClick (){
 
-            tablaConcatenacion= temporal+
+            tablaConcatenacion=
 
                             "<TABLE border=\"1\" WIDTH=\"100%\">"+
                             "<thead>"+
@@ -1174,7 +1191,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                             "</tr>" +
                             "</thead>"+
                             "<tbody>";
-            if (vector2[0].equals("SI")) {
+
                 tablaConcatenacion = tablaConcatenacion +
                         "<tr>" +
                         "<th colspan=\"6\" style=\"text-align:center;\">Descripción de las escaleras de servicio</th>" +
@@ -1215,8 +1232,8 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                         "<tr>" +
                         "<td>Iluminación artificial</td>";
                 agregarRenglon(vector[4][0], vector[4][1]);
-            }
-        if (vector2[1].equals("SI")) {
+
+
             tablaConcatenacion = tablaConcatenacion +
                     "<tr>" +
                     "<th colspan=\"6\" style=\"text-align:center;\">Descripción de las escaleras de emergencia</th>" +
@@ -1256,14 +1273,14 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                     "<tr>" +
                     "<td>Iluminación artificial</td>";
             agregarRenglon(vector[9][0], vector[9][1]);
-        }
+
             tablaConcatenacion=  tablaConcatenacion +
                     "</tbody>"+
                     "</table>";
-
+        return tablaConcatenacion;
 
     }
-    public void agregarRenglon(String decision, String estado) {
+    public static void agregarRenglon(String decision, String estado) {
         if (decision.equals("SI")) {
             tablaConcatenacion= tablaConcatenacion +
                     "<td style=\"background-color:Yellow; text-align:center;\">SI</td>" +

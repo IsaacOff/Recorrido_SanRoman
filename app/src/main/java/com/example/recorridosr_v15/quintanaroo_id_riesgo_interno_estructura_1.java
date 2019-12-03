@@ -35,7 +35,7 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
     static File pdfFile;
     static File directorio2;
     String temporal;
-    String tablaConcatenacion="";
+    static String tablaConcatenacion="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,9 +44,6 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
 
         this.setTitle("Riesgo interno_chetumal");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
-        directorio2 = new File(getIntent().getStringExtra("File"));
-        temporal = getIntent().getStringExtra("documento");
 
 
 
@@ -400,18 +397,16 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
 
     public void interno_siguiente2 (View view){
         Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_escaleraservicio_2.class);
-        intent.putExtra("File", directorio2.getPath());
-        intent.putExtra("documento", tablaConcatenacion);
         startActivity(intent);
     }
 
 
 
-    public void onClick (View view){
+    public static String onClick (){
 
 
 
-            tablaConcatenacion= temporal +
+            tablaConcatenacion=
 
 
                             "<TABLE border=\"1\" WIDTH=\"100%\">"+
@@ -516,10 +511,10 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
             //intent.putExtra("File", pdfFile.getPath());
             //startActivity(intent);
 
-
+            return tablaConcatenacion;
 
     }
-    public void agregarRenglon(String decision) {
+    public static void agregarRenglon(String decision) {
                 if (decision.equals("SI")) {
                     tablaConcatenacion= tablaConcatenacion +
 

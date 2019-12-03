@@ -45,7 +45,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
     static File directorio2;
     static boolean banderaTotal;
     String tablaConcatenacion="";
-    String temporal;
+    String aviso = "";
 
 
     @Override
@@ -58,11 +58,11 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         this.setTitle("Riesgo interno_chetumal");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        directorio2 = new File(getIntent().getStringExtra("File"));
+        /*directorio2 = new File(getIntent().getStringExtra("File"));
         temporal = getIntent().getStringExtra("documento");
         if(directorio2 != null) {
             pdfFile = new File(directorio2.getPath(), "Riesgos Internos.pdf");
-        }
+        }*/
 
         //Asigna los Rg y rb del xml a los de aqui
         rg1= (RadioGroup) findViewById(R.id.Rg1);
@@ -1822,6 +1822,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
 
 
     public void final_interno(View view) {
+        aviso ="";
         Boolean bandera = true;
         banderaTotal = true;
 
@@ -1841,58 +1842,60 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         }
 
         if (!quintanaroo_id_riesgo_interno.siguiente1()) {
-            Toast.makeText(this, "revisa la pagina 1", LENGTH_SHORT).show();
+            aviso = aviso +"1";
             banderaTotal = false;
         }
 
         if(!quintanaroo_id_riesgo_interno_estructura_1.siguiente2()){
-            Toast.makeText(this, "revisa la pagina 2", LENGTH_SHORT).show();
+            aviso = aviso +", 2";
             banderaTotal = false;
         }
 
         if(!quintanaroo_id_riesgo_interno_escaleraservicio_2.siguiente3()){
-            Toast.makeText(this, "revisa la pagina 3", LENGTH_SHORT).show();
+            aviso = aviso +", 3";
             banderaTotal = false;
         }
 
-        /*
-        if(!quintanaroo_id_riesgo_interno_estructura_1.siguiente2()){
-            Toast.makeText(this, "revisa la pagina 4", LENGTH_SHORT).show();
+
+        if(!quintanaroo_id_riesgo_interno_instalaciones_3.siguiente4()){
+            aviso = aviso +", 4";
             banderaTotal = false;
         }
 
-        if(!quintanaroo_id_riesgo_interno_estructura_1.siguiente2()){
-            Toast.makeText(this, "revisa la pagina 5", LENGTH_SHORT).show();
+        if(!quintanaroo_id_riesgo_interno_noEstructurales_4.siguiente5()){
+            aviso = aviso +", 5";
             banderaTotal = false;
         }
 
-        if(!quintanaroo_id_riesgo_interno_estructura_1.siguiente2()){
-            Toast.makeText(this, "revisa la pagina 6", LENGTH_SHORT).show();
+        if(!quintanaroo_id_riesgo_interno_equiposyservicios_5.siguiente6()){
+            aviso = aviso +", 6";
             banderaTotal = false;
         }
 
-        if(!quintanaroo_id_riesgo_interno_estructura_1.siguiente2()){
-            Toast.makeText(this, "revisa la pagina 7", LENGTH_SHORT).show();
+        if(!bandera){
+
+            aviso = aviso +", 7";
             banderaTotal = false;
-        }*/
+        }
 
         if(banderaTotal){
 
             if (bandera) {
-                vector2 = et1.getText().toString();
+                directorio2 = new File(quintanaroo_id_riesgo.file());
+                    if(directorio2 != null) {
+                        pdfFile = new File(directorio2.getPath(), "Riesgos Internos.pdf");
+                    }
                 onClick(view);
-
-                Toast.makeText(this, "Guardado con exito", LENGTH_SHORT).show();
-
-
-            } else {
-                Toast.makeText(this, "REVISA LOS DATOS", LENGTH_SHORT).show();
             }
+        }else{
+            Toast.makeText(this, "revisa las paginas " + aviso, LENGTH_SHORT).show();
         }
     }
 
 
     public void onClick (View view){
+
+
 
         try {
             Document document = new Document(PageSize.LETTER);
@@ -1902,8 +1905,12 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
             XMLWorkerHelper worker = XMLWorkerHelper.getInstance();
 
 
-            tablaConcatenacion=
-                            temporal+
+            tablaConcatenacion= quintanaroo_id_riesgo_interno.onClick() +
+                    quintanaroo_id_riesgo_interno_estructura_1.onClick()+
+                    quintanaroo_id_riesgo_interno_escaleraservicio_2.onClick()+
+                    quintanaroo_id_riesgo_interno_instalaciones_3.onClick()+
+                    quintanaroo_id_riesgo_interno_noEstructurales_4.onClick()+
+                    quintanaroo_id_riesgo_interno_equiposyservicios_5.onClick()+
 
                             "<TABLE border=\"1\" WIDTH=\"100%\">"+
                             "<thead>"+

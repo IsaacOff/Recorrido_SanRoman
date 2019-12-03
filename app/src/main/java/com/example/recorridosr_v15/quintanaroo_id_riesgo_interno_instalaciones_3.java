@@ -37,8 +37,8 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
     static String vector[] = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""};
     static File pdfFile;
     static File directorio2;
-    String tablaConcatenacion="";
-    String temporal;
+    static String tablaConcatenacion="";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +48,7 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
         this.setTitle("Riesgo interno_chetumal");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        directorio2 = new File(getIntent().getStringExtra("File"));
-        temporal = getIntent().getStringExtra("documento");
+
 
 
 
@@ -861,13 +860,30 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
 
 
 
-    public void siguiente4(View view) {
+    public static boolean siguiente4() {
         Boolean bandera = true;
 
+        for(int i=0;i<10; i++  ){
+            if(vector[i]==null || vector[i].equals("")){
+                bandera= false;
+            }
+        }
+
+        for(int i=11;i<21; i++  ){
+            if(vector[i]==null || vector[i].equals("")){
+                bandera= false;
+            }
+        }
+
+        for(int i=22;i<25; i++  ){
+            if(vector[i]==null || vector[i].equals("")){
+                bandera= false;
+            }
+        }
 
         if( vector[9]=="SI"){
 
-            if (et1.length() == 0) {
+            if (vector[10].equals("")) {
                 bandera = false;
             }
 
@@ -875,7 +891,7 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
 
         if( vector[20]=="SI"){
 
-            if (et2.length() == 0) {
+            if (vector[21].equals("")) {
                 bandera = false;
             }
 
@@ -884,26 +900,10 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
 
         if( vector[24]=="SI"){
 
-            if (et3.length() == 0) {
+            if (vector[25].equals("")) {
                 bandera = false;
             }
 
-        }
-
-
-
-
-            if(vector[8]==null){
-                bandera= false;
-            }
-
-
-        if(vector[24]==null){
-            bandera= false;
-        }
-
-        if(vector[4]==null){
-            bandera= false;
         }
 
 
@@ -915,13 +915,15 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
             //vector[25] = et3.getText().toString();
 
 
-            Toast.makeText(this, "vamos al siguiente", LENGTH_SHORT).show();
-            onClick(view);
-            interno_siguiente4(view);
+            //Toast.makeText(this, "vamos al siguiente", LENGTH_SHORT).show();
+            //onClick(view);
+            //interno_siguiente4(view);
+            return true;
 
 
         } else {
-            Toast.makeText(this, "REVISA LOS DATOS", LENGTH_SHORT).show();
+            //Toast.makeText(this, "REVISA LOS DATOS", LENGTH_SHORT).show();
+            return false;
         }
 
 
@@ -929,15 +931,13 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
 
     public void interno_siguiente4 (View view){
         Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_noEstructurales_4.class);
-        intent.putExtra("File", directorio2.getPath());
-        intent.putExtra("documento", tablaConcatenacion);
         startActivity(intent);
     }
 
-    public void onClick (View view){
+    public static String onClick (){
 
 
-            tablaConcatenacion= temporal+
+            tablaConcatenacion=
 
 
                             "<TABLE border=\"1\" WIDTH=\"100%\">"+
@@ -1178,8 +1178,10 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
                     "</tbody>"+
                     "</table>";
 
+            return tablaConcatenacion;
+
     }
-    public void agregarRenglon(String decision) {
+    public static void agregarRenglon(String decision) {
         if (decision.equals("SI")) {
             tablaConcatenacion= tablaConcatenacion +
                     "<td style=\"background-color:Yellow; text-align:center;\">SI</td>" +

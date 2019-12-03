@@ -30,8 +30,7 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
     static String vector[]= {"", "", "", "", "", "", "", "", "", "", "", ""};
     static File pdfFile;
     static File directorio2;
-    String tablaConcatenacion="";
-    String temporal;
+    static String tablaConcatenacion="";
 
 
 
@@ -43,9 +42,6 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
 
         this.setTitle("Riesgo interno_chetumal");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
-        directorio2 = new File(getIntent().getStringExtra("File"));
-        temporal = getIntent().getStringExtra("documento");
 
 
         //Asigna los Rg y rb del xml a los de aqui
@@ -432,12 +428,12 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
 
 
 
-    public void siguiente6(View view) {
+    public static boolean siguiente6() {
         Boolean bandera = true;
 
 
         for(int i=0;i<12; i++  ){
-            if(vector[i]==null){
+            if(vector[i]==null || vector[i].equals("")){
                 bandera= false;
             }
         }
@@ -445,15 +441,16 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
 
         if (bandera) {
 
-
-            Toast.makeText(this, "vamos al siguiente", LENGTH_SHORT).show();
-            onClick(view);
-            interno_siguiente6(view);
+            return true;
+            //Toast.makeText(this, "vamos al siguiente", LENGTH_SHORT).show();
+            //onClick(view);
+            //interno_siguiente6(view);
 
 
 
         } else {
-            Toast.makeText(this, "REVISA LOS DATOS", LENGTH_SHORT).show();
+            //Toast.makeText(this, "REVISA LOS DATOS", LENGTH_SHORT).show();
+            return false;
         }
 
 
@@ -463,16 +460,13 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
 
     public void interno_siguiente6 (View view){
         Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_otros_6.class);
-        intent.putExtra("File", directorio2.getPath());
-        intent.putExtra("documento", tablaConcatenacion);
         startActivity(intent);
     }
 
 
-    public void onClick (View view){
+    public static String onClick (){
 
             tablaConcatenacion=
-                    temporal+
 
                             "<TABLE border=\"1\" WIDTH=\"100%\">"+
                             "<thead>"+
@@ -575,9 +569,9 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
                     "</tbody>"+
                     "</table>";
 
-
+            return tablaConcatenacion;
     }
-    public void agregarRenglon(String decision) {
+    public static void agregarRenglon(String decision) {
         if (decision.equals("SI")) {
             tablaConcatenacion= tablaConcatenacion +
                     "<td style=\"background-color:Yellow; text-align:center;\">SI</td>" +

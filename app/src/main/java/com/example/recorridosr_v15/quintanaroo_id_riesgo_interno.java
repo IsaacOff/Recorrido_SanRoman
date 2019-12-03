@@ -25,7 +25,7 @@ import java.io.StringReader;
 public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
     static private EditText et1, et2, et3, et4, et5, et6, et7, et8, et9, et10, et11, et12, et13, et14, et15, et16, et17, et18, et19, et20;
     static private String vector[] = new String[17];
-    String tablaConcatenacion="";
+    static String tablaConcatenacion="";
     static File pdfFile;
     static File directorio2;
 
@@ -37,8 +37,8 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
         this.setTitle("Riesgo interno_chetumal");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        directorio2 = new File(getIntent().getStringExtra("File"));
-        /*if(directorio2 != null) {
+        /*directorio2 = new File(getIntent().getStringExtra("File"));
+        if(directorio2 != null) {
             pdfFile = new File(directorio2.getPath(), "prueba1.pdf");
         }*/
 
@@ -477,12 +477,10 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
 
     public void interno_estructura(View view) {
         Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_estructura_1.class);
-        intent.putExtra("File", directorio2.getPath());
-        intent.putExtra("documento", tablaConcatenacion);
         startActivity(intent);
     }
 
-    public void onClick (View view){
+    public static String onClick (){
         /*try {
             Document document = new Document(PageSize.LETTER);
             PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(pdfFile.getPath()));
@@ -604,6 +602,7 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
         Toast.makeText(this,"NO SE PUDO GENERAR EL DOCUMENTO", Toast.LENGTH_LONG).show();
         e.printStackTrace();
     }*/
+               return tablaConcatenacion;
 
 
 }
