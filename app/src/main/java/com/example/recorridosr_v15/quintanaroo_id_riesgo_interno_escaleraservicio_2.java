@@ -145,6 +145,8 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
         if(vector2[0].equals("SI")){
             rb21.setChecked(true);
             rb22.setChecked(false);
+
+
         }else if(vector2[0].equals("NO")){
             rb21.setChecked(false);
             rb22.setChecked(true);
@@ -259,6 +261,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
         }
 
         if(vector2[0].equals("SI")) {
+            System.out.println("cambio 4");
             if (vector[0][0].equals("SI")) {
                 rb1.setChecked(true);
                 rb2.setChecked(false);
@@ -359,14 +362,113 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb21){
                     vector2[0]="SI";
-                    System.out.println(vector2[0]);
+
+                    if (vector[0][0].equals("SI")) {
+                        //rb1.setChecked(true);
+                        rb1.setChecked(true);
+                        System.out.println(vector[0][0]+ " vector");
+                        System.out.println(rb1.isChecked() + " rb1" );
+                        rb2.setChecked(false);
+                        spin1.setVisibility(View.VISIBLE);
+                    } else if (vector[0][0].equals("NO")) {
+                        System.out.println("cambio 1");
+                        rb1.setChecked(false);
+                        rb2.setChecked(true);
+                    }
+
+                    if(vector[0][1].equals("Selecione el estado actual:")){
+                        spin1.setSelection(0);
+                    }else if(vector[0][1].equals("BUENO")) {
+                        spin1.setSelection(1);
+                    }else if (vector[0][1].equals("REGULAR")){
+                        spin1.setSelection(2);
+                    }else if (vector[0][1].equals("MALO")){
+                        spin1.setSelection(3);
+                    }
+
+                    if(vector[1][1].equals("Selecione el estado actual:")){
+                        spin2.setSelection(0);
+                    }else if(vector[1][1].equals("BUENO")) {
+                        spin2.setSelection(1);
+                    }else if (vector[1][1].equals("REGULAR")){
+                        spin2.setSelection(2);
+                    }else if (vector[1][1].equals("MALO")){
+                        spin2.setSelection(3);
+                    }
+
+                    if(vector[2][1].equals("Selecione el estado actual:")){
+                        spin3.setSelection(0);
+                    }else if(vector[2][1].equals("BUENO")) {
+                        spin3.setSelection(1);
+                    }else if (vector[2][1].equals("REGULAR")){
+                        spin3.setSelection(2);
+                    }else if (vector[2][1].equals("MALO")){
+                        spin3.setSelection(3);
+                    }
+
+                    if(vector[3][1].equals("Selecione el estado actual:")){
+                        spin4.setSelection(0);
+                    }else if(vector[3][1].equals("BUENO")) {
+                        spin4.setSelection(1);
+                    }else if (vector[3][1].equals("REGULAR")){
+                        spin4.setSelection(2);
+                    }else if (vector[3][1].equals("MALO")){
+                        spin4.setSelection(3);
+                    }
+
+                    if(vector[4][1].equals("Selecione el estado actual:")){
+                        spin5.setSelection(0);
+                    }else if(vector[4][1].equals("BUENO")) {
+                        spin5.setSelection(1);
+                    }else if (vector[4][1].equals("REGULAR")){
+                        spin5.setSelection(2);
+                    }else if (vector[4][1].equals("MALO")){
+                        spin5.setSelection(3);
+                    }
+
+
+
+                    if (vector[1][0].equals("SI")) {
+                        rb3.setChecked(true);
+                        rb4.setChecked(false);
+                        spin2.setVisibility(View.VISIBLE);
+                    } else if (vector[1][0].equals("NO")) {
+                        rb3.setChecked(false);
+                        rb4.setChecked(true);
+                    }
+
+                    if (vector[2][0].equals("SI")) {
+                        rb5.setChecked(true);
+                        rb6.setChecked(false);
+                        spin3.setVisibility(View.VISIBLE);
+                    } else if (vector[2][0].equals("NO")) {
+                        rb5.setChecked(false);
+                        rb6.setChecked(true);
+                    }
+
+                    if (vector[3][0].equals("SI")) {
+                        rb7.setChecked(true);
+                        rb8.setChecked(false);
+                        spin4.setVisibility(View.VISIBLE);
+                    } else if (vector[3][0].equals("NO")) {
+                        rb7.setChecked(false);
+                        rb8.setChecked(true);
+                    }
+
+                    if (vector[4][0].equals("SI")) {
+                        rb9.setChecked(true);
+                        rb10.setChecked(false);
+                        spin5.setVisibility(View.VISIBLE);
+                    } else if (vector[4][0].equals("NO")) {
+                        rb9.setChecked(false);
+                        rb10.setChecked(true);
+                    }
 
 
                 }else if(checkedId==R.id.rb22) {
                     vector2[0]="NO";
-                    System.out.println(vector2[0]);
 
-
+                    System.out.println("cambio 2");
                     rb1.setChecked(false);
                     rb2.setChecked(false);
                     rb3.setChecked(false);
@@ -377,6 +479,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                     rb8.setChecked(false);
                     rb9.setChecked(false);
                     rb10.setChecked(false);
+
 
 
 
@@ -399,18 +502,24 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
 
                 if (vector2[0].equals("SI")){
                 if(checkedId==R.id.rb1){
+                    //System.out.println("entre 1");
+                    rb1.setChecked(true);
                     vector[0][0]="SI";
                     spin1.setVisibility(View.VISIBLE);
 
                 }else if(checkedId==R.id.rb2) {
+                    rb2.setChecked(true);
+                    System.out.println("entre 2");
                     vector[0][0]="NO";
                     spin1.setVisibility(View.GONE);
                 }else{
+                    System.out.println("no entre");
                     vector[0][0]="";
                 }
                 }else{
-                    ((RadioButton) findViewById(R.id.rb1)).setChecked(false);
-                    ((RadioButton) findViewById(R.id.rb2)).setChecked(false);
+                    System.out.println("cambio 3");
+                    rb1.setChecked(false);
+                    rb2.setChecked(false);
                 }
 
             }
@@ -422,12 +531,12 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (vector2[0].equals("SI")){
                 if(checkedId==R.id.rb3){
-
+                    rb3.setChecked(true);
                     vector[1][0]="SI";
                     spin2.setVisibility(View.VISIBLE);
 
                 }else if(checkedId==R.id.rb4) {
-
+                    rb4.setChecked(true);
                     vector[1][0]="NO";
                     spin2.setVisibility(View.GONE);
 
@@ -449,11 +558,12 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (vector2[0].equals("SI")){
                 if(checkedId==R.id.rb5){
+                    rb5.setChecked(true);
                     vector[2][0]="SI";
                     spin3.setVisibility(View.VISIBLE);
 
                 }else if(checkedId==R.id.rb6) {
-
+                    rb6.setChecked(true);
                     vector[2][0]="NO";
                     spin3.setVisibility(View.GONE);
 
@@ -475,13 +585,13 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (vector2[0].equals("SI")){
                 if(checkedId==R.id.rb7){
-
+                    rb7.setChecked(true);
                     vector[3][0]="SI";
                     spin4.setVisibility(View.VISIBLE);
 
 
                 }else if(checkedId==R.id.rb8) {
-
+                    rb8.setChecked(true);
                     vector[3][0]="NO";
                     spin4.setVisibility(View.GONE);
                 }else{
@@ -501,11 +611,12 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (vector2[0].equals("SI")){
                 if(checkedId==R.id.rb9){
+                    rb9.setChecked(true);
                     vector[4][0]="SI";
                     spin5.setVisibility(View.VISIBLE);
 
                 }else if(checkedId==R.id.rb10) {
-
+                    rb10.setChecked(true);
                     vector[4][0]="NO";
                     spin5.setVisibility(View.GONE);
 
@@ -527,6 +638,101 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb23){
                     vector2[1]="SI";
+
+                    if(vector[5][1].equals("Selecione el estado actual:")){
+                        spin6.setSelection(0);
+                    }else if(vector[5][1].equals("BUENO")) {
+                        spin6.setSelection(1);
+                    }else if (vector[5][1].equals("REGULAR")){
+                        spin6.setSelection(2);
+                    }else if (vector[5][1].equals("MALO")){
+                        spin6.setSelection(3);
+                    }
+
+                    if(vector[6][1].equals("Selecione el estado actual:")){
+                        spin7.setSelection(0);
+                    }else if(vector[6][1].equals("BUENO")) {
+                        spin7.setSelection(1);
+                    }else if (vector[6][1].equals("REGULAR")){
+                        spin7.setSelection(2);
+                    }else if (vector[6][1].equals("MALO")){
+                        spin7.setSelection(3);
+                    }
+
+                    if(vector[7][1].equals("Selecione el estado actual:")){
+                        spin8.setSelection(0);
+                    }else if(vector[7][1].equals("BUENO")) {
+                        spin8.setSelection(1);
+                    }else if (vector[7][1].equals("REGULAR")){
+                        spin8.setSelection(2);
+                    }else if (vector[7][1].equals("MALO")){
+                        spin8.setSelection(3);
+                    }
+
+                    if(vector[8][1].equals("Selecione el estado actual:")){
+                        spin9.setSelection(0);
+                    }else if(vector[8][1].equals("BUENO")) {
+                        spin9.setSelection(1);
+                    }else if (vector[8][1].equals("REGULAR")){
+                        spin9.setSelection(2);
+                    }else if (vector[8][1].equals("MALO")){
+                        spin9.setSelection(3);
+                    }
+
+                    if(vector[9][1].equals("Selecione el estado actual:")){
+                        spin10.setSelection(0);
+                    }else if(vector[9][1].equals("BUENO")) {
+                        spin10.setSelection(1);
+                    }else if (vector[9][1].equals("REGULAR")){
+                        spin10.setSelection(2);
+                    }else if (vector[9][1].equals("MALO")){
+                        spin10.setSelection(3);
+                    }
+
+                    if (vector[5][0].equals("SI")) {
+                        rb11.setChecked(true);
+                        rb12.setChecked(false);
+                        spin6.setVisibility(View.VISIBLE);
+                    } else if (vector[5][0].equals("NO")) {
+                        rb11.setChecked(false);
+                        rb12.setChecked(true);
+                    }
+
+                    if (vector[6][0].equals("SI")) {
+                        rb13.setChecked(true);
+                        rb14.setChecked(false);
+                        spin7.setVisibility(View.VISIBLE);
+                    } else if (vector[6][0].equals("NO")) {
+                        rb13.setChecked(false);
+                        rb14.setChecked(true);
+                    }
+
+                    if (vector[7][0].equals("SI")) {
+                        rb15.setChecked(true);
+                        rb16.setChecked(false);
+                        spin8.setVisibility(View.VISIBLE);
+                    } else if (vector[7][0].equals("NO")) {
+                        rb15.setChecked(false);
+                        rb16.setChecked(true);
+                    }
+
+                    if (vector[8][0].equals("SI")) {
+                        rb17.setChecked(true);
+                        rb18.setChecked(false);
+                        spin9.setVisibility(View.VISIBLE);
+                    } else if (vector[8][0].equals("NO")) {
+                        rb17.setChecked(false);
+                        rb18.setChecked(true);
+                    }
+
+                    if (vector[9][0].equals("SI")) {
+                        rb19.setChecked(true);
+                        rb20.setChecked(false);
+                        spin10.setVisibility(View.VISIBLE);
+                    } else if (vector[9][0].equals("NO")) {
+                        rb19.setChecked(false);
+                        rb20.setChecked(true);
+                    }
 
 
                 }else if(checkedId==R.id.rb24) {
@@ -564,12 +770,12 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (vector2[1].equals("SI")){
                 if(checkedId==R.id.rb11){
-
+                    rb11.setChecked(true);
                     vector[5][0]="SI";
                     spin6.setVisibility(View.VISIBLE);
 
                 }else if(checkedId==R.id.rb12) {
-
+                    rb12.setChecked(true);
                     vector[5][0]="NO";
                     spin6.setVisibility(View.GONE);
 
@@ -591,12 +797,12 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (vector2[1].equals("SI")){
                 if(checkedId==R.id.rb13){
-
+                    rb13.setChecked(true);
                     vector[6][0]="SI";
                     spin7.setVisibility(View.VISIBLE);
 
                 }else if(checkedId==R.id.rb14) {
-
+                    rb14.setChecked(true);
                     vector[6][0]="NO";
                     spin7.setVisibility(View.GONE);
 
@@ -617,11 +823,11 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (vector2[1].equals("SI")){
                 if(checkedId==R.id.rb15){
-
+                    rb15.setChecked(true);
                     vector[7][0]="SI";
                     spin8.setVisibility(View.VISIBLE);
                 }else if(checkedId==R.id.rb16) {
-
+                    rb16.setChecked(true);
                     vector[7][0]="NO";
                     spin8.setVisibility(View.GONE);
 
@@ -642,12 +848,12 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (vector2[1].equals("SI")){
                 if(checkedId==R.id.rb17){
-
+                    rb17.setChecked(true);
                     vector[8][0]="SI";
                     spin9.setVisibility(View.VISIBLE);
 
                 }else if(checkedId==R.id.rb18) {
-
+                    rb18.setChecked(true);
                     vector[8][0]="NO";
                     spin9.setVisibility(View.GONE);
 
@@ -669,12 +875,12 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (vector2[1].equals("SI")){
                 if(checkedId==R.id.rb19){
-
+                    rb19.setChecked(true);
                     vector[9][0]="SI";
                     spin10.setVisibility(View.VISIBLE);
 
                 }else if(checkedId==R.id.rb20) {
-
+                    rb20.setChecked(true);
                     vector[9][0]="NO";
                     spin10.setVisibility(View.GONE);
 
@@ -806,7 +1012,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
 
 
 
-    public void siguiente3(View view){
+    public static boolean siguiente3(){
         Boolean bandera = true;
 
 /*
@@ -863,7 +1069,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             }
 
             for (int i = 0; i < 5; i++) {
-                if (vector[i][0] == null) {
+                if (vector[i][0] == null || vector[i][0].equals("")) {
                     bandera = false;
                 }
             }
@@ -911,7 +1117,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             }
 
                 for (int i = 5; i < 10; i++) {
-                    if (vector[i][0] == null) {
+                    if (vector[i][0] == null || vector[i][0].equals("")) {
                         bandera = false;
                     }
                 }
@@ -928,13 +1134,14 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
 
 
         if (bandera) {
-            Toast.makeText(this, "vamos al siguiente", LENGTH_SHORT).show();
-            onClick(view);
-            interno_siguiente3(view);
-
+            //Toast.makeText(this, "vamos al siguiente", LENGTH_SHORT).show();
+            //onClick(view);
+            //interno_siguiente3(view);
+            return true;
 
         } else {
-            Toast.makeText(this, "REVISA LOS DATOS", LENGTH_SHORT).show();
+            //Toast.makeText(this, "REVISA LOS DATOS", LENGTH_SHORT).show();
+            return false;
         }
 
 

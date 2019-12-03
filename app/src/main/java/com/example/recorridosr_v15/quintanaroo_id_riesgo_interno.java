@@ -23,7 +23,7 @@ import java.io.IOException;
 import java.io.StringReader;
 
 public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
-    private EditText et1, et2, et3, et4, et5, et6, et7, et8, et9, et10, et11, et12, et13, et14, et15, et16, et17, et18, et19, et20;
+    static private EditText et1, et2, et3, et4, et5, et6, et7, et8, et9, et10, et11, et12, et13, et14, et15, et16, et17, et18, et19, et20;
     static private String vector[] = new String[17];
     String tablaConcatenacion="";
     static File pdfFile;
@@ -356,89 +356,89 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
 
 
 
-    public void siguiente1(View view) {
+    static public boolean siguiente1() {
         Boolean bandera = true;
 
 
-        if (et1.length() == 0) {
+        if (et1.length() == 0 || et1.equals("")) {
             bandera = false;
         }
 
 
-        if (et2.length() == 0) {
+        if (et2.length() == 0 || et2.equals("")) {
 
             bandera = false;
         }
 
-        if (et3.length() == 0) {
+        if (et3.length() == 0 || et3.equals("")) {
             bandera = false;
         }
 
 
-        if (et4.length() == 0) {
+        if (et4.length() == 0 || et4.equals("")) {
             bandera = false;
         }
 
 
-        if (et5.length() == 0) {
+        if (et5.length() == 0 || et5.equals("")) {
             bandera = false;
         }
 
 
-        if (et6.length() == 0) {
+        if (et6.length() == 0 || et6.equals("")) {
             bandera = false;
         }
 
 
-        if (et7.length() == 0) {
+        if (et7.length() == 0 || et7.equals("")) {
             bandera = false;
         }
 
 
-        if (et8.length() == 0) {
+        if (et8.length() == 0 || et8.equals("")) {
             bandera = false;
         }
 
 
-        if (et9.length() == 0) {
+        if (et9.length() == 0 || et9.equals("")) {
             bandera = false;
         }
 
 
-        if (et10.length() == 0) {
+        if (et10.length() == 0 || et10.equals("")) {
             bandera = false;
         }
 
 
-        if (et11.length() == 0) {
+        if (et11.length() == 0 || et11.equals("")) {
             bandera = false;
         }
 
-        if (et12.length() == 0) {
+        if (et12.length() == 0 || et12.equals("")) {
             bandera = false;
         }
 
-        if (et13.length() == 0) {
-            bandera = false;
-        }
-
-
-        if (et14.length() == 0) {
+        if (et13.length() == 0 || et13.equals("")) {
             bandera = false;
         }
 
 
-        if (et15.length() == 0) {
+        if (et14.length() == 0 || et14.equals("")) {
             bandera = false;
         }
 
 
-        if (et16.length() == 0) {
+        if (et15.length() == 0 || et15.equals("")) {
             bandera = false;
         }
 
 
-        if (et17.length() == 0) {
+        if (et16.length() == 0 || et16.equals("")) {
+            bandera = false;
+        }
+
+
+        if (et17.length() == 0 || et17.equals("")) {
             bandera = false;
         }
 
@@ -462,15 +462,15 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
             vector[15] = et16.getText().toString();
             vector[16] = et17.getText().toString();
 */
-            Toast.makeText(this, "Vamos al siguiente", Toast.LENGTH_LONG).show();
-            onClick(view);
-            interno_estructura(view);
-
+            //Toast.makeText(this, "Vamos al siguiente", Toast.LENGTH_LONG).show();
+            //onClick(view);
+            //interno_estructura(view);
+            return true;
 
         } else {
-            Toast.makeText(this, "REVISA LOS DATOS", Toast.LENGTH_LONG).show();
+            //Toast.makeText(this, "REVISA LOS DATOS", Toast.LENGTH_LONG).show();
+            return false;
         }
-
 
     }
 

@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -24,7 +26,7 @@ import java.io.IOException;
 import java.io.StringReader;
 
 import static android.widget.Toast.LENGTH_SHORT;
-//----------------------------------------------
+
 public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActivity {
     private RadioButton rb1, rb2, rb3, rb4, rb5, rb6, rb7, rb8, rb9, rb10, rb11, rb12, rb13, rb14, rb15, rb16, rb17, rb18,rb19,rb20;
     private RadioButton rb21, rb22, rb23, rb24, rb25, rb26, rb27, rb28, rb29, rb30, rb31, rb32, rb33, rb34, rb35, rb36, rb37, rb38,rb39,rb40;
@@ -32,7 +34,7 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
     private RadioGroup rg1, rg2, rg3, rg4,rg5,rg6,rg7,rg8,rg9, rg10, rg11, rg12,rg13, rg14, rg15,rg16,rg17,rg18,rg19,rg20, rg21, rg22, rg23;
     private EditText et1, et2, et3;
 
-    String vector[] =new String[26];
+    static String vector[] = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""};
     static File pdfFile;
     static File directorio2;
     String tablaConcatenacion="";
@@ -42,7 +44,6 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quintana_roo_id_riesgo_interno_instalaciones_3);
-
 
         this.setTitle("Riesgo interno_chetumal");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -156,6 +157,207 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
         et2.setVisibility(View.GONE);
         et3.setVisibility(View.GONE);
 
+
+        if (vector[0].equals("SI")) {
+            rb1.setChecked(true);
+            rb2.setChecked(false);
+        } else if (vector[0].equals("NO")) {
+            rb1.setChecked(false);
+            rb2.setChecked(true);
+        }
+
+        if (vector[1].equals("SI")) {
+            rb3.setChecked(true);
+            rb4.setChecked(false);
+        } else if (vector[1].equals("NO")) {
+            rb3.setChecked(false);
+            rb4.setChecked(true);
+        }
+
+        if (vector[2].equals("SI")) {
+            rb5.setChecked(true);
+            rb6.setChecked(false);
+        } else if (vector[2].equals("NO")) {
+            rb5.setChecked(false);
+            rb6.setChecked(true);
+        }
+
+        if (vector[3].equals("SI")) {
+            rb7.setChecked(true);
+            rb8.setChecked(false);
+        } else if (vector[3].equals("NO")) {
+            rb7.setChecked(false);
+            rb8.setChecked(true);
+        }
+
+        if (vector[4].equals("SI")) {
+            rb9.setChecked(true);
+            rb10.setChecked(false);
+        } else if (vector[4].equals("NO")) {
+            rb9.setChecked(false);
+            rb10.setChecked(true);
+        }
+
+
+        if (vector[5].equals("SI")) {
+            rb11.setChecked(true);
+            rb12.setChecked(false);
+        } else if (vector[5].equals("NO")) {
+            rb11.setChecked(false);
+            rb12.setChecked(true);
+        }
+
+        if (vector[6].equals("SI")) {
+            rb13.setChecked(true);
+            rb14.setChecked(false);
+        } else if (vector[6].equals("NO")) {
+            rb13.setChecked(false);
+            rb14.setChecked(true);
+        }
+
+        if (vector[7].equals("SI")) {
+            rb15.setChecked(true);
+            rb16.setChecked(false);
+        } else if (vector[7].equals("NO")) {
+            rb15.setChecked(false);
+            rb16.setChecked(true);
+        }
+
+        if (vector[8].equals("SI")) {
+            rb17.setChecked(true);
+            rb18.setChecked(false);
+        } else if (vector[8].equals("NO")) {
+            rb17.setChecked(false);
+            rb18.setChecked(true);
+        }
+
+        if (vector[9].equals("SI")) {
+            rb19.setChecked(true);
+            rb20.setChecked(false);
+            et1.setVisibility(View.VISIBLE);
+        } else if (vector[9].equals("NO")) {
+            rb19.setChecked(false);
+            rb20.setChecked(true);
+        }
+
+        if(!vector[10].equals("") && vector[10] != null){
+            et1.setText(vector[10]);
+        }
+
+        if (vector[11].equals("SI")) {
+            rb21.setChecked(true);
+            rb22.setChecked(false);
+        } else if (vector[11].equals("NO")) {
+            rb21.setChecked(false);
+            rb22.setChecked(true);
+        }
+
+        if (vector[12].equals("SI")) {
+            rb23.setChecked(true);
+            rb24.setChecked(false);
+        } else if (vector[12].equals("NO")) {
+            rb23.setChecked(false);
+            rb24.setChecked(true);
+        }
+
+        if (vector[13].equals("SI")) {
+            rb25.setChecked(true);
+            rb26.setChecked(false);
+        } else if (vector[13].equals("NO")) {
+            rb25.setChecked(false);
+            rb26.setChecked(true);
+        }
+
+        if (vector[14].equals("SI")) {
+            rb27.setChecked(true);
+            rb28.setChecked(false);
+        } else if (vector[14].equals("NO")) {
+            rb27.setChecked(false);
+            rb28.setChecked(true);
+        }
+
+        if (vector[15].equals("SI")) {
+            rb29.setChecked(true);
+            rb30.setChecked(false);
+        } else if (vector[15].equals("NO")) {
+            rb29.setChecked(false);
+            rb30.setChecked(true);
+        }
+
+
+        if (vector[16].equals("SI")) {
+            rb31.setChecked(true);
+            rb32.setChecked(false);
+        } else if (vector[16].equals("NO")) {
+            rb31.setChecked(false);
+            rb32.setChecked(true);
+        }
+
+        if (vector[17].equals("SI")) {
+            rb33.setChecked(true);
+            rb34.setChecked(false);
+        } else if (vector[17].equals("NO")) {
+            rb33.setChecked(false);
+            rb34.setChecked(true);
+        }
+
+        if (vector[18].equals("SI")) {
+            rb35.setChecked(true);
+            rb36.setChecked(false);
+        } else if (vector[18].equals("NO")) {
+            rb35.setChecked(false);
+            rb36.setChecked(true);
+        }
+
+        if (vector[19].equals("SI")) {
+            rb37.setChecked(true);
+            rb38.setChecked(false);
+        } else if (vector[19].equals("NO")) {
+            rb37.setChecked(false);
+            rb38.setChecked(true);
+        }
+
+        if (vector[20].equals("SI")) {
+            rb39.setChecked(true);
+            rb40.setChecked(false);
+            et2.setVisibility(View.VISIBLE);
+        } else if (vector[20].equals("NO")) {
+            rb39.setChecked(false);
+            rb40.setChecked(true);
+        }
+
+        if(!vector[21].equals("") && vector[21] != null){
+            et2.setText(vector[21]);
+        }
+
+        if (vector[22].equals("SI")) {
+            rb41.setChecked(true);
+            rb42.setChecked(false);
+        } else if (vector[22].equals("NO")) {
+            rb41.setChecked(false);
+            rb42.setChecked(true);
+        }
+
+        if (vector[23].equals("SI")) {
+            rb43.setChecked(true);
+            rb44.setChecked(false);
+        } else if (vector[23].equals("NO")) {
+            rb43.setChecked(false);
+            rb44.setChecked(true);
+        }
+
+        if (vector[24].equals("SI")) {
+            rb45.setChecked(true);
+            rb46.setChecked(false);
+            et3.setVisibility(View.VISIBLE);
+        } else if (vector[24].equals("NO")) {
+            rb45.setChecked(false);
+            rb46.setChecked(true);
+        }
+
+        if(!vector[25].equals("") && vector[25] != null){
+            et3.setText(vector[25]);
+        }
 
 
         //Verificacion de los radiobutton
@@ -600,6 +802,57 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
             }
         });
 
+        et1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[10]=et1.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[21]=et2.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et3.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[25]=et3.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+
+
+
 
 
     }
@@ -657,9 +910,9 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
 
 
         if (bandera) {
-            vector[10] = et1.getText().toString();
-            vector[21] = et2.getText().toString();
-            vector[25] = et3.getText().toString();
+            //vector[10] = et1.getText().toString();
+            //vector[21] = et2.getText().toString();
+            //vector[25] = et3.getText().toString();
 
 
             Toast.makeText(this, "vamos al siguiente", LENGTH_SHORT).show();

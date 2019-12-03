@@ -28,7 +28,7 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
     private RadioButton rb1, rb2, rb3, rb4, rb5, rb6, rb7, rb8, rb9, rb10, rb11, rb12, rb13, rb14, rb15, rb16, rb17, rb18,rb19,rb20;
     private RadioButton rb21, rb22, rb23, rb24, rb25, rb26, rb27, rb28, rb29, rb30, rb31, rb32;
     private RadioGroup rg1, rg2, rg3, rg4,rg5,rg6,rg7,rg8,rg9, rg10, rg11, rg12,rg13, rg14, rg15,rg16;
-    String vector[]=new String[16];
+    static String vector[]= {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""};
 
     static File pdfFile;
     static File directorio2;
@@ -114,6 +114,136 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
         rb31 = (RadioButton) findViewById(R.id.rb31);
         rb32 = (RadioButton) findViewById(R.id.rb32);
 
+        if (vector[0].equals("SI")) {
+            rb1.setChecked(true);
+            rb2.setChecked(false);
+        } else if (vector[0].equals("NO")) {
+            rb1.setChecked(false);
+            rb2.setChecked(true);
+        }
+
+        if (vector[1].equals("SI")) {
+            rb3.setChecked(true);
+            rb4.setChecked(false);
+        } else if (vector[1].equals("NO")) {
+            rb3.setChecked(false);
+            rb4.setChecked(true);
+        }
+
+        if (vector[2].equals("SI")) {
+            rb5.setChecked(true);
+            rb6.setChecked(false);
+        } else if (vector[2].equals("NO")) {
+            rb5.setChecked(false);
+            rb6.setChecked(true);
+        }
+
+        if (vector[3].equals("SI")) {
+            rb7.setChecked(true);
+            rb8.setChecked(false);
+        } else if (vector[3].equals("NO")) {
+            rb7.setChecked(false);
+            rb8.setChecked(true);
+        }
+
+        if (vector[4].equals("SI")) {
+            rb9.setChecked(true);
+            rb10.setChecked(false);
+        } else if (vector[4].equals("NO")) {
+            rb9.setChecked(false);
+            rb10.setChecked(true);
+        }
+
+
+        if (vector[5].equals("SI")) {
+            rb11.setChecked(true);
+            rb12.setChecked(false);
+        } else if (vector[5].equals("NO")) {
+            rb11.setChecked(false);
+            rb12.setChecked(true);
+        }
+
+        if (vector[6].equals("SI")) {
+            rb13.setChecked(true);
+            rb14.setChecked(false);
+        } else if (vector[6].equals("NO")) {
+            rb13.setChecked(false);
+            rb14.setChecked(true);
+        }
+
+        if (vector[7].equals("SI")) {
+            rb15.setChecked(true);
+            rb16.setChecked(false);
+        } else if (vector[7].equals("NO")) {
+            rb15.setChecked(false);
+            rb16.setChecked(true);
+        }
+
+        if (vector[8].equals("SI")) {
+            rb17.setChecked(true);
+            rb18.setChecked(false);
+        } else if (vector[8].equals("NO")) {
+            rb17.setChecked(false);
+            rb18.setChecked(true);
+        }
+
+        if (vector[9].equals("SI")) {
+            rb19.setChecked(true);
+            rb20.setChecked(false);
+        } else if (vector[9].equals("NO")) {
+            rb19.setChecked(false);
+            rb20.setChecked(true);
+        }
+
+
+        if (vector[10].equals("SI")) {
+            rb21.setChecked(true);
+            rb22.setChecked(false);
+        } else if (vector[10].equals("NO")) {
+            rb21.setChecked(false);
+            rb22.setChecked(true);
+        }
+
+        if (vector[11].equals("SI")) {
+            rb23.setChecked(true);
+            rb24.setChecked(false);
+        } else if (vector[11].equals("NO")) {
+            rb23.setChecked(false);
+            rb24.setChecked(true);
+        }
+
+        if (vector[12].equals("SI")) {
+            rb25.setChecked(true);
+            rb26.setChecked(false);
+        } else if (vector[12].equals("NO")) {
+            rb25.setChecked(false);
+            rb26.setChecked(true);
+        }
+
+        if (vector[13].equals("SI")) {
+            rb27.setChecked(true);
+            rb28.setChecked(false);
+        } else if (vector[13].equals("NO")) {
+            rb27.setChecked(false);
+            rb28.setChecked(true);
+        }
+
+        if (vector[14].equals("SI")) {
+            rb29.setChecked(true);
+            rb30.setChecked(false);
+        } else if (vector[14].equals("NO")) {
+            rb29.setChecked(false);
+            rb30.setChecked(true);
+        }
+
+
+        if (vector[15].equals("SI")) {
+            rb31.setChecked(true);
+            rb32.setChecked(false);
+        } else if (vector[15].equals("NO")) {
+            rb31.setChecked(false);
+            rb32.setChecked(true);
+        }
 
         rg1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override

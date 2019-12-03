@@ -403,7 +403,7 @@ android:stretchColumns="1">
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:onClick="siguiente2"
+            android:onClick="interno_siguiente2"
             android:text="Siguiente"
             android:textSize="15sp">
 

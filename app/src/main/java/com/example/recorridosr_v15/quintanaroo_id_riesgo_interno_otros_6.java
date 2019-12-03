@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -37,10 +39,11 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
     private RadioButton rb101,rb102,rb103,rb104,rb105,rb106,rb107,rb108;
     private EditText et1;
 
-    String vector[] =new String[54];
-    String vector2;
+    static String vector[]={"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""};
+    static String vector2 = "";
     static File pdfFile;
     static File directorio2;
+    static boolean banderaTotal;
     String tablaConcatenacion="";
     String temporal;
 
@@ -293,9 +296,469 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
 
 
 
+        if (vector[0].equals("SI")) {
+            rb1.setChecked(true);
+            rb2.setChecked(false);
+        } else if (vector[0].equals("NO")) {
+            rb1.setChecked(false);
+            rb2.setChecked(true);
+        }
+
+        if (vector[1].equals("SI")) {
+            rb3.setChecked(true);
+            rb4.setChecked(false);
+        } else if (vector[1].equals("NO")) {
+            rb3.setChecked(false);
+            rb4.setChecked(true);
+        }
+
+        if (vector[2].equals("SI")) {
+            rb5.setChecked(true);
+            rb6.setChecked(false);
+        } else if (vector[2].equals("NO")) {
+            rb5.setChecked(false);
+            rb6.setChecked(true);
+        }
+
+        if (vector[3].equals("SI")) {
+            rb7.setChecked(true);
+            rb8.setChecked(false);
+        } else if (vector[3].equals("NO")) {
+            rb7.setChecked(false);
+            rb8.setChecked(true);
+        }
+
+        if (vector[4].equals("SI")) {
+            rb9.setChecked(true);
+            rb10.setChecked(false);
+        } else if (vector[4].equals("NO")) {
+            rb9.setChecked(false);
+            rb10.setChecked(true);
+        }
+
+
+        if (vector[5].equals("SI")) {
+            rb11.setChecked(true);
+            rb12.setChecked(false);
+        } else if (vector[5].equals("NO")) {
+            rb11.setChecked(false);
+            rb12.setChecked(true);
+        }
+
+        if (vector[6].equals("SI")) {
+            rb13.setChecked(true);
+            rb14.setChecked(false);
+        } else if (vector[6].equals("NO")) {
+            rb13.setChecked(false);
+            rb14.setChecked(true);
+        }
+
+        if (vector[7].equals("SI")) {
+            rb15.setChecked(true);
+            rb16.setChecked(false);
+        } else if (vector[7].equals("NO")) {
+            rb15.setChecked(false);
+            rb16.setChecked(true);
+        }
+
+        if (vector[8].equals("SI")) {
+            rb17.setChecked(true);
+            rb18.setChecked(false);
+        } else if (vector[8].equals("NO")) {
+            rb17.setChecked(false);
+            rb18.setChecked(true);
+        }
+
+        if (vector[9].equals("SI")) {
+            rb19.setChecked(true);
+            rb20.setChecked(false);
+        } else if (vector[9].equals("NO")) {
+            rb19.setChecked(false);
+            rb20.setChecked(true);
+        }
+
+
+        if (vector[10].equals("SI")) {
+            rb21.setChecked(true);
+            rb22.setChecked(false);
+        } else if (vector[10].equals("NO")) {
+            rb21.setChecked(false);
+            rb22.setChecked(true);
+        }
+
+        if (vector[11].equals("SI")) {
+            rb23.setChecked(true);
+            rb24.setChecked(false);
+        } else if (vector[11].equals("NO")) {
+            rb23.setChecked(false);
+            rb24.setChecked(true);
+        }
+
+        if (vector[12].equals("SI")) {
+            rb25.setChecked(true);
+            rb26.setChecked(false);
+        } else if (vector[12].equals("NO")) {
+            rb25.setChecked(false);
+            rb26.setChecked(true);
+        }
+
+        if (vector[13].equals("SI")) {
+            rb27.setChecked(true);
+            rb28.setChecked(false);
+        } else if (vector[13].equals("NO")) {
+            rb27.setChecked(false);
+            rb28.setChecked(true);
+        }
+
+        if (vector[14].equals("SI")) {
+            rb29.setChecked(true);
+            rb30.setChecked(false);
+        } else if (vector[14].equals("NO")) {
+            rb29.setChecked(false);
+            rb30.setChecked(true);
+        }
+
+        if (vector[15].equals("SI")) {
+            rb31.setChecked(true);
+            rb32.setChecked(false);
+        } else if (vector[15].equals("NO")) {
+            rb31.setChecked(false);
+            rb32.setChecked(true);
+        }
+
+        if (vector[16].equals("SI")) {
+            rb33.setChecked(true);
+            rb34.setChecked(false);
+        } else if (vector[16].equals("NO")) {
+            rb33.setChecked(false);
+            rb34.setChecked(true);
+        }
+
+
+        if (vector[17].equals("SI")) {
+            rb35.setChecked(true);
+            rb36.setChecked(false);
+        } else if (vector[17].equals("NO")) {
+            rb35.setChecked(false);
+            rb36.setChecked(true);
+        }
+
+        if (vector[18].equals("SI")) {
+            rb37.setChecked(true);
+            rb38.setChecked(false);
+        } else if (vector[18].equals("NO")) {
+            rb37.setChecked(false);
+            rb38.setChecked(true);
+        }
+
+        if (vector[19].equals("SI")) {
+            rb39.setChecked(true);
+            rb40.setChecked(false);
+        } else if (vector[19].equals("NO")) {
+            rb39.setChecked(false);
+            rb40.setChecked(true);
+        }
+
+        if (vector[20].equals("SI")) {
+            rb41.setChecked(true);
+            rb42.setChecked(false);
+        } else if (vector[20].equals("NO")) {
+            rb41.setChecked(false);
+            rb42.setChecked(true);
+        }
+
+        if (vector[21].equals("SI")) {
+            rb43.setChecked(true);
+            rb44.setChecked(false);
+        } else if (vector[21].equals("NO")) {
+            rb43.setChecked(false);
+            rb44.setChecked(true);
+        }
+
+
+        if (vector[22].equals("SI")) {
+            rb45.setChecked(true);
+            rb46.setChecked(false);
+        } else if (vector[22].equals("NO")) {
+            rb45.setChecked(false);
+            rb46.setChecked(true);
+        }
+
+        if (vector[23].equals("SI")) {
+            rb47.setChecked(true);
+            rb48.setChecked(false);
+        } else if (vector[23].equals("NO")) {
+            rb47.setChecked(false);
+            rb48.setChecked(true);
+        }
+
+        if (vector[24].equals("SI")) {
+            rb49.setChecked(true);
+            rb50.setChecked(false);
+        } else if (vector[24].equals("NO")) {
+            rb49.setChecked(false);
+            rb50.setChecked(true);
+        }
+
+        if (vector[25].equals("SI")) {
+            rb51.setChecked(true);
+            rb52.setChecked(false);
+        } else if (vector[25].equals("NO")) {
+            rb51.setChecked(false);
+            rb52.setChecked(true);
+        }
+
+        if (vector[26].equals("SI")) {
+            rb53.setChecked(true);
+            rb54.setChecked(false);
+        } else if (vector[26].equals("NO")) {
+            rb53.setChecked(false);
+            rb54.setChecked(true);
+        }
+
+        if (vector[27].equals("SI")) {
+            rb55.setChecked(true);
+            rb56.setChecked(false);
+        } else if (vector[27].equals("NO")) {
+            rb55.setChecked(false);
+            rb56.setChecked(true);
+        }
+
+        if (vector[28].equals("SI")) {
+            rb57.setChecked(true);
+            rb58.setChecked(false);
+        } else if (vector[28].equals("NO")) {
+            rb57.setChecked(false);
+            rb58.setChecked(true);
+        }
+
+        if (vector[29].equals("SI")) {
+            rb59.setChecked(true);
+            rb60.setChecked(false);
+        } else if (vector[29].equals("NO")) {
+            rb59.setChecked(false);
+            rb60.setChecked(true);
+        }
+
+
+        if (vector[30].equals("SI")) {
+            rb61.setChecked(true);
+            rb62.setChecked(false);
+        } else if (vector[30].equals("NO")) {
+            rb61.setChecked(false);
+            rb62.setChecked(true);
+        }
+
+        if (vector[31].equals("SI")) {
+            rb63.setChecked(true);
+            rb64.setChecked(false);
+        } else if (vector[31].equals("NO")) {
+            rb63.setChecked(false);
+            rb64.setChecked(true);
+        }
+
+        if (vector[32].equals("SI")) {
+            rb65.setChecked(true);
+            rb66.setChecked(false);
+        } else if (vector[32].equals("NO")) {
+            rb65.setChecked(false);
+            rb66.setChecked(true);
+        }
+
+        if (vector[33].equals("SI")) {
+            rb67.setChecked(true);
+            rb68.setChecked(false);
+        } else if (vector[33].equals("NO")) {
+            rb67.setChecked(false);
+            rb68.setChecked(true);
+        }
+
+        if (vector[34].equals("SI")) {
+            rb69.setChecked(true);
+            rb70.setChecked(false);
+        } else if (vector[34].equals("NO")) {
+            rb69.setChecked(false);
+            rb70.setChecked(true);
+        }
+
+
+        if (vector[35].equals("SI")) {
+            rb71.setChecked(true);
+            rb72.setChecked(false);
+        } else if (vector[35].equals("NO")) {
+            rb71.setChecked(false);
+            rb72.setChecked(true);
+        }
+
+        if (vector[36].equals("SI")) {
+            rb73.setChecked(true);
+            rb74.setChecked(false);
+        } else if (vector[36].equals("NO")) {
+            rb73.setChecked(false);
+            rb74.setChecked(true);
+        }
+
+        if (vector[37].equals("SI")) {
+            rb75.setChecked(true);
+            rb76.setChecked(false);
+        } else if (vector[37].equals("NO")) {
+            rb75.setChecked(false);
+            rb76.setChecked(true);
+        }
+
+        if (vector[38].equals("SI")) {
+            rb77.setChecked(true);
+            rb78.setChecked(false);
+            et1.setVisibility(View.VISIBLE);
+        } else if (vector[38].equals("NO")) {
+            rb77.setChecked(false);
+            rb78.setChecked(true);
+        }
+
+        if(!vector2.equals("") && vector2 != null){
+            et1.setText(vector2);
+        }
+
+
+        if (vector[39].equals("SI")) {
+            rb79.setChecked(true);
+            rb80.setChecked(false);
+        } else if (vector[39].equals("NO")) {
+            rb79.setChecked(false);
+            rb80.setChecked(true);
+        }
+
+        if (vector[40].equals("SI")) {
+            rb81.setChecked(true);
+            rb82.setChecked(false);
+        } else if (vector[40].equals("NO")) {
+            rb81.setChecked(false);
+            rb82.setChecked(true);
+        }
+
+        if (vector[41].equals("SI")) {
+            rb83.setChecked(true);
+            rb84.setChecked(false);
+        } else if (vector[41].equals("NO")) {
+            rb83.setChecked(false);
+            rb84.setChecked(true);
+        }
+
+        if (vector[42].equals("SI")) {
+            rb85.setChecked(true);
+            rb86.setChecked(false);
+        } else if (vector[42].equals("NO")) {
+            rb85.setChecked(false);
+            rb86.setChecked(true);
+        }
+
+        if (vector[43].equals("SI")) {
+            rb87.setChecked(true);
+            rb88.setChecked(false);
+        } else if (vector[43].equals("NO")) {
+            rb87.setChecked(false);
+            rb88.setChecked(true);
+        }
+
+
+        if (vector[44].equals("SI")) {
+            rb89.setChecked(true);
+            rb90.setChecked(false);
+        } else if (vector[44].equals("NO")) {
+            rb89.setChecked(false);
+            rb90.setChecked(true);
+        }
+
+        if (vector[45].equals("SI")) {
+            rb91.setChecked(true);
+            rb92.setChecked(false);
+        } else if (vector[45].equals("NO")) {
+            rb91.setChecked(false);
+            rb92.setChecked(true);
+        }
+
+        if (vector[46].equals("SI")) {
+            rb93.setChecked(true);
+            rb94.setChecked(false);
+        } else if (vector[46].equals("NO")) {
+            rb93.setChecked(false);
+            rb94.setChecked(true);
+        }
+
+        if (vector[47].equals("SI")) {
+            rb95.setChecked(true);
+            rb96.setChecked(false);
+        } else if (vector[47].equals("NO")) {
+            rb95.setChecked(false);
+            rb96.setChecked(true);
+        }
+
+        if (vector[48].equals("SI")) {
+            rb97.setChecked(true);
+            rb98.setChecked(false);
+        } else if (vector[48].equals("NO")) {
+            rb97.setChecked(false);
+            rb98.setChecked(true);
+        }
+
+
+        if (vector[49].equals("SI")) {
+            rb99.setChecked(true);
+            rb100.setChecked(false);
+        } else if (vector[49].equals("NO")) {
+            rb99.setChecked(false);
+            rb100.setChecked(true);
+        }
+
+        if (vector[50].equals("SI")) {
+            rb101.setChecked(true);
+            rb102.setChecked(false);
+        } else if (vector[50].equals("NO")) {
+            rb101.setChecked(false);
+            rb102.setChecked(true);
+        }
+
+        if (vector[51].equals("SI")) {
+            rb103.setChecked(true);
+            rb104.setChecked(false);
+        } else if (vector[51].equals("NO")) {
+            rb103.setChecked(false);
+            rb104.setChecked(true);
+        }
+
+        if (vector[52].equals("SI")) {
+            rb105.setChecked(true);
+            rb106.setChecked(false);
+        } else if (vector[52].equals("NO")) {
+            rb105.setChecked(false);
+            rb106.setChecked(true);
+        }
+
+        if (vector[53].equals("SI")) {
+            rb107.setChecked(true);
+            rb108.setChecked(false);
+        } else if (vector[53].equals("NO")) {
+            rb107.setChecked(false);
+            rb108.setChecked(true);
+        }
 
 
 
+        et1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2=et1.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
         //Verificacion de los radiobutton
 
 
@@ -1360,15 +1823,16 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
 
     public void final_interno(View view) {
         Boolean bandera = true;
+        banderaTotal = true;
 
 
-        for(int i=0;i<54; i++  ){
-            if(vector[i]==null){
-                bandera= false;
+        for (int i = 0; i < 54; i++) {
+            if (vector[i] == null || vector[i].equals("")) {
+                bandera = false;
             }
         }
 
-        if( vector[38]=="SI"){
+        if (vector[38] == "SI") {
 
             if (et1.length() == 0) {
                 bandera = false;
@@ -1376,17 +1840,54 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
 
         }
 
+        if (!quintanaroo_id_riesgo_interno.siguiente1()) {
+            Toast.makeText(this, "revisa la pagina 1", LENGTH_SHORT).show();
+            banderaTotal = false;
+        }
 
-        if (bandera) {
-            vector2 = et1.getText().toString();
-            onClick(view);
+        if(!quintanaroo_id_riesgo_interno_estructura_1.siguiente2()){
+            Toast.makeText(this, "revisa la pagina 2", LENGTH_SHORT).show();
+            banderaTotal = false;
+        }
 
-            Toast.makeText(this, "Guardado con exito", LENGTH_SHORT).show();
+        if(!quintanaroo_id_riesgo_interno_escaleraservicio_2.siguiente3()){
+            Toast.makeText(this, "revisa la pagina 3", LENGTH_SHORT).show();
+            banderaTotal = false;
+        }
+
+        /*
+        if(!quintanaroo_id_riesgo_interno_estructura_1.siguiente2()){
+            Toast.makeText(this, "revisa la pagina 4", LENGTH_SHORT).show();
+            banderaTotal = false;
+        }
+
+        if(!quintanaroo_id_riesgo_interno_estructura_1.siguiente2()){
+            Toast.makeText(this, "revisa la pagina 5", LENGTH_SHORT).show();
+            banderaTotal = false;
+        }
+
+        if(!quintanaroo_id_riesgo_interno_estructura_1.siguiente2()){
+            Toast.makeText(this, "revisa la pagina 6", LENGTH_SHORT).show();
+            banderaTotal = false;
+        }
+
+        if(!quintanaroo_id_riesgo_interno_estructura_1.siguiente2()){
+            Toast.makeText(this, "revisa la pagina 7", LENGTH_SHORT).show();
+            banderaTotal = false;
+        }*/
+
+        if(banderaTotal){
+
+            if (bandera) {
+                vector2 = et1.getText().toString();
+                onClick(view);
+
+                Toast.makeText(this, "Guardado con exito", LENGTH_SHORT).show();
 
 
-
-        } else {
-            Toast.makeText(this, "REVISA LOS DATOS", LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "REVISA LOS DATOS", LENGTH_SHORT).show();
+            }
         }
     }
 

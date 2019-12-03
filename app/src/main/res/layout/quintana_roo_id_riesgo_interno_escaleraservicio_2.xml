@@ -628,7 +628,7 @@ android:stretchColumns="1">
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:onClick="siguiente3"
+            android:onClick="interno_siguiente3"
             android:text="siguiente"
             android:textSize="15sp">
 

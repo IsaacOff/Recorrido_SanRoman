@@ -358,20 +358,20 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
     }
 
 
-    public void siguiente2(View view) {
+    public static boolean siguiente2() {
         Boolean bandera = true;
 
 
         if( vector[8]=="SI"){
 
-            if (et1.length() == 0) {
+            if (vector[9] == null || vector[9].equals("")) {
                 bandera = false;
             }
 
         }
 
-        for(int i=0;i<7; i++  ){
-            if(vector[i]==null){
+        for(int i=0;i<9; i++  ){
+            if(vector[i]==null || vector[i].equals("")){
                 bandera= false;
             }
         }
@@ -379,16 +379,17 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
 
 
         if (bandera) {
-            vector[9] = et1.getText().toString();
+            //vector[9] = et1.getText().toString();
 
-
-            Toast.makeText(this, "vamos al siguiente", LENGTH_SHORT).show();
-            onClick(view);
-            interno_siguiente2(view);
+            return true;
+            //Toast.makeText(this, "vamos al siguiente", LENGTH_SHORT).show();
+            //onClick(view);
+            //interno_siguiente2(view);
 
 
         } else {
-            Toast.makeText(this, "REVISA LOS DATOS", LENGTH_SHORT).show();
+            //Toast.makeText(this, "REVISA LOS DATOS", LENGTH_SHORT).show();
+            return false;
         }
 
 
