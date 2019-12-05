@@ -47,7 +47,7 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
         this.setTitle("Riesgo Externo_chetumal");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        directorio2 = new File(getIntent().getStringExtra("File"));
+        directorio2 = new File(quintanaroo_id_riesgo.file());
         if(directorio2 != null) {
             pdfFile = new File(directorio2.getPath(), "prueba1.pdf");
         }

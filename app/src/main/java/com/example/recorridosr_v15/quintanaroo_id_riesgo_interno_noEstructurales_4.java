@@ -552,17 +552,18 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
 
 
     public static boolean siguiente5() {
-        Boolean bandera = true;
+        Boolean banderanula = true;
 
 
         for(int i=0;i<16; i++  ){
             if(vector[i]==null || vector[i].equals("")){
-                bandera= false;
+                vector[i]="N/P";
+                banderanula= false;
             }
         }
 
 
-        if (bandera) {
+        if (banderanula) {
 
             return true;
             //Toast.makeText(this, "vamos al siguiente", LENGTH_SHORT).show();
@@ -593,17 +594,18 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
                             "<TABLE border=\"1\" WIDTH=\"100%\">"+
                             "<thead>"+
                             "<tr>"+
-                            "<td colspan=\"4\">RIESGOS POR ELEMENTOS NO ESTRUCTURALES</td>"+
+                            "<td colspan=\"5\">RIESGOS POR ELEMENTOS NO ESTRUCTURALES</td>"+
                             "</tr>"+
                             "<tr>"+
-                            "<td colspan=\"4\">Riesgo por las <b>condiciones de inseguridad</b> que existe en :</td>"+
+                            "<td colspan=\"5\">Riesgo por las <b>condiciones de inseguridad</b> que existe en :</td>"+
                             "</tr>"+
                             "<tr>" +
 
                             "<th style=\"border: inset 0pt\" WIDTH=\"4%\"></th>" +
-                            "<th style=\"border: inset 0pt\" WIDTH=\"86%\"></th>" +
+                            "<th style=\"border: inset 0pt\" WIDTH=\"66%\"></th>" +
                             "<th style=\"border: inset 0pt\" WIDTH=\"5%\"></th>" +
                             "<th style=\"border: inset 0pt\" WIDTH=\"5%\"></th>" +
+                                    "<th style=\"border: inset 0pt\" WIDTH=\"20%\"></th>" +
 
                             "</tr>" +
                             "</thead>"+
@@ -648,7 +650,7 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
 
             tablaConcatenacion =  tablaConcatenacion +
                     "<tr>"+
-                    "<td colspan=\"4\"><b>Nota: </b>Si respondió afirmativo en alguna de las cuestiones 1 a la 6, se requiere implementar medidas correctivas.</td>"+
+                    "<td colspan=\"5\"><b>Nota: </b>Si respondió afirmativo en alguna de las cuestiones 1 a la 6, se requiere implementar medidas correctivas.</td>"+
                     "</tr>";
 
             tablaConcatenacion=  tablaConcatenacion +
@@ -677,15 +679,15 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
 
             tablaConcatenacion =  tablaConcatenacion +
                     "<tr>"+
-                    "<td colspan=\"4\"><b>Nota: </b>Si respondió afirmativo en alguna de las cuestiones 7 a la 10, se requiere implementar medidas preventivas.</td>"+
+                    "<td colspan=\"5\"><b>Nota: </b>Si respondió afirmativo en alguna de las cuestiones 7 a la 10, se requiere implementar medidas preventivas.</td>"+
                     "</tr>";
 
             tablaConcatenacion =  tablaConcatenacion +
                     "<tr>"+
-                    "<td colspan=\"4\">RIESGOS POR ACABADOS DEL INMUEBLE</td>"+
+                    "<td colspan=\"5\">RIESGOS POR ACABADOS DEL INMUEBLE</td>"+
                     "</tr>"+
                     "<tr>"+
-                    "<td colspan=\"4\">Riesgo por las <b>condiciones de inseguridad</b> que presentan los acabados del inmueble :</td>"+
+                    "<td colspan=\"5\">Riesgo por las <b>condiciones de inseguridad</b> que presentan los acabados del inmueble :</td>"+
                     "</tr>";
 
             tablaConcatenacion =  tablaConcatenacion +
@@ -702,7 +704,7 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
 
             tablaConcatenacion =  tablaConcatenacion +
                     "<tr>"+
-                    "<td colspan=\"4\"><b>Nota: </b>Si respondió afirmativo en alguna de las cuestiones 1 y  2, se requiere implementar medidas preventivas.</td>"+
+                    "<td colspan=\"5\"><b>Nota: </b>Si respondió afirmativo en alguna de las cuestiones 1 y  2, se requiere implementar medidas preventivas.</td>"+
                     "</tr>";
 
             tablaConcatenacion =  tablaConcatenacion +
@@ -731,7 +733,7 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
 
             tablaConcatenacion =  tablaConcatenacion +
                     "<tr>"+
-                    "<td colspan=\"4\"><b>Nota: </b>Si respondió afirmativo en alguna de las cuestiones 3 a la 6, se requiere implementar medidas correctivas.</td>"+
+                    "<td colspan=\"5\"><b>Nota: </b>Si respondió afirmativo en alguna de las cuestiones 3 a la 6, se requiere implementar medidas correctivas.</td>"+
                     "</tr>";
 
             tablaConcatenacion=  tablaConcatenacion +
@@ -746,16 +748,24 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
             tablaConcatenacion= tablaConcatenacion +
                     "<td style=\"background-color:Yellow; text-align:center;\">SI</td>" +
                     "<td style=\"text-align:center;\">NO</td>" +
+                    "<td>"+""+"</td>" +
                     "</tr>";
         } else if(decision.equals("NO")){
             tablaConcatenacion= tablaConcatenacion +
                     "<td style=\"text-align:center;\">SI</td>" +
                     "<td style=\"background-color:Yellow; text-align:center;\">NO</td>" +
+                    "<td></td>" +
+                    "</tr>";
+        }else if(decision.equals("N/P")){
+            tablaConcatenacion= tablaConcatenacion +
+                    "<td colspan=\"2\" style=\"text-align:center; background-color:Yellow;\">No aplica</td>" +
+                    "<td></td>" +
                     "</tr>";
         }else{
             tablaConcatenacion= tablaConcatenacion +
                     "<td >SI</td>" +
                     "<td>NO</td>" +
+                    "<td></td>" +
                     "</tr>";
         }
 

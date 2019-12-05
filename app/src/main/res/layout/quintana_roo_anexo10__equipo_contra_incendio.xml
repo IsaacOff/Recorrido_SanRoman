@@ -347,7 +347,16 @@ android:stretchColumns="1">
 
         </EditText>
 
+        <EditText
+            android:id="@+id/editText7"
+            android:layout_width="254dp"
+            android:layout_height="56dp"
+            android:layout_column="0"
+            android:ems="10"
+            android:hint="Proveedor"
+            android:inputType="textPersonName">
 
+        </EditText>
 
         <EditText
             android:id="@+id/editText5"
@@ -355,7 +364,18 @@ android:stretchColumns="1">
             android:layout_height="56dp"
             android:layout_column="0"
             android:ems="10"
-            android:hint="Fecha de recarga"
+            android:hint="Fecha de ultima recarga"
+            android:inputType="date">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/editText6"
+            android:layout_width="254dp"
+            android:layout_height="56dp"
+            android:layout_column="0"
+            android:ems="10"
+            android:hint="Fecha de proxima recarga"
             android:inputType="date">
 
         </EditText>

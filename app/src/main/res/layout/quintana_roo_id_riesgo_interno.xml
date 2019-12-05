@@ -135,7 +135,7 @@ android:stretchColumns="1">
         </EditText>
 
 
-        <!--- Postes de Elect - 4-->
+        <!--- Postes de Elect - 4
         <TableRow>
 
             <TextView
@@ -158,7 +158,7 @@ android:stretchColumns="1">
             android:theme="@style/EditText">
 
         </EditText>
-
+-->
         <TextView
             android:layout_width="196dp"
             android:layout_height="45dp"

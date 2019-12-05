@@ -36,7 +36,6 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
     static File pdfFile;
     static File directorio2;
     static String tablaConcatenacion="";
-    String temporal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -360,19 +359,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb21){
                     vector2[0]="SI";
-/*
-                    if (vector[0][0].equals("SI")) {
-                        //rb1.setChecked(true);
-                        rb1.setChecked(true);
-                        System.out.println(vector[0][0]+ " vector");
-                        System.out.println(rb1.isChecked() + " rb1" );
-                        rb2.setChecked(false);
-                        spin1.setVisibility(View.VISIBLE);
-                    } else if (vector[0][0].equals("NO")) {
-                        System.out.println("cambio 1");
-                        rb1.setChecked(false);
-                        rb2.setChecked(true);
-                    }
+
 
                     if(vector[0][1].equals("Selecione el estado actual:")){
                         spin1.setSelection(0);
@@ -382,6 +369,8 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                         spin1.setSelection(2);
                     }else if (vector[0][1].equals("MALO")){
                         spin1.setSelection(3);
+                    }else{
+                        spin1.setSelection(0);
                     }
 
                     if(vector[1][1].equals("Selecione el estado actual:")){
@@ -392,6 +381,8 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                         spin2.setSelection(2);
                     }else if (vector[1][1].equals("MALO")){
                         spin2.setSelection(3);
+                    }else{
+                        spin2.setSelection(0);
                     }
 
                     if(vector[2][1].equals("Selecione el estado actual:")){
@@ -402,6 +393,8 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                         spin3.setSelection(2);
                     }else if (vector[2][1].equals("MALO")){
                         spin3.setSelection(3);
+                    }else{
+                        spin3.setSelection(0);
                     }
 
                     if(vector[3][1].equals("Selecione el estado actual:")){
@@ -412,6 +405,8 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                         spin4.setSelection(2);
                     }else if (vector[3][1].equals("MALO")){
                         spin4.setSelection(3);
+                    }else{
+                        spin4.setSelection(0);
                     }
 
                     if(vector[4][1].equals("Selecione el estado actual:")){
@@ -422,9 +417,21 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                         spin5.setSelection(2);
                     }else if (vector[4][1].equals("MALO")){
                         spin5.setSelection(3);
+                    }else{
+                        spin5.setSelection(0);
                     }
 
 
+                    if (vector[0][0].equals("SI")) {
+                        //rb1.setChecked(true);
+                        rb1.setChecked(true);
+                        rb2.setChecked(false);
+                        spin1.setVisibility(View.VISIBLE);
+                    } else if (vector[0][0].equals("NO")) {
+                        System.out.println("cambio 1");
+                        rb1.setChecked(false);
+                        rb2.setChecked(true);
+                    }
 
                     if (vector[1][0].equals("SI")) {
                         rb3.setChecked(true);
@@ -462,7 +469,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                         rb10.setChecked(true);
                     }
 
-*/
+
                 }else if(checkedId==R.id.rb22) {
                     vector2[0]="NO";
 
@@ -646,7 +653,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb23){
                     vector2[1]="SI";
-/*
+
                     if(vector[5][1].equals("Selecione el estado actual:")){
                         spin6.setSelection(0);
                     }else if(vector[5][1].equals("BUENO")) {
@@ -655,6 +662,8 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                         spin6.setSelection(2);
                     }else if (vector[5][1].equals("MALO")){
                         spin6.setSelection(3);
+                    }else{
+                        spin6.setSelection(0);
                     }
 
                     if(vector[6][1].equals("Selecione el estado actual:")){
@@ -665,6 +674,8 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                         spin7.setSelection(2);
                     }else if (vector[6][1].equals("MALO")){
                         spin7.setSelection(3);
+                    }else{
+                        spin7.setSelection(0);
                     }
 
                     if(vector[7][1].equals("Selecione el estado actual:")){
@@ -675,6 +686,8 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                         spin8.setSelection(2);
                     }else if (vector[7][1].equals("MALO")){
                         spin8.setSelection(3);
+                    }else{
+                        spin8.setSelection(0);
                     }
 
                     if(vector[8][1].equals("Selecione el estado actual:")){
@@ -685,6 +698,8 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                         spin9.setSelection(2);
                     }else if (vector[8][1].equals("MALO")){
                         spin9.setSelection(3);
+                    }else{
+                        spin9.setSelection(0);
                     }
 
                     if(vector[9][1].equals("Selecione el estado actual:")){
@@ -695,6 +710,8 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                         spin10.setSelection(2);
                     }else if (vector[9][1].equals("MALO")){
                         spin10.setSelection(3);
+                    }else{
+                        spin10.setSelection(0);
                     }
 
                     if (vector[5][0].equals("SI")) {
@@ -741,7 +758,6 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                         rb19.setChecked(false);
                         rb20.setChecked(true);
                     }
-*/
 
                 }else if(checkedId==R.id.rb24) {
                     vector2[1]="NO";
@@ -1032,7 +1048,8 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
 
 
     public static boolean siguiente3(){
-        Boolean bandera = true;
+        boolean bandera = true;
+        boolean banderanulo = true;
 
 /*
         //selecciona lo que carga el spinner
@@ -1053,7 +1070,6 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                 if (vector[0][1] == "Selecione el estado actual:") {
                     bandera = false;
                 }
-
             }
 
 
@@ -1061,8 +1077,6 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                 if (vector[1][1] == "Selecione el estado actual:") {
                     bandera = false;
                 }
-
-
             }
 
 
@@ -1070,7 +1084,6 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                 if (vector[2][1] == "Selecione el estado actual:") {
                     bandera = false;
                 }
-
             }
 
             if (vector[3][0] == "SI") {
@@ -1087,9 +1100,15 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                 }
             }
 
-            for (int i = 0; i < 5; i++) {
+            if (vector[0][0] == null || vector[0][0].equals("")) {
+                bandera = false;
+            }
+
+            for (int i = 1; i < 5; i++) {
                 if (vector[i][0] == null || vector[i][0].equals("")) {
-                    bandera = false;
+                    banderanulo = false;
+                    vector[i][0]="N/P";
+                    System.out.println(i);
                 }
             }
         }
@@ -1135,9 +1154,15 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
 
             }
 
-                for (int i = 5; i < 10; i++) {
+
+                if (vector[5][0] == null || vector[5][0].equals("")) {
+                    bandera = false;
+                }
+
+                for (int i = 6; i < 10; i++) {
                     if (vector[i][0] == null || vector[i][0].equals("")) {
-                        bandera = false;
+                        banderanulo = false;
+                        vector[i][0]="N/P";
                     }
                 }
 
@@ -1182,24 +1207,43 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                             "<thead>"+
 
                             "<tr>" +
-                            "<th style=\"border: inset 0pt\" WIDTH=\"45%\"></th>" +
+                            "<th style=\"border: inset 0pt\" WIDTH=\"46%\"></th>" +
+                            "<th style=\"border: inset 0pt\" WIDTH=\"6%\"></th>" +
+                            "<th style=\"border: inset 0pt\" WIDTH=\"6%\"></th>" +
+                            "<th style=\"border: inset 0pt\" WIDTH=\"8%\"></th>" +
                             "<th style=\"border: inset 0pt\" WIDTH=\"10%\"></th>" +
-                            "<th style=\"border: inset 0pt\" WIDTH=\"10%\"></th>" +
-                            "<th style=\"border: inset 0pt\" WIDTH=\"11%\"></th>" +
-                            "<th style=\"border: inset 0pt\" WIDTH=\"13%\"></th>" +
-                            "<th style=\"border: inset 0pt\" WIDTH=\"11%\"></th>" +
+                                    "<th style=\"border: inset 0pt\" WIDTH=\"8%\"></th>" +
+                                    "<th style=\"border: inset 0pt\" WIDTH=\"16%\"></th>" +
                             "</tr>" +
                             "</thead>"+
                             "<tbody>";
 
                 tablaConcatenacion = tablaConcatenacion +
                         "<tr>" +
-                        "<th colspan=\"6\" style=\"text-align:center;\">Descripción de las escaleras de servicio</th>" +
-                        "</tr>" +
+                        "<th>Descripción de las escaleras de servicio</th>" ;
+                        if(vector2[0].equals("SI")){
+                            tablaConcatenacion= tablaConcatenacion +
+                                    "<td style=\"background-color:Yellow; text-align:center;\">SI</td>" +
+                                    "<td style=\"text-align:center;\">NO</td>" ;
+                        }else if(vector2[0].equals("NO")){
+                            tablaConcatenacion= tablaConcatenacion +
+                                    "<td style=\"text-align:center;\">SI</td>" +
+                                    "<td style=\"background-color:Yellow; text-align:center;\">NO</td>" ;
+                        }else{
+                            tablaConcatenacion= tablaConcatenacion +
+                                    "<td >SI</td>" +
+                                    "<td>NO</td>" ;
+                        }
+                        tablaConcatenacion= tablaConcatenacion +
+                                "<td colspan=\"4\"></td>"+
+                                "</tr>";
+
+                        tablaConcatenacion = tablaConcatenacion +
                         "<tr>" +
                         "<td rowspan=\"2\" style=\"text-align:center;\" >Descripcion</td>" +
                         "<td rowspan=\"2\" colspan=\"2\" style=\"text-align:center;\" >Respuesta</td>" +
                         "<td colspan=\"3\" style=\"text-align:center;\">Estado actual</td>" +
+                        "<td rowspan=\"2\" style=\"text-align:center;\" >Observaciones</td>" +
                         "</tr>" +
 
                         "<tr>" +
@@ -1234,14 +1278,32 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                 agregarRenglon(vector[4][0], vector[4][1]);
 
 
+        tablaConcatenacion = tablaConcatenacion +
+                "<tr>" +
+                "<th>Descripción de las escaleras de servicio</th>" ;
+        if(vector2[1].equals("SI")){
+            tablaConcatenacion= tablaConcatenacion +
+                    "<td style=\"background-color:Yellow; text-align:center;\">SI</td>" +
+                    "<td style=\"text-align:center;\">NO</td>" ;
+        }else if(vector2[1].equals("NO")){
+            tablaConcatenacion= tablaConcatenacion +
+                    "<td style=\"text-align:center;\">SI</td>" +
+                    "<td style=\"background-color:Yellow; text-align:center;\">NO</td>" ;
+        }else{
+            tablaConcatenacion= tablaConcatenacion +
+                    "<td >SI</td>" +
+                    "<td>NO</td>" ;
+        }
+        tablaConcatenacion= tablaConcatenacion +
+                "<td colspan=\"4\"></td>"+
+                "</tr>";
+
             tablaConcatenacion = tablaConcatenacion +
-                    "<tr>" +
-                    "<th colspan=\"6\" style=\"text-align:center;\">Descripción de las escaleras de emergencia</th>" +
-                    "</tr>" +
                     "<tr>" +
                     "<td rowspan=\"2\" style=\"text-align:center;\">Descripcion</td>" +
                     "<td rowspan=\"2\" colspan=\"2\" style=\"text-align:center;\">Respuesta</td>" +
                     "<td colspan=\"3\" style=\"text-align:center;\">Estado actual</td>" +
+                    "<td rowspan=\"2\" style=\"text-align:center;\" >Observaciones</td>" +
                     "</tr>" +
 
                     "<tr>" +
@@ -1289,37 +1351,45 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             tablaConcatenacion= tablaConcatenacion +
                     "<td style=\"text-align:center;\">SI</td>" +
                     "<td style=\"background-color:Yellow; text-align:center;\">NO</td>" ;
+        }else if(decision.equals("N/P")){
+            tablaConcatenacion= tablaConcatenacion +
+            "<td colspan=\"2\" style=\"text-align:center; background-color:Yellow;\">No aplica</td>" ;
         }else{
             tablaConcatenacion= tablaConcatenacion +
-            "<td >SI</td>" +
-                    "<td>NO</td>" ;
+                    "<td></td>"+
+                    "<td></td>";
         }
 
         if (estado.equals("BUENO") && decision.equals("SI")){
             tablaConcatenacion= tablaConcatenacion +
                     "<td style=\"text-align:center;\">X</td>"+
                     "<td></td>"+
-                    "<td></td>"+
-                    "</tr>";
+                    "<td></td>";
         } else if(estado.equals("REGULAR") && decision.equals("SI")){
             tablaConcatenacion= tablaConcatenacion +
                     "<td></td>"+
                     "<td style=\"text-align:center;\">X</td>"+
-                    "<td></td>"+
-                    "</tr>";
+                    "<td></td>";
         } else if(estado.equals("MALO") && decision.equals("SI")){
             tablaConcatenacion= tablaConcatenacion +
                     "<td></td>"+
                     "<td></td>"+
-                    "<td style=\"text-align:center;\">X</td>"+
-                    "</tr>";
+                    "<td style=\"text-align:center;\">X</td>";
         }else{
             tablaConcatenacion= tablaConcatenacion +
                     "<td></td>"+
                     "<td></td>"+
                     "<td></td>"+
+                    "<td></td>"+
                     "</tr>";
         }
+
+        if (decision.equals("SI")) {
+            tablaConcatenacion= tablaConcatenacion +
+                    "<td style=\"text-align:center;\">"+""+"</td>" +
+                    "</tr>";
+        }
+
     }
 
 }

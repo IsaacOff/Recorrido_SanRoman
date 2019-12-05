@@ -7,7 +7,6 @@ tools:context=".quintanaroo_id_riesgo_externo"
 android:stretchColumns="1">
 
 
-
 <TableRow android:background="#128675">
 
     <TextView

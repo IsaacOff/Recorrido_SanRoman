@@ -429,10 +429,19 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
 
 
     public static boolean siguiente6() {
-        Boolean bandera = true;
+        boolean bandera = true;
+        boolean banderanula = true;
 
+        if(vector[0]==null || vector[0].equals("")){
+            bandera= false;
+        }
 
-        for(int i=0;i<12; i++  ){
+        if(vector[1]==null || vector[1].equals("")){
+            vector[1]="N/P";
+            banderanula= false;
+        }
+
+        for(int i=2;i<12; i++  ){
             if(vector[i]==null || vector[i].equals("")){
                 bandera= false;
             }
@@ -471,17 +480,18 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
                             "<TABLE border=\"1\" WIDTH=\"100%\">"+
                             "<thead>"+
                             "<tr>"+
-                            "<td colspan=\"4\">RIESGO POR DEFICIENCIAS EN LOS EQUIPOS Y SERVICIOS DE EMERGENCIA</td>"+
+                            "<td colspan=\"5\">RIESGO POR DEFICIENCIAS EN LOS EQUIPOS Y SERVICIOS DE EMERGENCIA</td>"+
                             "</tr>"+
                             "<tr>"+
-                            "<td colspan=\"4\">Evaluación del riesgo por la <b><u>carencia, insuficiencia o inoperancia</u></b> de los equipos y servicios de emergencia en el inmueble.</td>"+
+                            "<td colspan=\"5\">Evaluación del riesgo por la <b><u>carencia, insuficiencia o inoperancia</u></b> de los equipos y servicios de emergencia en el inmueble.</td>"+
                             "</tr>"+
                             "<tr>" +
 
                             "<th style=\"border: inset 0pt\" WIDTH=\"4%\"></th>" +
-                            "<th style=\"border: inset 0pt\" WIDTH=\"86%\"></th>" +
+                            "<th style=\"border: inset 0pt\" WIDTH=\"66%\"></th>" +
                             "<th style=\"border: inset 0pt\" WIDTH=\"5%\"></th>" +
                             "<th style=\"border: inset 0pt\" WIDTH=\"5%\"></th>" +
+                                    "<th style=\"border: inset 0pt\" WIDTH=\"20%\"></th>" +
 
                             "</tr>" +
                             "</thead>"+
@@ -562,7 +572,7 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
 
             tablaConcatenacion =  tablaConcatenacion +
                     "<tr>"+
-                    "<td colspan=\"4\"><b>Nota: </b> Si respondió afirmativo en alguna de las cuestiones 1 a la 12, se requiere implementar medidas correctivas <b>inmediatas.</b></td>"+
+                    "<td colspan=\"5\"><b>Nota: </b> Si respondió afirmativo en alguna de las cuestiones 1 a la 12, se requiere implementar medidas correctivas <b>inmediatas.</b></td>"+
                     "</tr>";
 
             tablaConcatenacion=  tablaConcatenacion +
@@ -576,16 +586,24 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
             tablaConcatenacion= tablaConcatenacion +
                     "<td style=\"background-color:Yellow; text-align:center;\">SI</td>" +
                     "<td style=\"text-align:center;\">NO</td>" +
+                    "<td>"+""+"</td>" +
                     "</tr>";
         } else if(decision.equals("NO")){
             tablaConcatenacion= tablaConcatenacion +
                     "<td style=\"text-align:center;\">SI</td>" +
                     "<td style=\"background-color:Yellow; text-align:center;\">NO</td>" +
+                    "<td></td>" +
+                    "</tr>";
+        }else if(decision.equals("N/P")){
+            tablaConcatenacion= tablaConcatenacion +
+                    "<td colspan=\"2\" style=\"text-align:center; background-color:Yellow;\">No aplica</td>" +
+                    "<td></td>" +
                     "</tr>";
         }else{
             tablaConcatenacion= tablaConcatenacion +
                     "<td >SI</td>" +
                     "<td>NO</td>" +
+                    "<td></td>" +
                     "</tr>";
         }
 

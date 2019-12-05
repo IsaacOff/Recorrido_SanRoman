@@ -862,14 +862,40 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
 
     public static boolean siguiente4() {
         Boolean bandera = true;
+        boolean banderanulo = true;
 
-        for(int i=0;i<10; i++  ){
+        for(int i=0;i<4; i++  ){
             if(vector[i]==null || vector[i].equals("")){
                 bandera= false;
             }
         }
 
-        for(int i=11;i<21; i++  ){
+        for(int i=4;i<10; i++  ){
+            if(vector[i]==null || vector[i].equals("")){
+                banderanulo= false;
+                vector[i]="N/P";
+            }
+        }
+
+
+
+        if(vector[11]==null || vector[11].equals("")){
+            banderanulo= false;
+            vector[11]="N/P";
+        }
+
+        for(int i=12;i<18; i++  ){
+            if(vector[i]==null || vector[i].equals("")){
+                bandera= false;
+            }
+        }
+
+        if(vector[18]==null || vector[18].equals("")){
+            banderanulo= false;
+            vector[18]="N/P";
+        }
+
+        for(int i=19;i<21; i++  ){
             if(vector[i]==null || vector[i].equals("")){
                 bandera= false;
             }
@@ -877,7 +903,8 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
 
         for(int i=22;i<25; i++  ){
             if(vector[i]==null || vector[i].equals("")){
-                bandera= false;
+                banderanulo= false;
+                vector[i]="N/P";
             }
         }
 
@@ -943,17 +970,18 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
                             "<TABLE border=\"1\" WIDTH=\"100%\">"+
                             "<thead>"+
                             "<tr>"+
-                            "<td colspan=\"4\">RIESGOS POR DEFICIENCIA EN LAS INSTALACIONES DE SERVICIO DEL INMUEBLE</td>"+
+                            "<td colspan=\"5\">RIESGOS POR DEFICIENCIA EN LAS INSTALACIONES DE SERVICIO DEL INMUEBLE</td>"+
                             "</tr>"+
                             "<tr>"+
-                            "<td colspan=\"4\">Medición de <b>deficiencias</b> en los servicios del inmueble</td>"+
+                            "<td colspan=\"5\">Medición de <b>deficiencias</b> en los servicios del inmueble</td>"+
                             "</tr>"+
                             "<tr>" +
 
-                            "<th style=\"border: inset 0pt\" WIDTH=\"3%\"></th>" +
-                            "<th style=\"border: inset 0pt\" WIDTH=\"87%\"></th>" +
-                            "<th style=\"border: inset 0pt\" WIDTH=\"5%\"></th>" +
-                            "<th style=\"border: inset 0pt\" WIDTH=\"5%\"></th>" +
+                                    "<th style=\"border: inset 0pt\" WIDTH=\"3%\"></th>" +
+                                    "<th style=\"border: inset 0pt\" WIDTH=\"67%\"></th>" +
+                                    "<th style=\"border: inset 0pt\" WIDTH=\"5%\"></th>" +
+                                    "<th style=\"border: inset 0pt\" WIDTH=\"5%\"></th>" +
+                                    "<th style=\"border: inset 0pt\" WIDTH=\"20%\"></th>" +
 
                             "</tr>" +
                             "</thead>"+
@@ -961,7 +989,7 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
 
                             "<tr>"+
                             "<td>1.</td>"+
-                            "<td colspan=\"3\" >Instalación hidrosanitaria</td>"+
+                            "<td colspan=\"4\" >Instalación hidrosanitaria</td>"+
                             "</tr>"+
 
                             "<tr>" +
@@ -998,7 +1026,7 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>"+
                     "<td>2.</td>"+
-                    "<td colspan=\"3\" >Instalación de gas</td>"+
+                    "<td colspan=\"4\" >Instalación de gas</td>"+
                     "</tr>"+
                     "<tr>" +
                     "<td></td>"+
@@ -1034,10 +1062,10 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
 
             if(vector[9].equals("SI")) {
                 tablaConcatenacion=  tablaConcatenacion +
-                        "<td colspan=\"4\" >De qué fecha: <b>"+vector[10]+"</b></td>";
+                        "<td colspan=\"5\" >De qué fecha: <b>"+vector[10]+"</b></td>";
             }else{
                 tablaConcatenacion=  tablaConcatenacion +
-                        "<td colspan=\"4\" >De qué fecha:</td>";
+                        "<td colspan=\"5\" >De qué fecha:</td>";
             }
 
             tablaConcatenacion=  tablaConcatenacion +
@@ -1045,13 +1073,13 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
 
             tablaConcatenacion =  tablaConcatenacion +
                     "<tr>"+
-                    "<td colspan=\"4\"><b>Nota: </b> Si respondió afirmativo presentar copia del dictamen técnico.</td>"+
+                    "<td colspan=\"5\"><b>Nota: </b> Si respondió afirmativo presentar copia del dictamen técnico.</td>"+
                     "</tr>";
 
             tablaConcatenacion =  tablaConcatenacion +
                     "<tr>"+
                     "<td>3.</td>"+
-                    "<td colspan=\"3\" >Instalación eléctrica</td>"+
+                    "<td colspan=\"4\" >Instalación eléctrica</td>"+
                     "</tr>"+
 
                     "<tr>" +
@@ -1118,10 +1146,10 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
 
             if(vector[20].equals("SI")) {
                 tablaConcatenacion=  tablaConcatenacion +
-                        "<td colspan=\"4\" >De qué fecha: <b>"+vector[21]+"</b></td>";
+                        "<td colspan=\"5\" >De qué fecha: <b>"+vector[21]+"</b></td>";
             }else{
                 tablaConcatenacion=  tablaConcatenacion +
-                        "<td colspan=\"4\" >De qué fecha:</td>";
+                        "<td colspan=\"5\" >De qué fecha:</td>";
             }
 
             tablaConcatenacion=  tablaConcatenacion +
@@ -1129,13 +1157,13 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
 
             tablaConcatenacion =  tablaConcatenacion +
                     "<tr>"+
-                    "<td colspan=\"4\"><b>Nota: </b> Si respondió afirmativo presentar copia del dictamen técnico.</td>"+
+                    "<td colspan=\"5\"><b>Nota: </b> Si respondió afirmativo presentar copia del dictamen técnico.</td>"+
                     "</tr>";
 
             tablaConcatenacion =  tablaConcatenacion +
                     "<tr>"+
                     "<td>4.</td>"+
-                    "<td colspan=\"3\" >Instalación de aire acondicionado</td>"+
+                    "<td colspan=\"4\" >Instalación de aire acondicionado</td>"+
                     "</tr>"+
 
                     "<tr>" +
@@ -1160,15 +1188,15 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
                     "<td></td>";
             if(vector[24].equals("SI")) {
                 tablaConcatenacion=  tablaConcatenacion +
-                        "<td colspan=\"3\">Especifique: <b>" + vector[25] + "</b></td>";
+                        "<td colspan=\"4\">Especifique: <b>" + vector[25] + "</b></td>";
             }else{
                 tablaConcatenacion=  tablaConcatenacion +
-                "<td colspan=\"3\">Especifique: </td>";
+                "<td colspan=\"4\">Especifique: </td>";
             }
                     tablaConcatenacion=  tablaConcatenacion +
                     "</tr>"+
                     "<tr>"+
-                    "<td colspan=\"4\"><b>Nota: </b>\n" +
+                    "<td colspan=\"5\"><b>Nota: </b>\n" +
                     "Si respondió afirmativo en alguna de las opciones de la cuestión 1., se requiere implementar medidas preventivas.\n" +
                     "Si respondió afirmativo en alguna de las opciones de las cuestiones 2 a la 4, se requiere implementar medidas correctivas, además de los dictámenes técnicos correspondientes elaborados por una Unidad de Verificación o Perito Autorizado en la materia.\n</td>"+
                     "</tr>";
@@ -1186,16 +1214,24 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
             tablaConcatenacion= tablaConcatenacion +
                     "<td style=\"background-color:Yellow; text-align:center;\">SI</td>" +
                     "<td style=\"text-align:center;\">NO</td>" +
+                    "<td>"+""+"</td>" +
                     "</tr>";
         } else if(decision.equals("NO")){
             tablaConcatenacion= tablaConcatenacion +
                     "<td style=\"text-align:center;\">SI</td>" +
                     "<td style=\"background-color:Yellow; text-align:center;\">NO</td>" +
+                    "<td></td>" +
+                    "</tr>";
+        }else if(decision.equals("N/P")){
+            tablaConcatenacion= tablaConcatenacion +
+                    "<td colspan=\"2\" style=\"text-align:center; background-color:Yellow;\">No aplica</td>" +
+                    "<td></td>" +
                     "</tr>";
         }else{
             tablaConcatenacion= tablaConcatenacion +
                     "<td >SI</td>" +
                     "<td>NO</td>" +
+                    "<td></td>" +
                     "</tr>";
         }
 

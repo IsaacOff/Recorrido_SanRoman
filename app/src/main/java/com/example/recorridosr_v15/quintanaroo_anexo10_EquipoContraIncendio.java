@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -32,13 +34,13 @@ import static android.widget.Toast.LENGTH_SHORT;
 public class quintanaroo_anexo10_EquipoContraIncendio extends AppCompatActivity {
 
 private Spinner spin1, spin2, spin3;
-private EditText et1, et2, et3, et4, et5;
+private EditText et1, et2, et3, et4, et5, et6, et7;
     private RadioButton rb1, rb2, rb3, rb4, rb5, rb6, rb7, rb8, rb9, rb10;
     private RadioGroup rg1, rg2, rg3, rg4,rg5;
     private TextView tv1;
     private String sel;
     static private int numero =1;
-String vector[] =new String[13];
+    String vector[] =new String[15];
     private File pdfFile;
     private String htmlToPDF;
     static private String detectores;
@@ -64,6 +66,8 @@ String vector[] =new String[13];
         et3  = (EditText) findViewById(R.id.editText3);
         et4  = (EditText) findViewById(R.id.editText4);
         et5  = (EditText) findViewById(R.id.editText5);
+        et6  = (EditText) findViewById(R.id.editText6);
+        et7  = (EditText) findViewById(R.id.editText7);
 
 
         //Ocultar EditText
@@ -204,9 +208,9 @@ String vector[] =new String[13];
         });
 
         //pasa parametros al spinner para mostrar
-        mostrar(spin1, et1);
-        mostrar(spin2, et2);
-        mostrar(spin3, et3);
+        mostrar(spin1, et1, 0);
+        mostrar(spin2, et2, 2);
+        mostrar(spin3, et3, 6);
 
 
 
@@ -214,12 +218,14 @@ String vector[] =new String[13];
     }
 
 
-    public void mostrar(Spinner x, final EditText o){
+    public void mostrar(final Spinner x, final EditText o, final int i){
         x.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 sel= parent.getItemAtPosition(position).toString();
+
+                vector[i]   = x.getSelectedItem().toString();
 
                 switch( sel ) {
 
@@ -236,6 +242,120 @@ String vector[] =new String[13];
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
+
+        et1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[1]   = et1.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[3]   = et2.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et3.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[7]   = et3.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et4.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[11]  = et4.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et5.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[12]  = et5.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et6.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[13]  = et6.getText().toString();
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et7.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[14]  = et7.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+
     }
 
     public void onClick(View view){
@@ -245,61 +365,35 @@ String vector[] =new String[13];
     public void agregar(View view) {
         Boolean bandera= true;
 
-        vector[0]   = spin1.getSelectedItem().toString();
-        vector[2]   = spin2.getSelectedItem().toString();
-        vector[6]   = spin3.getSelectedItem().toString();
-
-
-        if(vector[0]=="TIPO DE EXTINTOR:"){
-            bandera= false;
-        }
-        if(vector[2]=="CAPACIDAD EN KILOGRAMOS:"){
-            bandera= false;
-        }
-        if(vector[6]=="PRESION:"){
-            bandera= false;
-        }
 
 
         if (et1.getVisibility() == View.VISIBLE) {
-            if (et1.length() == 0) {
+            if (vector[1] == null || vector[1].equals("")) {
                 bandera = false;
             }
         }
 
         if (et2.getVisibility() == View.VISIBLE) {
-            if (et2.length() == 0) {
+            if (vector[3] == null || vector[3].equals("")) {
                 bandera = false;
             }
         }
 
         if (et3.getVisibility() == View.VISIBLE) {
-            if (et3.length() == 0) {
+            if (vector[7] == null || vector[7].equals("")) {
                 bandera = false;
             }
         }
 
 
-        if (et4.length() == 0) {
-            bandera = false;
+        for(int i=0;i<15; i++  ){
+            if((vector[i]==null || vector[i].equals("")) && (i!=1 && i!=3 && i!=7)){
+                bandera= false;
+            }
         }
-        if (et5.length() == 0) {
-            bandera = false;
-        }
-
-
-
 
         if(bandera){
-
-
-
-            vector[1]   = et1.getText().toString();
-            vector[3]   = et2.getText().toString();
-            vector[7]   = et3.getText().toString();
-            vector[11]  = et4.getText().toString();
-            vector[12]  = et5.getText().toString();
-
+            agregarExtintor(vector);
 
             numero++;
             tv1.setText(Integer.toString(numero));
@@ -313,6 +407,8 @@ String vector[] =new String[13];
             et3.setText("");
             et4.setText("");
             et5.setText("");
+            et6.setText("");
+            et7.setText("");
 
             rg1.clearCheck();
             rg2.clearCheck();
@@ -320,7 +416,9 @@ String vector[] =new String[13];
             rg4.clearCheck();
             rg5.clearCheck();
 
-            agregarExtintor(vector);
+            for(int i=0;i<15; i++  ){
+                vector[i]="";
+            }
 
             Toast.makeText(this, "Agregado con exito", LENGTH_SHORT).show();
         }else{
@@ -350,20 +448,22 @@ String vector[] =new String[13];
         "</colgroup>" +*/
                     "<thead>" +
                     "<tr>" +
-                    "<th colspan=\"4\">Equipo contra incendios</th>" +
+                    "<th colspan=\"13\">Equipo contra incendios</th>" +
                     "</tr>" +
                     "<tr>" +
-                    "<th WIDTH=\"4%\">No.</th>" +
+                    "<th WIDTH=\"3%\">No.</th>" +
                     "<th WIDTH=\"8%\">Tipo</th>" +
-                    "<th WIDTH=\"8%\">Cap. KG</th>" +
-                    "<th WIDTH=\"9%\">P. Hidros</th>" +
+                    "<th WIDTH=\"5%\">Cap. KG</th>" +
+                    "<th WIDTH=\"8%\">P. Hidros</th>" +
                     "<th WIDTH=\"7%\">Valvula</th>" +
                     "<th WIDTH=\"7%\">Presion</th>" +
                     "<th WIDTH=\"10%\">Manometro</th>" +
                     "<th WIDTH=\"8%\">Boquilla</th>" +
                     "<th WIDTH=\"9%\">Etiqueta de inspec.</th>" +
-                    "<th WIDTH=\"15%\">Ubicación</th>" +
-                    "<th WIDTH=\"15%\">Fecha de recarga</th>" +
+                    "<th WIDTH=\"9%\">Ubicación</th>" +
+                    "<th WIDTH=\"10%\">Proveedor</th>" +
+                    "<th WIDTH=\"8%\">Fecha de ultima recarga</th>" +
+                    "<th WIDTH=\"8%\">Fecha de proxima recarga</th>" +
                     "</tr>" +
                     "</thead>" +
                     "<tbody>" +
@@ -428,7 +528,9 @@ String vector[] =new String[13];
                 "<td>"+vector[9]+"</td>" +
                 "<td>"+vector[10]+"</td>" +
                 "<td>"+vector[11]+"</td>" +
+                "<td>"+vector[14]+"</td>" +
                 "<td>"+vector[12]+"</td>" +
+                "<td>"+vector[13]+"</td>" +
                 "</tr>";
     }
 

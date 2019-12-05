@@ -1823,22 +1823,23 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
 
     public void final_interno(View view) {
         aviso ="";
-        Boolean bandera = true;
+        boolean bandera = true;
+        boolean banderanula=true;
         banderaTotal = true;
 
 
         for (int i = 0; i < 54; i++) {
             if (vector[i] == null || vector[i].equals("")) {
-                bandera = false;
+                vector[i] = "N/P";
+                banderanula = false;
             }
         }
 
         if (vector[38] == "SI") {
 
-            if (et1.length() == 0) {
+            if (vector2.equals("")) {
                 bandera = false;
             }
-
         }
 
         if (!quintanaroo_id_riesgo_interno.siguiente1()) {
@@ -1915,17 +1916,18 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
                             "<TABLE border=\"1\" WIDTH=\"100%\">"+
                             "<thead>"+
                             "<tr>"+
-                            "<td colspan=\"4\">OTROS RIESGOS INTERNOS</td>"+
+                            "<td colspan=\"5\">OTROS RIESGOS INTERNOS</td>"+
                             "</tr>"+
                             "<tr>"+
-                            "<td colspan=\"4\">Objetos que pueden caer:</td>"+
+                            "<td colspan=\"5\">Objetos que pueden caer:</td>"+
                             "</tr>"+
                             "<tr>" +
 
                             "<th style=\"border: inset 0pt\" WIDTH=\"3%\"></th>" +
-                            "<th style=\"border: inset 0pt\" WIDTH=\"87%\"></th>" +
+                            "<th style=\"border: inset 0pt\" WIDTH=\"67%\"></th>" +
                             "<th style=\"border: inset 0pt\" WIDTH=\"5%\"></th>" +
                             "<th style=\"border: inset 0pt\" WIDTH=\"5%\"></th>" +
+                            "<th style=\"border: inset 0pt\" WIDTH=\"20%\"></th>" +
 
                             "</tr>" +
                             "</thead>"+
@@ -2013,7 +2015,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
 
             tablaConcatenacion =  tablaConcatenacion +
                     "<tr>"+
-                    "<td colspan=\"4\">Objetos que pueden deslizarse:</td>"+
+                    "<td colspan=\"5\">Objetos que pueden deslizarse:</td>"+
                     "</tr>";
 
             tablaConcatenacion=  tablaConcatenacion +
@@ -2078,7 +2080,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
 
             tablaConcatenacion =  tablaConcatenacion +
                     "<tr>"+
-                    "<td colspan=\"4\">Objetos que pueden volcar:</td>"+
+                    "<td colspan=\"5\">Objetos que pueden volcar:</td>"+
                     "</tr>";
 
             tablaConcatenacion=  tablaConcatenacion +
@@ -2137,7 +2139,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>"+
-                    "<td colspan=\"4\">Objetos que pueden ser tóxicos, inflamar y/o explotar:</td>" +
+                    "<td colspan=\"5\">Objetos que pueden ser tóxicos, inflamar y/o explotar:</td>" +
                     "</tr>";
 
             tablaConcatenacion=  tablaConcatenacion +
@@ -2185,7 +2187,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
                     "<td ></td>"+
-                    "<td colspan=\"3\">Especificar: <b>"+vector2+"</b></td>"+
+                    "<td colspan=\"4\">Especificar: <b>"+vector2+"</b></td>"+
                     "</tr>";
 
             //_------------------------------
@@ -2193,7 +2195,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td colspan=\"4\"> Objetos que pueden propiciar un incendio:</td>"+
+                    "<td colspan=\"5\"> Objetos que pueden propiciar un incendio:</td>"+
                     "</tr>";
 
             tablaConcatenacion=  tablaConcatenacion +
@@ -2240,7 +2242,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td colspan=\"4\">Objetos que pueden obstaculizar una evacuación:</td>"+
+                    "<td colspan=\"5\">Objetos que pueden obstaculizar una evacuación:</td>"+
                     "</tr>";
 
             tablaConcatenacion=  tablaConcatenacion +
@@ -2320,16 +2322,24 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
             tablaConcatenacion= tablaConcatenacion +
                     "<td style=\"background-color:Yellow; text-align:center;\">SI</td>" +
                     "<td style=\"text-align:center;\">NO</td>" +
+                    "<td>"+""+"</td>" +
                     "</tr>";
         } else if(decision.equals("NO")){
             tablaConcatenacion= tablaConcatenacion +
                     "<td style=\"text-align:center;\">SI</td>" +
                     "<td style=\"background-color:Yellow; text-align:center;\">NO</td>" +
+                    "<td></td>" +
+                    "</tr>";
+        }else if(decision.equals("N/P")){
+            tablaConcatenacion= tablaConcatenacion +
+                    "<td colspan=\"2\" style=\"text-align:center; background-color:Yellow;\">No aplica</td>" +
+                    "<td></td>" +
                     "</tr>";
         }else{
             tablaConcatenacion= tablaConcatenacion +
                     "<td >SI</td>" +
                     "<td>NO</td>" +
+                    "<td></td>" +
                     "</tr>";
         }
 

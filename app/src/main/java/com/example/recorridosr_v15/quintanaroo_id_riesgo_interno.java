@@ -23,8 +23,8 @@ import java.io.IOException;
 import java.io.StringReader;
 
 public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
-    static private EditText et1, et2, et3, et4, et5, et6, et7, et8, et9, et10, et11, et12, et13, et14, et15, et16, et17, et18, et19, et20;
-    static private String vector[] = new String[17];
+    static private EditText et1, et2, et3, et4, et6, et7, et8, et9, et10, et11, et12, et13, et14, et15, et16, et17, et18, et19, et20;
+    static private String vector[] = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""};
     static String tablaConcatenacion="";
     static File pdfFile;
     static File directorio2;
@@ -47,7 +47,7 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
         et2 = (EditText) findViewById(R.id.editText2);
         et3 = (EditText) findViewById(R.id.editText3);
         et4 = (EditText) findViewById(R.id.editText4);
-        et5 = (EditText) findViewById(R.id.editText5);
+        //et5 = (EditText) findViewById(R.id.editText5);
         et6 = (EditText) findViewById(R.id.editText6);
         et7 = (EditText) findViewById(R.id.editText7);
         et8 = (EditText) findViewById(R.id.editText8);
@@ -65,7 +65,7 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
         et2.setText(vector[1]);
         et3.setText(vector[2]);
         et4.setText(vector[3]);
-        et5.setText(vector[4]);
+        //et5.setText(vector[4]);
         et6.setText(vector[5]);
         et7.setText(vector[6]);
         et8.setText(vector[7]);
@@ -143,7 +143,7 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
             }
         });
 
-        et5.addTextChangedListener(new TextWatcher() {
+       /* et5.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -158,7 +158,7 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
             }
         });
-
+*/
         et6.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -380,9 +380,9 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
         }
 
 
-        if (et5.length() == 0 || et5.equals("")) {
+        /*if (et5.length() == 0 || et5.equals("")) {
             bandera = false;
-        }
+        }*/
 
 
         if (et6.length() == 0 || et6.equals("")) {
@@ -522,8 +522,7 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
                 "</tr>"+
 
                 "<tr>"+
-                "<td style='border: inset 0pt' colspan=\"2\">Teléfono: <b>"+vector[3]+"</b></td>"+
-                "<td style='border: inset 0pt' >Fax: <b>"+vector[4]+"</b></td>"+
+                "<td style='border: inset 0pt' colspan=\"3\">Teléfono: <b>"+vector[3]+"</b></td>"+
                 "</tr>"+
 
                 "<tr>"+

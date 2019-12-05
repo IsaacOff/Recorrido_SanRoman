@@ -412,19 +412,21 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
                             "<TABLE border=\"1\" WIDTH=\"100%\">"+
                             "<thead>"+
                             "<tr>"+
-                            "<th colspan=\"4\" style=\"text-align:center;\">RIESGOS POR DAÑOS ESTRUCTURALES</th>"+
+                            "<th colspan=\"5\" style=\"text-align:center;\">RIESGOS POR DAÑOS ESTRUCTURALES</th>"+
                             "</tr>"+
                             "<tr>" +
-                            "<th style=\"border: inset 0pt\" WIDTH=\"3%\"></th>" +
-                            "<th style=\"border: inset 0pt\" WIDTH=\"87%\"></th>" +
-                            "<th style=\"border: inset 0pt\" WIDTH=\"5%\"></th>" +
-                            "<th style=\"border: inset 0pt\" WIDTH=\"5%\"></th>" +
+                                    "<th style=\"border: inset 0pt\" WIDTH=\"3%\"></th>" +
+                                    "<th style=\"border: inset 0pt\" WIDTH=\"67%\"></th>" +
+                                    "<th style=\"border: inset 0pt\" WIDTH=\"5%\"></th>" +
+                                    "<th style=\"border: inset 0pt\" WIDTH=\"5%\"></th>" +
+                                    "<th style=\"border: inset 0pt\" WIDTH=\"20%\"></th>" +
                             "</tr>" +
                             "</thead>"+
                             "<tbody>"+
 
                             "<tr>"+
                             "<td colspan=\"4\" >Los aspectos de este apartado, se evaluaran <b>por simple apreciación visual.</b></td>"+
+                                    "<td>Observaciones</td>" +
                             "</tr>"+
 
                             "<tr>" +
@@ -464,7 +466,7 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td colspan=\"4\"><b>Nota:</b> Si respondió afirmativo en alguna de las cuestiones 1 a la 6, se requiere una evaluación detallada la cual será realizada por un experto en estructuras, quien emitirá un dictamen técnico correspondiente de acuerdo a la reglamentación local y normativa aplicable vigente.</td>"+
+                    "<td colspan=\"5\"><b>Nota:</b> Si respondió afirmativo en alguna de las cuestiones 1 a la 6, se requiere una evaluación detallada la cual será realizada por un experto en estructuras, quien emitirá un dictamen técnico correspondiente de acuerdo a la reglamentación local y normativa aplicable vigente.</td>"+
                     "</tr>";
 
             tablaConcatenacion=  tablaConcatenacion +
@@ -481,7 +483,7 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td colspan=\"4\"><b>Nota:</b> Si respondió afirmativo en alguna de las cuestiones 1 a la 8, se requiere la atención inmediata para subsanar las deficiencias encontradas.</td>"+
+                    "<td colspan=\"5\"><b>Nota:</b> Si respondió afirmativo en alguna de las cuestiones 1 a la 8, se requiere la atención inmediata para subsanar las deficiencias encontradas.</td>"+
                     "</tr>";
 
             tablaConcatenacion=  tablaConcatenacion +
@@ -492,12 +494,12 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td colspan=\"4\">De qué fecha: "+vector[9]+"</td>"+
+                    "<td colspan=\"5\">De qué fecha: "+vector[9]+"</td>"+
                     "</tr>";
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td colspan=\"4\"><b>Nota:</b> Si respondió afirmativo presentar copia del dictamen técnico.</td>"+
+                    "<td colspan=\"5\"><b>Nota:</b> Si respondió afirmativo presentar copia del dictamen técnico.</td>"+
                     "</tr>";
 
             tablaConcatenacion=  tablaConcatenacion +
@@ -520,16 +522,19 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
 
                             "<td style=\"background-color:Yellow; text-align:center;\">SI</td>" +
                             "<td style=\"text-align:center;\">NO</td>" +
+                            "<td>"+""+"</td>" +
                             "</tr>";
                 } else if(decision.equals("NO")){
                     tablaConcatenacion= tablaConcatenacion +
                             "<td style=\"text-align:center;\">SI</td>" +
                             "<td style=\"background-color:Yellow; text-align:center;\">NO</td>" +
+                            "<td></td>" +
                             "</tr>";
                 }else{
                     tablaConcatenacion= tablaConcatenacion +
                             "<td>SI</td>" +
                             "<td>NO</td>" +
+                            "<td></td>" +
                             "</tr>";
                 }
     }
