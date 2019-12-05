@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -31,8 +33,10 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
     private Spinner spin1, spin2, spin3, spin4, spin5, spin6, spin7, spin8, spin9, spin10;
     private RadioButton rb1, rb2, rb3, rb4, rb5, rb6, rb7, rb8, rb9, rb10, rb11, rb12, rb13, rb14, rb15, rb16, rb17, rb18,rb19,rb20, rb21, rb22, rb23, rb24;
     private RadioGroup rg1, rg2, rg3, rg4,rg5,rg6,rg7,rg8,rg9, rg10, rg11, rg12;
+    private EditText et1, et2, et3, et4, et5, et6, et7, et8, et9, et10;
     static String vector[][] = {{"",""}, {"",""}, {"",""}, {"",""}, {"",""}, {"",""}, {"",""}, {"",""}, {"",""}, {"",""}};
     static String vector2[] = {"", ""};
+    static String vector3[] = {"", "", "", "", "", "", "", "", "", ""};
     static File pdfFile;
     static File directorio2;
     static String tablaConcatenacion="";
@@ -95,7 +99,16 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
         rb23 = (RadioButton) findViewById(R.id.rb23);
         rb24 = (RadioButton) findViewById(R.id.rb24);
 
-
+        et1 = (EditText) findViewById(R.id.editText1);
+        et2 = (EditText) findViewById(R.id.editText2);
+        et3 = (EditText) findViewById(R.id.editText3);
+        et4 = (EditText) findViewById(R.id.editText4);
+        et5 = (EditText) findViewById(R.id.editText5);
+        et6 = (EditText) findViewById(R.id.editText6);
+        et7 = (EditText) findViewById(R.id.editText7);
+        et8 = (EditText) findViewById(R.id.editText8);
+        et9 = (EditText) findViewById(R.id.editText9);
+        et10 = (EditText) findViewById(R.id.editText10);
 
         //asigna los espiner del xml a los espiner aqui declarados
         spin1 =(Spinner)findViewById(R.id.spinner1);
@@ -139,6 +152,17 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
         spin9.setVisibility(View.GONE);
         spin10.setVisibility(View.GONE);
 
+        et1.setVisibility(View.GONE);
+        et2.setVisibility(View.GONE);
+        et3.setVisibility(View.GONE);
+        et4.setVisibility(View.GONE);
+        et5.setVisibility(View.GONE);
+        et6.setVisibility(View.GONE);
+        et7.setVisibility(View.GONE);
+        et8.setVisibility(View.GONE);
+        et9.setVisibility(View.GONE);
+        et10.setVisibility(View.GONE);
+
         if(vector2[0].equals("SI")){
             rb21.setChecked(true);
             rb22.setChecked(false);
@@ -155,6 +179,46 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
         }else if(vector2[1].equals("NO")){
             rb23.setChecked(false);
             rb24.setChecked(true);
+        }
+
+        if(!vector3[0].equals("") && vector3[0] != null){
+            et1.setText(vector3[0]);
+        }
+
+        if(!vector3[1].equals("") && vector3[1] != null){
+            et2.setText(vector3[1]);
+        }
+
+        if(!vector3[2].equals("") && vector3[2] != null){
+            et3.setText(vector3[2]);
+        }
+
+        if(!vector3[3].equals("") && vector3[3] != null){
+            et4.setText(vector3[3]);
+        }
+
+        if(!vector3[4].equals("") && vector3[4] != null){
+            et5.setText(vector3[4]);
+        }
+
+        if(!vector3[5].equals("") && vector3[5] != null){
+            et6.setText(vector3[5]);
+        }
+
+        if(!vector3[6].equals("") && vector3[6] != null){
+            et7.setText(vector3[6]);
+        }
+
+        if(!vector3[7].equals("") && vector3[7] != null){
+            et8.setText(vector3[7]);
+        }
+
+        if(!vector3[8].equals("") && vector3[8] != null){
+            et9.setText(vector3[8]);
+        }
+
+        if(!vector3[9].equals("") && vector3[9] != null){
+            et10.setText(vector3[9]);
         }
 
         if(vector[0][1].equals("Selecione el estado actual:")){
@@ -262,6 +326,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             if (vector[0][0].equals("SI")) {
                 rb1.setChecked(true);
                 rb2.setChecked(false);
+                et1.setVisibility(View.VISIBLE);
                 spin1.setVisibility(View.VISIBLE);
             } else if (vector[0][0].equals("NO")) {
                 rb1.setChecked(false);
@@ -271,6 +336,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             if (vector[1][0].equals("SI")) {
                 rb3.setChecked(true);
                 rb4.setChecked(false);
+                et2.setVisibility(View.VISIBLE);
                 spin2.setVisibility(View.VISIBLE);
             } else if (vector[1][0].equals("NO")) {
                 rb3.setChecked(false);
@@ -280,6 +346,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             if (vector[2][0].equals("SI")) {
                 rb5.setChecked(true);
                 rb6.setChecked(false);
+                et3.setVisibility(View.VISIBLE);
                 spin3.setVisibility(View.VISIBLE);
             } else if (vector[2][0].equals("NO")) {
                 rb5.setChecked(false);
@@ -289,6 +356,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             if (vector[3][0].equals("SI")) {
                 rb7.setChecked(true);
                 rb8.setChecked(false);
+                et4.setVisibility(View.VISIBLE);
                 spin4.setVisibility(View.VISIBLE);
             } else if (vector[3][0].equals("NO")) {
                 rb7.setChecked(false);
@@ -298,6 +366,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             if (vector[4][0].equals("SI")) {
                 rb9.setChecked(true);
                 rb10.setChecked(false);
+                et5.setVisibility(View.VISIBLE);
                 spin5.setVisibility(View.VISIBLE);
             } else if (vector[4][0].equals("NO")) {
                 rb9.setChecked(false);
@@ -309,6 +378,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             if (vector[5][0].equals("SI")) {
                 rb11.setChecked(true);
                 rb12.setChecked(false);
+                et6.setVisibility(View.VISIBLE);
                 spin6.setVisibility(View.VISIBLE);
             } else if (vector[5][0].equals("NO")) {
                 rb11.setChecked(false);
@@ -318,6 +388,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             if (vector[6][0].equals("SI")) {
                 rb13.setChecked(true);
                 rb14.setChecked(false);
+                et7.setVisibility(View.VISIBLE);
                 spin7.setVisibility(View.VISIBLE);
             } else if (vector[6][0].equals("NO")) {
                 rb13.setChecked(false);
@@ -327,6 +398,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             if (vector[7][0].equals("SI")) {
                 rb15.setChecked(true);
                 rb16.setChecked(false);
+                et8.setVisibility(View.VISIBLE);
                 spin8.setVisibility(View.VISIBLE);
             } else if (vector[7][0].equals("NO")) {
                 rb15.setChecked(false);
@@ -336,6 +408,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             if (vector[8][0].equals("SI")) {
                 rb17.setChecked(true);
                 rb18.setChecked(false);
+                et9.setVisibility(View.VISIBLE);
                 spin9.setVisibility(View.VISIBLE);
             } else if (vector[8][0].equals("NO")) {
                 rb17.setChecked(false);
@@ -345,6 +418,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             if (vector[9][0].equals("SI")) {
                 rb19.setChecked(true);
                 rb20.setChecked(false);
+                et10.setVisibility(View.VISIBLE);
                 spin10.setVisibility(View.VISIBLE);
             } else if (vector[9][0].equals("NO")) {
                 rb19.setChecked(false);
@@ -421,11 +495,25 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                         spin5.setSelection(0);
                     }
 
+                    et6.setText(vector3[5]);
+                    et7.setText(vector3[6]);
+                    et8.setText(vector3[7]);
+                    et9.setText(vector3[8]);
+                    et10.setText(vector3[9]);
+
+
+                    et1.setText(vector3[0]);
+                    et2.setText(vector3[1]);
+                    et3.setText(vector3[2]);
+                    et4.setText(vector3[3]);
+                    et5.setText(vector3[4]);
+
 
                     if (vector[0][0].equals("SI")) {
                         //rb1.setChecked(true);
                         rb1.setChecked(true);
                         rb2.setChecked(false);
+                        et1.setVisibility(View.VISIBLE);
                         spin1.setVisibility(View.VISIBLE);
                     } else if (vector[0][0].equals("NO")) {
                         System.out.println("cambio 1");
@@ -436,6 +524,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                     if (vector[1][0].equals("SI")) {
                         rb3.setChecked(true);
                         rb4.setChecked(false);
+                        et2.setVisibility(View.VISIBLE);
                         spin2.setVisibility(View.VISIBLE);
                     } else if (vector[1][0].equals("NO")) {
                         rb3.setChecked(false);
@@ -445,6 +534,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                     if (vector[2][0].equals("SI")) {
                         rb5.setChecked(true);
                         rb6.setChecked(false);
+                        et3.setVisibility(View.VISIBLE);
                         spin3.setVisibility(View.VISIBLE);
                     } else if (vector[2][0].equals("NO")) {
                         rb5.setChecked(false);
@@ -454,6 +544,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                     if (vector[3][0].equals("SI")) {
                         rb7.setChecked(true);
                         rb8.setChecked(false);
+                        et4.setVisibility(View.VISIBLE);
                         spin4.setVisibility(View.VISIBLE);
                     } else if (vector[3][0].equals("NO")) {
                         rb7.setChecked(false);
@@ -463,6 +554,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                     if (vector[4][0].equals("SI")) {
                         rb9.setChecked(true);
                         rb10.setChecked(false);
+                        et5.setVisibility(View.VISIBLE);
                         spin5.setVisibility(View.VISIBLE);
                     } else if (vector[4][0].equals("NO")) {
                         rb9.setChecked(false);
@@ -492,6 +584,12 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                     spin4.setVisibility(View.GONE);
                     spin5.setVisibility(View.GONE);
 
+                    et1.setVisibility(View.GONE);
+                    et2.setVisibility(View.GONE);
+                    et3.setVisibility(View.GONE);
+                    et4.setVisibility(View.GONE);
+                    et5.setVisibility(View.GONE);
+
                     spin1.setSelection(0);
                     spin2.setSelection(0);
                     spin3.setSelection(0);
@@ -502,6 +600,9 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                         for(int x = 0 ; x< vector[i].length;x++) {
                             vector[i][x]="";
                         }
+                    }
+                    for(int i = 0 ; i< 5;i++) {
+                            vector3[i]="";
                     }
 
 
@@ -517,22 +618,20 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
 
                 if (vector2[0].equals("SI")){
                 if(checkedId==R.id.rb1){
-                    //System.out.println("entre 1");
                     rb1.setChecked(true);
                     vector[0][0]="SI";
+                    et1.setVisibility(View.VISIBLE);
                     spin1.setVisibility(View.VISIBLE);
 
                 }else if(checkedId==R.id.rb2) {
                     rb2.setChecked(true);
-                    System.out.println("entre 2");
                     vector[0][0]="NO";
+                    et1.setVisibility(View.GONE);
                     spin1.setVisibility(View.GONE);
                 }else{
-                    System.out.println("no entre");
                     vector[0][0]="";
                 }
                 }else{
-                    System.out.println("cambio 3");
                     rb1.setChecked(false);
                     rb2.setChecked(false);
                 }
@@ -549,19 +648,20 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                     rb3.setChecked(true);
                     vector[1][0]="SI";
                     spin2.setVisibility(View.VISIBLE);
-
+                    et2.setVisibility(View.VISIBLE);
                 }else if(checkedId==R.id.rb4) {
                     rb4.setChecked(true);
                     vector[1][0]="NO";
                     spin2.setVisibility(View.GONE);
+                    et2.setVisibility(View.GONE);
 
 
                 }else{
                     vector[0][0]="";
                 }
             }else{
-                ((RadioButton) findViewById(R.id.rb3)).setChecked(false);
-                ((RadioButton) findViewById(R.id.rb4)).setChecked(false);
+                rb3.setChecked(false);
+                rb4.setChecked(false);
             }
 
             }
@@ -576,19 +676,19 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                     rb5.setChecked(true);
                     vector[2][0]="SI";
                     spin3.setVisibility(View.VISIBLE);
-
+                    et3.setVisibility(View.VISIBLE);
                 }else if(checkedId==R.id.rb6) {
                     rb6.setChecked(true);
                     vector[2][0]="NO";
                     spin3.setVisibility(View.GONE);
-
+                    et3.setVisibility(View.GONE);
 
                 }else{
                     vector[0][0]="";
                 }
             }else{
-                ((RadioButton) findViewById(R.id.rb5)).setChecked(false);
-                ((RadioButton) findViewById(R.id.rb6)).setChecked(false);
+               rb5.setChecked(false);
+               rb6.setChecked(false);
             }
 
             }
@@ -603,18 +703,20 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                     rb7.setChecked(true);
                     vector[3][0]="SI";
                     spin4.setVisibility(View.VISIBLE);
+                    et4.setVisibility(View.VISIBLE);
 
 
                 }else if(checkedId==R.id.rb8) {
                     rb8.setChecked(true);
                     vector[3][0]="NO";
                     spin4.setVisibility(View.GONE);
+                    et4.setVisibility(View.GONE);
                 }else{
                     vector[0][0]="";
                 }
                 }else{
-                    ((RadioButton) findViewById(R.id.rb7)).setChecked(false);
-                    ((RadioButton) findViewById(R.id.rb8)).setChecked(false);
+                    rb7.setChecked(false);
+                    rb8.setChecked(false);
                 }
 
             }
@@ -629,18 +731,18 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                     rb9.setChecked(true);
                     vector[4][0]="SI";
                     spin5.setVisibility(View.VISIBLE);
-
+                    et5.setVisibility(View.VISIBLE);
                 }else if(checkedId==R.id.rb10) {
                     rb10.setChecked(true);
                     vector[4][0]="NO";
                     spin5.setVisibility(View.GONE);
-
+                    et5.setVisibility(View.GONE);
                 }else{
                     vector[0][0]="";
                 }
             }else{
-                ((RadioButton) findViewById(R.id.rb9)).setChecked(false);
-                ((RadioButton) findViewById(R.id.rb10)).setChecked(false);
+                rb9.setChecked(false);
+                rb10.setChecked(false);
             }
 
             }
@@ -714,9 +816,16 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                         spin10.setSelection(0);
                     }
 
+                        et6.setText(vector3[5]);
+                        et7.setText(vector3[6]);
+                        et8.setText(vector3[7]);
+                        et9.setText(vector3[8]);
+                        et10.setText(vector3[9]);
+
                     if (vector[5][0].equals("SI")) {
                         rb11.setChecked(true);
                         rb12.setChecked(false);
+                        et6.setVisibility(View.VISIBLE);
                         spin6.setVisibility(View.VISIBLE);
                     } else if (vector[5][0].equals("NO")) {
                         rb11.setChecked(false);
@@ -726,6 +835,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                     if (vector[6][0].equals("SI")) {
                         rb13.setChecked(true);
                         rb14.setChecked(false);
+                        et7.setVisibility(View.VISIBLE);
                         spin7.setVisibility(View.VISIBLE);
                     } else if (vector[6][0].equals("NO")) {
                         rb13.setChecked(false);
@@ -735,6 +845,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                     if (vector[7][0].equals("SI")) {
                         rb15.setChecked(true);
                         rb16.setChecked(false);
+                        et8.setVisibility(View.VISIBLE);
                         spin8.setVisibility(View.VISIBLE);
                     } else if (vector[7][0].equals("NO")) {
                         rb15.setChecked(false);
@@ -744,6 +855,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                     if (vector[8][0].equals("SI")) {
                         rb17.setChecked(true);
                         rb18.setChecked(false);
+                        et9.setVisibility(View.VISIBLE);
                         spin9.setVisibility(View.VISIBLE);
                     } else if (vector[8][0].equals("NO")) {
                         rb17.setChecked(false);
@@ -753,6 +865,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                     if (vector[9][0].equals("SI")) {
                         rb19.setChecked(true);
                         rb20.setChecked(false);
+                        et10.setVisibility(View.VISIBLE);
                         spin10.setVisibility(View.VISIBLE);
                     } else if (vector[9][0].equals("NO")) {
                         rb19.setChecked(false);
@@ -780,6 +893,12 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                     spin9.setVisibility(View.GONE);
                     spin10.setVisibility(View.GONE);
 
+                    et6.setVisibility(View.GONE);
+                    et7.setVisibility(View.GONE);
+                    et8.setVisibility(View.GONE);
+                    et9.setVisibility(View.GONE);
+                    et10.setVisibility(View.GONE);
+
                     spin6.setSelection(0);
                     spin7.setSelection(0);
                     spin8.setSelection(0);
@@ -790,6 +909,10 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                         for(int x = 0 ; x< vector[i].length;x++) {
                             vector[i][x]="";
                         }
+                    }
+
+                    for(int x = 5 ; x<10;x++) {
+                        vector3[x]="";
                     }
 
                 }
@@ -808,11 +931,12 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                     rb11.setChecked(true);
                     vector[5][0]="SI";
                     spin6.setVisibility(View.VISIBLE);
-
+                    et6.setVisibility(View.VISIBLE);
                 }else if(checkedId==R.id.rb12) {
                     rb12.setChecked(true);
                     vector[5][0]="NO";
                     spin6.setVisibility(View.GONE);
+                    et6.setVisibility(View.GONE);
 
                 }else{
                     vector[0][0]="";
@@ -835,11 +959,13 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                     rb13.setChecked(true);
                     vector[6][0]="SI";
                     spin7.setVisibility(View.VISIBLE);
+                    et7.setVisibility(View.VISIBLE);
 
                 }else if(checkedId==R.id.rb14) {
                     rb14.setChecked(true);
                     vector[6][0]="NO";
                     spin7.setVisibility(View.GONE);
+                    et7.setVisibility(View.GONE);
 
                 }else{
                     vector[0][0]="";
@@ -861,10 +987,12 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                     rb15.setChecked(true);
                     vector[7][0]="SI";
                     spin8.setVisibility(View.VISIBLE);
+                    et8.setVisibility(View.VISIBLE);
                 }else if(checkedId==R.id.rb16) {
                     rb16.setChecked(true);
                     vector[7][0]="NO";
                     spin8.setVisibility(View.GONE);
+                    et8.setVisibility(View.GONE);
 
                 }else{
                     vector[0][0]="";
@@ -886,11 +1014,13 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                     rb17.setChecked(true);
                     vector[8][0]="SI";
                     spin9.setVisibility(View.VISIBLE);
+                    et9.setVisibility(View.VISIBLE);
 
                 }else if(checkedId==R.id.rb18) {
                     rb18.setChecked(true);
                     vector[8][0]="NO";
                     spin9.setVisibility(View.GONE);
+                    et9.setVisibility(View.GONE);
 
 
                 }else{
@@ -913,11 +1043,13 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                     rb19.setChecked(true);
                     vector[9][0]="SI";
                     spin10.setVisibility(View.VISIBLE);
+                    et10.setVisibility(View.VISIBLE);
 
                 }else if(checkedId==R.id.rb20) {
                     rb20.setChecked(true);
                     vector[9][0]="NO";
                     spin10.setVisibility(View.GONE);
+                    et10.setVisibility(View.GONE);
 
 
                 }else{
@@ -1043,7 +1175,169 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             }
         });
 
+        et1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector3[0]=et1.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector3[1]=et2.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et3.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector3[2]=et3.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et4.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector3[3]=et4.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et5.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector3[4]=et5.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et6.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector3[5]=et6.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et7.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector3[6]=et7.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et8.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector3[7]=et8.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et9.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector3[8]=et9.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et10.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector3[9]=et10.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
     }
+
+
 
 
 
@@ -1111,6 +1405,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                     System.out.println(i);
                 }
             }
+
         }
 
             if (vector2[1].equals("SI")) {
@@ -1255,27 +1550,27 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
                 tablaConcatenacion = tablaConcatenacion +
                         "<tr>" +
                         "<td>Escaleras homogéneas</td>";
-                agregarRenglon(vector[0][0], vector[0][1]);
+                agregarRenglon(vector[0][0], vector[0][1], vector3[0]);
 
                 tablaConcatenacion = tablaConcatenacion +
                         "<tr>" +
                         "<td>Cuenta con barandal</td>";
-                agregarRenglon(vector[1][0], vector[1][1]);
+                agregarRenglon(vector[1][0], vector[1][1], vector3[1]);
 
                 tablaConcatenacion = tablaConcatenacion +
                         "<tr>" +
                         "<td>Cuenta con pasamanos</td>";
-                agregarRenglon(vector[2][0], vector[2][1]);
+                agregarRenglon(vector[2][0], vector[2][1], vector3[2]);
 
                 tablaConcatenacion = tablaConcatenacion +
                         "<tr>" +
                         "<td>Cuenta con cinta antiderrapante</td>";
-                agregarRenglon(vector[3][0], vector[3][1]);
+                agregarRenglon(vector[3][0], vector[3][1], vector3[3]);
 
                 tablaConcatenacion = tablaConcatenacion +
                         "<tr>" +
                         "<td>Iluminación artificial</td>";
-                agregarRenglon(vector[4][0], vector[4][1]);
+                agregarRenglon(vector[4][0], vector[4][1], vector3[4]);
 
 
         tablaConcatenacion = tablaConcatenacion +
@@ -1314,27 +1609,27 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
 
                     "<tr>" +
                     "<td>Escaleras homogéneas</td>";
-            agregarRenglon(vector[5][0], vector[5][1]);
+            agregarRenglon(vector[5][0], vector[5][1], vector3[5]);
 
             tablaConcatenacion = tablaConcatenacion +
                     "<tr>" +
                     "<td>Cuenta con barandal</td>";
-            agregarRenglon(vector[6][0], vector[6][1]);
+            agregarRenglon(vector[6][0], vector[6][1], vector3[6]);
 
             tablaConcatenacion = tablaConcatenacion +
                     "<tr>" +
                     "<td>Cuenta con pasamanos</td>";
-            agregarRenglon(vector[7][0], vector[7][1]);
+            agregarRenglon(vector[7][0], vector[7][1], vector3[7]);
 
             tablaConcatenacion = tablaConcatenacion +
                     "<tr>" +
                     "<td>Cuenta con cinta antiderrapante</td>";
-            agregarRenglon(vector[8][0], vector[8][1]);
+            agregarRenglon(vector[8][0], vector[8][1], vector3[8]);
 
             tablaConcatenacion = tablaConcatenacion +
                     "<tr>" +
                     "<td>Iluminación artificial</td>";
-            agregarRenglon(vector[9][0], vector[9][1]);
+            agregarRenglon(vector[9][0], vector[9][1], vector3[9]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "</tbody>"+
@@ -1342,7 +1637,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
         return tablaConcatenacion;
 
     }
-    public static void agregarRenglon(String decision, String estado) {
+    public static void agregarRenglon(String decision, String estado, String observaciones) {
         if (decision.equals("SI")) {
             tablaConcatenacion= tablaConcatenacion +
                     "<td style=\"background-color:Yellow; text-align:center;\">SI</td>" +
@@ -1386,7 +1681,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
 
         if (decision.equals("SI")) {
             tablaConcatenacion= tablaConcatenacion +
-                    "<td style=\"text-align:center;\">"+""+"</td>" +
+                    "<td >"+observaciones+"</td>" +
                     "</tr>";
         }
 

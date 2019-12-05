@@ -68,9 +68,6 @@ android:stretchColumns="1">
 
 
 
-
-
-
         <!-- El inmueble cuenta con:  -->
 
 
@@ -110,6 +107,7 @@ android:stretchColumns="1">
         </TableRow>
 
 
+
         <TableRow android:layout_height="122dp">
         <Spinner
             android:id="@+id/spinner1"
@@ -122,7 +120,19 @@ android:stretchColumns="1">
         </Spinner>
         </TableRow>
 
+        <TableRow android:layout_height="122dp">
 
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"/>
+
+        </TableRow>
 
 
         <TableRow android:layout_height="122dp">
@@ -171,7 +181,19 @@ android:stretchColumns="1">
 
             </Spinner>
         </TableRow>
+        <TableRow android:layout_height="122dp">
 
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"/>
+
+        </TableRow>
 
 
         <TableRow android:layout_height="122dp">
@@ -222,6 +244,20 @@ android:stretchColumns="1">
 
         <TableRow android:layout_height="122dp">
 
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"/>
+
+        </TableRow>
+
+        <TableRow android:layout_height="122dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
@@ -267,7 +303,19 @@ android:stretchColumns="1">
             </Spinner>
         </TableRow>
 
+        <TableRow android:layout_height="122dp">
 
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"/>
+
+        </TableRow>
 
 
 
@@ -321,7 +369,19 @@ android:stretchColumns="1">
             </Spinner>
         </TableRow>
 
+        <TableRow android:layout_height="122dp">
 
+            <EditText
+                android:id="@+id/editText5"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"/>
+
+        </TableRow>
 
 
         <!--- /////////////////////////////////////////////////// -->
@@ -424,6 +484,19 @@ android:stretchColumns="1">
             </Spinner>
         </TableRow>
 
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/editText6"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"/>
+
+        </TableRow>
 
 
         <TableRow android:layout_height="122dp">
@@ -475,6 +548,20 @@ android:stretchColumns="1">
 
         <TableRow android:layout_height="122dp">
 
+            <EditText
+                android:id="@+id/editText7"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"/>
+
+        </TableRow>
+
+        <TableRow android:layout_height="122dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
@@ -519,6 +606,19 @@ android:stretchColumns="1">
             </Spinner>
         </TableRow>
 
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/editText8"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"/>
+
+        </TableRow>
 
         <!--- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
@@ -571,6 +671,19 @@ android:stretchColumns="1">
             </Spinner>
         </TableRow>
 
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/editText9"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"/>
+
+        </TableRow>
 
 
         <TableRow android:layout_height="122dp">
@@ -619,7 +732,19 @@ android:stretchColumns="1">
         </TableRow>
 
 
+        <TableRow android:layout_height="122dp">
 
+            <EditText
+                android:id="@+id/editText10"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"/>
+
+        </TableRow>
 
         <!--- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
