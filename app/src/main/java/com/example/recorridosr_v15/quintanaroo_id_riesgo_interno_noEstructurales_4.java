@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -28,7 +30,9 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
     private RadioButton rb1, rb2, rb3, rb4, rb5, rb6, rb7, rb8, rb9, rb10, rb11, rb12, rb13, rb14, rb15, rb16, rb17, rb18,rb19,rb20;
     private RadioButton rb21, rb22, rb23, rb24, rb25, rb26, rb27, rb28, rb29, rb30, rb31, rb32;
     private RadioGroup rg1, rg2, rg3, rg4,rg5,rg6,rg7,rg8,rg9, rg10, rg11, rg12,rg13, rg14, rg15,rg16;
+    private EditText et1, et2, et3, et4, et5, et6, et7, et8, et9, et10, et11, et12, et13, et14, et15, et16;
     static String vector[]= {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""};
+    static String vector2[]= {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""};
 
     static File pdfFile;
     static File directorio2;
@@ -111,9 +115,94 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
         rb31 = (RadioButton) findViewById(R.id.rb31);
         rb32 = (RadioButton) findViewById(R.id.rb32);
 
+        et1 = (EditText) findViewById(R.id.editText1);
+        et2 = (EditText) findViewById(R.id.editText2);
+        et3 = (EditText) findViewById(R.id.editText3);
+        et4 = (EditText) findViewById(R.id.editText4);
+        et5 = (EditText) findViewById(R.id.editText5);
+        et6 = (EditText) findViewById(R.id.editText6);
+        et7 = (EditText) findViewById(R.id.editText7);
+        et8 = (EditText) findViewById(R.id.editText8);
+        et9 = (EditText) findViewById(R.id.editText9);
+        et10 = (EditText) findViewById(R.id.editText10);
+        et11 = (EditText) findViewById(R.id.editText11);
+        et12 = (EditText) findViewById(R.id.editText12);
+        et13 = (EditText) findViewById(R.id.editText13);
+        et14 = (EditText) findViewById(R.id.editText14);
+        et15 = (EditText) findViewById(R.id.editText15);
+        et16 = (EditText) findViewById(R.id.editText16);
+
+        et1.setVisibility(View.GONE);
+        et2.setVisibility(View.GONE);
+        et3.setVisibility(View.GONE);
+        et4.setVisibility(View.GONE);
+        et5.setVisibility(View.GONE);
+        et6.setVisibility(View.GONE);
+        et7.setVisibility(View.GONE);
+        et8.setVisibility(View.GONE);
+        et9.setVisibility(View.GONE);
+        et10.setVisibility(View.GONE);
+        et11.setVisibility(View.GONE);
+        et12.setVisibility(View.GONE);
+        et13.setVisibility(View.GONE);
+        et14.setVisibility(View.GONE);
+        et15.setVisibility(View.GONE);
+        et16.setVisibility(View.GONE);
+
+        if(!vector2[0].equals("") && vector2[0] != null){
+            et1.setText(vector2[0]);
+        }
+        if(!vector2[1].equals("") && vector2[1] != null){
+            et2.setText(vector2[1]);
+        }
+        if(!vector2[2].equals("") && vector2[2] != null){
+            et3.setText(vector2[2]);
+        }
+        if(!vector2[3].equals("") && vector2[3] != null){
+            et4.setText(vector2[3]);
+        }
+        if(!vector2[4].equals("") && vector2[4] != null){
+            et5.setText(vector2[4]);
+        }
+        if(!vector2[5].equals("") && vector2[5] != null){
+            et6.setText(vector2[5]);
+        }
+        if(!vector2[6].equals("") && vector2[6] != null){
+            et7.setText(vector2[6]);
+        }
+        if(!vector2[7].equals("") && vector2[7] != null){
+            et8.setText(vector2[7]);
+        }
+        if(!vector2[8].equals("") && vector2[8] != null){
+            et9.setText(vector2[8]);
+        }
+        if(!vector2[9].equals("") && vector2[9] != null){
+            et10.setText(vector2[9]);
+        }
+        if(!vector2[10].equals("") && vector2[10] != null){
+            et11.setText(vector2[10]);
+        }
+        if(!vector2[11].equals("") && vector2[11] != null){
+            et12.setText(vector2[11]);
+        }
+        if(!vector2[12].equals("") && vector2[12] != null){
+            et13.setText(vector2[12]);
+        }
+        if(!vector2[13].equals("") && vector2[13] != null){
+            et14.setText(vector2[13]);
+        }
+        if(!vector2[14].equals("") && vector2[14] != null){
+            et15.setText(vector2[14]);
+        }
+        if(!vector2[15].equals("") && vector2[15] != null){
+            et16.setText(vector2[15]);
+        }
+
+
         if (vector[0].equals("SI")) {
             rb1.setChecked(true);
             rb2.setChecked(false);
+            et1.setVisibility(View.VISIBLE);
         } else if (vector[0].equals("NO")) {
             rb1.setChecked(false);
             rb2.setChecked(true);
@@ -122,6 +211,7 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
         if (vector[1].equals("SI")) {
             rb3.setChecked(true);
             rb4.setChecked(false);
+            et2.setVisibility(View.VISIBLE);
         } else if (vector[1].equals("NO")) {
             rb3.setChecked(false);
             rb4.setChecked(true);
@@ -130,6 +220,7 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
         if (vector[2].equals("SI")) {
             rb5.setChecked(true);
             rb6.setChecked(false);
+            et3.setVisibility(View.VISIBLE);
         } else if (vector[2].equals("NO")) {
             rb5.setChecked(false);
             rb6.setChecked(true);
@@ -138,6 +229,7 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
         if (vector[3].equals("SI")) {
             rb7.setChecked(true);
             rb8.setChecked(false);
+            et4.setVisibility(View.VISIBLE);
         } else if (vector[3].equals("NO")) {
             rb7.setChecked(false);
             rb8.setChecked(true);
@@ -146,6 +238,7 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
         if (vector[4].equals("SI")) {
             rb9.setChecked(true);
             rb10.setChecked(false);
+            et5.setVisibility(View.VISIBLE);
         } else if (vector[4].equals("NO")) {
             rb9.setChecked(false);
             rb10.setChecked(true);
@@ -155,6 +248,7 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
         if (vector[5].equals("SI")) {
             rb11.setChecked(true);
             rb12.setChecked(false);
+            et6.setVisibility(View.VISIBLE);
         } else if (vector[5].equals("NO")) {
             rb11.setChecked(false);
             rb12.setChecked(true);
@@ -163,6 +257,7 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
         if (vector[6].equals("SI")) {
             rb13.setChecked(true);
             rb14.setChecked(false);
+            et7.setVisibility(View.VISIBLE);
         } else if (vector[6].equals("NO")) {
             rb13.setChecked(false);
             rb14.setChecked(true);
@@ -171,6 +266,7 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
         if (vector[7].equals("SI")) {
             rb15.setChecked(true);
             rb16.setChecked(false);
+            et8.setVisibility(View.VISIBLE);
         } else if (vector[7].equals("NO")) {
             rb15.setChecked(false);
             rb16.setChecked(true);
@@ -179,6 +275,7 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
         if (vector[8].equals("SI")) {
             rb17.setChecked(true);
             rb18.setChecked(false);
+            et9.setVisibility(View.VISIBLE);
         } else if (vector[8].equals("NO")) {
             rb17.setChecked(false);
             rb18.setChecked(true);
@@ -187,6 +284,7 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
         if (vector[9].equals("SI")) {
             rb19.setChecked(true);
             rb20.setChecked(false);
+            et10.setVisibility(View.VISIBLE);
         } else if (vector[9].equals("NO")) {
             rb19.setChecked(false);
             rb20.setChecked(true);
@@ -196,6 +294,7 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
         if (vector[10].equals("SI")) {
             rb21.setChecked(true);
             rb22.setChecked(false);
+            et11.setVisibility(View.VISIBLE);
         } else if (vector[10].equals("NO")) {
             rb21.setChecked(false);
             rb22.setChecked(true);
@@ -204,6 +303,7 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
         if (vector[11].equals("SI")) {
             rb23.setChecked(true);
             rb24.setChecked(false);
+            et12.setVisibility(View.VISIBLE);
         } else if (vector[11].equals("NO")) {
             rb23.setChecked(false);
             rb24.setChecked(true);
@@ -212,6 +312,7 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
         if (vector[12].equals("SI")) {
             rb25.setChecked(true);
             rb26.setChecked(false);
+            et13.setVisibility(View.VISIBLE);
         } else if (vector[12].equals("NO")) {
             rb25.setChecked(false);
             rb26.setChecked(true);
@@ -220,6 +321,7 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
         if (vector[13].equals("SI")) {
             rb27.setChecked(true);
             rb28.setChecked(false);
+            et14.setVisibility(View.VISIBLE);
         } else if (vector[13].equals("NO")) {
             rb27.setChecked(false);
             rb28.setChecked(true);
@@ -228,6 +330,7 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
         if (vector[14].equals("SI")) {
             rb29.setChecked(true);
             rb30.setChecked(false);
+            et15.setVisibility(View.VISIBLE);
         } else if (vector[14].equals("NO")) {
             rb29.setChecked(false);
             rb30.setChecked(true);
@@ -237,6 +340,7 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
         if (vector[15].equals("SI")) {
             rb31.setChecked(true);
             rb32.setChecked(false);
+            et16.setVisibility(View.VISIBLE);
         } else if (vector[15].equals("NO")) {
             rb31.setChecked(false);
             rb32.setChecked(true);
@@ -248,11 +352,11 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
                 if(checkedId==R.id.rb1){
 
                     vector[0]="SI";
-
+                    et1.setVisibility(View.VISIBLE);
                 }else if(checkedId==R.id.rb2) {
                     vector[0]="NO";
 
-
+                    et1.setVisibility(View.GONE);
                 }
 
             }
@@ -265,11 +369,12 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
                 if(checkedId==R.id.rb3){
 
                     vector[1]="SI";
+                    et2.setVisibility(View.VISIBLE);
 
                 }else if(checkedId==R.id.rb4) {
 
                     vector[1]="NO";
-
+                    et2.setVisibility(View.GONE);
 
                 }
 
@@ -282,13 +387,13 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb5){
                     vector[2]="SI";
-
+                    et3.setVisibility(View.VISIBLE);
 
                 }else if(checkedId==R.id.rb6) {
 
                     vector[2]="NO";
 
-
+                    et3.setVisibility(View.GONE);
                 }
 
             }
@@ -302,11 +407,11 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
 
                     vector[3]="SI";
 
-
+                    et4.setVisibility(View.VISIBLE);
                 }else if(checkedId==R.id.rb8) {
 
                     vector[3]="NO";
-
+                    et4.setVisibility(View.GONE);
                 }
 
             }
@@ -319,12 +424,12 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
                 if(checkedId==R.id.rb9){
 
                     vector[4]="SI";
-
+                    et5.setVisibility(View.VISIBLE);
 
                 }else if(checkedId==R.id.rb10) {
 
                     vector[4]="NO";
-
+                    et5.setVisibility(View.GONE);
 
 
                 }
@@ -339,12 +444,12 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
                 if(checkedId==R.id.rb11){
 
                     vector[5]="SI";
-
+                    et6.setVisibility(View.VISIBLE);
 
                 }else if(checkedId==R.id.rb12) {
 
                     vector[5]="NO";
-
+                    et6.setVisibility(View.GONE);
 
                 }
 
@@ -359,12 +464,12 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
                 if(checkedId==R.id.rb13){
 
                     vector[6]="SI";
-
+                    et7.setVisibility(View.VISIBLE);
 
                 }else if(checkedId==R.id.rb14) {
 
                     vector[6]="NO";
-
+                    et7.setVisibility(View.GONE);
 
                 }
 
@@ -378,11 +483,11 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
                 if(checkedId==R.id.rb15){
 
                     vector[7]="SI";
-
+                    et8.setVisibility(View.VISIBLE);
                 }else if(checkedId==R.id.rb16) {
 
                     vector[7]="NO";
-
+                    et8.setVisibility(View.GONE);
 
                 }
 
@@ -396,14 +501,14 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
                 if(checkedId==R.id.rb17){
 
                     vector[8]="SI";
-
+                    et9.setVisibility(View.VISIBLE);
 
 
                 }else if(checkedId==R.id.rb18) {
 
                     vector[8]="NO";
 
-
+                    et9.setVisibility(View.GONE);
 
                 }
 
@@ -424,10 +529,10 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
                 if(checkedId==R.id.rb19){
 
                     vector[9]="SI";
-
+                    et10.setVisibility(View.VISIBLE);
                 }else if(checkedId==R.id.rb20) {
                     vector[9]="NO";
-
+                    et10.setVisibility(View.GONE);
 
                 }
 
@@ -441,12 +546,12 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
                 if(checkedId==R.id.rb21){
 
                     vector[10]="SI";
-
+                    et11.setVisibility(View.VISIBLE);
                 }else if(checkedId==R.id.rb22) {
 
                     vector[10]="NO";
 
-
+                    et11.setVisibility(View.GONE);
                 }
 
             }
@@ -459,11 +564,11 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
                 if(checkedId==R.id.rb23){
                     vector[11]="SI";
 
-
+                    et12.setVisibility(View.VISIBLE);
                 }else if(checkedId==R.id.rb24) {
 
                     vector[11]="NO";
-
+                    et12.setVisibility(View.GONE);
 
                 }
 
@@ -478,11 +583,11 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
 
                     vector[12]="SI";
 
-
+                    et13.setVisibility(View.VISIBLE);
                 }else if(checkedId==R.id.rb26) {
 
                     vector[12]="NO";
-
+                    et13.setVisibility(View.GONE);
                 }
 
             }
@@ -496,11 +601,11 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
 
                     vector[13]="SI";
 
-
+                    et14.setVisibility(View.VISIBLE);
                 }else if(checkedId==R.id.rb28) {
 
                     vector[13]="NO";
-
+                    et14.setVisibility(View.GONE);
 
 
                 }
@@ -515,12 +620,12 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
                 if(checkedId==R.id.rb29){
 
                     vector[14]="SI";
-
+                    et15.setVisibility(View.VISIBLE);
 
                 }else if(checkedId==R.id.rb30) {
 
                     vector[14]="NO";
-
+                    et15.setVisibility(View.GONE);
 
                 }
 
@@ -536,14 +641,270 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
 
                     vector[15]="SI";
 
-
+                    et16.setVisibility(View.VISIBLE);
                 }else if(checkedId==R.id.rb32) {
 
                     vector[15]="NO";
-
+                    et16.setVisibility(View.GONE);
 
                 }
 
+            }
+        });
+
+        et1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[0]= et1.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[1]= et2.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et3.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[2]= et3.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et4.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[3]= et4.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et5.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[4]= et5.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et6.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[5]= et6.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et7.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[6]= et7.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et8.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[7]= et8.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et9.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[8]= et9.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et10.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[9]= et10.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et11.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[10]= et11.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et12.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[11]= et12.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et13.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[12]= et13.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et14.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[13]= et14.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et15.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[14]= et15.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et16.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[15]= et16.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
             }
         });
 
@@ -614,39 +975,39 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
                             "<tr>" +
                             "<td>1</td>"+
                             "<td>Anaqueles y/o estantería</td>";
-            agregarRenglon(vector[0]);
+            agregarRenglon(vector[0], vector2[0]);
 
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
                     "<td>2</td>"+
                     "<td>Vidrios</td>";
-            agregarRenglon(vector[1]);
+            agregarRenglon(vector[1], vector2[1]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
                     "<td>3</td>"+
                     "<td>Antenas</td>";
-            agregarRenglon(vector[2]);
+            agregarRenglon(vector[2], vector2[2]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
                     "<td>4</td>"+
                     "<td>Plafones</td>";
-            agregarRenglon(vector[3]);
+            agregarRenglon(vector[3], vector2[3]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
                     "<td>5</td>"+
                     "<td>Lámparas</td>";
-            agregarRenglon(vector[4]);
+            agregarRenglon(vector[4], vector2[4]);
 
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
                     "<td>6</td>"+
                     "<td>Elevadores</td>";
-            agregarRenglon(vector[5]);
+            agregarRenglon(vector[5], vector2[5]);
 
             tablaConcatenacion =  tablaConcatenacion +
                     "<tr>"+
@@ -657,25 +1018,25 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
                     "<tr>" +
                     "<td>7</td>"+
                     "<td>Cancelería</td>";
-            agregarRenglon(vector[6]);
+            agregarRenglon(vector[6], vector2[6]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
                     "<td>8</td>"+
                     "<td>Puertas y ventanas</td>";
-            agregarRenglon(vector[7]);
+            agregarRenglon(vector[7], vector2[7]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
                     "<td>9</td>"+
                     "<td>Elementos suspendidos</td>";
-            agregarRenglon(vector[8]);
+            agregarRenglon(vector[8], vector2[8]);
 
             tablaConcatenacion =  tablaConcatenacion +
                     "<tr>" +
                     "<td>10</td>"+
                     "<td>Muros falsos</td>";
-            agregarRenglon(vector[9]);
+            agregarRenglon(vector[9], vector2[9]);
 
             tablaConcatenacion =  tablaConcatenacion +
                     "<tr>"+
@@ -694,13 +1055,13 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
                     "<tr>" +
                     "<td>1</td>"+
                     "<td>Lambrines</td>";
-            agregarRenglon(vector[10]);
+            agregarRenglon(vector[10], vector2[10]);
 
             tablaConcatenacion =  tablaConcatenacion +
                     "<tr>" +
                     "<td>2</td>"+
                     "<td>Recubrimiento de material incombustible</td>";
-            agregarRenglon(vector[11]);
+            agregarRenglon(vector[11], vector2[11]);
 
             tablaConcatenacion =  tablaConcatenacion +
                     "<tr>"+
@@ -711,25 +1072,25 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
                     "<tr>" +
                     "<td>3</td>"+
                     "<td>Recubrimiento de material combustible</td>";
-            agregarRenglon(vector[12]);
+            agregarRenglon(vector[12], vector2[12]);
 
             tablaConcatenacion =  tablaConcatenacion +
                     "<tr>" +
                     "<td>4</td>"+
                     "<td>Pisos y desniveles</td>";
-            agregarRenglon(vector[13]);
+            agregarRenglon(vector[13], vector2[13]);
 
             tablaConcatenacion =  tablaConcatenacion +
                     "<tr>" +
                     "<td>5</td>"+
                     "<td>Pisos falsos</td>";
-            agregarRenglon(vector[14]);
+            agregarRenglon(vector[14], vector2[14]);
 
             tablaConcatenacion =  tablaConcatenacion +
                     "<tr>" +
                     "<td>6</td>"+
                     "<td>Losetas y azulejos</td>";
-            agregarRenglon(vector[15]);
+            agregarRenglon(vector[15], vector2[15]);
 
             tablaConcatenacion =  tablaConcatenacion +
                     "<tr>"+
@@ -743,12 +1104,12 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
 
             return tablaConcatenacion;
     }
-    public static void agregarRenglon(String decision) {
+    public static void agregarRenglon(String decision, String observacion) {
         if (decision.equals("SI")) {
             tablaConcatenacion= tablaConcatenacion +
                     "<td style=\"background-color:Yellow; text-align:center;\">SI</td>" +
                     "<td style=\"text-align:center;\">NO</td>" +
-                    "<td>"+""+"</td>" +
+                    "<td>"+observacion+"</td>" +
                     "</tr>";
         } else if(decision.equals("NO")){
             tablaConcatenacion= tablaConcatenacion +

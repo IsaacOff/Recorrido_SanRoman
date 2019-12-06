@@ -229,7 +229,6 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb1){
-
                     vector[0]="SI";
                     et2.setVisibility(View.VISIBLE);
                 }else if(checkedId==R.id.rb2) {

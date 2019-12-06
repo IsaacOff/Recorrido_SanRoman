@@ -143,7 +143,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Cuenta con barandal"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext2"
+                />
 
 
 
@@ -204,7 +207,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Cuenta con pasamanos"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext3"
+                />
 
 
             <RadioGroup
@@ -264,7 +270,9 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Cuenta con cinta antiderrapante"
-                android:textColor="#000000" />
+                android:textColor="#000000" android:clickable="true"
+                android:onClick="eventtext4"
+                />
 
 
             <RadioGroup
@@ -330,7 +338,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Iluminación artificial"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext5"
+                />
 
 
             <RadioGroup
@@ -507,7 +518,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Cuenta con barandal"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext7"
+                />
 
 
             <RadioGroup
@@ -568,7 +582,9 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Cuenta con pasamanos"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext8"/>
 
             <RadioGroup
                 android:id="@+id/Rg8"
@@ -632,7 +648,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Cuenta con cinta antiderrapante"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext9"
+                />
 
 
             <RadioGroup
@@ -694,7 +713,9 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Iluminación artificial"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext10"/>
 
             <RadioGroup
                 android:id="@+id/Rg10"
