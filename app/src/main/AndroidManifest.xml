@@ -7,6 +7,7 @@
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -51,6 +52,17 @@
         <activity android:name=".index_Yucatan" />
         <activity android:name=".index_Campeche" />
         <activity android:name=".MainActivity" />
+
+        <provider
+            android:authorities="com.example.recorridosr_v15.FileProvider"
+            android:name="androidx.core.content.FileProvider"
+            android:enabled="true"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+
+        </provider>
     </application>
 
 </manifest>
