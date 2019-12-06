@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -28,6 +29,7 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
     private RadioButton rb21, rb22, rb23, rb24;
     private RadioGroup rg1, rg2, rg3, rg4,rg5,rg6,rg7,rg8,rg9, rg10, rg11, rg12;
     static String vector[]= {"", "", "", "", "", "", "", "", "", "", "", ""};
+    private EditText et1, et2, et3, et4, et5, et6, et7, et8, et9, et10, et11, et12;
     static File pdfFile;
     static File directorio2;
     static String tablaConcatenacion="";
@@ -92,6 +94,22 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
         rg12= (RadioGroup) findViewById(R.id.Rg12);
         rb23 = (RadioButton) findViewById(R.id.rb23);
         rb24 = (RadioButton) findViewById(R.id.rb24);
+
+
+        //edit text codigo listo office
+        et1 = (EditText) findViewById(R.id.et1);
+        et2 = (EditText) findViewById(R.id.et2);
+        et3 = (EditText) findViewById(R.id.et3);
+        et4 = (EditText) findViewById(R.id.et4);
+        et5 = (EditText) findViewById(R.id.et5);
+        et6 = (EditText) findViewById(R.id.et6);
+        et7 = (EditText) findViewById(R.id.et7);
+        et8 = (EditText) findViewById(R.id.et8);
+        et9 = (EditText) findViewById(R.id.et9);
+        et10 = (EditText) findViewById(R.id.et10);
+        et11 = (EditText) findViewById(R.id.et11);
+        et12 = (EditText) findViewById(R.id.et12);
+
 
 
         if (vector[0].equals("SI")) {

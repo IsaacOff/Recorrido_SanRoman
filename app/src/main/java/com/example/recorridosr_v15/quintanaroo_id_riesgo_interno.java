@@ -1,12 +1,15 @@
 package com.example.recorridosr_v15;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -36,6 +39,15 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
         setContentView(R.layout.quintana_roo_id_riesgo_interno);
         this.setTitle("Riesgo interno_chetumal");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+
+        // Find the toolbar view inside the activity layout
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        // Sets the Toolbar to act as the ActionBar for this Activity window.
+        // Make sure the toolbar exists in the activity and is not null
+        setSupportActionBar(toolbar);
+
+
 
         /*directorio2 = new File(getIntent().getStringExtra("File"));
         if(directorio2 != null) {
@@ -351,6 +363,32 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
             }
         });
 
+    }
+
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.opcion1) {
+            Toast.makeText(this, "Se presionó la opción 1 del menú", Toast.LENGTH_LONG).show();
+            return true;
+        }
+        if (id == R.id.opcion2) {
+            Toast.makeText(this, "Se presionó la opción 2 del menú", Toast.LENGTH_LONG).show();
+            return true;
+        }
+        if (id == R.id.opcion3) {
+            Toast.makeText(this, "Se presionó la opción 3 del menú", Toast.LENGTH_LONG).show();
+            return true;
+        }        return super.onOptionsItemSelected(item);
     }
 
 

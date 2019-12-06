@@ -37,9 +37,13 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
     private RadioButton rb61, rb62, rb63, rb64, rb65, rb66,rb67,rb68, rb69, rb70, rb71, rb72, rb73,rb74, rb75, rb76, rb77, rb78, rb79, rb80;
     private RadioButton rb81, rb82, rb83, rb84, rb85, rb86,rb87,rb88, rb89, rb90, rb91, rb92, rb93,rb94, rb95, rb96, rb97, rb98, rb99, rb100;
     private RadioButton rb101,rb102,rb103,rb104,rb105,rb106,rb107,rb108;
-    private EditText et1;
+    private EditText et1, et2,  et3,  et4,  et5,  et6,  et7,  et8,  et9, et10, et11, et12, et13, et14, et15, et16, et17, et18, et19, et20;
+    private EditText et21,et22, et23, et24, et25, et26, et27, et28, et29, et30, et31, et32, et33, et34, et35, et36, et37, et38, et39, et40, et41, et42, et43;
+    private EditText  et44,  et45,  et46,  et47,  et48,  et49, et50, et51, et52, et53, et54;
+
 
     static String vector[]={"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""};
+    //Vector para Edit Text
     static String vector2 = "";
     static File pdfFile;
     static File directorio2;
@@ -284,14 +288,122 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         rb108 = (RadioButton) findViewById(R.id.rb108);
 
 
-
-        //asigna los edit text a los et de aqui Rg 39
-        et1 = (EditText) findViewById(R.id.editText1);
+        //asignar EditText a las variables de aqui
+        et1  = (EditText) findViewById(R.id.et1);
+        et2  = (EditText) findViewById(R.id.et2);
+        et3  = (EditText) findViewById(R.id.et3);
+        et4  = (EditText) findViewById(R.id.et4);
+        et5  = (EditText) findViewById(R.id.et5);
+        et6  = (EditText) findViewById(R.id.et6);
+        et7  = (EditText) findViewById(R.id.et7);
+        et8  = (EditText) findViewById(R.id.et8);
+        et9  = (EditText) findViewById(R.id.et9);
+        et10 = (EditText) findViewById(R.id.et10);
+        et11 = (EditText) findViewById(R.id.et11);
+        et12 = (EditText) findViewById(R.id.et12);
+        et13 = (EditText) findViewById(R.id.et13);
+        et14 = (EditText) findViewById(R.id.et14);
+        et15 = (EditText) findViewById(R.id.et15);
+        et16 = (EditText) findViewById(R.id.et16);
+        et17 = (EditText) findViewById(R.id.et17);
+        et18 = (EditText) findViewById(R.id.et18);
+        et19 = (EditText) findViewById(R.id.et19);
+        et20 = (EditText) findViewById(R.id.et20);
+        et21 = (EditText) findViewById(R.id.et21);
+        et22 = (EditText) findViewById(R.id.et22);
+        et23 = (EditText) findViewById(R.id.et23);
+        et24 = (EditText) findViewById(R.id.et24);
+        et25 = (EditText) findViewById(R.id.et25);
+        et26 = (EditText) findViewById(R.id.et26);
+        et27 = (EditText) findViewById(R.id.et27);
+        et28 = (EditText) findViewById(R.id.et28);
+        et29 = (EditText) findViewById(R.id.et29);
+        et30 = (EditText) findViewById(R.id.et30);
+        et31 = (EditText) findViewById(R.id.et31);
+        et32 = (EditText) findViewById(R.id.et32);
+        et33 = (EditText) findViewById(R.id.et33);
+        et34 = (EditText) findViewById(R.id.et34);
+        et35 = (EditText) findViewById(R.id.et35);
+        et36 = (EditText) findViewById(R.id.et36);
+        et37 = (EditText) findViewById(R.id.et37);
+        et38 = (EditText) findViewById(R.id.et38);
+        et39 = (EditText) findViewById(R.id.et39);
+        et40 = (EditText) findViewById(R.id.et40);
+        et41 = (EditText) findViewById(R.id.et41);
+        et42 = (EditText) findViewById(R.id.et42);
+        et43 = (EditText) findViewById(R.id.et43);
+        et44 = (EditText) findViewById(R.id.et44);
+        et45 = (EditText) findViewById(R.id.et45);
+        et46 = (EditText) findViewById(R.id.et46);
+        et47 = (EditText) findViewById(R.id.et47);
+        et48 = (EditText) findViewById(R.id.et48);
+        et49 = (EditText) findViewById(R.id.et49);
+        et50 = (EditText) findViewById(R.id.et50);
+        et51 = (EditText) findViewById(R.id.et51);
+        et52 = (EditText) findViewById(R.id.et52);
+        et53 = (EditText) findViewById(R.id.et53);
+        et54 = (EditText) findViewById(R.id.et54);
 
 
 
         //Ocultar EditText
         et1.setVisibility(View.GONE);
+        et2.setVisibility(View.GONE);
+        et3.setVisibility(View.GONE);
+        et4.setVisibility(View.GONE);
+        et5.setVisibility(View.GONE);
+        et6.setVisibility(View.GONE);
+        et7.setVisibility(View.GONE);
+        et8.setVisibility(View.GONE);
+        et9.setVisibility(View.GONE);
+        et10.setVisibility(View.GONE);
+        et11.setVisibility(View.GONE);
+        et12.setVisibility(View.GONE);
+        et13.setVisibility(View.GONE);
+        et14.setVisibility(View.GONE);
+        et15.setVisibility(View.GONE);
+        et16.setVisibility(View.GONE);
+        et17.setVisibility(View.GONE);
+        et18.setVisibility(View.GONE);
+        et19.setVisibility(View.GONE);
+        et20.setVisibility(View.GONE);
+        et21.setVisibility(View.GONE);
+        et22.setVisibility(View.GONE);
+        et23.setVisibility(View.GONE);
+        et24.setVisibility(View.GONE);
+        et25.setVisibility(View.GONE);
+        et26.setVisibility(View.GONE);
+        et27.setVisibility(View.GONE);
+        et28.setVisibility(View.GONE);
+        et29.setVisibility(View.GONE);
+        et30.setVisibility(View.GONE);
+        et31.setVisibility(View.GONE);
+        et32.setVisibility(View.GONE);
+        et33.setVisibility(View.GONE);
+        et34.setVisibility(View.GONE);
+        et35.setVisibility(View.GONE);
+        et36.setVisibility(View.GONE);
+        et37.setVisibility(View.GONE);
+        et38.setVisibility(View.GONE);
+        et39.setVisibility(View.GONE);
+        et40.setVisibility(View.GONE);
+        et41.setVisibility(View.GONE);
+        et42.setVisibility(View.GONE);
+        et43.setVisibility(View.GONE);
+        et44.setVisibility(View.GONE);
+        et45.setVisibility(View.GONE);
+        et46.setVisibility(View.GONE);
+        et47.setVisibility(View.GONE);
+        et48.setVisibility(View.GONE);
+        et49.setVisibility(View.GONE);
+        et50.setVisibility(View.GONE);
+        et51.setVisibility(View.GONE);
+        et52.setVisibility(View.GONE);
+        et53.setVisibility(View.GONE);
+        et54.setVisibility(View.GONE);
+
+
+
 
 
 
@@ -744,7 +856,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
 
 
 
-        et1.addTextChangedListener(new TextWatcher() {
+     /*   et1.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -758,7 +870,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
             }
-        });
+        });*/
         //Verificacion de los radiobutton
 
 

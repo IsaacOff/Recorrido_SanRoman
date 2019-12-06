@@ -23,7 +23,8 @@
         <activity android:name=".quintanaroo_id_riesgo_interno_instalaciones_3" />
         <activity android:name=".quintanaroo_id_riesgo_interno_escaleraservicio_2" />
         <activity android:name=".quintanaroo_id_riesgo_interno_estructura_1" />
-        <activity android:name=".quintanaroo_id_riesgo_interno" />
+        <activity android:name=".quintanaroo_id_riesgo_interno"
+            android:theme="@style/AppTheme2"/>
         <activity android:name=".quintanaroo_id_riesgo_externo" />
         <activity android:name=".quintanaroo_id_riesgo" />
         <activity android:name=".quintanaroo_anexo10_RecursosMateriales" />

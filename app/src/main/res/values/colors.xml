@@ -8,4 +8,13 @@
 
     <color name="focus">#3260F5</color>
     <color name="ET">#26F248</color>
+
+
+
+
+    <color name="ControlNormal">#ffffff</color>
+    <!-- Applies to views in their activated state (i.e checked or switches) -->
+    <color name="ControlActivated">#F10000</color>
+    <!-- Applied to framework control highlights (i.e ripples or list selectors) -->
+    <color name="ControlHighlight">#0007F1</color>
 </resources>

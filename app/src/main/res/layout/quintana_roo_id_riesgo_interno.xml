@@ -8,6 +8,13 @@ android:padding="5dp"
 tools:context=".quintanaroo_id_riesgo_interno"
 android:stretchColumns="1">
 
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
     <TableRow
         android:layout_height="25dp"
         android:background="#128675">
