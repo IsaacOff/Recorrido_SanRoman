@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -30,6 +32,7 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
     private RadioGroup rg1, rg2, rg3, rg4,rg5,rg6,rg7,rg8,rg9, rg10, rg11, rg12;
     static String vector[]= {"", "", "", "", "", "", "", "", "", "", "", ""};
     private EditText et1, et2, et3, et4, et5, et6, et7, et8, et9, et10, et11, et12;
+    static String vector2[]= {"", "", "", "", "", "", "", "", "", "", "", ""};
     static File pdfFile;
     static File directorio2;
     static String tablaConcatenacion="";
@@ -109,6 +112,58 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
         et10 = (EditText) findViewById(R.id.et10);
         et11 = (EditText) findViewById(R.id.et11);
         et12 = (EditText) findViewById(R.id.et12);
+
+        //Ocultar EditText
+        et1.setVisibility(View.GONE);
+        et2.setVisibility(View.GONE);
+        et3.setVisibility(View.GONE);
+        et4.setVisibility(View.GONE);
+        et5.setVisibility(View.GONE);
+        et6.setVisibility(View.GONE);
+        et7.setVisibility(View.GONE);
+        et8.setVisibility(View.GONE);
+        et9.setVisibility(View.GONE);
+        et10.setVisibility(View.GONE);
+        et11.setVisibility(View.GONE);
+        et12.setVisibility(View.GONE);
+
+
+        if(!vector2[0].equals("") && vector2[0] != null){
+            et1.setText(vector2[0]);
+        }
+        if(!vector2[1].equals("") && vector2[1] != null){
+            et2.setText(vector2[1]);
+        }
+        if(!vector2[2].equals("") && vector2[2] != null){
+            et3.setText(vector2[2]);
+        }
+        if(!vector2[3].equals("") && vector2[3] != null){
+            et4.setText(vector2[3]);
+        }
+        if(!vector2[4].equals("") && vector2[4] != null){
+            et5.setText(vector2[4]);
+        }
+        if(!vector2[5].equals("") && vector2[5] != null){
+            et6.setText(vector2[5]);
+        }
+        if(!vector2[6].equals("") && vector2[6] != null){
+            et7.setText(vector2[6]);
+        }
+        if(!vector2[7].equals("") && vector2[7] != null){
+            et8.setText(vector2[7]);
+        }
+        if(!vector2[8].equals("") && vector2[8] != null){
+            et9.setText(vector2[8]);
+        }
+        if(!vector2[9].equals("") && vector2[9] != null){
+            et10.setText(vector2[9]);
+        }
+        if(!vector2[10].equals("") && vector2[10] != null){
+            et11.setText(vector2[10]);
+        }
+        if(!vector2[11].equals("") && vector2[11] != null){
+            et12.setText(vector2[11]);
+        }
 
 
 
@@ -211,6 +266,7 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
         }
 
 
+        //Escuchadores agrupados por radios grups que contienen por par a las radio buttons
 
         rg1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -218,11 +274,11 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
                 if(checkedId==R.id.rb1){
 
                     vector[0]="SI";
-
+                    et1.setVisibility(View.VISIBLE);
                 }else if(checkedId==R.id.rb2) {
                     vector[0]="NO";
 
-
+                    et1.setVisibility(View.GONE);
                 }
 
             }
@@ -232,17 +288,24 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
         rg2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(checkedId==R.id.rb3){
+               if(!vector[1].equals("1")) {
+                   if (checkedId == R.id.rb3) {
 
-                    vector[1]="SI";
+                       vector[1] = "SI";
+                       et2.setVisibility(View.VISIBLE);
 
-                }else if(checkedId==R.id.rb4) {
+                   } else if (checkedId == R.id.rb4) {
 
-                    vector[1]="NO";
+                       vector[1] = "NO";
+                       et2.setVisibility(View.GONE);
 
-
-                }
-
+                   }
+               }else{
+                   vector[1] = "";
+                   rb3.setChecked(false);
+                   rb4.setChecked(false);
+                   et2.setVisibility(View.GONE);
+               }
             }
         });
 
@@ -252,13 +315,13 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(checkedId==R.id.rb5){
                     vector[2]="SI";
-
+                    et3.setVisibility(View.VISIBLE);
 
                 }else if(checkedId==R.id.rb6) {
 
                     vector[2]="NO";
 
-
+                    et3.setVisibility(View.GONE);
                 }
 
             }
@@ -272,11 +335,11 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
 
                     vector[3]="SI";
 
-
+                    et4.setVisibility(View.VISIBLE);
                 }else if(checkedId==R.id.rb8) {
 
                     vector[3]="NO";
-
+                    et4.setVisibility(View.GONE);
                 }
 
             }
@@ -289,12 +352,12 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
                 if(checkedId==R.id.rb9){
 
                     vector[4]="SI";
-
+                    et5.setVisibility(View.VISIBLE);
 
                 }else if(checkedId==R.id.rb10) {
 
                     vector[4]="NO";
-
+                    et5.setVisibility(View.GONE);
 
 
                 }
@@ -309,12 +372,12 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
                 if(checkedId==R.id.rb11){
 
                     vector[5]="SI";
-
+                    et6.setVisibility(View.VISIBLE);
 
                 }else if(checkedId==R.id.rb12) {
 
                     vector[5]="NO";
-
+                    et6.setVisibility(View.GONE);
 
                 }
 
@@ -329,12 +392,12 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
                 if(checkedId==R.id.rb13){
 
                     vector[6]="SI";
-
+                    et7.setVisibility(View.VISIBLE);
 
                 }else if(checkedId==R.id.rb14) {
 
                     vector[6]="NO";
-
+                    et7.setVisibility(View.GONE);
 
                 }
 
@@ -348,11 +411,11 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
                 if(checkedId==R.id.rb15){
 
                     vector[7]="SI";
-
+                    et8.setVisibility(View.VISIBLE);
                 }else if(checkedId==R.id.rb16) {
 
                     vector[7]="NO";
-
+                    et8.setVisibility(View.GONE);
 
                 }
 
@@ -366,26 +429,19 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
                 if(checkedId==R.id.rb17){
 
                     vector[8]="SI";
-
+                    et9.setVisibility(View.VISIBLE);
 
 
                 }else if(checkedId==R.id.rb18) {
 
                     vector[8]="NO";
 
-
+                    et9.setVisibility(View.GONE);
 
                 }
 
             }
         });
-
-
-
-
-
-
-        ///otro9-18
 
 
         rg10.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -394,10 +450,10 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
                 if(checkedId==R.id.rb19){
 
                     vector[9]="SI";
-
+                    et10.setVisibility(View.VISIBLE);
                 }else if(checkedId==R.id.rb20) {
                     vector[9]="NO";
-
+                    et10.setVisibility(View.GONE);
 
                 }
 
@@ -411,12 +467,12 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
                 if(checkedId==R.id.rb21){
 
                     vector[10]="SI";
-
+                    et11.setVisibility(View.VISIBLE);
                 }else if(checkedId==R.id.rb22) {
 
                     vector[10]="NO";
 
-
+                    et11.setVisibility(View.GONE);
                 }
 
             }
@@ -429,20 +485,236 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
                 if(checkedId==R.id.rb23){
                     vector[11]="SI";
 
-
+                    et12.setVisibility(View.VISIBLE);
                 }else if(checkedId==R.id.rb24) {
 
                     vector[11]="NO";
-
+                    et12.setVisibility(View.GONE);
 
                 }
 
             }
         });
 
+
+        //Escuchador de un edit text para ir guardando los datos mientras escribe el usuario
+        et1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[0]= et1.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[1]= et2.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et3.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[2]= et3.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et4.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[3]= et4.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et5.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[4]= et5.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et6.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[5]= et6.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et7.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[6]= et7.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et8.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[7]= et8.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et9.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[8]= et9.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et10.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[9]= et10.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et11.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[10]= et11.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        et12.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[11]= et12.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+
+
+
+
+
+
     }
 
 
+    public void eventtext2 (View view){
+        System.out.println("eventext2");
+        vector[1]= "1";
+        rb3.setChecked(false);
+        rb4.setChecked(false);
+
+
+        vector2[1]="";
+        et2.setVisibility(View.GONE);
+        et2.setText("");
+
+        if(vector[1]=="1"){
+            System.out.println("cambio");
+            vector[1]="";
+        }
+    }
 
 
 
@@ -482,6 +754,7 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
 
 
     }
+
 
 
 
