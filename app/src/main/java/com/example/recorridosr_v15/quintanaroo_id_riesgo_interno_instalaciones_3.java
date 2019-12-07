@@ -551,18 +551,31 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
         rg5.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(checkedId==R.id.rb9){
+                if(!vector[4].equals("1")) {
+                    if(checkedId==R.id.rb9){
 
-                    vector[4]="SI";
+                        vector[4]="SI";
+                        rb9.setChecked(true);
 
-                    et5.setVisibility(View.VISIBLE);
-                }else if(checkedId==R.id.rb10) {
+                        et5.setVisibility(View.VISIBLE);
+                    }else if(checkedId==R.id.rb10) {
 
-                    vector[4]="NO";
+                        vector[4]="NO";
+                        rb10.setChecked(true);
+                        et5.setVisibility(View.GONE);
+
+
+                    }
+
+                }else{
+                    vector[4] = "";
+                    rb9.setChecked(false);
+                    rb10.setChecked(false);
                     et5.setVisibility(View.GONE);
 
 
                 }
+
 
             }
         });
@@ -571,17 +584,30 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
         rg6.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(checkedId==R.id.rb11){
+                if(!vector[5].equals("1")) {
 
-                    vector[5]="SI";
-                    et6.setVisibility(View.VISIBLE);
+                    if(checkedId==R.id.rb11){
 
-                }else if(checkedId==R.id.rb12) {
+                        vector[5]="SI";
+                        rb11.setChecked(true);
+                        et6.setVisibility(View.VISIBLE);
 
-                    vector[5]="NO";
+                    }else if(checkedId==R.id.rb12) {
+
+                        vector[5]="NO";
+                        rb12.setChecked(true);
+                        et6.setVisibility(View.GONE);
+
+                    }
+                }else{
+                    vector[5] = "";
+                    rb11.setChecked(false);
+                    rb12.setChecked(false);
                     et6.setVisibility(View.GONE);
 
+
                 }
+
 
             }
         });
@@ -591,15 +617,29 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
         rg7.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(checkedId==R.id.rb13){
+                if(!vector[6].equals("1")) {
 
-                    vector[6]="SI";
-                    et7.setVisibility(View.VISIBLE);
+                    if(checkedId==R.id.rb13){
 
-                }else if(checkedId==R.id.rb14) {
+                        vector[6]="SI";
+                        rb13.setChecked(true);
+                        et7.setVisibility(View.VISIBLE);
 
-                    vector[6]="NO";
+                    }else if(checkedId==R.id.rb14) {
+
+                        vector[6]="NO";
+                        rb14.setChecked(true);
+                        et7.setVisibility(View.GONE);
+
+                    }
+
+                }else{
+                    vector[6] = "";
+                    rb13.setChecked(false);
+                    rb14.setChecked(false);
                     et7.setVisibility(View.GONE);
+
+
 
                 }
 
@@ -610,16 +650,30 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
         rg8.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(checkedId==R.id.rb15){
+                if(!vector[7].equals("1")) {
 
-                    vector[7]="SI";
-                    et8.setVisibility(View.VISIBLE);
-                }else if(checkedId==R.id.rb16) {
+                    if(checkedId==R.id.rb15){
 
-                    vector[7]="NO";
+                        vector[7]="SI";
+                        rb15.setChecked(true);
+                        et8.setVisibility(View.VISIBLE);
+                    }else if(checkedId==R.id.rb16) {
+
+                        vector[7]="NO";
+                        rb16.setChecked(true);
+                        et8.setVisibility(View.GONE);
+
+                    }
+                }else{
+                    vector[7] = "";
+                    rb15.setChecked(false);
+                    rb16.setChecked(false);
                     et8.setVisibility(View.GONE);
 
+
                 }
+
+
 
             }
         });
@@ -628,29 +682,36 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
         rg9.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(checkedId==R.id.rb17){
+                if(!vector[8].equals("1")) {
+                    if(checkedId==R.id.rb17){
 
-                    vector[8]="SI";
-                    et9.setVisibility(View.VISIBLE);
+                        vector[8]="SI";
+                        rb17.setChecked(true);
+                        et9.setVisibility(View.VISIBLE);
 
 
-                }else if(checkedId==R.id.rb18) {
+                    }else if(checkedId==R.id.rb18) {
 
-                    vector[8]="NO";
+                        vector[8]="NO";
+                        rb18.setChecked(true);
+                        et9.setVisibility(View.GONE);
+
+
+                    }
+                }else{
+                    vector[8] = "";
+                    rb17.setChecked(false);
+                    rb18.setChecked(false);
                     et9.setVisibility(View.GONE);
 
-
                 }
+
 
             }
         });
 
 
 
-
-
-
-        ///otro9-18
 
 
         rg10.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -675,17 +736,29 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
         rg11.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(checkedId==R.id.rb21){
+                if(!vector[11].equals("1")) {
+                    if(checkedId==R.id.rb21){
 
-                    vector[11]="SI";
-                    et10.setVisibility(View.VISIBLE);
+                        vector[11]="SI";
+                        rb21.setChecked(true);
+                        et10.setVisibility(View.VISIBLE);
 
-                }else if(checkedId==R.id.rb22) {
+                    }else if(checkedId==R.id.rb22) {
 
-                    vector[11]="NO";
+                        vector[11]="NO";
+                        rb22.setChecked(true);
+                        et10.setVisibility(View.GONE);
+
+                    }
+
+                }else{
+                    vector[11] = "";
+                    rb21.setChecked(false);
+                    rb22.setChecked(false);
                     et10.setVisibility(View.GONE);
 
                 }
+
 
             }
         });
@@ -789,16 +862,20 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
         rg17.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(checkedId==R.id.rb33){
 
-                    vector[17]="SI";
-                    et16.setVisibility(View.VISIBLE);
-                }else if(checkedId==R.id.rb34) {
+                    if(checkedId==R.id.rb33){
+                        vector[17]="SI";
+                        rb33.setChecked(true);
+                        et16.setVisibility(View.VISIBLE);
+                    }else if(checkedId==R.id.rb34) {
 
-                    vector[17]="NO";
-                    et16.setVisibility(View.GONE);
+                        vector[17]="NO";
+                        rb34.setChecked(true);
+                        et16.setVisibility(View.GONE);
 
-                }
+                    }
+
+
 
             }
         });
@@ -807,17 +884,30 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
         rg18.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(checkedId==R.id.rb35){
+                if(!vector[18].equals("1")) {
 
-                    vector[18]="SI";
+                    if(checkedId==R.id.rb35){
 
-                    et17.setVisibility(View.VISIBLE);
-                }else if(checkedId==R.id.rb36) {
+                        vector[18]="SI";
+                        rb35.setChecked(true);
+                        et17.setVisibility(View.VISIBLE);
+                    }else if(checkedId==R.id.rb36) {
 
-                    vector[18]="NO";
+                        vector[18]="NO";
+                        rb36.setChecked(true);
+                        et17.setVisibility(View.GONE);
+                    }
 
+                }else{
+                    vector[17] = "";
+                    rb35.setChecked(false);
+                    rb36.setChecked(false);
                     et17.setVisibility(View.GONE);
+
                 }
+
+
+
 
             }
         });
@@ -843,6 +933,7 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
         rg20.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+
                 if(checkedId==R.id.rb39){
 
                     vector[20]="SI";
@@ -864,17 +955,31 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
         rg21.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(checkedId==R.id.rb41){
+                if(!vector[22].equals("1")) {
+                    if(checkedId==R.id.rb41){
 
-                    vector[22]="SI";
-                    et19.setVisibility(View.VISIBLE);
+                        vector[22]="SI";
+                        rb41.setChecked(true);
+                        et19.setVisibility(View.VISIBLE);
 
-                }else if(checkedId==R.id.rb42) {
+                    }else if(checkedId==R.id.rb42) {
 
-                    vector[22]="NO";
+                        vector[22]="NO";
+                        rb42.setChecked(true);
+                        et19.setVisibility(View.GONE);
+
+                    }
+
+                }else{
+                    vector[22] = "";
+                    rb41.setChecked(false);
+                    rb42.setChecked(false);
                     et19.setVisibility(View.GONE);
 
+
                 }
+
+
 
             }
         });
@@ -882,16 +987,27 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
         rg22.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(checkedId==R.id.rb43){
+                if(!vector[23].equals("1")) {
+                    if(checkedId==R.id.rb43){
 
-                    vector[23]="SI";
-                    et20.setVisibility(View.VISIBLE);
+                        vector[23]="SI";
+                        rb43.setChecked(true);
+                        et20.setVisibility(View.VISIBLE);
 
-                }else if(checkedId==R.id.rb44) {
+                    }else if(checkedId==R.id.rb44) {
 
-                    vector[23]="NO";
+                        vector[23]="NO";
+                        rb44.setChecked(true);
+                        et20.setVisibility(View.GONE);
+                    }
 
+                }else{
+                    vector[23] = "";
+                    rb43.setChecked(false);
+                    rb44.setChecked(false);
                     et20.setVisibility(View.GONE);
+
+
                 }
 
             }
@@ -900,19 +1016,30 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
         rg23.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(checkedId==R.id.rb45){
+                if(!vector[24].equals("1")) {
+                    if(checkedId==R.id.rb45){
+                        vector[24]="SI";
+                        rb45.setChecked(true);
+                        edt3.setVisibility(View.VISIBLE);
 
-                    vector[24]="SI";
-                    edt3.setVisibility(View.VISIBLE);
+
+                    }else if(checkedId==R.id.rb46) {
+
+                        vector[24]="NO";
+                        rb46.setChecked(true);
+                        edt3.setVisibility(View.GONE);
 
 
-                }else if(checkedId==R.id.rb46) {
-
-                    vector[24]="NO";
+                    }
+                }else{
+                    vector[23] = "";
+                    rb45.setChecked(false);
+                    rb46.setChecked(false);
                     edt3.setVisibility(View.GONE);
 
 
                 }
+
 
             }
         });
@@ -1291,6 +1418,179 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
 
 
 
+    public void eventtext5 (View view){
+        System.out.println("eventext5");
+        vector[4]= "1";
+        rb9.setChecked(false);
+        rb10.setChecked(false);
+
+
+        vector2[4]="";
+        et5.setVisibility(View.GONE);
+        et5.setText("");
+
+        if(vector[4]=="1"){
+           // System.out.println("cambio");
+            vector[4]="";
+        }
+    }
+
+    public void eventtext6 (View view){
+        System.out.println("eventext6");
+        vector[5]= "1";
+        rb11.setChecked(false);
+        rb12.setChecked(false);
+
+
+        vector2[5]="";
+        et6.setVisibility(View.GONE);
+        et6.setText("");
+
+        if(vector[5]=="1"){
+          //  System.out.println("cambio");
+            vector[5]="";
+        }
+    }
+
+
+    public void event_text7 (View view){
+        System.out.println("eventext7");
+        vector[6]= "1";
+        rb13.setChecked(false);
+        rb14.setChecked(false);
+
+
+        vector2[6]="";
+        et7.setVisibility(View.GONE);
+        et7.setText("");
+
+        if(vector[6]=="1"){
+           // System.out.println("cambio");
+            vector[6]="";
+        }
+    }
+
+    public void event_text8 (View view){
+        System.out.println("eventext8");
+        vector[7]= "1";
+        rb15.setChecked(false);
+        rb16.setChecked(false);
+
+
+        vector2[7]="";
+        et8.setVisibility(View.GONE);
+        et8.setText("");
+
+        if(vector[7]=="1"){
+            // System.out.println("cambio");
+            vector[7]="";
+        }
+    }
+
+    public void event_text9 (View view){
+        System.out.println("eventext9");
+        vector[8]= "1";
+        rb17.setChecked(false);
+        rb18.setChecked(false);
+
+
+        vector2[8]="";
+        et9.setVisibility(View.GONE);
+        et9.setText("");
+
+        if(vector[8]=="1"){
+            // System.out.println("cambio");
+            vector[8]="";
+        }
+    }
+
+    public void event_text11 (View view){
+       // System.out.println("eventext9");
+        vector[11]= "1";
+        rb21.setChecked(false);
+        rb22.setChecked(false);
+
+
+        vector2[9]="";
+        et10.setVisibility(View.GONE);
+        et10.setText("");
+
+        if(vector[11]=="1"){
+            // System.out.println("cambio");
+            vector[11]="";
+        }
+    }
+
+
+    public void event_text18 (View view){
+        // System.out.println("eventext9");
+        vector[18]= "1";
+        rb35.setChecked(false);
+        rb36.setChecked(false);
+
+
+        vector2[16]="";
+        et17.setVisibility(View.GONE);
+        et17.setText("");
+
+        if(vector[18]=="1"){
+            // System.out.println("cambio");
+            vector[18]="";
+        }
+    }
+
+
+    public void event_text21 (View view){
+        // System.out.println("eventext9");
+        vector[22]= "1";
+        rb41.setChecked(false);
+        rb42.setChecked(false);
+
+
+        vector2[18]="";
+        et19.setVisibility(View.GONE);
+        et19.setText("");
+
+        if(vector[22]=="1"){
+            // System.out.println("cambio");
+            vector[22]="";
+        }
+    }
+
+
+    public void event_text22 (View view){
+        // System.out.println("eventext9");
+        vector[23]= "1";
+        rb43.setChecked(false);
+        rb44.setChecked(false);
+
+
+        vector2[19]="";
+        et20.setVisibility(View.GONE);
+        et20.setText("");
+
+        if(vector[23]=="1"){
+            // System.out.println("cambio");
+            vector[23]="";
+        }
+    }
+
+    public void event_text23 (View view){
+        // System.out.println("eventext9");
+        vector[24]= "1";
+        rb45.setChecked(false);
+        rb46.setChecked(false);
+
+
+        vector[25]="";
+        edt3.setVisibility(View.GONE);
+        edt3.setText("");
+
+        if(vector[24]=="1"){
+            // System.out.println("cambio");
+            vector[24]="";
+        }
+    }
 
 
     public static boolean siguiente4() {

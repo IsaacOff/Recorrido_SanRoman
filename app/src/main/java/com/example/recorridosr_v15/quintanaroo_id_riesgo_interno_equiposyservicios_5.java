@@ -292,11 +292,13 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
                    if (checkedId == R.id.rb3) {
 
                        vector[1] = "SI";
+                       rb3.setChecked(true);
                        et2.setVisibility(View.VISIBLE);
 
                    } else if (checkedId == R.id.rb4) {
 
                        vector[1] = "NO";
+                       rb4.setChecked(true);
                        et2.setVisibility(View.GONE);
 
                    }
