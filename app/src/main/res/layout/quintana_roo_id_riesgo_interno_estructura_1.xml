@@ -6,6 +6,13 @@ android:layout_height="match_parent"
 tools:context=".quintanaroo_id_riesgo_interno_estructura_1"
 android:stretchColumns="1">
 
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 <TableRow android:background="#128675">
 
     <TextView

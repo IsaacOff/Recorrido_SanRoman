@@ -1,12 +1,15 @@
 package com.example.recorridosr_v15;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -48,6 +51,16 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
 
         this.setTitle("Riesgo interno_chetumal");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+
+
+        // Implementa el menu para que se vea en esta vista en especifico
+        // Find the toolbar view inside the activity layout
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        // Sets the Toolbar to act as the ActionBar for this Activity window.
+        // Make sure the toolbar exists in the activity and is not null
+        setSupportActionBar(toolbar);
+
 
 
         //Asigna los Rg y rb del xml a los de aqui
@@ -910,6 +923,64 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
 
 
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.opcion1) {
+            Toast.makeText(this, "Actividad 1 abierta", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_id_riesgo_interno.class);
+            startActivity(intent);
+
+
+            return true;
+        }
+        if (id == R.id.opcion2) {
+            Toast.makeText(this, "Actividad 2 abierta", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_estructura_1.class);
+            startActivity(intent);
+            return true;
+        }
+        if (id == R.id.opcion3) {
+            Toast.makeText(this, "Actividad 3 abierta", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_escaleraservicio_2.class);
+            startActivity(intent);
+            return true;
+        }
+        if (id == R.id.opcion4) {
+            Toast.makeText(this, "Actividad 4 abierta", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_instalaciones_3.class);
+            startActivity(intent);
+            return true;
+        }
+        if (id == R.id.opcion5) {
+            Toast.makeText(this, "Actividad 5 abierta", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_noEstructurales_4.class);
+            startActivity(intent);
+            return true;
+        }
+        if (id == R.id.opcion6) {
+            Toast.makeText(this, "Actividad 6 abierta", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_equiposyservicios_5.class);
+            startActivity(intent);
+            return true;
+        }
+        if (id == R.id.opcion7) {
+            Toast.makeText(this, "Actividad 7 abierta", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_otros_6.class);
+            startActivity(intent);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 
 
     public static boolean siguiente5() {

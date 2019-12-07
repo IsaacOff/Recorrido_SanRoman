@@ -365,7 +365,7 @@ android:stretchColumns="1">
             android:layout_column="0"
             android:ems="10"
             android:hint="Fecha de ultima recarga"
-            android:inputType="date">
+            android:inputType="datetime">
 
         </EditText>
 
@@ -376,7 +376,7 @@ android:stretchColumns="1">
             android:layout_column="0"
             android:ems="10"
             android:hint="Fecha de proxima recarga"
-            android:inputType="date">
+            android:inputType="datetime">
 
         </EditText>
 

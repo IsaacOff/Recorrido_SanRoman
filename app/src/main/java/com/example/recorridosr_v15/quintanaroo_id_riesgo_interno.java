@@ -378,19 +378,51 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.opcion1) {
-            Toast.makeText(this, "Se presionó la opción 1 del menú", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Actividad 1 abierta", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_id_riesgo_interno.class);
+            startActivity(intent);
+
+
             return true;
         }
         if (id == R.id.opcion2) {
-            Toast.makeText(this, "Se presionó la opción 2 del menú", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Actividad 2 abierta", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_estructura_1.class);
+            startActivity(intent);
             return true;
         }
         if (id == R.id.opcion3) {
-            Toast.makeText(this, "Se presionó la opción 3 del menú", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Actividad 3 abierta", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_escaleraservicio_2.class);
+            startActivity(intent);
             return true;
-        }        return super.onOptionsItemSelected(item);
+        }
+        if (id == R.id.opcion4) {
+            Toast.makeText(this, "Actividad 4 abierta", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_instalaciones_3.class);
+            startActivity(intent);
+            return true;
+        }
+        if (id == R.id.opcion5) {
+            Toast.makeText(this, "Actividad 5 abierta", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_noEstructurales_4.class);
+            startActivity(intent);
+            return true;
+        }
+        if (id == R.id.opcion6) {
+            Toast.makeText(this, "Actividad 6 abierta", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_equiposyservicios_5.class);
+            startActivity(intent);
+            return true;
+        }
+        if (id == R.id.opcion7) {
+            Toast.makeText(this, "Actividad 7 abierta", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_id_riesgo_interno_otros_6.class);
+            startActivity(intent);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
-
 
 
 
