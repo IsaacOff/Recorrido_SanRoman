@@ -53,7 +53,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Anaqueles y/o estantería"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext1"
+                />
 
             <RadioGroup
                 android:id="@+id/Rg1"
@@ -89,7 +92,7 @@ android:stretchColumns="1">
                 android:layout_height="50dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Especifique:"
+                android:hint="Observaciones"
                 android:inputType="textPersonName"
                 android:textColor="#3260F5"
                 android:theme="@style/EditText"/>
@@ -106,7 +109,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Vidrios"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext2"
+                />
 
 
 
@@ -143,7 +149,7 @@ android:stretchColumns="1">
                 android:layout_height="50dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Especifique:"
+                android:hint="Observaciones"
                 android:inputType="textPersonName"
                 android:textColor="#3260F5"
                 android:theme="@style/EditText"/>
@@ -158,7 +164,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Antenas"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext3"
+                />
 
 
             <RadioGroup
@@ -192,7 +201,7 @@ android:stretchColumns="1">
                 android:layout_height="50dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Especifique:"
+                android:hint="Observaciones"
                 android:inputType="textPersonName"
                 android:textColor="#3260F5"
                 android:theme="@style/EditText"/>
@@ -207,7 +216,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Plafones"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext4"
+                />
 
 
             <RadioGroup
@@ -241,7 +253,7 @@ android:stretchColumns="1">
                 android:layout_height="50dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Especifique:"
+                android:hint="Observaciones"
                 android:inputType="textPersonName"
                 android:textColor="#3260F5"
                 android:theme="@style/EditText"/>
@@ -263,7 +275,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Lámparas"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext5"
+                />
 
 
             <RadioGroup
@@ -297,7 +312,7 @@ android:stretchColumns="1">
                 android:layout_height="50dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Especifique:"
+                android:hint="Observaciones"
                 android:inputType="textPersonName"
                 android:textColor="#3260F5"
                 android:theme="@style/EditText"/>
@@ -312,7 +327,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Elevadores"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext6"
+                />
 
 
             <RadioGroup
@@ -347,7 +365,7 @@ android:stretchColumns="1">
                 android:layout_height="50dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Especifique:"
+                android:hint="Observaciones"
                 android:inputType="textPersonName"
                 android:textColor="#3260F5"
                 android:theme="@style/EditText"/>
@@ -362,7 +380,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Cancelería"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext7"
+                />
 
 
             <RadioGroup
@@ -397,7 +418,7 @@ android:stretchColumns="1">
                 android:layout_height="50dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Especifique:"
+                android:hint="Observaciones"
                 android:inputType="textPersonName"
                 android:textColor="#3260F5"
                 android:theme="@style/EditText"/>
@@ -411,7 +432,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Puertas y ventanas"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext8"
+                />
 
             <RadioGroup
                 android:id="@+id/Rg8"
@@ -447,7 +471,7 @@ android:stretchColumns="1">
                 android:layout_height="50dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Especifique:"
+                android:hint="Observaciones"
                 android:inputType="textPersonName"
                 android:textColor="#3260F5"
                 android:theme="@style/EditText"/>
@@ -461,7 +485,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Elementos suspendidos"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext9"
+                />
 
 
             <RadioGroup
@@ -496,7 +523,7 @@ android:stretchColumns="1">
                 android:layout_height="50dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Especifique:"
+                android:hint="Observaciones"
                 android:inputType="textPersonName"
                 android:textColor="#3260F5"
                 android:theme="@style/EditText"/>
@@ -512,7 +539,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Muros falsos"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext10"
+                />
 
             <RadioGroup
                 android:id="@+id/Rg10"
@@ -546,7 +576,7 @@ android:stretchColumns="1">
                 android:layout_height="50dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Especifique:"
+                android:hint="Observaciones"
                 android:inputType="textPersonName"
                 android:textColor="#3260F5"
                 android:theme="@style/EditText"/>
@@ -584,7 +614,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Lambrines"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext11"
+                />
 
 
             <RadioGroup
@@ -618,7 +651,7 @@ android:stretchColumns="1">
                 android:layout_height="50dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Especifique:"
+                android:hint="Observaciones"
                 android:inputType="textPersonName"
                 android:textColor="#3260F5"
                 android:theme="@style/EditText"/>
@@ -633,7 +666,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Recubrimiento de material incombustible"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext12"
+                />
 
 
             <RadioGroup
@@ -667,7 +703,7 @@ android:stretchColumns="1">
                 android:layout_height="50dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Especifique:"
+                android:hint="Observaciones"
                 android:inputType="textPersonName"
                 android:textColor="#3260F5"
                 android:theme="@style/EditText"/>
@@ -682,7 +718,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Recubrimiento de material combustible"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext13"
+                />
 
 
             <RadioGroup
@@ -718,7 +757,7 @@ android:stretchColumns="1">
                 android:layout_height="50dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Especifique:"
+                android:hint="Observaciones"
                 android:inputType="textPersonName"
                 android:textColor="#3260F5"
                 android:theme="@style/EditText"/>
@@ -732,7 +771,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Pisos y desniveles"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext14"
+                />
 
 
             <RadioGroup
@@ -767,7 +809,7 @@ android:stretchColumns="1">
                 android:layout_height="50dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Especifique:"
+                android:hint="Observaciones"
                 android:inputType="textPersonName"
                 android:textColor="#3260F5"
                 android:theme="@style/EditText"/>
@@ -783,7 +825,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Pisos falsos"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext15"
+                />
 
 
             <RadioGroup
@@ -818,7 +863,7 @@ android:stretchColumns="1">
                 android:layout_height="50dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Especifique:"
+                android:hint="Observaciones"
                 android:inputType="textPersonName"
                 android:textColor="#3260F5"
                 android:theme="@style/EditText"/>
@@ -833,7 +878,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Losetas y azulejos"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext16"
+                />
 
 
             <RadioGroup
@@ -868,7 +916,7 @@ android:stretchColumns="1">
                 android:layout_height="50dp"
                 android:layout_column="0"
                 android:ems="10"
-                android:hint="Especifique:"
+                android:hint="Observaciones"
                 android:inputType="textPersonName"
                 android:textColor="#3260F5"
                 android:theme="@style/EditText"/>

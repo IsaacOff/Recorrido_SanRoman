@@ -1670,6 +1670,7 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
             }
         }
 
+
         for(int i=4;i<10; i++  ){
             if(vector[i]==null || vector[i].equals("")){
                 banderanulo= false;

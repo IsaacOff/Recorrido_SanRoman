@@ -55,7 +55,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Lámparas"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext1"
+                />
 
             <RadioGroup
                 android:id="@+id/Rg1"
@@ -109,7 +112,9 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Candiles"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext2"/>
 
 
 
@@ -162,7 +167,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Bocinas"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext3"
+                />
 
 
             <RadioGroup
@@ -212,7 +220,9 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Rejillas"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext4"/>
 
 
             <RadioGroup
@@ -269,7 +279,9 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Aparadores de Vidrio"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext5"/>
 
 
             <RadioGroup
@@ -321,7 +333,9 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Canceles de vidrio"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext6"/>
 
 
             <RadioGroup
@@ -372,7 +386,9 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Candelabros"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext7"/>
 
 
             <RadioGroup
@@ -422,7 +438,9 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Plafones"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext8"/>
 
             <RadioGroup
                 android:id="@+id/Rg8"
@@ -477,7 +495,9 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Entrepaños o repisas"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext9"/>
 
 
             <RadioGroup
@@ -529,7 +549,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Cuadros"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext10"
+                />
 
             <RadioGroup
                 android:id="@+id/Rg10"
@@ -579,7 +602,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Espejos"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext11"
+                />
 
 
             <RadioGroup
@@ -629,7 +655,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Líquidos tóxicos o inflamables"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext12"
+                />
 
 
             <RadioGroup
@@ -679,7 +708,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Macetas y otros objetos colgantes"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext13"
+                />
 
 
             <RadioGroup
@@ -729,7 +761,8 @@ android:stretchColumns="1">
             android:padding="3dip"
             android:text="  2.- Objetos que pueden deslizarse:"
             android:textColor="#000000"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            />
 
 
 
@@ -743,7 +776,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Escritorios"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext14"
+                />
 
 
             <RadioGroup
@@ -795,7 +831,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Mesas"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext15"
+                />
 
 
             <RadioGroup
@@ -845,7 +884,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Sillas"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext16"
+                />
 
 
             <RadioGroup
@@ -896,7 +938,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Refrigeradores"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext17"
+                />
 
 
             <RadioGroup
@@ -947,7 +992,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Cunas"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext18"
+                />
 
 
             <RadioGroup
@@ -999,7 +1047,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Camas"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext19"
+                />
 
 
             <RadioGroup
@@ -1051,7 +1102,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Corralitos"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext20"
+                />
 
 
             <RadioGroup
@@ -1101,7 +1155,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Sillas de ruedas"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext21"
+                />
 
 
             <RadioGroup
@@ -1152,7 +1209,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Mobiliario y equipo para trasladar usuarios"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext22"
+                />
 
 
             <RadioGroup
@@ -1203,7 +1263,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Y todos aquellos con ruedas"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext23"
+                />
 
 
             <RadioGroup
@@ -1270,7 +1333,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Equipo de computo"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext24"
+                />
 
 
             <RadioGroup
@@ -1320,7 +1386,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Libreros"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext25"
+                />
 
 
             <RadioGroup
@@ -1370,7 +1439,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Roperos"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext26"
+                />
 
 
             <RadioGroup
@@ -1420,7 +1492,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Lockers"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext27"
+                />
 
 
             <RadioGroup
@@ -1470,7 +1545,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Archiveros"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext28"
+                />
 
 
             <RadioGroup
@@ -1520,7 +1598,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Estantes no anclados"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext29"
+                />
 
 
             <RadioGroup
@@ -1571,7 +1652,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Vitrinas"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext30"
+                />
 
 
             <RadioGroup
@@ -1622,7 +1706,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Tanques de gas"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext31"
+                />
 
 
             <RadioGroup
@@ -1674,7 +1761,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Subdivisiones de espacios no ligados al techo y piso"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext32"
+                />
 
 
             <RadioGroup
@@ -1725,7 +1815,8 @@ android:stretchColumns="1">
             android:padding="3dip"
             android:text="  4.- Objetos que pueden ser tóxicos, inflamar y/o explotar:"
             android:textColor="#000000"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            />
 
 
 
@@ -1737,7 +1828,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Recipientes o tanques con combustible"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext33"
+                />
 
 
             <RadioGroup
@@ -1790,7 +1884,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Solventes (thiner, aguarrás) y otras semejantes"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext34"
+                />
 
 
             <RadioGroup
@@ -1842,7 +1939,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Almacén de papel, cartón, entre otros"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext35"
+                />
 
 
             <RadioGroup
@@ -1894,7 +1994,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Pinturas"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext36"
+                />
 
 
             <RadioGroup
@@ -1947,7 +2050,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Líquidos para el control de fauna nociva"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext37"
+                />
 
 
             <RadioGroup
@@ -2000,7 +2106,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Líquidos de limpieza"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext38"
+                />
 
 
             <RadioGroup
@@ -2053,7 +2162,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Otros"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext39"
+                />
 
             <RadioGroup
                 android:id="@+id/Rg39"
@@ -2078,6 +2190,20 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Especificar"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
         <TableRow android:layout_height="122dp">
 
             <EditText
@@ -2120,7 +2246,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Recipientes e instalaciones de gas"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext40"
+                />
 
 
             <RadioGroup
@@ -2173,7 +2302,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Hornillas o parrillas eléctricas"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext41"
+                />
 
 
             <RadioGroup
@@ -2225,7 +2357,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Cafeteras"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext42"
+                />
 
 
             <RadioGroup
@@ -2276,7 +2411,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Contactos, apagadores, clavijas y cables en mal estado"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext43"
+                />
 
 
             <RadioGroup
@@ -2329,7 +2467,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Hornos de microondas sin base o plato protector"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext44"
+                />
 
 
             <RadioGroup
@@ -2382,7 +2523,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Velas y veladoras"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext45"
+                />
 
 
             <RadioGroup
@@ -2435,7 +2579,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Aromatizantes eléctricos"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext46"
+                />
 
             <RadioGroup
                 android:id="@+id/Rg46"
@@ -2500,7 +2647,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Tapetes"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext47"
+                />
 
 
             <RadioGroup
@@ -2553,7 +2703,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Macetas"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext48"
+                />
 
 
             <RadioGroup
@@ -2605,7 +2758,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Archiveros"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext49"
+                />
 
 
             <RadioGroup
@@ -2657,7 +2813,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Pizarrones portátiles"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext50"
+                />
 
 
             <RadioGroup
@@ -2710,7 +2869,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Muebles"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext51"
+                />
 
 
             <RadioGroup
@@ -2763,7 +2925,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Cubetas, trapeadores, escobas, y todos aquellos que son dejados fuera de su lugar"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext52"
+                />
 
 
             <RadioGroup
@@ -2815,7 +2980,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Juguetes"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext53"
+                />
 
             <RadioGroup
                 android:id="@+id/Rg53"
@@ -2864,7 +3032,10 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Equipo y mobiliario"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:clickable="true"
+                android:onClick="eventtext54"
+                />
 
             <RadioGroup
                 android:id="@+id/Rg54"
