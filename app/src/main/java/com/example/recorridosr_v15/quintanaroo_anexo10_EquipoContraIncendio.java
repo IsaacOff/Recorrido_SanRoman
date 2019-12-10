@@ -40,7 +40,7 @@ private EditText et1, et2, et3, et4, et5, et6, et7;
     private TextView tv1;
     private String sel;
     static private int numero =1;
-    String vector[] =new String[15];
+    String vector[] = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", ""};
     private File pdfFile;
     private String htmlToPDF;
     static private String detectores;
@@ -207,41 +207,6 @@ private EditText et1, et2, et3, et4, et5, et6, et7;
             }
         });
 
-        //pasa parametros al spinner para mostrar
-        mostrar(spin1, et1, 0);
-        mostrar(spin2, et2, 2);
-        mostrar(spin3, et3, 6);
-
-
-
-
-    }
-
-
-    public void mostrar(final Spinner x, final EditText o, final int i){
-        x.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                sel= parent.getItemAtPosition(position).toString();
-
-                vector[i]   = x.getSelectedItem().toString();
-
-                switch( sel ) {
-
-                    case "OTROS":
-                        o.setVisibility(View.VISIBLE);
-                        break;
-                    default:
-                        o.setVisibility(View.GONE);
-                        break;
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-            }
-        });
 
         et1.addTextChangedListener(new TextWatcher() {
             @Override
@@ -267,7 +232,7 @@ private EditText et1, et2, et3, et4, et5, et6, et7;
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                vector[3]   = et2.getText().toString();
+                vector[3]   = et2.getText().toString()+ " KG";
             }
 
             @Override
@@ -355,7 +320,38 @@ private EditText et1, et2, et3, et4, et5, et6, et7;
             }
         });
 
+        //pasa parametros al spinner para mostrar
+        mostrar(spin1, et1, 0);
+        mostrar(spin2, et2, 2);
+        mostrar(spin3, et3, 6);
 
+    }
+
+
+    public void mostrar(final Spinner x, final EditText o, final int i){
+        x.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                sel= parent.getItemAtPosition(position).toString();
+
+                vector[i]   = x.getSelectedItem().toString();
+
+                switch( sel ) {
+
+                    case "OTROS":
+                        o.setVisibility(View.VISIBLE);
+                        break;
+                    default:
+                        o.setVisibility(View.GONE);
+                        break;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
     }
 
     public void onClick(View view){
@@ -390,6 +386,18 @@ private EditText et1, et2, et3, et4, et5, et6, et7;
             if((vector[i]==null || vector[i].equals("")) && (i!=1 && i!=3 && i!=7)){
                 bandera= false;
             }
+        }
+
+        if((vector[0]==null || vector[0].equals("") || vector[0].equals("TIPO DE EXTINTOR:"))){
+            bandera= false;
+        }
+
+        if((vector[2]==null || vector[2].equals("") || vector[2].equals("CAPACIDAD EN KILOGRAMOS:"))){
+            bandera= false;
+        }
+
+        if((vector[6]==null || vector[6].equals("") || vector[6].equals("PRESION:"))){
+            bandera= false;
         }
 
         if(bandera){
@@ -518,7 +526,7 @@ private EditText et1, et2, et3, et4, et5, et6, et7;
 
         detectores=detectores +
                 "<tr>" +
-                "<td>"+ (numero-1) +"</td>"+
+                "<td>"+ (numero) +"</td>"+
                 "<td>"+tipo+"</td>" +
                 "<td>"+capacidad+"</td>" +
                 "<td>"+vector[4]+"</td>" +

@@ -831,10 +831,10 @@ android:stretchColumns="1">
 
             <TextView
                 android:layout_width="229dp"
-                android:layout_height="55dp"
+                android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Otros (Bares, Antros, Cantinas, Centros Nocturnos, ETC...)"
+                android:text="Otros"
                 android:textColor="#000000" />
 
 
@@ -1329,14 +1329,16 @@ android:stretchColumns="1">
         </TableRow>
 
 
+
+
         <TableRow android:layout_height="122dp">
 
             <TextView
                 android:layout_width="229dp"
-                android:layout_height="80dp"
+                android:layout_height="45dp"
                 android:layout_column="0"
                 android:padding="3dip"
-                android:text="Vulcanismo(Lluvia de ceniza, Afectacion por lava, Afectacion por flujos piroclasticos, Afectaciondes por flujo de lodo"
+                android:text="Otros"
                 android:textColor="#000000" />
 
 
@@ -1356,44 +1358,6 @@ android:stretchColumns="1">
 
                 <RadioButton
                     android:id="@+id/rb68"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="No"
-                    android:padding="8dp"/>
-            </RadioGroup>
-
-        </TableRow>
-
-
-
-
-        <TableRow android:layout_height="122dp">
-
-            <TextView
-                android:layout_width="229dp"
-                android:layout_height="45dp"
-                android:layout_column="0"
-                android:padding="3dip"
-                android:text="Otros"
-                android:textColor="#000000" />
-
-
-            <RadioGroup
-                android:id="@+id/Rg35"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="center_horizontal">
-
-                <RadioButton
-                    android:id="@+id/rb69"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Si"
-                    android:padding="8dp"/>
-
-                <RadioButton
-                    android:id="@+id/rb70"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="No"
@@ -1437,7 +1401,7 @@ android:stretchColumns="1">
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:onClick="externo2"
+            android:onClick="externo_siguiente2"
             android:text="Siguiente"
             android:textSize="15sp">
 

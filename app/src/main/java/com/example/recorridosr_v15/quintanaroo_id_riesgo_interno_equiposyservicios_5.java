@@ -182,6 +182,7 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
         if (vector[0].equals("SI")) {
             rb1.setChecked(true);
             rb2.setChecked(false);
+            et1.setVisibility(View.VISIBLE);
         } else if (vector[0].equals("NO")) {
             rb1.setChecked(false);
             rb2.setChecked(true);
@@ -190,6 +191,7 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
         if (vector[1].equals("SI")) {
             rb3.setChecked(true);
             rb4.setChecked(false);
+            et2.setVisibility(View.VISIBLE);
         } else if (vector[1].equals("NO")) {
             rb3.setChecked(false);
             rb4.setChecked(true);
@@ -198,6 +200,7 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
         if (vector[2].equals("SI")) {
             rb5.setChecked(true);
             rb6.setChecked(false);
+            et3.setVisibility(View.VISIBLE);
         } else if (vector[2].equals("NO")) {
             rb5.setChecked(false);
             rb6.setChecked(true);
@@ -206,6 +209,7 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
         if (vector[3].equals("SI")) {
             rb7.setChecked(true);
             rb8.setChecked(false);
+            et4.setVisibility(View.VISIBLE);
         } else if (vector[3].equals("NO")) {
             rb7.setChecked(false);
             rb8.setChecked(true);
@@ -214,6 +218,7 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
         if (vector[4].equals("SI")) {
             rb9.setChecked(true);
             rb10.setChecked(false);
+            et5.setVisibility(View.VISIBLE);
         } else if (vector[4].equals("NO")) {
             rb9.setChecked(false);
             rb10.setChecked(true);
@@ -223,6 +228,7 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
         if (vector[5].equals("SI")) {
             rb11.setChecked(true);
             rb12.setChecked(false);
+            et6.setVisibility(View.VISIBLE);
         } else if (vector[5].equals("NO")) {
             rb11.setChecked(false);
             rb12.setChecked(true);
@@ -231,6 +237,7 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
         if (vector[6].equals("SI")) {
             rb13.setChecked(true);
             rb14.setChecked(false);
+            et7.setVisibility(View.VISIBLE);
         } else if (vector[6].equals("NO")) {
             rb13.setChecked(false);
             rb14.setChecked(true);
@@ -239,6 +246,7 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
         if (vector[7].equals("SI")) {
             rb15.setChecked(true);
             rb16.setChecked(false);
+            et8.setVisibility(View.VISIBLE);
         } else if (vector[7].equals("NO")) {
             rb15.setChecked(false);
             rb16.setChecked(true);
@@ -247,6 +255,7 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
         if (vector[8].equals("SI")) {
             rb17.setChecked(true);
             rb18.setChecked(false);
+            et9.setVisibility(View.VISIBLE);
         } else if (vector[8].equals("NO")) {
             rb17.setChecked(false);
             rb18.setChecked(true);
@@ -255,6 +264,7 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
         if (vector[9].equals("SI")) {
             rb19.setChecked(true);
             rb20.setChecked(false);
+            et10.setVisibility(View.VISIBLE);
         } else if (vector[9].equals("NO")) {
             rb19.setChecked(false);
             rb20.setChecked(true);
@@ -264,6 +274,7 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
         if (vector[10].equals("SI")) {
             rb21.setChecked(true);
             rb22.setChecked(false);
+            et11.setVisibility(View.VISIBLE);
         } else if (vector[10].equals("NO")) {
             rb21.setChecked(false);
             rb22.setChecked(true);
@@ -272,6 +283,7 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
         if (vector[11].equals("SI")) {
             rb23.setChecked(true);
             rb24.setChecked(false);
+            et12.setVisibility(View.VISIBLE);
         } else if (vector[11].equals("NO")) {
             rb23.setChecked(false);
             rb24.setChecked(true);

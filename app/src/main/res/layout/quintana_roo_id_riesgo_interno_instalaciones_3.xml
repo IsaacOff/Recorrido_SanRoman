@@ -319,6 +319,40 @@ android:stretchColumns="1">
             android:text="  2.- Instalación de gas"
             android:textColor="#9C8046" />
 
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_column="0"
+                android:padding="3dip"
+                android:text="Cuenta con instalación de gas"
+                android:textColor="#000000" />
+
+
+            <RadioGroup
+                android:id="@+id/Radiogroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:padding="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rbt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:padding="8dp"/>
+            </RadioGroup>
+
+        </TableRow>
 
         <TableRow android:layout_height="122dp">
 

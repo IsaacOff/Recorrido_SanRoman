@@ -21,14 +21,15 @@ import java.io.File;
 public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActivity {
     private RadioButton rb1, rb2, rb3, rb4, rb5, rb6, rb7, rb8, rb9, rb10, rb11, rb12, rb13, rb14, rb15, rb16, rb17, rb18,rb19,rb20;
     private RadioButton rb21, rb22, rb23, rb24, rb25, rb26, rb27, rb28, rb29, rb30, rb31, rb32, rb33, rb34, rb35, rb36, rb37, rb38,rb39,rb40;
-    private RadioButton rb41, rb42, rb43, rb44, rb45, rb46;
-    private RadioGroup rg1, rg2, rg3, rg4,rg5,rg6,rg7,rg8,rg9, rg10, rg11, rg12,rg13, rg14, rg15,rg16,rg17,rg18,rg19,rg20, rg21, rg22, rg23;
+    private RadioButton rb41, rb42, rb43, rb44, rb45, rb46, rbt1, rbt2;
+    private RadioGroup rg1, rg2, rg3, rg4,rg5,rg6,rg7,rg8,rg9, rg10, rg11, rg12,rg13, rg14, rg15,rg16,rg17,rg18,rg19,rg20, rg21, rg22, rg23, rgb1;
     private EditText edt1, edt2, edt3;
     private EditText et1, et2, et3, et4, et5, et6, et7, et8, et9, et10, et11, et12, et13, et14, et15, et16, et17, et18, et19, et20;
 
 
     static String vector[] = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""};
     static String vector2[] = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""};
+    static String vector3 = "";
     static File pdfFile;
     static File directorio2;
     static String tablaConcatenacion="";
@@ -152,6 +153,9 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
         edt2 = (EditText) findViewById(R.id.editText2);
         edt3 = (EditText) findViewById(R.id.editText3);
 
+        rgb1 = (RadioGroup) findViewById(R.id.Radiogroup);
+        rbt1 = (RadioButton) findViewById(R.id.rbt1);
+        rbt2 = (RadioButton) findViewById(R.id.rbt2);
 
         //Ocultar EditText
         edt1.setVisibility(View.GONE);
@@ -261,6 +265,14 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
             et20.setText(vector2[19]);
         }
 
+
+        if (vector3.equals("SI")) {
+            rbt1.setChecked(true);
+            rbt2.setChecked(false);
+        } else if (vector3.equals("NO")) {
+            rbt1.setChecked(false);
+            rbt2.setChecked(true);
+        }
 
         if (vector[0].equals("SI")) {
             rb1.setChecked(true);
@@ -487,6 +499,57 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
         //Verificacion de los radiobutton
 
 
+        rgb1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rbt1){
+                    System.out.println("entro si");
+                    vector3 = "SI";
+
+                }else if(checkedId==R.id.rbt2) {
+                    System.out.println("entro no");
+                    vector3 = "NO";
+
+                    vector[5]="2";
+                    vector[6]="2";
+                    vector[7]="2";
+                    vector[8]="2";
+
+                    rb11.setChecked(false);
+                    rb12.setChecked(false);
+                    rb13.setChecked(false);
+                    rb14.setChecked(false);
+                    rb15.setChecked(false);
+                    rb16.setChecked(false);
+                    rb17.setChecked(false);
+                    rb18.setChecked(false);
+
+
+                    et9.setText("");
+                    et6.setText("");
+                    et7.setText("");
+                    et8.setText("");
+
+                    et9.setVisibility(View.GONE);
+                    et6.setVisibility(View.GONE);
+                    et7.setVisibility(View.GONE);
+                    et8.setVisibility(View.GONE);
+
+                    vector[5]="";
+                    vector[6]="";
+                    vector[7]="";
+                    vector[8]="";
+                    vector2[5]="";
+                    vector2[6]="";
+                    vector2[7]="";
+                    vector2[8]="";
+
+                }
+
+            }
+        });
+
+
         rg1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -597,21 +660,43 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(!vector[5].equals("1")) {
+                    if(!vector[5].equals("2")) {
+                        if (checkedId == R.id.rb11) {
+                            System.out.println("entro 11");
+                            vector[5] = "SI";
+                            rb11.setChecked(true);
+                            et6.setVisibility(View.VISIBLE);
+                            if(vector3.equals("NO") || vector3.equals("")){
+                                vector[5]="";
+                                vector2[5]="";
+                                rb11.setChecked(false);
+                                rb12.setChecked(false);
+                                et6.setVisibility(View.GONE);
+                            }
 
-                    if(checkedId==R.id.rb11){
+                        } else if (checkedId == R.id.rb12) {
+                            System.out.println("entro 12");
+                            vector[5] = "NO";
+                            rb12.setChecked(true);
+                            et6.setVisibility(View.GONE);
 
-                        vector[5]="SI";
-                        rb11.setChecked(true);
-                        et6.setVisibility(View.VISIBLE);
-
-                    }else if(checkedId==R.id.rb12) {
-
-                        vector[5]="NO";
-                        rb12.setChecked(true);
+                            if(vector3.equals("NO") || vector3.equals("")){
+                                vector[5]="";
+                                vector2[5]="";
+                                rb11.setChecked(false);
+                                rb12.setChecked(false);
+                                et6.setVisibility(View.GONE);
+                            }
+                        }
+                    }else{
+                        rb11.setChecked(false);
+                        rb12.setChecked(false);
+                        vector[5] = "";
                         et6.setVisibility(View.GONE);
-
+                        vector2[5]= "";
                     }
                 }else{
+                    System.out.println("entro else");
                     vector[5] = "";
                     rb11.setChecked(false);
                     rb12.setChecked(false);
@@ -630,21 +715,41 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(!vector[6].equals("1")) {
+                    if(!vector[6].equals("2")) {
 
                     if(checkedId==R.id.rb13){
 
                         vector[6]="SI";
                         rb13.setChecked(true);
                         et7.setVisibility(View.VISIBLE);
-
+                        if(vector3.equals("NO") || vector3.equals("")){
+                            vector[6]="";
+                            vector2[6]="";
+                            rb13.setChecked(false);
+                            rb14.setChecked(false);
+                            et7.setVisibility(View.GONE);
+                        }
                     }else if(checkedId==R.id.rb14) {
 
                         vector[6]="NO";
                         rb14.setChecked(true);
                         et7.setVisibility(View.GONE);
-
+                        if(vector3.equals("NO") || vector3.equals("")){
+                            vector[6]="";
+                            vector2[6]="";
+                            rb13.setChecked(false);
+                            rb14.setChecked(false);
+                            et7.setVisibility(View.GONE);
+                        }
                     }
 
+                        }else{
+                            rb13.setChecked(false);
+                            rb14.setChecked(false);
+                            vector[6] = "";
+                            et7.setVisibility(View.GONE);
+                            vector2[6]= "";
+                        }
                 }else{
                     vector[6] = "";
                     rb13.setChecked(false);
@@ -663,19 +768,42 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(!vector[7].equals("1")) {
+                    if(!vector[7].equals("2")) {
 
                     if(checkedId==R.id.rb15){
 
                         vector[7]="SI";
                         rb15.setChecked(true);
                         et8.setVisibility(View.VISIBLE);
+
+                        if(vector3.equals("NO") || vector3.equals("")){
+                            vector[7]="";
+                            vector2[7]="";
+                            rb15.setChecked(false);
+                            rb16.setChecked(false);
+                            et8.setVisibility(View.GONE);
+                        }
                     }else if(checkedId==R.id.rb16) {
 
                         vector[7]="NO";
                         rb16.setChecked(true);
                         et8.setVisibility(View.GONE);
-
+                        if(vector3.equals("NO") || vector3.equals("")){
+                            vector[7]="";
+                            vector2[7]="";
+                            rb15.setChecked(false);
+                            rb16.setChecked(false);
+                            et8.setVisibility(View.GONE);
+                        }
                     }
+
+                        }else{
+                            rb15.setChecked(false);
+                            rb16.setChecked(false);
+                            vector[7] = "";
+                            et8.setVisibility(View.GONE);
+                            vector2[7]= "";
+                        }
                 }else{
                     vector[7] = "";
                     rb15.setChecked(false);
@@ -695,21 +823,42 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if(!vector[8].equals("1")) {
+                    if(!vector[8].equals("2")) {
+
                     if(checkedId==R.id.rb17){
 
                         vector[8]="SI";
                         rb17.setChecked(true);
                         et9.setVisibility(View.VISIBLE);
-
+                        if(vector3.equals("NO") || vector3.equals("")){
+                            vector[8]="";
+                            vector2[8]="";
+                            rb17.setChecked(false);
+                            rb18.setChecked(false);
+                            et9.setVisibility(View.GONE);
+                        }
 
                     }else if(checkedId==R.id.rb18) {
 
                         vector[8]="NO";
                         rb18.setChecked(true);
                         et9.setVisibility(View.GONE);
-
+                        if(vector3.equals("NO") || vector3.equals("")){
+                            vector[8]="";
+                            vector2[8]="";
+                            rb17.setChecked(false);
+                            rb18.setChecked(false);
+                            et9.setVisibility(View.GONE);
+                        }
 
                     }
+                        }else{
+                            rb17.setChecked(false);
+                            rb18.setChecked(false);
+                            vector[8] = "";
+                            et9.setVisibility(View.GONE);
+                            vector2[8]= "";
+                        }
                 }else{
                     vector[8] = "";
                     rb17.setChecked(false);
@@ -1664,18 +1813,27 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
         Boolean bandera = true;
         boolean banderanulo = true;
 
+        if (vector3 == null || vector3.equals("")) {
+            bandera = false;
+        }
+
         for(int i=0;i<4; i++  ){
             if(vector[i]==null || vector[i].equals("")){
                 bandera= false;
             }
         }
 
-
-        for(int i=4;i<10; i++  ){
-            if(vector[i]==null || vector[i].equals("")){
-                banderanulo= false;
-                vector[i]="N/P";
+        if(vector3.equals("SI")) {
+        for(int i=4;i<9; i++  ){
+                if (vector[i] == null || vector[i].equals("")) {
+                    banderanulo = false;
+                    vector[i] = "N/P";
+                }
             }
+        }
+
+        if(vector[9]==null || vector[9].equals("")){
+            bandera= false;
         }
 
 
@@ -1828,7 +1986,16 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
                     "<tr>"+
                     "<td>2.</td>"+
                     "<td colspan=\"4\" >Instalación de gas</td>"+
-                    "</tr>"+
+                    "</tr>";
+
+        tablaConcatenacion=  tablaConcatenacion +
+                "<tr>" +
+                "<td></td>"+
+                "<td>Cuenta con instalación de gas</td>";
+        agregarRenglon(vector3, "");
+
+
+        tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
                     "<td></td>"+
                     "<td>Presenta fugas</td>";
@@ -2006,8 +2173,8 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
                     "</tr>";
         }else{
             tablaConcatenacion= tablaConcatenacion +
-                    "<td >SI</td>" +
-                    "<td>NO</td>" +
+                    "<td  style=\"text-align:center;\">SI</td>" +
+                    "<td  style=\"text-align:center;\">NO</td>" +
                     "<td></td>" +
                     "</tr>";
         }

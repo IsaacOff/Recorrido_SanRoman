@@ -421,6 +421,172 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         et54.setVisibility(View.GONE);
 
 
+        if(!vector2.equals("") && vector2 != null){
+            edit1.setText(vector2);
+        }
+        if(!vector3[0].equals("") && vector3[0] != null){
+            et1.setText(vector3[0]);
+        }
+        if(!vector3[1].equals("") && vector3[1] != null){
+            et2.setText(vector3[1]);
+        }
+        if(!vector3[2].equals("") && vector3[2] != null){
+            et3.setText(vector3[2]);
+        }
+        if(!vector3[3].equals("") && vector3[3] != null){
+            et4.setText(vector3[3]);
+        }
+        if(!vector3[4].equals("") && vector3[4] != null){
+            et5.setText(vector3[4]);
+        }
+        if(!vector3[5].equals("") && vector3[5] != null){
+            et6.setText(vector3[5]);
+        }
+        if(!vector3[6].equals("") && vector3[6] != null){
+            et7.setText(vector3[6]);
+        }
+        if(!vector3[7].equals("") && vector3[7] != null){
+            et8.setText(vector3[7]);
+        }
+        if(!vector3[8].equals("") && vector3[8] != null){
+            et9.setText(vector3[8]);
+        }
+        if(!vector3[9].equals("") && vector3[9] != null){
+            et10.setText(vector3[9]);
+        }
+        if(!vector3[10].equals("") && vector3[10] != null){
+            et11.setText(vector3[10]);
+        }
+        if(!vector3[11].equals("") && vector3[11] != null){
+            et12.setText(vector3[11]);
+        }
+        if(!vector3[12].equals("") && vector3[12] != null){
+            et13.setText(vector3[12]);
+        }
+        if(!vector3[13].equals("") && vector3[13] != null){
+            et14.setText(vector3[13]);
+        }
+        if(!vector3[14].equals("") && vector3[14] != null){
+            et15.setText(vector3[14]);
+        }
+        if(!vector3[15].equals("") && vector3[15] != null){
+            et16.setText(vector3[15]);
+        }
+        if(!vector3[16].equals("") && vector3[16] != null){
+            et17.setText(vector3[16]);
+        }
+        if(!vector3[17].equals("") && vector3[17] != null){
+            et18.setText(vector3[17]);
+        }
+        if(!vector3[18].equals("") && vector3[18] != null){
+            et19.setText(vector3[18]);
+        }
+        if(!vector3[19].equals("") && vector3[19] != null){
+            et20.setText(vector3[19]);
+        }
+        if(!vector3[20].equals("") && vector3[20] != null){
+            et21.setText(vector3[20]);
+        }
+        if(!vector3[21].equals("") && vector3[21] != null){
+            et22.setText(vector3[21]);
+        }
+        if(!vector3[22].equals("") && vector3[22] != null){
+            et23.setText(vector3[22]);
+        }
+        if(!vector3[23].equals("") && vector3[23] != null){
+            et24.setText(vector3[23]);
+        }
+        if(!vector3[24].equals("") && vector3[24] != null){
+            et25.setText(vector3[24]);
+        }
+        if(!vector3[25].equals("") && vector3[25] != null){
+            et26.setText(vector3[25]);
+        }
+        if(!vector3[26].equals("") && vector3[26] != null){
+            et27.setText(vector3[26]);
+        }
+        if(!vector3[27].equals("") && vector3[27] != null){
+            et28.setText(vector3[27]);
+        }
+        if(!vector3[28].equals("") && vector3[28] != null){
+            et29.setText(vector3[28]);
+        }
+        if(!vector3[29].equals("") && vector3[29] != null){
+            et30.setText(vector3[29]);
+        }
+        if(!vector3[30].equals("") && vector3[30] != null){
+            et31.setText(vector3[30]);
+        }
+        if(!vector3[31].equals("") && vector3[31] != null){
+            et32.setText(vector3[31]);
+        }
+        if(!vector3[32].equals("") && vector3[32] != null){
+            et33.setText(vector3[32]);
+        }
+        if(!vector3[33].equals("") && vector3[33] != null){
+            et34.setText(vector3[33]);
+        }
+        if(!vector3[34].equals("") && vector3[34] != null){
+            et35.setText(vector3[34]);
+        }
+        if(!vector3[35].equals("") && vector3[35] != null){
+            et36.setText(vector3[35]);
+        }
+        if(!vector3[36].equals("") && vector3[36] != null){
+            et37.setText(vector3[36]);
+        }
+        if(!vector3[37].equals("") && vector3[37] != null){
+            et38.setText(vector3[37]);
+        }
+        if(!vector3[38].equals("") && vector3[38] != null){
+            et39.setText(vector3[38]);
+        }
+        if(!vector3[39].equals("") && vector3[39] != null){
+            et40.setText(vector3[39]);
+        }
+        if(!vector3[40].equals("") && vector3[40] != null){
+            et41.setText(vector3[40]);
+        }
+        if(!vector3[41].equals("") && vector3[41] != null){
+            et42.setText(vector3[41]);
+        }
+        if(!vector3[42].equals("") && vector3[42] != null){
+            et43.setText(vector3[42]);
+        }
+        if(!vector3[43].equals("") && vector3[43] != null){
+            et44.setText(vector3[43]);
+        }
+        if(!vector3[44].equals("") && vector3[44] != null){
+            et45.setText(vector3[44]);
+        }
+        if(!vector3[45].equals("") && vector3[45] != null){
+            et46.setText(vector3[45]);
+        }
+        if(!vector3[46].equals("") && vector3[46] != null){
+            et47.setText(vector3[46]);
+        }
+        if(!vector3[47].equals("") && vector3[47] != null){
+            et48.setText(vector3[47]);
+        }
+        if(!vector3[48].equals("") && vector3[48] != null){
+            et49.setText(vector3[48]);
+        }
+        if(!vector3[49].equals("") && vector3[49] != null){
+            et50.setText(vector3[49]);
+        }
+        if(!vector3[50].equals("") && vector3[50] != null){
+            et51.setText(vector3[50]);
+        }
+        if(!vector3[51].equals("") && vector3[51] != null){
+            et52.setText(vector3[51]);
+        }
+        if(!vector3[52].equals("") && vector3[52] != null){
+            et53.setText(vector3[52]);
+        }
+        if(!vector3[53].equals("") && vector3[53] != null){
+            et54.setText(vector3[53]);
+        }
+
 
 
 
@@ -438,6 +604,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[1].equals("SI")) {
             rb3.setChecked(true);
             rb4.setChecked(false);
+            et2.setVisibility(View.VISIBLE);
         } else if (vector[1].equals("NO")) {
             rb3.setChecked(false);
             rb4.setChecked(true);
@@ -446,6 +613,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[2].equals("SI")) {
             rb5.setChecked(true);
             rb6.setChecked(false);
+            et3.setVisibility(View.VISIBLE);
         } else if (vector[2].equals("NO")) {
             rb5.setChecked(false);
             rb6.setChecked(true);
@@ -454,6 +622,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[3].equals("SI")) {
             rb7.setChecked(true);
             rb8.setChecked(false);
+            et4.setVisibility(View.VISIBLE);
         } else if (vector[3].equals("NO")) {
             rb7.setChecked(false);
             rb8.setChecked(true);
@@ -462,6 +631,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[4].equals("SI")) {
             rb9.setChecked(true);
             rb10.setChecked(false);
+            et5.setVisibility(View.VISIBLE);
         } else if (vector[4].equals("NO")) {
             rb9.setChecked(false);
             rb10.setChecked(true);
@@ -471,6 +641,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[5].equals("SI")) {
             rb11.setChecked(true);
             rb12.setChecked(false);
+            et6.setVisibility(View.VISIBLE);
         } else if (vector[5].equals("NO")) {
             rb11.setChecked(false);
             rb12.setChecked(true);
@@ -479,6 +650,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[6].equals("SI")) {
             rb13.setChecked(true);
             rb14.setChecked(false);
+            et7.setVisibility(View.VISIBLE);
         } else if (vector[6].equals("NO")) {
             rb13.setChecked(false);
             rb14.setChecked(true);
@@ -487,6 +659,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[7].equals("SI")) {
             rb15.setChecked(true);
             rb16.setChecked(false);
+            et8.setVisibility(View.VISIBLE);
         } else if (vector[7].equals("NO")) {
             rb15.setChecked(false);
             rb16.setChecked(true);
@@ -495,6 +668,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[8].equals("SI")) {
             rb17.setChecked(true);
             rb18.setChecked(false);
+            et9.setVisibility(View.VISIBLE);
         } else if (vector[8].equals("NO")) {
             rb17.setChecked(false);
             rb18.setChecked(true);
@@ -503,6 +677,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[9].equals("SI")) {
             rb19.setChecked(true);
             rb20.setChecked(false);
+            et10.setVisibility(View.VISIBLE);
         } else if (vector[9].equals("NO")) {
             rb19.setChecked(false);
             rb20.setChecked(true);
@@ -512,6 +687,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[10].equals("SI")) {
             rb21.setChecked(true);
             rb22.setChecked(false);
+            et11.setVisibility(View.VISIBLE);
         } else if (vector[10].equals("NO")) {
             rb21.setChecked(false);
             rb22.setChecked(true);
@@ -520,6 +696,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[11].equals("SI")) {
             rb23.setChecked(true);
             rb24.setChecked(false);
+            et12.setVisibility(View.VISIBLE);
         } else if (vector[11].equals("NO")) {
             rb23.setChecked(false);
             rb24.setChecked(true);
@@ -528,6 +705,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[12].equals("SI")) {
             rb25.setChecked(true);
             rb26.setChecked(false);
+            et13.setVisibility(View.VISIBLE);
         } else if (vector[12].equals("NO")) {
             rb25.setChecked(false);
             rb26.setChecked(true);
@@ -536,6 +714,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[13].equals("SI")) {
             rb27.setChecked(true);
             rb28.setChecked(false);
+            et14.setVisibility(View.VISIBLE);
         } else if (vector[13].equals("NO")) {
             rb27.setChecked(false);
             rb28.setChecked(true);
@@ -544,6 +723,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[14].equals("SI")) {
             rb29.setChecked(true);
             rb30.setChecked(false);
+            et15.setVisibility(View.VISIBLE);
         } else if (vector[14].equals("NO")) {
             rb29.setChecked(false);
             rb30.setChecked(true);
@@ -552,6 +732,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[15].equals("SI")) {
             rb31.setChecked(true);
             rb32.setChecked(false);
+            et16.setVisibility(View.VISIBLE);
         } else if (vector[15].equals("NO")) {
             rb31.setChecked(false);
             rb32.setChecked(true);
@@ -560,6 +741,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[16].equals("SI")) {
             rb33.setChecked(true);
             rb34.setChecked(false);
+            et17.setVisibility(View.VISIBLE);
         } else if (vector[16].equals("NO")) {
             rb33.setChecked(false);
             rb34.setChecked(true);
@@ -569,6 +751,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[17].equals("SI")) {
             rb35.setChecked(true);
             rb36.setChecked(false);
+            et18.setVisibility(View.VISIBLE);
         } else if (vector[17].equals("NO")) {
             rb35.setChecked(false);
             rb36.setChecked(true);
@@ -577,6 +760,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[18].equals("SI")) {
             rb37.setChecked(true);
             rb38.setChecked(false);
+            et19.setVisibility(View.VISIBLE);
         } else if (vector[18].equals("NO")) {
             rb37.setChecked(false);
             rb38.setChecked(true);
@@ -585,6 +769,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[19].equals("SI")) {
             rb39.setChecked(true);
             rb40.setChecked(false);
+            et20.setVisibility(View.VISIBLE);
         } else if (vector[19].equals("NO")) {
             rb39.setChecked(false);
             rb40.setChecked(true);
@@ -593,6 +778,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[20].equals("SI")) {
             rb41.setChecked(true);
             rb42.setChecked(false);
+            et21.setVisibility(View.VISIBLE);
         } else if (vector[20].equals("NO")) {
             rb41.setChecked(false);
             rb42.setChecked(true);
@@ -601,6 +787,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[21].equals("SI")) {
             rb43.setChecked(true);
             rb44.setChecked(false);
+            et22.setVisibility(View.VISIBLE);
         } else if (vector[21].equals("NO")) {
             rb43.setChecked(false);
             rb44.setChecked(true);
@@ -610,6 +797,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[22].equals("SI")) {
             rb45.setChecked(true);
             rb46.setChecked(false);
+            et23.setVisibility(View.VISIBLE);
         } else if (vector[22].equals("NO")) {
             rb45.setChecked(false);
             rb46.setChecked(true);
@@ -618,6 +806,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[23].equals("SI")) {
             rb47.setChecked(true);
             rb48.setChecked(false);
+            et24.setVisibility(View.VISIBLE);
         } else if (vector[23].equals("NO")) {
             rb47.setChecked(false);
             rb48.setChecked(true);
@@ -626,6 +815,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[24].equals("SI")) {
             rb49.setChecked(true);
             rb50.setChecked(false);
+            et25.setVisibility(View.VISIBLE);
         } else if (vector[24].equals("NO")) {
             rb49.setChecked(false);
             rb50.setChecked(true);
@@ -634,6 +824,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[25].equals("SI")) {
             rb51.setChecked(true);
             rb52.setChecked(false);
+            et26.setVisibility(View.VISIBLE);
         } else if (vector[25].equals("NO")) {
             rb51.setChecked(false);
             rb52.setChecked(true);
@@ -642,6 +833,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[26].equals("SI")) {
             rb53.setChecked(true);
             rb54.setChecked(false);
+            et27.setVisibility(View.VISIBLE);
         } else if (vector[26].equals("NO")) {
             rb53.setChecked(false);
             rb54.setChecked(true);
@@ -650,6 +842,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[27].equals("SI")) {
             rb55.setChecked(true);
             rb56.setChecked(false);
+            et28.setVisibility(View.VISIBLE);
         } else if (vector[27].equals("NO")) {
             rb55.setChecked(false);
             rb56.setChecked(true);
@@ -658,6 +851,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[28].equals("SI")) {
             rb57.setChecked(true);
             rb58.setChecked(false);
+            et29.setVisibility(View.VISIBLE);
         } else if (vector[28].equals("NO")) {
             rb57.setChecked(false);
             rb58.setChecked(true);
@@ -666,6 +860,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[29].equals("SI")) {
             rb59.setChecked(true);
             rb60.setChecked(false);
+            et30.setVisibility(View.VISIBLE);
         } else if (vector[29].equals("NO")) {
             rb59.setChecked(false);
             rb60.setChecked(true);
@@ -675,6 +870,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[30].equals("SI")) {
             rb61.setChecked(true);
             rb62.setChecked(false);
+            et31.setVisibility(View.VISIBLE);
         } else if (vector[30].equals("NO")) {
             rb61.setChecked(false);
             rb62.setChecked(true);
@@ -683,6 +879,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[31].equals("SI")) {
             rb63.setChecked(true);
             rb64.setChecked(false);
+            et32.setVisibility(View.VISIBLE);
         } else if (vector[31].equals("NO")) {
             rb63.setChecked(false);
             rb64.setChecked(true);
@@ -691,6 +888,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[32].equals("SI")) {
             rb65.setChecked(true);
             rb66.setChecked(false);
+            et33.setVisibility(View.VISIBLE);
         } else if (vector[32].equals("NO")) {
             rb65.setChecked(false);
             rb66.setChecked(true);
@@ -699,6 +897,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[33].equals("SI")) {
             rb67.setChecked(true);
             rb68.setChecked(false);
+            et34.setVisibility(View.VISIBLE);
         } else if (vector[33].equals("NO")) {
             rb67.setChecked(false);
             rb68.setChecked(true);
@@ -707,6 +906,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[34].equals("SI")) {
             rb69.setChecked(true);
             rb70.setChecked(false);
+            et35.setVisibility(View.VISIBLE);
         } else if (vector[34].equals("NO")) {
             rb69.setChecked(false);
             rb70.setChecked(true);
@@ -716,6 +916,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[35].equals("SI")) {
             rb71.setChecked(true);
             rb72.setChecked(false);
+            et36.setVisibility(View.VISIBLE);
         } else if (vector[35].equals("NO")) {
             rb71.setChecked(false);
             rb72.setChecked(true);
@@ -724,6 +925,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[36].equals("SI")) {
             rb73.setChecked(true);
             rb74.setChecked(false);
+            et37.setVisibility(View.VISIBLE);
         } else if (vector[36].equals("NO")) {
             rb73.setChecked(false);
             rb74.setChecked(true);
@@ -732,6 +934,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[37].equals("SI")) {
             rb75.setChecked(true);
             rb76.setChecked(false);
+            et38.setVisibility(View.VISIBLE);
         } else if (vector[37].equals("NO")) {
             rb75.setChecked(false);
             rb76.setChecked(true);
@@ -740,7 +943,8 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[38].equals("SI")) {
             rb77.setChecked(true);
             rb78.setChecked(false);
-            et1.setVisibility(View.VISIBLE);
+            edit1.setVisibility(View.VISIBLE);
+            et39.setVisibility(View.VISIBLE);
         } else if (vector[38].equals("NO")) {
             rb77.setChecked(false);
             rb78.setChecked(true);
@@ -754,6 +958,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[39].equals("SI")) {
             rb79.setChecked(true);
             rb80.setChecked(false);
+            et40.setVisibility(View.VISIBLE);
         } else if (vector[39].equals("NO")) {
             rb79.setChecked(false);
             rb80.setChecked(true);
@@ -762,6 +967,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[40].equals("SI")) {
             rb81.setChecked(true);
             rb82.setChecked(false);
+            et41.setVisibility(View.VISIBLE);
         } else if (vector[40].equals("NO")) {
             rb81.setChecked(false);
             rb82.setChecked(true);
@@ -770,6 +976,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[41].equals("SI")) {
             rb83.setChecked(true);
             rb84.setChecked(false);
+            et42.setVisibility(View.VISIBLE);
         } else if (vector[41].equals("NO")) {
             rb83.setChecked(false);
             rb84.setChecked(true);
@@ -778,6 +985,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[42].equals("SI")) {
             rb85.setChecked(true);
             rb86.setChecked(false);
+            et43.setVisibility(View.VISIBLE);
         } else if (vector[42].equals("NO")) {
             rb85.setChecked(false);
             rb86.setChecked(true);
@@ -786,6 +994,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[43].equals("SI")) {
             rb87.setChecked(true);
             rb88.setChecked(false);
+            et44.setVisibility(View.VISIBLE);
         } else if (vector[43].equals("NO")) {
             rb87.setChecked(false);
             rb88.setChecked(true);
@@ -795,6 +1004,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[44].equals("SI")) {
             rb89.setChecked(true);
             rb90.setChecked(false);
+            et45.setVisibility(View.VISIBLE);
         } else if (vector[44].equals("NO")) {
             rb89.setChecked(false);
             rb90.setChecked(true);
@@ -803,6 +1013,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[45].equals("SI")) {
             rb91.setChecked(true);
             rb92.setChecked(false);
+            et46.setVisibility(View.VISIBLE);
         } else if (vector[45].equals("NO")) {
             rb91.setChecked(false);
             rb92.setChecked(true);
@@ -811,6 +1022,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[46].equals("SI")) {
             rb93.setChecked(true);
             rb94.setChecked(false);
+            et47.setVisibility(View.VISIBLE);
         } else if (vector[46].equals("NO")) {
             rb93.setChecked(false);
             rb94.setChecked(true);
@@ -819,6 +1031,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[47].equals("SI")) {
             rb95.setChecked(true);
             rb96.setChecked(false);
+            et48.setVisibility(View.VISIBLE);
         } else if (vector[47].equals("NO")) {
             rb95.setChecked(false);
             rb96.setChecked(true);
@@ -827,6 +1040,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[48].equals("SI")) {
             rb97.setChecked(true);
             rb98.setChecked(false);
+            et49.setVisibility(View.VISIBLE);
         } else if (vector[48].equals("NO")) {
             rb97.setChecked(false);
             rb98.setChecked(true);
@@ -836,6 +1050,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[49].equals("SI")) {
             rb99.setChecked(true);
             rb100.setChecked(false);
+            et50.setVisibility(View.VISIBLE);
         } else if (vector[49].equals("NO")) {
             rb99.setChecked(false);
             rb100.setChecked(true);
@@ -844,6 +1059,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[50].equals("SI")) {
             rb101.setChecked(true);
             rb102.setChecked(false);
+            et51.setVisibility(View.VISIBLE);
         } else if (vector[50].equals("NO")) {
             rb101.setChecked(false);
             rb102.setChecked(true);
@@ -852,6 +1068,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[51].equals("SI")) {
             rb103.setChecked(true);
             rb104.setChecked(false);
+            et52.setVisibility(View.VISIBLE);
         } else if (vector[51].equals("NO")) {
             rb103.setChecked(false);
             rb104.setChecked(true);
@@ -860,6 +1077,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[52].equals("SI")) {
             rb105.setChecked(true);
             rb106.setChecked(false);
+            et53.setVisibility(View.VISIBLE);
         } else if (vector[52].equals("NO")) {
             rb105.setChecked(false);
             rb106.setChecked(true);
@@ -868,6 +1086,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if (vector[53].equals("SI")) {
             rb107.setChecked(true);
             rb108.setChecked(false);
+            et54.setVisibility(View.VISIBLE);
         } else if (vector[53].equals("NO")) {
             rb107.setChecked(false);
             rb108.setChecked(true);
