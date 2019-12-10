@@ -36,7 +36,7 @@ public class quintanaroo_id_riesgo extends AppCompatActivity {
 
     public void Riesgos_externo_quintana (View view){
         onClick(view, "Riesgo Externo");
-        Intent intent = new Intent(this, quintanaroo_id_riesgo_externo.class);
+        Intent intent = new Intent(this, quintanaroo_id_riesgo_externo_fenomeno_1.class);
         startActivity(intent);
     }
 
