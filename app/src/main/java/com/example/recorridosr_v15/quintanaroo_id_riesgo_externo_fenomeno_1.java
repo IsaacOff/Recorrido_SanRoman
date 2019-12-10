@@ -26,16 +26,16 @@ import static android.widget.Toast.LENGTH_SHORT;
 
 public class quintanaroo_id_riesgo_externo_fenomeno_1 extends AppCompatActivity {
     private RadioGroup rg1, rg2, rg3, rg4,rg5,rg6,rg7,rg8,rg9, rg10, rg11, rg12,rg13, rg14, rg15,rg16,rg17,rg18,rg19,rg20, rg21, rg22, rg23, rg24, rg25;
-    private RadioGroup rg26, rg27, rg28, rg29,rg30,rg31,rg32,rg33,rg34;
+    private RadioGroup rg26, rg27, rg28, rg29,rg30,rg31,rg32,rg33,rg34, rg35;
 
     private RadioButton  rb1,  rb2,  rb3,  rb4,  rb5,  rb6, rb7, rb8,  rb9, rb10, rb11, rb12, rb13,rb14, rb15, rb16, rb17, rb18, rb19, rb20;
     private RadioButton rb21, rb22, rb23, rb24, rb25, rb26,rb27,rb28, rb29, rb30, rb31, rb32, rb33,rb34, rb35, rb36, rb37, rb38, rb39, rb40;
     private RadioButton rb41, rb42, rb43, rb44, rb45, rb46,rb47,rb48, rb49, rb50, rb51, rb52, rb53,rb54, rb55, rb56, rb57, rb58, rb59, rb60;
-    private RadioButton rb61, rb62, rb63, rb64, rb65, rb66,rb67,rb68;
+    private RadioButton rb61, rb62, rb63, rb64, rb65, rb66,rb67,rb68, rb69, rb70;
 
     private EditText et1, et2, et3, et4;
 
-    String vector[] =new String[38];
+    String vector[] =new String[39];
 
     String tablaConcatenacion="";
     static File pdfFile;
@@ -194,6 +194,10 @@ public class quintanaroo_id_riesgo_externo_fenomeno_1 extends AppCompatActivity 
         rg34= (RadioGroup) findViewById(R.id.Rg34);
         rb67 = (RadioButton) findViewById(R.id.rb67);
         rb68 = (RadioButton) findViewById(R.id.rb68);
+
+        rg35= (RadioGroup) findViewById(R.id.Rg35);
+        rb69 = (RadioButton) findViewById(R.id.rb69);
+        rb70 = (RadioButton) findViewById(R.id.rb70);
 
 
 
@@ -878,11 +882,29 @@ public class quintanaroo_id_riesgo_externo_fenomeno_1 extends AppCompatActivity 
                 if(checkedId==R.id.rb67){
 
                     vector[36]="SI";
-                    et4.setVisibility(View.VISIBLE);
+
 
                 }else if(checkedId==R.id.rb68) {
 
                     vector[36]="NO";
+
+
+                }
+
+            }
+        });
+
+        rg35.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb69){
+
+                    vector[37]="SI";
+                    et4.setVisibility(View.VISIBLE);
+
+                }else if(checkedId==R.id.rb70) {
+
+                    vector[37]="NO";
                     et4.setVisibility(View.GONE);
 
 
@@ -953,7 +975,7 @@ public class quintanaroo_id_riesgo_externo_fenomeno_1 extends AppCompatActivity 
         }
 
 
-        if( vector[36]=="SI"){
+        if( vector[37]=="SI"){
 
             if (et4.length() == 0) {
                 bandera = false;
@@ -967,7 +989,7 @@ public class quintanaroo_id_riesgo_externo_fenomeno_1 extends AppCompatActivity 
             vector[7] = et1.getText().toString();
             vector[17] = et2.getText().toString();
             vector[23] = et3.getText().toString();
-            vector[37] = et4.getText().toString();
+            vector[38] = et4.getText().toString();
 
 
             Toast.makeText(this, "Guardado con exito", LENGTH_SHORT).show();
