@@ -874,75 +874,75 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
                             "<tr>" +
                             "<td>1</td>"+
                             "<td>Sistema de alertamiento</td>";
-            agregarRenglon(vector[0]);
+            agregarRenglon(vector[0], vector2[0]);
 
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
                     "<td>2</td>"+
                     "<td>Sistema contra incendio</td>";
-            agregarRenglon(vector[1]);
+            agregarRenglon(vector[1], vector2[1]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
                     "<td>3</td>"+
                     "<td>Extintores</td>";
-            agregarRenglon(vector[2]);
+            agregarRenglon(vector[2], vector2[2]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
                     "<td>4</td>"+
                     "<td>Equipo de protección personal para atención de emergencia</td>";
-            agregarRenglon(vector[3]);
+            agregarRenglon(vector[3], vector2[3]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
                     "<td>5</td>"+
                     "<td>Material y equipo para atención de emergencia</td>";
-            agregarRenglon(vector[4]);
+            agregarRenglon(vector[4], vector2[4]);
 
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
                     "<td>6</td>"+
                     "<td>Rutas de evacuación</td>";
-            agregarRenglon(vector[5]);
+            agregarRenglon(vector[5], vector2[5]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
                     "<td>7</td>"+
                     "<td>Salidas de emergencia</td>";
-            agregarRenglon(vector[6]);
+            agregarRenglon(vector[6], vector2[6]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
                     "<td>8</td>"+
                     "<td>Señalización</td>";
-            agregarRenglon(vector[7]);
+            agregarRenglon(vector[7], vector2[7]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
                     "<td>9</td>"+
                     "<td>Brigadas de emergencia</td>";
-            agregarRenglon(vector[8]);
+            agregarRenglon(vector[8], vector2[8]);
 
             tablaConcatenacion =  tablaConcatenacion +
                     "<tr>" +
                     "<td>10</td>"+
                     "<td>Sistemas de comunicación de emergencia</td>";
-            agregarRenglon(vector[9]);
+            agregarRenglon(vector[9], vector2[9]);
 
             tablaConcatenacion =  tablaConcatenacion +
                     "<tr>" +
                     "<td>11</td>"+
                     "<td>Zonas de seguridad y de conteo</td>";
-            agregarRenglon(vector[10]);
+            agregarRenglon(vector[10], vector2[10]);
 
             tablaConcatenacion =  tablaConcatenacion +
                     "<tr>" +
                     "<td>12</td>"+
                     "<td>Servicios médicos o de primeros auxilios</td>";
-            agregarRenglon(vector[11]);
+            agregarRenglon(vector[11], vector2[11]);
 
             tablaConcatenacion =  tablaConcatenacion +
                     "<tr>"+
@@ -955,12 +955,12 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
 
             return tablaConcatenacion;
     }
-    public static void agregarRenglon(String decision) {
+    public static void agregarRenglon(String decision, String observaciones) {
         if (decision.equals("SI")) {
             tablaConcatenacion= tablaConcatenacion +
                     "<td style=\"background-color:Yellow; text-align:center;\">SI</td>" +
                     "<td style=\"text-align:center;\">NO</td>" +
-                    "<td>"+""+"</td>" +
+                    "<td>"+observaciones+"</td>" +
                     "</tr>";
         } else if(decision.equals("NO")){
             tablaConcatenacion= tablaConcatenacion +

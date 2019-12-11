@@ -1882,167 +1882,178 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
 
 
 
-    public void externosiguiente1(View view) {
+    public void externo_siguiente1(View view) {
         Boolean bandera = true;
 
 
         for(int i=0;i<22; i++  ){
-            if( vector[i][0].equals("")){
+            if(vector[i][0]==null){
                 bandera= false;
             }
         }
-
-
-
 
         //Verificar si los editText contienen algo sino no los deja enviar
         if (et1.getVisibility() == View.VISIBLE) {
-            if(vector[0][1].equals("")){
-                bandera= false;
+            if (et1.length() == 0) {
+                bandera = false;
             }
         }
 
-
         if (et2.getVisibility() == View.VISIBLE) {
-            if(vector[1][1].equals("")){
-                bandera= false;
+            if (et2.length() == 0) {
+                bandera = false;
             }
         }
 
         if (et3.getVisibility() == View.VISIBLE) {
-            if(vector[2][1].equals("")){
-                bandera= false;
+            if (et3.length() == 0) {
+                bandera = false;
             }
         }
 
         if (et4.getVisibility() == View.VISIBLE) {
-            if(vector[3][1].equals("")){
-                bandera= false;
-            }
+            if (et4.length() == 0) {
+                bandera = false; }
         }
 
         if (et5.getVisibility() == View.VISIBLE) {
-            if(vector[4][1].equals("")){
-                bandera= false;
+            if (et5.length() == 0) {
+                bandera = false;
             }
         }
 
-
-
         if (et6.getVisibility() == View.VISIBLE) {
-            if(vector[5][1].equals("")){
-                bandera= false;
+            if (et6.length() == 0) {
+                bandera = false;
             }
         }
 
         if (et7.getVisibility() == View.VISIBLE) {
-            if(vector[6][1].equals("")){
-                bandera= false;
+            if (et7.length() == 0) {
+                bandera = false;
             }
         }
 
         if (et8.getVisibility() == View.VISIBLE) {
-            if(vector[7][1].equals("")){
-                bandera= false;
+            if (et8.length() == 0) {
+                bandera = false;
             }
         }
 
         if (et9.getVisibility() == View.VISIBLE) {
-            if(vector[8][1].equals("")){
-                bandera= false;
+            if (et9.length() == 0) {
+                bandera = false;
             }
         }
 
         if (et10.getVisibility() == View.VISIBLE) {
-            if(vector[9][1].equals("")){
-                bandera= false;
+            if (et10.length() == 0) {
+                bandera = false;
             }
         }
 
         if (et11.getVisibility() == View.VISIBLE) {
-            if(vector[10][1].equals("")){
-                bandera= false;
+            if (et11.length() == 0) {
+                bandera = false;
             }
         }
 
         if (et12.getVisibility() == View.VISIBLE) {
-            if(vector[11][1].equals("")){
-                bandera= false;
+            if (et12.length() == 0) {
+                bandera = false;
             }
         }
 
         if (et13.getVisibility() == View.VISIBLE) {
-            if(vector[12][1].equals("")){
-                bandera= false;
+            if (et13.length() == 0) {
+                bandera = false;
             }
         }
 
         if (et14.getVisibility() == View.VISIBLE) {
-            if(vector[13][1].equals("")){
-                bandera= false;
+            if (et14.length() == 0) {
+                bandera = false;
             }
         }
 
         if (et15.getVisibility() == View.VISIBLE) {
-            if(vector[14][1].equals("")){
-                bandera= false;
+            if (et15.length() == 0) {
+                bandera = false;
             }
         }
 
         if (et16.getVisibility() == View.VISIBLE) {
-            if(vector[15][1].equals("")){
-                bandera= false;
+            if (et16.length() == 0) {
+                bandera = false;
             }
         }
 
         if (et17.getVisibility() == View.VISIBLE) {
-            if(vector[16][1].equals("")){
-                bandera= false;
+            if (et17.length() == 0) {
+                bandera = false;
             }
         }
 
         if (et18.getVisibility() == View.VISIBLE) {
-            if(vector[17][1].equals("")){
-                bandera= false;
+            if (et18.length() == 0) {
+                bandera = false;
             }
         }
 
         if (et19.getVisibility() == View.VISIBLE) {
-            if(vector[18][1].equals("")){
-                bandera= false;
+            if (et19.length() == 0) {
+                bandera = false;
             }
         }
 
         if (et20.getVisibility() == View.VISIBLE) {
-            if(vector[19][1].equals("")){
-                bandera= false;
+            if (et20.length() == 0) {
+                bandera = false;
             }
         }
-
 
         if (et21.getVisibility() == View.VISIBLE) {
-            if(vector[20][1].equals("")){
-                bandera= false;
+            if (et21.length() == 0) {
+                bandera = false;
             }
         }
-
 
         if (et22.getVisibility() == View.VISIBLE) {
-            if(vector[21][1].equals("")){
-                bandera= false;
+            if (et22.length() == 0) {
+                bandera = false;
             }
         }
-
-
-
 
 
 
         if (bandera) {
+            vector[0] [1] = et1.getText().toString();
+            vector[1] [1] = et2.getText().toString();
+            vector[2] [1] = et3.getText().toString();
+            vector[3] [1] = et4.getText().toString();
+            vector[4] [1] = et5.getText().toString();
+            vector[5] [1] = et6.getText().toString();
+            vector[6] [1] = et7.getText().toString();
+            vector[7] [1] = et8.getText().toString();
+            vector[8] [1] = et9.getText().toString();
+            vector[9] [1] = et10.getText().toString();
+            vector[10][1] = et11.getText().toString();
+            vector[11][1] = et12.getText().toString();
+            vector[12][1] = et13.getText().toString();
+            vector[13][1] = et14.getText().toString();
+            vector[14][1] = et15.getText().toString();
+            vector[15][1] = et16.getText().toString();
+            vector[16][1] = et17.getText().toString();
+            vector[17][1] = et18.getText().toString();
+            vector[18][1] = et19.getText().toString();
+            vector[19][1] = et20.getText().toString();
+            vector[20][1] = et21.getText().toString();
+            vector[21][1] = et22.getText().toString();
+
 
             //onClick(view);
-          //  externo1(view);
-            Toast.makeText(this, "Listo vamos al siguiente 1", LENGTH_SHORT).show();
+            externo1(view);
+            Toast.makeText(this, "Listo vamos al siguiente", LENGTH_SHORT).show();
 
 
 
