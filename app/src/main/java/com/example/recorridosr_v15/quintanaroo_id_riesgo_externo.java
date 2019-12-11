@@ -1893,7 +1893,7 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
         }
 
 
-
+ if ( vector[0][0].equals("puto si lo vez00")){}
 
         //Verificar si los editText contienen algo sino no los deja enviar
         if (et1.getVisibility() == View.VISIBLE) {
