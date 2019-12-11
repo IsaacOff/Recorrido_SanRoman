@@ -62,6 +62,21 @@ android:stretchColumns="1">
 
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et1"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
+
 
 
 

@@ -1099,7 +1099,6 @@ public class quintanaroo_id_riesgo_externo_fenomeno_1 extends AppCompatActivity 
                 }else if(checkedId==R.id.rb38) {
 
                     vector[20]="NO";
-
                     et19.setVisibility(View.GONE);
                 }
 
@@ -2112,8 +2111,8 @@ public class quintanaroo_id_riesgo_externo_fenomeno_1 extends AppCompatActivity 
 
 
             Toast.makeText(this, "Guardado con exito", LENGTH_SHORT).show();
-            onClick(view);
-            //externo2(view);
+           // onClick(view);
+            externo2(view);
 
 
 

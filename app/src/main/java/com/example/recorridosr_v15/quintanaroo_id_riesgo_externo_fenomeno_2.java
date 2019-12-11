@@ -30,10 +30,10 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quintana_roo_id_riesgo_externo_fenomeno_2);
 
-        directorio2 = new File(getIntent().getStringExtra("File"));
-        if(directorio2 != null) {
-            pdfFile = new File(directorio2.getPath(), "prueba1.pdf");
-        }
+      //  directorio2 = new File(getIntent().getStringExtra("File"));
+       // if(directorio2 != null) {
+         //   pdfFile = new File(directorio2.getPath(), "prueba1.pdf");
+        //}
 
     }
 
