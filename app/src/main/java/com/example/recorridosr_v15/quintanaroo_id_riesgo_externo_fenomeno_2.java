@@ -63,7 +63,7 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
         directorio2 = new File(quintanaroo_id_riesgo.file());
         if(directorio2 != null) {
             pdfFile = new File(directorio2.getPath(), "prueba1.pdf");
-        }
+       }
 
 
         //Asigna los Rg y rb del xml a los de aqui
@@ -441,6 +441,23 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
         }
 
 
+        //Repinta los valores obtenidos en el vector2
+        if(!vector[8][0].equals("") && vector[8][0] != null){
+            edi1.setText(vector2[0]);
+        }
+        if(!vector[9][0].equals("") && vector[9][0] != null){
+            edi2.setText(vector2[1]);
+            edi3.setText(vector2[2]);
+        }
+        if(!vector[30][0].equals("") && vector[30][0] != null){
+            edi4.setText(vector2[3]);
+        }
+        if(!vector[31][0].equals("") && vector[31][0] != null){
+            edi5.setText(vector2[4]);
+        }
+        if(!vector[32][0].equals("") && vector[32][0] != null){
+            edi6.setText(vector2[5]);
+        }
 
         //
 
@@ -521,6 +538,7 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
             rb17.setChecked(true);
             rb18.setChecked(false);
             et9.setVisibility(View.VISIBLE);
+            edi1.setVisibility(View.VISIBLE);
         } else if (vector[8][0].equals("NO")) {
             rb17.setChecked(false);
             rb18.setChecked(true);
@@ -530,6 +548,8 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
             rb19.setChecked(true);
             rb20.setChecked(false);
             et10.setVisibility(View.VISIBLE);
+            edi2.setVisibility(View.VISIBLE);
+            edi3.setVisibility(View.VISIBLE);
         } else if (vector[9][0].equals("NO")) {
             rb19.setChecked(false);
             rb20.setChecked(true);
@@ -723,6 +743,7 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
             rb61.setChecked(true);
             rb62.setChecked(false);
             et31.setVisibility(View.VISIBLE);
+            edi4.setVisibility(View.VISIBLE);
         } else if (vector[30][0].equals("NO")) {
             rb61.setChecked(false);
             rb62.setChecked(true);
@@ -732,6 +753,7 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
             rb63.setChecked(true);
             rb64.setChecked(false);
             et32.setVisibility(View.VISIBLE);
+            edi5.setVisibility(View.VISIBLE);
         } else if (vector[31][0].equals("NO")) {
             rb63.setChecked(false);
             rb64.setChecked(true);
@@ -741,6 +763,7 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
             rb65.setChecked(true);
             rb66.setChecked(false);
             et33.setVisibility(View.VISIBLE);
+            edi6.setVisibility(View.VISIBLE);
         } else if (vector[32][0].equals("NO")) {
             rb65.setChecked(false);
             rb66.setChecked(true);
@@ -2339,36 +2362,41 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
 
 
             if (vector[8][0].equals("SI")) {
-                vector2[0]="";
-                bandera = false;
+                if(vector2[0].equals("")) {
+                    bandera = false;
+                }
             }
 
 
 
         if (vector[9][0].equals("SI")) {
-            vector2[1]="";
-            vector2[2]="";
-            bandera = false;
+            if (vector2[1].equals("")||vector2[2].equals("")) {
+                bandera = false;
+            }
         }
 
 
         if (vector[30][0].equals("SI")) {
-            vector2[3]="";
-            bandera = false;
+            if(vector2[3].equals("")) {
+                bandera = false;
+            }
         }
 
         if (vector[31][0].equals("SI")) {
-            vector2[4]="";
-            bandera = false;
+
+            if(vector2[4].equals("")) {
+                bandera = false;
+            }
         }
 
         if (vector[32][0].equals("SI")) {
-            vector2[5]="";
-            bandera = false;
-        }
+            if(vector2[5].equals("")) {
+                bandera = false;
+            }
+            }
 
 
-        if(!quintanaroo_id_riesgo_externo.externosiguiente1()){
+       /*if(!quintanaroo_id_riesgo_externo.externosiguiente1()){
             banderatotal = false;
             Toast.makeText(this, "Revisa la pagina 1", LENGTH_SHORT).show();
         }
@@ -2381,10 +2409,12 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
         if(!bandera){
             banderatotal = false;
             Toast.makeText(this, "Revisa la pagina 3", LENGTH_SHORT).show();
-        }
+        }*/
 
-        if(bandera){
-            onClick();
+        if(banderatotal){
+           onClick();
+            Toast.makeText(this, "LISTO ", LENGTH_SHORT).show();
+
         }
         else{
             Toast.makeText(this, "revisa las paginas ", LENGTH_SHORT).show();
@@ -2411,9 +2441,9 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
             XMLWorkerHelper worker = XMLWorkerHelper.getInstance();
 
             tablaConcatenacion=
-                    //"<html>" + "<body>" +
-                            quintanaroo_id_riesgo_externo.onClick()+
-                            quintanaroo_id_riesgo_externo_fenomeno_1.onClick()+
+                    "<html>" + "<body>" +
+                           // quintanaroo_id_riesgo_externo.onClick()+
+                           // quintanaroo_id_riesgo_externo_fenomeno_1.onClick()+
 
                             "<TABLE border=\"1\" WIDTH=\"100%\">"+
                             "<thead>"+
