@@ -62,6 +62,7 @@ android:stretchColumns="1">
 
 
         </TableRow>
+
         <TableRow android:layout_height="122dp">
 
             <EditText
@@ -116,6 +117,20 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et2"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
 
 
         <TextView
@@ -167,6 +182,20 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et3"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
 
 
 
@@ -204,6 +233,20 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et4"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
 
 
 
@@ -247,6 +290,20 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et5"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
 
 
 
@@ -286,6 +343,19 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et6"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
 
 
         <TableRow android:layout_height="122dp">
@@ -322,6 +392,20 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et7"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
 
 
 
@@ -359,6 +443,20 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et8"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
 
 
 
@@ -399,7 +497,7 @@ android:stretchColumns="1">
         </TableRow>
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/edi1"
             android:layout_width="wrap_content"
             android:layout_height="53dp"
             android:layout_column="0"
@@ -408,6 +506,22 @@ android:stretchColumns="1">
             android:inputType="textPersonName"
             android:textColor="#3260F5"
             android:theme="@style/EditText"/>
+
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et9"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
+
 
 
         <!--- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -447,11 +561,12 @@ android:stretchColumns="1">
                     android:padding="8dp"/>
             </RadioGroup>
 
+
         </TableRow>
 
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/edi2"
             android:layout_width="wrap_content"
             android:layout_height="53dp"
             android:layout_column="0"
@@ -463,7 +578,7 @@ android:stretchColumns="1">
             android:theme="@style/EditText" />
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/edit3"
             android:layout_width="wrap_content"
             android:layout_height="53dp"
             android:layout_column="0"
@@ -473,6 +588,29 @@ android:stretchColumns="1">
             android:textColor="#3260F5"
             android:textSize="14sp"
             android:theme="@style/EditText" />
+
+
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et10"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
+
+
+
+
+
+
+
 
 
 
@@ -511,6 +649,23 @@ android:stretchColumns="1">
 
         </TableRow>
 
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et11"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
+
+
+
 
 
         <TableRow>
@@ -548,6 +703,23 @@ android:stretchColumns="1">
 
         </TableRow>
 
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et12"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
+
+
+
 
 
         <TableRow>
@@ -584,6 +756,23 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et13"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
+
+
 
 
         <TextView
@@ -633,6 +822,23 @@ android:stretchColumns="1">
 
         </TableRow>
 
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et14"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
+
+
+
 
 
 
@@ -671,6 +877,19 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et15"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
 
 
 
@@ -708,6 +927,23 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et16"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
+
+
+
 
         <TableRow>
 
@@ -743,6 +979,20 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et17"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
 
 
 
@@ -782,6 +1032,20 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et18"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
 
 
 
@@ -821,6 +1085,20 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et19"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
 
 
 
@@ -860,6 +1138,21 @@ android:stretchColumns="1">
 
         </TableRow>
 
+        <TableRow android:layout_height="122dp">
+
+        <EditText
+            android:id="@+id/et20"
+            android:layout_width="118dp"
+            android:layout_height="50dp"
+            android:layout_column="0"
+            android:ems="10"
+            android:hint="Observaciones"
+            android:inputType="textPersonName"
+            android:textColor="#3260F5"
+            android:theme="@style/EditText"/>
+    </TableRow>
+
+
 
 
         <TableRow android:layout_height="122dp">
@@ -896,6 +1189,20 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et21"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
 
 
 
@@ -934,6 +1241,20 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et22"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
 
 
 
@@ -974,6 +1295,20 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et23"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
 
 
 
@@ -1020,6 +1355,20 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et24"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
 
 
         <TableRow android:layout_height="122dp">
@@ -1056,6 +1405,20 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et25"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
 
 
         <TableRow android:layout_height="122dp">
@@ -1092,6 +1455,20 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et26"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
 
 
         <TableRow android:layout_height="122dp">
@@ -1128,6 +1505,20 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et27"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
 
 
         <TableRow android:layout_height="122dp">
@@ -1164,6 +1555,20 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et28"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
 
 
         <TableRow android:layout_height="122dp">
@@ -1200,6 +1605,20 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et29"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
 
 
 
@@ -1238,6 +1657,23 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et30"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
+
+
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -1286,7 +1722,7 @@ android:stretchColumns="1">
         </TableRow>
 
         <EditText
-            android:id="@+id/editText4"
+            android:id="@+id/edi4"
             android:layout_width="wrap_content"
             android:layout_height="53dp"
             android:layout_column="0"
@@ -1296,6 +1732,19 @@ android:stretchColumns="1">
             android:textColor="#3260F5"
             android:textSize="14sp"
             android:theme="@style/EditText" />
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et31"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
 
 
 
@@ -1336,7 +1785,7 @@ android:stretchColumns="1">
         </TableRow>
 
         <EditText
-            android:id="@+id/editText5"
+            android:id="@+id/edi5"
             android:layout_width="wrap_content"
             android:layout_height="53dp"
             android:layout_column="0"
@@ -1346,6 +1795,20 @@ android:stretchColumns="1">
             android:textColor="#3260F5"
             android:textSize="14sp"
             android:theme="@style/EditText" />
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et32"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
 
 
 
@@ -1385,7 +1848,7 @@ android:stretchColumns="1">
         </TableRow>
 
         <EditText
-            android:id="@+id/editText6"
+            android:id="@+id/edi6"
             android:layout_width="wrap_content"
             android:layout_height="53dp"
             android:layout_column="0"
@@ -1395,6 +1858,21 @@ android:stretchColumns="1">
             android:textColor="#3260F5"
             android:textSize="14sp"
             android:theme="@style/EditText" />
+
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et33"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
 
 
 
@@ -1433,6 +1911,20 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et34"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
 
 
 
@@ -1471,6 +1963,19 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et35"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
 
 
 
@@ -1508,6 +2013,20 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et36"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
 
 
 
@@ -1546,6 +2065,20 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et37"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
 
 
 
@@ -1584,6 +2117,20 @@ android:stretchColumns="1">
             </RadioGroup>
 
         </TableRow>
+        <TableRow android:layout_height="122dp">
+
+            <EditText
+                android:id="@+id/et38"
+                android:layout_width="118dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:ems="10"
+                android:hint="Observaciones"
+                android:inputType="textPersonName"
+                android:textColor="#3260F5"
+                android:theme="@style/EditText"/>
+        </TableRow>
+
 
 
 
@@ -1594,7 +2141,7 @@ android:stretchColumns="1">
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
+            android:onClick="final_externo"
             android:text="Siguiente"
             android:textSize="15sp">
 

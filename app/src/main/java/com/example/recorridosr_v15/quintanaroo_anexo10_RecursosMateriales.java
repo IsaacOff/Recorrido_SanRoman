@@ -1174,7 +1174,7 @@ public class quintanaroo_anexo10_RecursosMateriales extends AppCompatActivity {
             vector[13] [2]  = et41.getText().toString();
             vector[13] [3]  = et42.getText().toString();
 
-//vector2
+//vector
             //rg15
             vector2[0] [1]  = et43.getText().toString();
             vector2[0] [2]  = et44.getText().toString();
