@@ -2,6 +2,7 @@ package com.example.recorridosr_v15;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.text.Editable;
@@ -12,7 +13,16 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.PageSize;
+import com.itextpdf.text.pdf.PdfWriter;
+import com.itextpdf.tool.xml.XMLWorkerHelper;
+
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.StringReader;
 
 import static android.widget.Toast.LENGTH_SHORT;
 
@@ -50,12 +60,10 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
 
-        //  directorio2 = new File(getIntent().getStringExtra("File"));
-       // if(directorio2 != null) {
-         //   pdfFile = new File(directorio2.getPath(), "prueba1.pdf");
-        //}
-
-
+        directorio2 = new File(quintanaroo_id_riesgo.file());
+        if(directorio2 != null) {
+            pdfFile = new File(directorio2.getPath(), "prueba1.pdf");
+        }
 
 
         //Asigna los Rg y rb del xml a los de aqui
@@ -2319,7 +2327,7 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
 
     public void final_externo(View view) {
         boolean bandera = true;
-
+        boolean banderatotal = true;
 
 
 
@@ -2360,11 +2368,23 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
         }
 
 
+        if(!quintanaroo_id_riesgo_externo.externosiguiente1()){
+            banderatotal = false;
+            Toast.makeText(this, "Revisa la pagina 1", LENGTH_SHORT).show();
+        }
 
+        if(!quintanaroo_id_riesgo_externo_fenomeno_1.externo_siguiente2()){
+            banderatotal = false;
+            Toast.makeText(this, "Revisa la pagina 2", LENGTH_SHORT).show();
+        }
+
+        if(!bandera){
+            banderatotal = false;
+            Toast.makeText(this, "Revisa la pagina 3", LENGTH_SHORT).show();
+        }
 
         if(bandera){
-
-            Toast.makeText(this, "listo generando PDF ", LENGTH_SHORT).show();
+            onClick();
         }
         else{
             Toast.makeText(this, "revisa las paginas ", LENGTH_SHORT).show();
@@ -2381,8 +2401,8 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
 
 
 
-/*
-    public void onClick (View view){
+
+    public void onClick (){
         try {
             Document document = new Document(PageSize.LETTER);
             PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(pdfFile.getPath()));
@@ -2391,77 +2411,91 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
             XMLWorkerHelper worker = XMLWorkerHelper.getInstance();
 
             tablaConcatenacion=
-                    "<html>" + "<body>" +
+                    //"<html>" + "<body>" +
+                            quintanaroo_id_riesgo_externo.onClick()+
+                            quintanaroo_id_riesgo_externo_fenomeno_1.onClick()+
 
                             "<TABLE border=\"1\" WIDTH=\"100%\">"+
                             "<thead>"+
                             "<tr>"+
-                            "<td colspan=\"4\">FENÓMENOS PERTURBADORES</td>"+
-                            "</tr>"+
-                            "<tr>"+
-                            "<td colspan=\"4\">De origen Socio-Organizativo</td>"+
+                            "<td colspan=\"5\">De origen De origen Quimico-Tecnologico</td>"+
                             "</tr>"+
                             "<tr>" +
 
                             "<th style=\"border: inset 0pt\" WIDTH=\"3%\"></th>" +
-                            "<th style=\"border: inset 0pt\" WIDTH=\"87%\"></th>" +
+                            "<th style=\"border: inset 0pt\" WIDTH=\"67%\"></th>" +
                             "<th style=\"border: inset 0pt\" WIDTH=\"5%\"></th>" +
                             "<th style=\"border: inset 0pt\" WIDTH=\"5%\"></th>" +
+                            "<th style=\"border: inset 0pt\" WIDTH=\"20%\"></th>" +
 
                             "</tr>" +
                             "</thead>"+
                             "<tbody>"+
 
-                            "<tr>"+
-                            "<td colspan=\"4\" style=\"text-align:center;\" >Elementos a evaluar</td>"+
-                            "</tr>"+
-
                             "<tr>" +
-                            "<td>1</td>"+
-                            "<td>Accidentes aéreos, terrestres y fluviales</td>";
-            agregarRenglon(vector[0]);
+                            "<td>15</td>"+
+                            "<td>Incendios</td>";
+            agregarRenglon(vector[0][0], vector[0][1]);
 
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
                     "<td></td>"+
-                    "<td>Accidentes de vehículos que transportan materiales químicos peligrosos (explosiones, gas, cloro, gasolina, solventes, otros).</td>";
-            agregarRenglon(vector[1]);
+                    "<td>Forestale</td>";
+            agregarRenglon(vector[1][0], vector[1][1]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
                     "<td></td>"+
-                    "<td>Accidentes en donde se involucren vehículos terrestres de transporte de       pasajeros.</td>";
-            agregarRenglon(vector[2]);
+                    "<td colspan=\"4\">¿Qué se quemaria?</td>"+
+                    "<tr>" ;
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
                     "<td></td>"+
-                    "<td>Accidentes en donde se involucren vehículos aéreos.</td>";
-            agregarRenglon(vector[3]);
+                    "<td>Industrial</td>";
+            agregarRenglon(vector[2][0], vector[2][1]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
                     "<td></td>"+
-                    "<td>Accidentes en donde se involucren vehículos marítimos de transporte de carga.</td>";
-            agregarRenglon(vector[4]);
+                    "<td>Gasolinera</td>";
+            agregarRenglon(vector[3][0], vector[3][1]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
                     "<td></td>"+
-                    "<td>Accidentes en donde se involucren vehículos marítimos de transportes de       pasajeros.</td>";
-            agregarRenglon(vector[5]);
+                    "<td>Gasera</td>";
+            agregarRenglon(vector[4][0], vector[4][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td></td>"+
+                    "<td>Tlapalería</td>";
+            agregarRenglon(vector[5][0], vector[5][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td></td>"+
+                    "<td>Mercado</td>";
+            agregarRenglon(vector[6][0], vector[6][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td></td>"+
+                    "<td>Plaza comercial</td>";
+            agregarRenglon(vector[7][0], vector[7][1]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
                     "<td></td>"+
                     "<td>Otros, especificar:</td>";
-            agregarRenglon(vector[6]);
+            agregarRenglon(vector[8][0], vector[8][1]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
                     "<td></td>"+
-                    "<td colspan=\"3\">"+vector[7]+"</td>"+
+                    "<td colspan=\"4\">"+vector2[0]+"</td>"+
                     "</tr>";
 
 
@@ -2469,194 +2503,212 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td>2</td>"+
-                    "<td>Terrorismo y sabotaje</td>";
-            agregarRenglon(vector[8]);
+                    "<td>16</td>"+
+                    "<td>Fuga o derrame de materiales químicos peligrosos</td>";
+            agregarRenglon(vector[9][0], vector[9][1]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td></td>"+
-                    "<td>Robo</td>";
-            agregarRenglon(vector[9]);
-
-            tablaConcatenacion=  tablaConcatenacion +
-                    "<tr>" +
-                    "<td></td>"+
-                    "<td>Robo con violencia</td>";
-            agregarRenglon(vector[10]);
-
-            tablaConcatenacion=  tablaConcatenacion +
-                    "<tr>" +
-                    "<td></td>"+
-                    "<td>Secuestro</td>";
-            agregarRenglon(vector[11]);
-
-            tablaConcatenacion=  tablaConcatenacion +
-                    "<tr>" +
-                    "<td></td>"+
-                    "<td>Invasión de bienes inmuebles</td>";
-            agregarRenglon(vector[12]);
-
-            tablaConcatenacion=  tablaConcatenacion +
-                    "<tr>" +
-                    "<td></td>"+
-                    "<td>Interrupción de vialidades</td>";
-            agregarRenglon(vector[13]);
-
-            tablaConcatenacion=  tablaConcatenacion +
-                    "<tr>" +
-                    "<td></td>"+
-                    "<td>Sabotaje a los servicios públicos</td>";
-            agregarRenglon(vector[14]);
-
-            tablaConcatenacion=  tablaConcatenacion +
-                    "<tr>" +
-                    "<td></td>"+
-                    "<td>Sabotaje a los servicios privados</td>";
-            agregarRenglon(vector[15]);
-
-            tablaConcatenacion=  tablaConcatenacion +
-                    "<tr>" +
-                    "<td></td>"+
-                    "<td>Otros, especificar:</td>";
-            agregarRenglon(vector[16]);
-
-            tablaConcatenacion=  tablaConcatenacion +
-                    "<tr>" +
-                    "<td></td>"+
-                    "<td colspan=\"3\">"+vector[17]+"</td>"+
+                    "<td colspan=\"5\">De qué manera una fuga o derrame de materiales químicos peligrosos podría afectarlo "+ vector[1]+"</td>"+
                     "</tr>";
 
-
-            //-------------------VERIFICAR
-
-            tablaConcatenacion=  tablaConcatenacion +
+                    tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td>3</td>"+
-                    "<td>Concentraciones masivas</td>";
-            agregarRenglon(vector[18]);
-
-            tablaConcatenacion=  tablaConcatenacion +
-                    "<tr>" +
-                    "<td></td>"+
-                    "<td>Marchas y manifestaciones</td>";
-            agregarRenglon(vector[19]);
-
-            tablaConcatenacion=  tablaConcatenacion +
-                    "<tr>" +
-                    "<td></td>"+
-                    "<td>Plantones y mítines</td>";
-            agregarRenglon(vector[20]);
-
-            tablaConcatenacion=  tablaConcatenacion +
-                    "<tr>" +
-                    "<td></td>"+
-                    "<td>Actos vandálicos</td>";
-            agregarRenglon(vector[21]);
-
-            tablaConcatenacion=  tablaConcatenacion +
-                    "<tr>" +
-                    "<td></td>"+
-                    "<td>Otros, especificar:</td>";
-            agregarRenglon(vector[22]);
-
-            tablaConcatenacion=  tablaConcatenacion +
-                    "<tr>" +
-                    "<td></td>"+
-                    "<td colspan=\"3\">"+vector[23]+"</td>"+
-                    "</tr>";
-
-            //-----------------------------VERIFICAR
-
-            tablaConcatenacion=  tablaConcatenacion +
-                    "<tr>" +
-                    "<td>4</td>"+
-                    "<td>Interrupción de servicios</td>";
-            agregarRenglon(vector[24]);
-
-            tablaConcatenacion=  tablaConcatenacion +
-                    "<tr>"+
-                    "<td colspan=\"4\">De origen Geológico</td>"+
+                    "<td colspan=\"5\">Cuales serian los lugares: "+ vector[2] +"</td>"+
                     "</tr>";
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td>5</td>"+
-                    "<td>Agrietamiento</td>";
-            agregarRenglon(vector[25]);
+                    "<td>17</td>"+
+                    "<td>Exposición a materiales radioactivos</td>";
+            agregarRenglon(vector[10][0], vector[10][1]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td>6</td>"+
-                    "<td>Hundimiento de terreno</td>";
-            agregarRenglon(vector[26]);
+                    "<td>18</td>"+
+                    "<td>Explosiones</td>";
+            agregarRenglon(vector[11][0], vector[11][1]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td>7</td>"+
-                    "<td>Deslave</td>";
-            agregarRenglon(vector[27]);
+                    "<td>19</td>"+
+                    "<td>Envenenamiento</td>";
+            agregarRenglon(vector[12][0], vector[12][1]);
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td>8</td>"+
-                    "<td>Deslizamiento de alud</td>";
-            agregarRenglon(vector[28]);
-
-            tablaConcatenacion=  tablaConcatenacion +
-                    "<tr>" +
-                    "<td>9</td>"+
-                    "<td>Erosión del suelo productivo</td>";
-            agregarRenglon(vector[29]);
-
-            tablaConcatenacion=  tablaConcatenacion +
-                    "<tr>" +
-                    "<td>10</td>"+
-                    "<td>Sobre explotación de fuentes de agua</td>";
-            agregarRenglon(vector[30]);
-
-            tablaConcatenacion=  tablaConcatenacion +
-                    "<tr>" +
-                    "<td>11</td>"+
-                    "<td>Sobre explotación de mantos freáticos</td>";
-            agregarRenglon(vector[31]);
-
-            tablaConcatenacion=  tablaConcatenacion +
-                    "<tr>" +
-                    "<td>12</td>"+
-                    "<td>Sismos o Terremotos</td>";
-            agregarRenglon(vector[32]);
-
-            tablaConcatenacion=  tablaConcatenacion +
-                    "<tr>" +
-                    "<td></td>"+
-                    "<td>Derrumbes de edificios aledaños</td>";
-            agregarRenglon(vector[33]);
-
-            tablaConcatenacion=  tablaConcatenacion +
-                    "<tr>" +
-                    "<td></td>"+
-                    "<td>Caída de torres de alta tensión</td>";
-            agregarRenglon(vector[34]);
-
-            tablaConcatenacion=  tablaConcatenacion +
-                    "<tr>" +
-                    "<td></td>"+
-                    "<td> Maremotos o Tsunamis</td>";
-            agregarRenglon(vector[35]);
-
-            tablaConcatenacion=  tablaConcatenacion +
-                    "<tr>" +
-                    "<td></td>"+
-                    "<td>Otros, especificar:</td>";
-            agregarRenglon(vector[36]);
-
-            tablaConcatenacion=  tablaConcatenacion +
-                    "<tr>" +
-                    "<td></td>"+
-                    "<td colspan=\"3\">"+vector[37]+"</td>"+
+                    "<td colspan=\"5\">De origen hidrometeorológico</td>"+
                     "</tr>";
 
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>20</td>"+
+                    "<td>Inundación</td>";
+            agregarRenglon(vector[13][0], vector[13][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td></td>"+
+                    "<td>Por Río</td>";
+            agregarRenglon(vector[14][0], vector[14][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td></td>"+
+                    "<td>Por lago, laguna, presa</td>";
+            agregarRenglon(vector[15][0], vector[15][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td></td>"+
+                    "<td>Por lluvia</td>";
+            agregarRenglon(vector[16][0], vector[16][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td></td>"+
+                    "<td>Por mar</td>";
+            agregarRenglon(vector[17][0], vector[17][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>21</td>"+
+                    "<td>Vientos fuertes</td>";
+            agregarRenglon(vector[18][0], vector[18][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>22</td>"+
+                    "<td>Huracán</td>";
+            agregarRenglon(vector[19][0], vector[19][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>23</td>"+
+                    "<td>Marea de tempestad</td>";
+            agregarRenglon(vector[20][0], vector[20][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>24</td>"+
+                    "<td>Tormenta eléctrica</td>";
+            agregarRenglon(vector[21][0], vector[21][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>25</td>"+
+                    "<td>Lluvia torrencial</td>";
+            agregarRenglon(vector[22][0], vector[22][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>26</td>"+
+                    "<td>Tromba</td>";
+            agregarRenglon(vector[23][0], vector[23][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>27</td>"+
+                    "<td>Tornado</td>";
+            agregarRenglon(vector[24][0], vector[24][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>28</td>"+
+                    "<td>Tormenta de granizo</td>";
+            agregarRenglon(vector[25][0], vector[25][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>29</td>"+
+                    "<td>Helada</td>";
+            agregarRenglon(vector[26][0], vector[26][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>30</td>"+
+                    "<td>Nevada</td>";
+            agregarRenglon(vector[27][0], vector[27][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>31</td>"+
+                    "<td>Sequía</td>";
+            agregarRenglon(vector[28][0], vector[28][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>32</td>"+
+                    "<td>Temperaturas extremas</td>";
+            agregarRenglon(vector[29][0], vector[29][1]);
+
+             tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td colspan=\"5\">De origen Sanitario-Ecológico</td>"+
+                    "</tr>";
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>33</td>"+
+                    "<td>Epidemia</td>";
+            agregarRenglon(vector[30][0], vector[30][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td colspan=\"5\">A que tipo de epidemia es vulnerable: "+vector[3]+"</td>"+
+                    "</tr>";
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>34</td>"+
+                    "<td>Plaga</td>";
+            agregarRenglon(vector[31][0], vector[31][1]);
+
+             tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td colspan=\"5\">A que tipo de plaga es vulnerable: "+vector[4]+"</td>"+
+                    "</tr>";
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>35</td>"+
+                    "<td>Envenenamiento</td>";
+            agregarRenglon(vector[32][0], vector[32][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td colspan=\"5\">A que tipo de envenenamiento es vulnerable: "+vector[5]+"</td>"+
+                    "</tr>";
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td>36</td>"+
+                    "<td>Contaminacion</td>";
+            agregarRenglon(vector[33][0], vector[33][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td></td>"+
+                    "<td>Aire</td>";
+            agregarRenglon(vector[34][0], vector[34][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td></td>"+
+                    "<td>Agua</td>";
+            agregarRenglon(vector[35][0], vector[35][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td></td>"+
+                    "<td>Suelo</td>";
+            agregarRenglon(vector[36][0], vector[36][1]);
+
+            tablaConcatenacion=  tablaConcatenacion +
+                    "<tr>" +
+                    "<td></td>"+
+                    "<td>Salud</td>";
+            agregarRenglon(vector[37][0], vector[37][1]);
 
             tablaConcatenacion= tablaConcatenacion+
                     "</tbody>"+
@@ -2683,26 +2735,29 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
 
     }
 
-    public void agregarRenglon(String decision) {
+    public void agregarRenglon(String decision, String observaciones) {
         if (decision.equals("SI")) {
             tablaConcatenacion= tablaConcatenacion +
                     "<td style=\"background-color:Yellow; text-align:center;\">SI</td>" +
                     "<td style=\"text-align:center;\">NO</td>" +
+                    "<td >"+observaciones+"</td>" +
                     "</tr>";
 
         } else if(decision.equals("NO")){
             tablaConcatenacion= tablaConcatenacion +
                     "<td style=\"text-align:center;\">SI</td>" +
                     "<td style=\"background-color:Yellow; text-align:center;\">NO</td>" +
+                    "<td ></td>" +
                     "</tr>";
         }else{
             tablaConcatenacion= tablaConcatenacion +
                     "<td style=\"text-align:center;\">SI</td>" +
                     "<td style=\"text-align:center;\">NO</td>" +
+                    "<td ></td>" +
                     "</tr>";
         }
 
     }
-*/
+
 
 }
