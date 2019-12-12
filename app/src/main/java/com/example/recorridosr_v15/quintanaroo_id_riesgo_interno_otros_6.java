@@ -421,7 +421,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         et54.setVisibility(View.GONE);
 
 
-        if(!vector2.equals("") && vector2 != null){
+      if(!vector2.equals("") && vector2 != null){
             edit1.setText(vector2);
         }
         if(!vector3[0].equals("") && vector3[0] != null){
@@ -1102,7 +1102,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                vector2=et1.getText().toString();
+                vector=et1.getText().toString();
             }
 
             @Override
