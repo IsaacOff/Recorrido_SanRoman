@@ -1,12 +1,15 @@
 package com.example.recorridosr_v15;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -58,6 +61,13 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
 
         this.setTitle("Riesgo Externo_chetumal");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+
+        // Find the toolbar view inside the activity layout
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        // Sets the Toolbar to act as the ActionBar for this Activity window.
+        // Make sure the toolbar exists in the activity and is not null
+        setSupportActionBar(toolbar);
 
         directorio2 = new File(quintanaroo_id_riesgo.file());
         if(directorio2 != null) {
@@ -2342,6 +2352,42 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
 
 
     }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_externo, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.opcion1) {
+            Toast.makeText(this, "Actividad 1 abierta", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_id_riesgo_externo.class);
+            startActivity(intent);
+
+
+            return true;
+        }
+        if (id == R.id.opcion2) {
+            Toast.makeText(this, "Actividad 2 abierta", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_id_riesgo_externo_fenomeno_1.class);
+            startActivity(intent);
+            return true;
+        }
+        if (id == R.id.opcion3) {
+            Toast.makeText(this, "Actividad 3 abierta", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_id_riesgo_externo_fenomeno_2.class);
+            startActivity(intent);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
 
 
 

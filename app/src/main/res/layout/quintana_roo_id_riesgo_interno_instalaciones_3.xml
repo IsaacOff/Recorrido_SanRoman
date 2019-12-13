@@ -40,7 +40,9 @@ android:stretchColumns="1">
             android:layout_column="0"
             android:padding="3dip"
             android:text="  1.- Instalación hidrosanitaria"
-            android:textColor="#9C8046" />
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
 
         <!-- El inmueble cuenta con:  -->
@@ -317,7 +319,9 @@ android:stretchColumns="1">
             android:layout_column="0"
             android:padding="3dip"
             android:text="  2.- Instalación de gas"
-            android:textColor="#9C8046" />
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <TableRow android:layout_height="122dp">
 
@@ -621,7 +625,9 @@ android:stretchColumns="1">
             android:layout_column="0"
             android:padding="3dip"
             android:text="  3.- Instalación eléctrica"
-            android:textColor="#9C8046" />
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <TableRow android:layout_height="122dp">
 
@@ -1130,7 +1136,9 @@ android:stretchColumns="1">
             android:layout_column="0"
             android:padding="3dip"
             android:text="  4.- Instalación de aire acondicionado"
-            android:textColor="#9C8046" />
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
 
         <TableRow android:layout_height="122dp">
 

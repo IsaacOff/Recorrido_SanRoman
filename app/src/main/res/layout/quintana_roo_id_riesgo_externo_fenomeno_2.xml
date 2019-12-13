@@ -5,7 +5,11 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context=".quintanaroo_id_riesgo_externo_fenomeno_2"
 android:stretchColumns="1">
-
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 <ScrollView
     android:layout_width="match_parent"

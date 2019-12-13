@@ -36,11 +36,13 @@ android:stretchColumns="1">
         <!--- /////////////////////////////////////////////////// -->
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
+            android:layout_height="50dp"
             android:layout_column="0"
             android:padding="3dip"
             android:text=" Riesgo por las condiciones de inseguridad que existe en :"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
 
         <!-- El inmueble cuenta con:  -->
@@ -53,7 +55,7 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Anaqueles y/o estantería"
-                android:textColor="#000000"
+                android:textColor="#EC6501"
                 android:clickable="true"
                 android:onClick="eventtext1"
                 />
@@ -109,7 +111,7 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Vidrios"
-                android:textColor="#000000"
+                android:textColor="#EC6501"
                 android:clickable="true"
                 android:onClick="eventtext2"
                 />
@@ -164,7 +166,7 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Antenas"
-                android:textColor="#000000"
+                android:textColor="#EC6501"
                 android:clickable="true"
                 android:onClick="eventtext3"
                 />
@@ -216,7 +218,7 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Plafones"
-                android:textColor="#000000"
+                android:textColor="#EC6501"
                 android:clickable="true"
                 android:onClick="eventtext4"
                 />
@@ -275,7 +277,7 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Lámparas"
-                android:textColor="#000000"
+                android:textColor="#EC6501"
                 android:clickable="true"
                 android:onClick="eventtext5"
                 />
@@ -327,7 +329,7 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Elevadores"
-                android:textColor="#000000"
+                android:textColor="#EC6501"
                 android:clickable="true"
                 android:onClick="eventtext6"
                 />
@@ -380,7 +382,7 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Cancelería"
-                android:textColor="#000000"
+                android:textColor="#EC6501"
                 android:clickable="true"
                 android:onClick="eventtext7"
                 />
@@ -432,7 +434,7 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Puertas y ventanas"
-                android:textColor="#000000"
+                android:textColor="#EC6501"
                 android:clickable="true"
                 android:onClick="eventtext8"
                 />
@@ -485,7 +487,7 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Elementos suspendidos"
-                android:textColor="#000000"
+                android:textColor="#EC6501"
                 android:clickable="true"
                 android:onClick="eventtext9"
                 />
@@ -539,7 +541,7 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Muros falsos"
-                android:textColor="#000000"
+                android:textColor="#EC6501"
                 android:clickable="true"
                 android:onClick="eventtext10"
                 />
@@ -596,11 +598,13 @@ android:stretchColumns="1">
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="55dp"
             android:layout_column="0"
             android:padding="3dip"
             android:text=" Riesgo por las condiciones de inseguridad que presentan los   acabados del inmueble :"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
 
 
@@ -614,7 +618,7 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Lambrines"
-                android:textColor="#000000"
+                android:textColor="#EC6501"
                 android:clickable="true"
                 android:onClick="eventtext11"
                 />
@@ -666,7 +670,7 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Recubrimiento de material incombustible"
-                android:textColor="#000000"
+                android:textColor="#EC6501"
                 android:clickable="true"
                 android:onClick="eventtext12"
                 />
@@ -718,7 +722,7 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Recubrimiento de material combustible"
-                android:textColor="#000000"
+                android:textColor="#EC6501"
                 android:clickable="true"
                 android:onClick="eventtext13"
                 />
@@ -771,7 +775,7 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Pisos y desniveles"
-                android:textColor="#000000"
+                android:textColor="#EC6501"
                 android:clickable="true"
                 android:onClick="eventtext14"
                 />
@@ -825,7 +829,7 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Pisos falsos"
-                android:textColor="#000000"
+                android:textColor="#EC6501"
                 android:clickable="true"
                 android:onClick="eventtext15"
                 />
@@ -878,7 +882,7 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Losetas y azulejos"
-                android:textColor="#000000"
+                android:textColor="#EC6501"
                 android:clickable="true"
                 android:onClick="eventtext16"
                 />
