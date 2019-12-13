@@ -10,38 +10,6 @@
 
 
     <Button
-        android:id="@+id/button"
-        style="@android:style/Widget.Button.Inset"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_gravity="center"
-        android:onClick="Exterior_quintana"
-        android:text="SEGURIDAD EXTERIOR"
-        android:textSize="16dp" />
-
-    <Button
-        android:id="@+id/button2"
-        style="@android:style/Widget.Button.Inset"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_gravity="center"
-        android:onClick="Analisis_quintana"
-        android:text="ANALISIS DE RECURSOS"
-        android:textSize="16dp"/>
-
-    <Button
-        android:id="@+id/button3"
-        style="@android:style/Widget.Button.Inset"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_gravity="center"
-        android:onClick="Circundantes_quintana"
-        android:text="RECURSOS CIRCUNDANTES"
-        android:textSize="16dp"/>
-
-
-
-    <Button
         android:id="@+id/button4"
         style="@android:style/Widget.Button.Inset"
         android:layout_width="match_parent"
