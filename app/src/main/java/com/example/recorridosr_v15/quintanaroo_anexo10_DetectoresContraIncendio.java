@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -28,11 +31,11 @@ public class quintanaroo_anexo10_DetectoresContraIncendio extends AppCompatActiv
     private Spinner spin1;
     private TextView TV1;
     static private int numero =1;
-    String vector[] =new String[5];
+    static String vector[] = {"", "", "", "", ""};
     private EditText  et1, et2,  et3,  et4;
     private File pdfFile;
-    private String htmlToPDF;
-    private File directorio2;
+    static private String htmlToPDF;
+    static private File directorio2;
     static private String detectores;
 
     @Override
@@ -64,8 +67,107 @@ public class quintanaroo_anexo10_DetectoresContraIncendio extends AppCompatActiv
         et3  = (EditText) findViewById(R.id.editText3);
         et4  = (EditText) findViewById(R.id.editText4);
 
+        if(!vector[1].equals("")){
+            et1.setText(vector[1]);
+        }
+        if(!vector[2].equals("")){
+            et2.setText(vector[2]);
+        }
+        if(!vector[3].equals("")){
+            et3.setText(vector[3]);
+        }
+        if(!vector[4].equals("")){
+            et4.setText(vector[4]);
+        }
+
+        if(vector[0].equals("TIPO DE DETECTOR:")){
+            spin1.setSelection(0);
+        }else if(vector[0].equals("HUMO")) {
+            spin1.setSelection(1);
+        }else if (vector[0].equals("FUEGO")){
+            spin1.setSelection(2);
+        }else if (vector[0].equals("GAS")){
+            spin1.setSelection(3);
+        }else if (vector[0].equals("SENSORES DE HUMO")){
+            spin1.setSelection(4);
+        }else{
+            spin1.setSelection(0);
+        }
+
+        et1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[1]  = et1.getText().toString();
 
 
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[2] = et2.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et3.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[3]  = et3.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et4.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[4] = et4.getText().toString();
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
+        spin1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                vector[0]= spin1.getSelectedItem().toString();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+            }
+        });
     }
 
 
@@ -85,36 +187,28 @@ public class quintanaroo_anexo10_DetectoresContraIncendio extends AppCompatActiv
     public void OnClick (View view){
         Boolean bandera=true;
 
-
-
-        vector[0]   = spin1.getSelectedItem().toString();
-
-        if (et1.length() == 0) {
+        if (vector[1].equals("")) {
              bandera = false;
         }
 
 
-        if (et2.length() == 0) {
+        if (vector[2].equals("")) {
             bandera = false;
         }
 
-        if (et3.length() == 0) {
+        if (vector[3].equals("")) {
             bandera = false;
         }
 
-        if (et4.length() == 0) {
+        if (vector[4].equals("")) {
             bandera = false;
         }
 
-        if(vector[0]=="TIPO DE DETECTOR:"){
+        if(vector[0].equals("TIPO DE DETECTOR:")){
                 bandera= false;
         }
 
         if (bandera){
-            vector[1]   = et1.getText().toString();
-            vector[2]   = et2.getText().toString();
-            vector[3]   = et3.getText().toString();
-            vector[4]   = et4.getText().toString();
 
             agregarDetector(numero, vector[0],vector[1],vector[2],vector[3],vector[4]);
 

@@ -39,7 +39,7 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
     private EditText et21,et22, et23, et24, et25, et26, et27, et28, et29, et30, et31, et32, et33, et34, et35, et36, et37, et38;
     private EditText  edi1,  edi2,  edi3, edi4,  edi5,  edi6;
 
-    String tablaConcatenacion="";
+    static String tablaConcatenacion="";
     static File pdfFile;
     static File directorio2;
 
@@ -59,12 +59,10 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
         this.setTitle("Riesgo Externo_chetumal");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-
         directorio2 = new File(quintanaroo_id_riesgo.file());
         if(directorio2 != null) {
-            pdfFile = new File(directorio2.getPath(), "prueba1.pdf");
-       }
-
+            pdfFile = new File(directorio2.getPath(), "Riesgos Externo.pdf");
+        }
 
         //Asigna los Rg y rb del xml a los de aqui
         rg1= (RadioGroup) findViewById(R.id.Rg1);
@@ -1136,7 +1134,7 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
             public void afterTextChanged(Editable s) {
             }
         });
-        et21.addTextChangedListener(new TextWatcher() {
+        et22.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -2351,6 +2349,7 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
     public void final_externo(View view) {
         boolean bandera = true;
         boolean banderatotal = true;
+        String text= "";
 
 
 
@@ -2396,20 +2395,20 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
             }
 
 
-       /*if(!quintanaroo_id_riesgo_externo.externosiguiente1()){
+       if(!quintanaroo_id_riesgo_externo.externosiguiente1()){
             banderatotal = false;
-            Toast.makeText(this, "Revisa la pagina 1", LENGTH_SHORT).show();
+            text = "1,";
         }
 
         if(!quintanaroo_id_riesgo_externo_fenomeno_1.externo_siguiente2()){
             banderatotal = false;
-            Toast.makeText(this, "Revisa la pagina 2", LENGTH_SHORT).show();
+            text = text + "2,";
         }
 
         if(!bandera){
             banderatotal = false;
-            Toast.makeText(this, "Revisa la pagina 3", LENGTH_SHORT).show();
-        }*/
+            text = text + "3";
+        }
 
         if(banderatotal){
            onClick();
@@ -2417,7 +2416,7 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
 
         }
         else{
-            Toast.makeText(this, "revisa las paginas ", LENGTH_SHORT).show();
+            Toast.makeText(this, "revisa las paginas "+text, LENGTH_SHORT).show();
         }
     }
 
@@ -2441,9 +2440,9 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
             XMLWorkerHelper worker = XMLWorkerHelper.getInstance();
 
             tablaConcatenacion=
-                    "<html>" + "<body>" +
-                           // quintanaroo_id_riesgo_externo.onClick()+
-                           // quintanaroo_id_riesgo_externo_fenomeno_1.onClick()+
+                    //"<html>" + "<body>" +
+                           quintanaroo_id_riesgo_externo.onClick()+
+                           quintanaroo_id_riesgo_externo_fenomeno_1.onClick()+
 
                             "<TABLE border=\"1\" WIDTH=\"100%\">"+
                             "<thead>"+
@@ -2478,7 +2477,7 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
                     "<tr>" +
                     "<td></td>"+
                     "<td colspan=\"4\">¿Qué se quemaria?</td>"+
-                    "<tr>" ;
+                    "</tr>" ;
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
@@ -2539,12 +2538,12 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td colspan=\"5\">De qué manera una fuga o derrame de materiales químicos peligrosos podría afectarlo "+ vector[1]+"</td>"+
+                    "<td colspan=\"5\">De qué manera una fuga o derrame de materiales químicos peligrosos podría afectarlo "+ vector2[1]+"</td>"+
                     "</tr>";
 
                     tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td colspan=\"5\">Cuales serian los lugares: "+ vector[2] +"</td>"+
+                    "<td colspan=\"5\">Cuales serian los lugares: "+ vector2[2] +"</td>"+
                     "</tr>";
 
             tablaConcatenacion=  tablaConcatenacion +
@@ -2685,7 +2684,7 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td colspan=\"5\">A que tipo de epidemia es vulnerable: "+vector[3]+"</td>"+
+                    "<td colspan=\"5\">A que tipo de epidemia es vulnerable: "+vector2[3]+"</td>"+
                     "</tr>";
 
             tablaConcatenacion=  tablaConcatenacion +
@@ -2696,7 +2695,7 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
 
              tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td colspan=\"5\">A que tipo de plaga es vulnerable: "+vector[4]+"</td>"+
+                    "<td colspan=\"5\">A que tipo de plaga es vulnerable: "+vector2[4]+"</td>"+
                     "</tr>";
 
             tablaConcatenacion=  tablaConcatenacion +
@@ -2707,7 +2706,7 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
 
             tablaConcatenacion=  tablaConcatenacion +
                     "<tr>" +
-                    "<td colspan=\"5\">A que tipo de envenenamiento es vulnerable: "+vector[5]+"</td>"+
+                    "<td colspan=\"5\">A que tipo de envenenamiento es vulnerable: "+vector2[5]+"</td>"+
                     "</tr>";
 
             tablaConcatenacion=  tablaConcatenacion +

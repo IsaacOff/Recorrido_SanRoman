@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -32,12 +34,12 @@ public class quintanaroo_anexo10_RecursosMateriales extends AppCompatActivity {
     private EditText  et1, et2,  et3,  et4,  et5,  et6,  et7,  et8,  et9, et10, et11, et12, et13, et14, et15, et16, et17, et18, et19, et20;
     private EditText et21,et22, et23, et24, et25, et26, et27, et28, et29, et30, et31, et32, et33, et34, et35, et36, et37, et38, et39, et40;
     private EditText et41,et42, et43, et44, et45, et46, et47, et48, et49, et50, et51, et52, et53, et54, et55, et56, et57, et58, et59, et60, et61, et62;
-    private String vector[][] = new String[14][4];
-    private String vector2[][] = new String[5][5];
+    static private String vector[][] = {{"", "", "", ""}, {"", "", "", ""}, {"", "", "", ""}, {"", "", "", ""}, {"", "", "", ""}, {"", "", "", ""}, {"", "", "", ""}, {"", "", "", ""}, {"", "", "", ""}, {"", "", "", ""}, {"", "", "", ""}, {"", "", "", ""}, {"", "", "", ""}, {"", "", "", ""}};
+    static private String vector2[][] = {{"", "", "", "", ""}, {"", "", "", "", ""}, {"", "", "", "", ""}, {"", "", "", "", ""}, {"", "", "", "", ""}};
     private File pdfFile;
-    private String htmlToPDF;
+    static private String htmlToPDF;
     private File directorio2;
-    private String titulos []={"Botiquin", "Cascos", "Chalecos", "Brazaletes", "Botas", "Banderillas", "Lamparas de emergencia", "Equipo de zapa", "Paro de emergencia", "Hidrantes", "Alarma de emergencia", "Megafono", "Extintores","Camillas"};
+    static private String titulos []={"Botiquin", "Cascos", "Chalecos", "Brazaletes", "Botas", "Banderillas", "Lamparas de emergencia", "Equipo de zapa", "Paro de emergencia", "Hidrantes", "Alarma de emergencia", "Megafono", "Extintores","Camillas"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -268,10 +270,472 @@ public class quintanaroo_anexo10_RecursosMateriales extends AppCompatActivity {
 
 
 
+        if(!vector[0][1].equals("") && vector[0][1] != null){
+            et1.setText(vector[0][1]);
+        }
+
+        if(!vector[0][2].equals("") && vector[0][2] != null){
+            et2.setText(vector[0][2]);
+        }
+
+        if(!vector[0][3].equals("") && vector[0][3] != null){
+            et3.setText(vector[0][3]);
+        }
+
+        if(!vector[1][1].equals("") && vector[1][1] != null){
+            et4.setText(vector[1][1]);
+        }
+
+        if(!vector[1][2].equals("") && vector[1][2] != null){
+            et5.setText(vector[1][2]);
+        }
+
+        if(!vector[1][3].equals("") && vector[1][3] != null){
+            et6.setText(vector[1][3]);
+        }
+
+        if(!vector[2][1].equals("") && vector[2][1] != null){
+            et7.setText(vector[2][1]);
+        }
+
+        if(!vector[2][2].equals("") && vector[2][2] != null){
+            et8.setText(vector[2][2]);
+        }
+
+        if(!vector[2][3].equals("") && vector[2][3] != null){
+            et9.setText(vector[2][3]);
+        }
+
+        if(!vector[3][1].equals("") && vector[3][1] != null){
+            et10.setText(vector[3][1]);
+        }
+
+        if(!vector[3][2].equals("") && vector[3][2] != null){
+            et11.setText(vector[3][2]);
+        }
+
+        if(!vector[3][3].equals("") && vector[3][3] != null){
+            et12.setText(vector[3][3]);
+        }
+
+        if(!vector[4][1].equals("") && vector[4][1] != null){
+            et13.setText(vector[4][1]);
+        }
+
+        if(!vector[4][2].equals("") && vector[4][2] != null){
+            et14.setText(vector[4][2]);
+        }
+
+        if(!vector[4][3].equals("") && vector[4][3] != null){
+            et15.setText(vector[4][3]);
+        }
+
+        if(!vector[5][1].equals("") && vector[5][1] != null){
+            et16.setText(vector[5][1]);
+        }
+
+        if(!vector[5][2].equals("") && vector[5][2] != null){
+            et17.setText(vector[5][2]);
+        }
+
+        if(!vector[5][3].equals("") && vector[5][3] != null){
+            et18.setText(vector[5][3]);
+        }
+
+        if(!vector[6][1].equals("") && vector[6][1] != null){
+            et19.setText(vector[6][1]);
+        }
+
+        if(!vector[6][2].equals("") && vector[6][2] != null){
+            et20.setText(vector[6][2]);
+        }
+
+        if(!vector[6][3].equals("") && vector[6][3] != null){
+            et21.setText(vector[6][3]);
+        }
+
+        if(!vector[7][1].equals("") && vector[7][1] != null){
+            et22.setText(vector[7][1]);
+        }
+
+        if(!vector[7][2].equals("") && vector[7][2] != null){
+            et23.setText(vector[7][2]);
+        }
+
+        if(!vector[7][3].equals("") && vector[7][3] != null){
+            et24.setText(vector[7][3]);
+        }
+
+        if(!vector[8][1].equals("") && vector[8][1] != null){
+            et25.setText(vector[8][1]);
+        }
+
+        if(!vector[8][2].equals("") && vector[8][2] != null){
+            et26.setText(vector[8][2]);
+        }
+
+        if(!vector[8][3].equals("") && vector[8][3] != null){
+            et27.setText(vector[8][3]);
+        }
+
+        if(!vector[9][1].equals("") && vector[9][1] != null){
+            et28.setText(vector[9][1]);
+        }
+
+        if(!vector[9][2].equals("") && vector[9][2] != null){
+            et29.setText(vector[9][2]);
+        }
+
+        if(!vector[9][3].equals("") && vector[9][3] != null){
+            et30.setText(vector[9][3]);
+        }
+
+        if(!vector[10][1].equals("") && vector[10][1] != null){
+            et31.setText(vector[10][1]);
+        }
+
+        if(!vector[10][2].equals("") && vector[10][2] != null){
+            et32.setText(vector[10][2]);
+        }
+
+        if(!vector[10][3].equals("") && vector[10][3] != null){
+            et33.setText(vector[10][3]);
+        }
+
+        if(!vector[11][1].equals("") && vector[11][1] != null){
+            et34.setText(vector[11][1]);
+        }
+
+        if(!vector[11][2].equals("") && vector[11][2] != null){
+            et35.setText(vector[11][2]);
+        }
+
+        if(!vector[11][3].equals("") && vector[11][3] != null){
+            et36.setText(vector[11][3]);
+        }
+
+        if(!vector[12][1].equals("") && vector[12][1] != null){
+            et37.setText(vector[12][1]);
+        }
+
+        if(!vector[12][2].equals("") && vector[12][2] != null){
+            et38.setText(vector[12][2]);
+        }
+
+        if(!vector[12][3].equals("") && vector[12][3] != null){
+            et39.setText(vector[12][3]);
+        }
+
+        if(!vector[13][1].equals("") && vector[13][1] != null){
+            et40.setText(vector[13][1]);
+        }
+
+        if(!vector[13][2].equals("") && vector[13][2] != null){
+            et41.setText(vector[13][2]);
+        }
+
+        if(!vector[13][3].equals("") && vector[13][3] != null){
+            et42.setText(vector[13][3]);
+        }
 
 
+        if(!vector2[0][1].equals("") && vector2[0][1] != null){
+            et43.setText(vector2[0][1]);
+        }
+
+        if(!vector2[0][2].equals("") && vector2[0][2] != null){
+            et44.setText(vector2[0][2]);
+        }
+
+        if(!vector2[0][3].equals("") && vector2[0][3] != null){
+            et45.setText(vector2[0][3]);
+        }
+
+        if(!vector2[0][4].equals("") && vector2[0][4] != null){
+            et46.setText(vector2[0][4]);
+        }
+
+        if(!vector2[1][1].equals("") && vector2[1][1] != null){
+            et47.setText(vector2[1][1]);
+        }
+
+        if(!vector2[1][2].equals("") && vector2[1][2] != null){
+            et48.setText(vector2[1][2]);
+        }
+
+        if(!vector2[1][3].equals("") && vector2[1][3] != null){
+            et49.setText(vector2[1][3]);
+        }
+
+        if(!vector2[1][4].equals("") && vector2[1][4] != null){
+            et50.setText(vector2[1][4]);
+        }
+
+        if(!vector2[2][1].equals("") && vector2[2][1] != null){
+            et51.setText(vector2[2][1]);
+        }
+
+        if(!vector2[2][2].equals("") && vector2[2][2] != null){
+            et52.setText(vector2[2][2]);
+        }
+
+        if(!vector2[2][3].equals("") && vector2[2][3] != null){
+            et53.setText(vector2[2][3]);
+        }
+
+        if(!vector2[2][4].equals("") && vector2[2][4] != null){
+            et54.setText(vector2[2][4]);
+        }
+
+        if(!vector2[3][1].equals("") && vector2[3][1] != null){
+            et55.setText(vector2[3][1]);
+        }
+
+        if(!vector2[3][2].equals("") && vector2[3][2] != null){
+            et56.setText(vector2[3][2]);
+        }
+
+        if(!vector2[3][3].equals("") && vector2[3][3] != null){
+            et57.setText(vector2[3][3]);
+        }
+
+        if(!vector2[3][4].equals("") && vector2[3][4] != null){
+            et58.setText(vector2[3][4]);
+        }
+
+        if(!vector2[4][1].equals("") && vector2[4][1] != null){
+            et59.setText(vector2[4][1]);
+        }
+
+        if(!vector2[4][2].equals("") && vector2[4][2] != null){
+            et60.setText(vector2[4][2]);
+        }
+
+        if(!vector2[4][3].equals("") && vector2[4][3] != null){
+            et61.setText(vector2[4][3]);
+        }
+
+        if(!vector2[4][4].equals("") && vector2[4][4] != null){
+            et62.setText(vector2[4][4]);
+        }
 
 
+        if (vector[0][0].equals("SI")) {
+            rb1.setChecked(true);
+            rb2.setChecked(false);
+            et1.setVisibility(View.VISIBLE);
+            et2.setVisibility(View.VISIBLE);
+            et3.setVisibility(View.VISIBLE);
+        } else if (vector[0][0].equals("NO")) {
+            rb1.setChecked(false);
+            rb2.setChecked(true);
+        }
+
+        if (vector[1][0].equals("SI")) {
+            rb3.setChecked(true);
+            rb4.setChecked(false);
+            et4.setVisibility(View.VISIBLE);
+            et5.setVisibility(View.VISIBLE);
+            et6.setVisibility(View.VISIBLE);
+        } else if (vector[1][0].equals("NO")) {
+            rb3.setChecked(false);
+            rb4.setChecked(true);
+        }
+
+        if (vector[2][0].equals("SI")) {
+            rb5.setChecked(true);
+            rb6.setChecked(false);
+            et7.setVisibility(View.VISIBLE);
+            et8.setVisibility(View.VISIBLE);
+            et9.setVisibility(View.VISIBLE);
+        } else if (vector[2].equals("NO")) {
+            rb5.setChecked(false);
+            rb6.setChecked(true);
+        }
+
+        if (vector[3][0].equals("SI")) {
+            rb7.setChecked(true);
+            rb8.setChecked(false);
+            et10.setVisibility(View.VISIBLE);
+            et11.setVisibility(View.VISIBLE);
+            et12.setVisibility(View.VISIBLE);
+        } else if (vector[3][0].equals("NO")) {
+            rb7.setChecked(false);
+            rb8.setChecked(true);
+        }
+
+        if (vector[4][0].equals("SI")) {
+            rb9.setChecked(true);
+            rb10.setChecked(false);
+            et13.setVisibility(View.VISIBLE);
+            et14.setVisibility(View.VISIBLE);
+            et15.setVisibility(View.VISIBLE);
+        } else if (vector[4][0].equals("NO")) {
+            rb9.setChecked(false);
+            rb10.setChecked(true);
+        }
+
+
+        if (vector[5][0].equals("SI")) {
+            rb11.setChecked(true);
+            rb12.setChecked(false);
+            et16.setVisibility(View.VISIBLE);
+            et17.setVisibility(View.VISIBLE);
+            et18.setVisibility(View.VISIBLE);
+        } else if (vector[5][0].equals("NO")) {
+            rb11.setChecked(false);
+            rb12.setChecked(true);
+        }
+
+        if (vector[6][0].equals("SI")) {
+            rb13.setChecked(true);
+            rb14.setChecked(false);
+            et19.setVisibility(View.VISIBLE);
+            et20.setVisibility(View.VISIBLE);
+            et21.setVisibility(View.VISIBLE);
+        } else if (vector[6][0].equals("NO")) {
+            rb13.setChecked(false);
+            rb14.setChecked(true);
+        }
+
+        if (vector[7][0].equals("SI")) {
+            rb15.setChecked(true);
+            rb16.setChecked(false);
+            et22.setVisibility(View.VISIBLE);
+            et23.setVisibility(View.VISIBLE);
+            et24.setVisibility(View.VISIBLE);
+        } else if (vector[7][0].equals("NO")) {
+            rb15.setChecked(false);
+            rb16.setChecked(true);
+        }
+
+        if (vector[8][0].equals("SI")) {
+            rb17.setChecked(true);
+            rb18.setChecked(false);
+            et25.setVisibility(View.VISIBLE);
+            et26.setVisibility(View.VISIBLE);
+            et27.setVisibility(View.VISIBLE);
+        } else if (vector[8][0].equals("NO")) {
+            rb17.setChecked(false);
+            rb18.setChecked(true);
+        }
+
+        if (vector[9][0].equals("SI")) {
+            rb19.setChecked(true);
+            rb20.setChecked(false);
+            et28.setVisibility(View.VISIBLE);
+            et29.setVisibility(View.VISIBLE);
+            et30.setVisibility(View.VISIBLE);
+        } else if (vector[9][0].equals("NO")) {
+            rb19.setChecked(false);
+            rb20.setChecked(true);
+        }
+
+
+        if (vector[10][0].equals("SI")) {
+            rb21.setChecked(true);
+            rb22.setChecked(false);
+            et31.setVisibility(View.VISIBLE);
+            et32.setVisibility(View.VISIBLE);
+            et33.setVisibility(View.VISIBLE);
+        } else if (vector[10][0].equals("NO")) {
+            rb21.setChecked(false);
+            rb22.setChecked(true);
+        }
+
+        if (vector[11][0].equals("SI")) {
+            rb23.setChecked(true);
+            rb24.setChecked(false);
+            et34.setVisibility(View.VISIBLE);
+            et35.setVisibility(View.VISIBLE);
+            et36.setVisibility(View.VISIBLE);
+        } else if (vector[11][0].equals("NO")) {
+            rb23.setChecked(false);
+            rb24.setChecked(true);
+        }
+
+        if (vector[12][0].equals("SI")) {
+            rb25.setChecked(true);
+            rb26.setChecked(false);
+            et37.setVisibility(View.VISIBLE);
+            et38.setVisibility(View.VISIBLE);
+            et39.setVisibility(View.VISIBLE);
+        } else if (vector[12][0].equals("NO")) {
+            rb25.setChecked(false);
+            rb26.setChecked(true);
+        }
+
+        if (vector[13][0].equals("SI")) {
+            rb27.setChecked(true);
+            rb28.setChecked(false);
+            et40.setVisibility(View.VISIBLE);
+            et41.setVisibility(View.VISIBLE);
+            et42.setVisibility(View.VISIBLE);
+        } else if (vector[13][0].equals("NO")) {
+            rb27.setChecked(false);
+            rb28.setChecked(true);
+        }
+
+
+        if (vector2[0][0].equals("SI")) {
+            rb29.setChecked(true);
+            rb30.setChecked(false);
+            et43.setVisibility(View.VISIBLE);
+            et44.setVisibility(View.VISIBLE);
+            et45.setVisibility(View.VISIBLE);
+            et46.setVisibility(View.VISIBLE);
+        } else if (vector2[0][0].equals("NO")) {
+            rb29.setChecked(false);
+            rb30.setChecked(true);
+        }
+
+        if (vector2[1][0].equals("SI")) {
+            rb31.setChecked(true);
+            rb32.setChecked(false);
+            et47.setVisibility(View.VISIBLE);
+            et48.setVisibility(View.VISIBLE);
+            et49.setVisibility(View.VISIBLE);
+            et50.setVisibility(View.VISIBLE);
+        } else if (vector2[1][0].equals("NO")) {
+            rb31.setChecked(false);
+            rb32.setChecked(true);
+        }
+
+        if (vector2[2][0].equals("SI")) {
+            rb33.setChecked(true);
+            rb34.setChecked(false);
+            et51.setVisibility(View.VISIBLE);
+            et52.setVisibility(View.VISIBLE);
+            et53.setVisibility(View.VISIBLE);
+            et54.setVisibility(View.VISIBLE);
+        } else if (vector2[2][0].equals("NO")) {
+            rb33.setChecked(false);
+            rb34.setChecked(true);
+        }
+
+        if (vector2[3][0].equals("SI")) {
+            rb35.setChecked(true);
+            rb36.setChecked(false);
+            et55.setVisibility(View.VISIBLE);
+            et56.setVisibility(View.VISIBLE);
+            et57.setVisibility(View.VISIBLE);
+            et58.setVisibility(View.VISIBLE);
+        } else if (vector2[3][0].equals("NO")) {
+            rb35.setChecked(false);
+            rb36.setChecked(true);
+        }
+
+        if (vector2[4][0].equals("SI")) {
+            rb37.setChecked(true);
+            rb38.setChecked(false);
+            et59.setVisibility(View.VISIBLE);
+            et60.setVisibility(View.VISIBLE);
+            et61.setVisibility(View.VISIBLE);
+            et62.setVisibility(View.VISIBLE);
+        } else if (vector2[4][0].equals("NO")) {
+            rb37.setChecked(false);
+            rb38.setChecked(true);
+        }
 
 
         rg1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -753,6 +1217,941 @@ public class quintanaroo_anexo10_RecursosMateriales extends AppCompatActivity {
         });
 
 
+        et1.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[0] [1]  = et1.getText().toString();
+
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[0] [2]  = et2.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et3.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[0] [3]  = et3.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et4.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[1] [1]  = et4.getText().toString();
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et5.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[1] [2]  = et5.getText().toString();
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et6.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[1] [3]  = et6.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et7.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[2] [1]  = et7.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et8.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[2] [2]  = et8.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et9.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[2] [3]  = et9.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et10.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[3] [1]  = et10.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et11.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[3] [2]  = et11.getText().toString();
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et12.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[3] [3]  = et12.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et13.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[4] [1]  = et13.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et14.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[4] [2]  = et14.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et15.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[4] [3]  = et15.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et16.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[5] [1]  = et16.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et17.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[5] [2]  = et17.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et18.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[5] [3]  = et18.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et19.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[6] [1]  = et19.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et20.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[6] [2]  = et20.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et21.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[6] [3]  = et21.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et22.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[7] [1]  = et22.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et23.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[7] [2]  = et23.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et24.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[7] [3]  = et24.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et25.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[8] [1]  = et25.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et26.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[8] [2]  = et26.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et27.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[8] [3]  = et27.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et28.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[9] [1]  = et28.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et29.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[9] [2]  = et29.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et30.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[9] [3]  = et30.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et31.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[10] [1]  = et31.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et32.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[10] [2]  = et32.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et33.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[10] [3]  = et33.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et34.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[11] [1]  = et34.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et35.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[11] [2]  = et35.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et36.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[11] [3]  = et36.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et37.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[12] [1]  = et37.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et38.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[12] [2]  = et38.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et39.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[12] [3]  = et39.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et40.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[13] [1]  = et40.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et41.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[13] [2]  = et41.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et42.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector[13] [3]  = et42.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et43.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[0] [1]  = et43.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et44.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[0] [2]  = et44.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et45.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[0] [3]  = et45.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et46.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[0] [4]  = et46.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et47.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[1] [1]  = et47.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et48.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[1] [2]  = et48.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et49.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[1] [3]  = et49.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et50.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[1] [4]  = et50.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et51.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[2] [1]  = et51.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et52.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[2] [2]  = et52.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et53.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[2] [3]  = et53.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et54.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[2] [4]  = et54.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et55.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[3] [1]  = et55.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et56.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[3] [2]  = et56.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et57.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[3] [3]  = et57.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et58.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[3] [4]  = et58.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et59.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[4] [1]  = et59.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et60.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[4] [2]  = et60.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et61.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[4] [3]  = et61.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        et62.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                vector2[4] [4]  = et62.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
 
 
 
@@ -762,6 +2161,24 @@ public class quintanaroo_anexo10_RecursosMateriales extends AppCompatActivity {
     public void OnClick (View view){
         Boolean bandera=true;
 
+        for(int i = 0 ; i<14; i++){
+            if( vector[i][0]==""){
+                bandera=false;
+            }else if( vector[i][0]=="SI"){
+                if(vector[i][1]=="" || vector[i][2]=="" || vector[i][3]==""){
+                    bandera=false;
+                }
+            }
+        }
+
+        for(int i = 0 ; i<5; i++){
+            if( vector2[i][0]=="SI"){
+                if(vector2[i][1]=="" || vector2[i][2]=="" || vector2[i][3]=="" || vector2[i][4]==""){
+                    bandera=false;
+                }
+            }
+        }
+/*
 
         if( vector[0][0]=="SI"){
 
@@ -778,6 +2195,8 @@ public class quintanaroo_anexo10_RecursosMateriales extends AppCompatActivity {
                 bandera = false;
             }
 
+        }else if(vector[0][0]==""){
+            bandera = false;
         }
 
 
@@ -1112,105 +2531,13 @@ public class quintanaroo_anexo10_RecursosMateriales extends AppCompatActivity {
 
 
 
-
+*/
 
 
 
         if (bandera){
-            vector[0] [1]  = et1.getText().toString();
-            vector[0] [2]  = et2.getText().toString();
-            vector[0] [3]  = et3.getText().toString();
 
-            vector[1] [1]  = et4.getText().toString();
-            vector[1] [2]  = et5.getText().toString();
-            vector[1] [3]  = et6.getText().toString();
-
-            vector[2] [1]  = et7.getText().toString();
-            vector[2] [2]  = et8.getText().toString();
-            vector[2] [3]  = et9.getText().toString();
-
-            vector[3] [1]  = et10.getText().toString();
-            vector[3] [2]  = et11.getText().toString();
-            vector[3] [3]  = et12.getText().toString();
-
-            vector[4] [1]  = et13.getText().toString();
-            vector[4] [2]  = et14.getText().toString();
-            vector[4] [3]  = et15.getText().toString();
-
-            vector[5] [1]  = et16.getText().toString();
-            vector[5] [2]  = et17.getText().toString();
-            vector[5] [3]  = et18.getText().toString();
-
-            vector[6] [1]  = et19.getText().toString();
-            vector[6] [2]  = et20.getText().toString();
-            vector[6] [3]  = et21.getText().toString();
-
-            vector[7] [1]  = et22.getText().toString();
-            vector[7] [2]  = et23.getText().toString();
-            vector[7] [3]  = et24.getText().toString();
-
-            vector[8] [1]  = et25.getText().toString();
-            vector[8] [2]  = et26.getText().toString();
-            vector[8] [3]  = et27.getText().toString();
-
-            vector[9] [1]  = et28.getText().toString();
-            vector[9] [2]  = et29.getText().toString();
-            vector[9] [3]  = et30.getText().toString();
-
-            vector[10] [1]  = et31.getText().toString();
-            vector[10] [2]  = et32.getText().toString();
-            vector[10] [3]  = et33.getText().toString();
-
-            vector[11] [1]  = et34.getText().toString();
-            vector[11] [2]  = et35.getText().toString();
-            vector[11] [3]  = et36.getText().toString();
-
-
-            vector[12] [1]  = et37.getText().toString();
-            vector[12] [2]  = et38.getText().toString();
-            vector[12] [3]  = et39.getText().toString();
-
-            vector[13] [1]  = et40.getText().toString();
-            vector[13] [2]  = et41.getText().toString();
-            vector[13] [3]  = et42.getText().toString();
-
-//vector
-            //rg15
-            vector2[0] [1]  = et43.getText().toString();
-            vector2[0] [2]  = et44.getText().toString();
-            vector2[0] [3]  = et45.getText().toString();
-            vector2[0] [4]  = et46.getText().toString();
-
-            //rg16
-            vector2[1] [1]  = et47.getText().toString();
-            vector2[1] [2]  = et48.getText().toString();
-            vector2[1] [3]  = et49.getText().toString();
-            vector2[1] [4]  = et50.getText().toString();
-
-            //rg17
-            vector2[2] [1]  = et51.getText().toString();
-            vector2[2] [2]  = et52.getText().toString();
-            vector2[2] [3]  = et53.getText().toString();
-            vector2[2] [4]  = et54.getText().toString();
-
-            //rg18
-            vector2[3] [1]  = et55.getText().toString();
-            vector2[3] [2]  = et56.getText().toString();
-            vector2[3] [3]  = et57.getText().toString();
-            vector2[3] [4]  = et58.getText().toString();
-
-            //rg19
-            vector2[4] [1]  = et59.getText().toString();
-            vector2[4] [2]  = et60.getText().toString();
-            vector2[4] [3]  = et61.getText().toString();
-            vector2[4] [4]  = et62.getText().toString();
-
-
-
-
-
-
-            Reporte(view);
+            Reporte();
 
         }else{
             Toast.makeText(this, "REVISA LOS DATOS", LENGTH_SHORT).show();
@@ -1221,7 +2548,7 @@ public class quintanaroo_anexo10_RecursosMateriales extends AppCompatActivity {
     }
 
 
-    public void Reporte(View v){
+    public void Reporte(){
         try {
             Document document = new Document(PageSize.LETTER.rotate());
             PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(pdfFile.getPath()));
