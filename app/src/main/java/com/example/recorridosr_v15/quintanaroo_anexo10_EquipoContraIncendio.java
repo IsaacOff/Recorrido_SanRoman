@@ -40,7 +40,7 @@ private EditText et1, et2, et3, et4, et5, et6, et7;
     private TextView tv1;
     private String sel;
     static private int numero =1;
-    String vector[] = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", ""};
+    static  String vector[] = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", ""};
     private File pdfFile;
     private String htmlToPDF;
     static private String detectores;
@@ -60,6 +60,7 @@ private EditText et1, et2, et3, et4, et5, et6, et7;
 
         tv1 = (TextView) findViewById(R.id.tv1);
         tv1.setText(Integer.toString(numero));
+
         //asigna los edit text a los et de aqui
         et1  = (EditText) findViewById(R.id.editText1);
         et2  = (EditText) findViewById(R.id.editText2);
@@ -108,15 +109,15 @@ private EditText et1, et2, et3, et4, et5, et6, et7;
 
         //crea el vector de String que contendra el spinner y lo carga en la variable adapter
         String [] opciones ={"TIPO DE EXTINTOR:","PQS","K","CO2","H2O","ESPUMA","POLVO", "OTROS"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, opciones);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner_item_sanroman, opciones);
 
         //crea el vector de String que contendra el spinner y lo carga en la variable adapter
         String [] opciones1 ={"CAPACIDAD EN KILOGRAMOS:","1 KG","2KG","2.5KG","4.5KG","6KG","9KG","12KG","35KG","50KG","70KG", "OTROS"};
-        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, opciones1);
+        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this, R.layout.spinner_item_sanroman, opciones1);
 
         //crea el vector de String que contendra el spinner y lo carga en la variable adapter
         String [] opciones2 ={"PRESION:","0","1.2","1.7","2.7","SOBRECARGA", "OTROS"};
-        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, opciones2);
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, R.layout.spinner_item_sanroman, opciones2);
 
 
         //se asigna la variable adapter a cada espiner para mostrarle al usuario
@@ -127,85 +128,146 @@ private EditText et1, et2, et3, et4, et5, et6, et7;
 
 
 
-       rg1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(checkedId==R.id.rb1){
-                    vector[4]="SI";
 
 
-                }else if(checkedId==R.id.rb2) {
-                    vector[4]="NO";
-
-                }
-
-            }
-        });
-
-
-        rg2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(checkedId==R.id.rb3){
-                    vector[5]="SI";
-
-
-                }else if(checkedId==R.id.rb4) {
-                    vector[5]="NO";
-
-                }
-
-            }
-        });
-
-
-        rg3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(checkedId==R.id.rb5){
-                    vector[8]="SI";
-
-
-                }else if(checkedId==R.id.rb6) {
-                    vector[8]="NO";
-
-                }
-
-            }
-        });
+        if(!vector[1].equals("")){
+        et1.setText(vector[1]);
+        }
+        if(!vector[3].equals("")){
+        et2.setText(vector[3]);
+        }
+        if(!vector[7].equals("")){
+        et3.setText(vector[7]);
+        }
+        if(!vector[11].equals("")){
+        et4.setText(vector[11]);
+        }
+        if(!vector[12].equals("")){
+        et5.setText(vector[12]);
+        }
+        if(!vector[13].equals("")){
+        et6.setText(vector[13]);
+        }
+        if(!vector[14].equals("")){
+        et7.setText(vector[14]);
+        }
 
 
 
-        rg4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(checkedId==R.id.rb7){
-                    vector[9]="SI";
+        if (vector[4].equals("SI")) {
+            rb1.setChecked(true);
+            rb2.setChecked(false);
+           // et1.setVisibility(View.VISIBLE);
+        } else if (vector[4].equals("NO")) {
+            rb1.setChecked(false);
+            rb2.setChecked(true);
+        }
+
+        if (vector[5].equals("SI")) {
+            rb3.setChecked(true);
+            rb4.setChecked(false);
+           // et2.setVisibility(View.VISIBLE);
+        } else if (vector[5].equals("NO")) {
+            rb3.setChecked(false);
+            rb4.setChecked(true);
+        }
+
+        if (vector[8].equals("SI")) {
+            rb5.setChecked(true);
+            rb6.setChecked(false);
+            //et3.setVisibility(View.VISIBLE);
+        } else if (vector[8].equals("NO")) {
+            rb5.setChecked(false);
+            rb6.setChecked(true);
+        }
+
+        if (vector[9].equals("SI")) {
+            rb7.setChecked(true);
+            rb8.setChecked(false);
+           // et4.setVisibility(View.VISIBLE);
+        } else if (vector[9].equals("NO")) {
+            rb7.setChecked(false);
+            rb8.setChecked(true);
+        }
+
+        if (vector[10].equals("SI")) {
+            rb9.setChecked(true);
+            rb10.setChecked(false);
+           // et5.setVisibility(View.VISIBLE);
+        } else if (vector[10].equals("NO")) {
+            rb9.setChecked(false);
+            rb10.setChecked(true);
+        }
+
+        //pinta de nuevo lo que habia guardado en el espiner
+        if(vector[0].equals("TIPO DE EXTINTOR:")){
+            spin1.setSelection(0);
+        }else if(vector[0].equals("PQS")) {
+            spin1.setSelection(1);
+        }else if (vector[0].equals("K")){
+            spin1.setSelection(2);
+        }else if (vector[0].equals("CO2")){
+            spin1.setSelection(3);
+        }else if (vector[0].equals("H2O")){
+            spin1.setSelection(4);
+        }else if (vector[0].equals("ESPUMA")){
+            spin1.setSelection(5);
+        }else if (vector[0].equals("POLVO")){
+            spin1.setSelection(6);
+        }else if (vector[0].equals("OTROS")){
+            spin1.setSelection(7);
+        }
 
 
-                }else if(checkedId==R.id.rb8) {
-                    vector[9]="NO";
 
-                }
+        //pinta de nuevo lo que habia guardado en el espiner//////////////
+        if(vector[2].equals("CAPACIDAD EN KILOGRAMOS:")){
+            spin2.setSelection(0);
+        }else if(vector[2].equals("1 KG")) {
+            spin2.setSelection(1);
+        }else if (vector[2].equals("2KG")){
+            spin2.setSelection(2);
+        }else if (vector[2].equals("2.5KG")){
+            spin2.setSelection(3);
+        }else if (vector[2].equals("4.5KG")){
+            spin2.setSelection(4);
+        }else if (vector[2].equals("6KG")){
+            spin2.setSelection(5);
+        }else if (vector[2].equals("9KG")){
+            spin2.setSelection(6);
+        }else if (vector[2].equals("12KG")){
+            spin2.setSelection(7);
+        }else if (vector[2].equals("35KG")){
+            spin2.setSelection(8);
+        }else if (vector[2].equals("50KG")){
+            spin2.setSelection(9);
+        }else if (vector[2].equals("70KG")){
+            spin2.setSelection(10);
+        }else if (vector[2].equals("OTROS")){
+            spin2.setSelection(11);
+        }
 
-            }
-        });
+
+        //pinta de nuevo lo que habia guardado en el espiner
+        if(vector[6].equals("PRESION:")){
+            spin3.setSelection(0);
+        }else if(vector[6].equals("0")) {
+            spin3.setSelection(1);
+        }else if (vector[6].equals("1.2")){
+            spin3.setSelection(2);
+        }else if (vector[6].equals("1.7")){
+            spin3.setSelection(3);
+        }else if (vector[6].equals("2.7")){
+            spin3.setSelection(4);
+        }else if (vector[6].equals("SOBRECARGA")){
+            spin3.setSelection(5);
+        }else if (vector[6].equals("OTROS")){
+            spin3.setSelection(6);
+        }
 
 
-        rg5.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(checkedId==R.id.rb9){
-                    vector[10]="SI";
 
 
-                }else if(checkedId==R.id.rb10) {
-                    vector[10]="NO";
-
-                }
-
-            }
-        });
 
 
         et1.addTextChangedListener(new TextWatcher() {
@@ -319,6 +381,95 @@ private EditText et1, et2, et3, et4, et5, et6, et7;
             public void afterTextChanged(Editable s) {
             }
         });
+
+
+
+
+
+
+       rg1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb1){
+                    vector[4]="SI";
+
+
+                }else if(checkedId==R.id.rb2) {
+                    vector[4]="NO";
+
+                }
+
+            }
+        });
+
+
+        rg2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb3){
+                    vector[5]="SI";
+
+
+                }else if(checkedId==R.id.rb4) {
+                    vector[5]="NO";
+
+                }
+
+            }
+        });
+
+
+        rg3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb5){
+                    vector[8]="SI";
+
+
+                }else if(checkedId==R.id.rb6) {
+                    vector[8]="NO";
+
+                }
+
+            }
+        });
+
+
+
+        rg4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb7){
+                    vector[9]="SI";
+
+
+                }else if(checkedId==R.id.rb8) {
+                    vector[9]="NO";
+
+                }
+
+            }
+        });
+
+
+        rg5.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.rb9){
+                    vector[10]="SI";
+
+
+                }else if(checkedId==R.id.rb10) {
+                    vector[10]="NO";
+
+                }
+
+            }
+        });
+
+
+
+
 
         //pasa parametros al spinner para mostrar
         mostrar(spin1, et1, 0);
