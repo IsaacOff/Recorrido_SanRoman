@@ -548,7 +548,7 @@ public class quintanaroo_anexo10_RecursosMateriales extends AppCompatActivity {
             et7.setVisibility(View.VISIBLE);
             et8.setVisibility(View.VISIBLE);
             et9.setVisibility(View.VISIBLE);
-        } else if (vector[2].equals("NO")) {
+        } else if (vector[2][0].equals("NO")) {
             rb5.setChecked(false);
             rb6.setChecked(true);
         }

@@ -4410,21 +4410,21 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
             banderaTotal = false;
         }
 
-        if(!quintanaroo_id_riesgo_interno_noEstructurales_4.siguiente5()){
-            aviso = aviso +", 5";
-            banderaTotal = false;
-        }
+       // if(!quintanaroo_id_riesgo_interno_noEstructurales_4.siguiente5()){
+         //   aviso = aviso +", 5";
+           // banderaTotal = false;
+        //}
 
         if(!quintanaroo_id_riesgo_interno_equiposyservicios_5.siguiente6()){
             aviso = aviso +", 6";
             banderaTotal = false;
         }
 
-        if(!bandera){
+       // if(!bandera){
 
-            aviso = aviso +", 7";
-            banderaTotal = false;
-        }
+            //aviso = aviso +", 7";
+          //  banderaTotal = false;
+        //}
 
         if(banderaTotal){
 
