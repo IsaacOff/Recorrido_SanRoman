@@ -63,7 +63,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
 
 
 
-        this.setTitle("Riesgo interno_chetumal");
+        this.setTitle("Riesgo interno 7");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
 

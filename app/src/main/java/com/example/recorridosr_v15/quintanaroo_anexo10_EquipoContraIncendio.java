@@ -52,8 +52,9 @@ private EditText et1, et2, et3, et4, et5, et6, et7;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quintana_roo_anexo10__equipo_contra_incendio);
+        this.setTitle("Equipo contra incendio");
 
-        directorio2 = new File(getIntent().getStringExtra("File"));
+        directorio2 = new File(quintanaroo_anexo10.file());
         if(directorio2 != null) {
             pdfFile = new File(directorio2.getPath(), "Equipo contra incendio.pdf");
         }

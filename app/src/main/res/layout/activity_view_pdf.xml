@@ -15,5 +15,13 @@
         android:layout_height="fill_parent"
         android:id="@+id/pdfView">
     </com.github.barteksc.pdfviewer.PDFView>
-
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:text="Regresar al menu"
+        android:onClick="regresar"/>
 </RelativeLayout>

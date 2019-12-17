@@ -16,10 +16,10 @@ public class index_QuintanaRoo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.index__quintana_roo);
-        this.setTitle(R.string.titulo2);
+        this.setTitle("Index");
         //Pantalla en vertical
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        directorio2 = new File(getIntent().getStringExtra("File"));
+            directorio2 = new File(carpetaempresa_quintanaRoo.file());
     }
 
     public void Exterior_quintana (View view){
@@ -44,16 +44,16 @@ public class index_QuintanaRoo extends AppCompatActivity {
     }
 
     public void Anexo10 (View view){
+        onClick(view, "Anexo");
         Intent ext = new Intent(this, quintanaroo_anexo10.class);
-        ext.putExtra("File", directorio2.getPath());
         startActivity(ext);
     }
 
 
 
     public void Id_Riesgo (View view){
+        onClick(view, "Riesgos");
         Intent ext = new Intent(this, quintanaroo_id_riesgo.class);
-        ext.putExtra("File", directorio2.getPath());
         startActivity(ext);
     }
 
@@ -61,6 +61,10 @@ public class index_QuintanaRoo extends AppCompatActivity {
     public void onClick(View v, String nombre){
             directorio = new File(directorio2.getPath(), nombre);
             directorio.mkdir();
+    }
+
+    static public String file(){
+        return directorio.getPath();
     }
 
 }

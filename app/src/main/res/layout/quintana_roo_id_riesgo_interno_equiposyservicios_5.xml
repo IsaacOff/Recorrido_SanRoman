@@ -39,8 +39,11 @@ android:stretchColumns="1">
             android:layout_height="70dp"
             android:layout_column="0"
             android:padding="3dip"
-            android:text=" Evaluación del riesgo por la carencia, insuficiencia o inoperancia de los equipos y servicios de emergencia en el inmueble."
-            android:textColor="#000000" />
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:text="Evaluación del riesgo por la carencia, insuficiencia o inoperancia de los equipos y servicios de emergencia en el inmueble."
+            />
 
 
         <!-- El inmueble cuenta con:  -->
@@ -109,7 +112,7 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Sistema contra incendio"
-                android:textColor="#000000"
+                android:textColor="#EC6501"
                 android:clickable="true"
                 android:onClick="eventtext2"/>
 

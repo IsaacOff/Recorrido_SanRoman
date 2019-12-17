@@ -44,6 +44,7 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="CUENTA CON ESCALERS DE SERVICIO"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
             <RadioGroup
@@ -147,9 +148,9 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Cuenta con barandal"
-                android:textColor="#000000"
                 android:clickable="true"
                 android:onClick="eventtext2"
+                android:textColor="#EC6501"
                 />
 
 
@@ -211,9 +212,9 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Cuenta con pasamanos"
-                android:textColor="#000000"
                 android:clickable="true"
                 android:onClick="eventtext3"
+                android:textColor="#EC6501"
                 />
 
 
@@ -274,8 +275,9 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Cuenta con cinta antiderrapante"
-                android:textColor="#000000" android:clickable="true"
+                android:clickable="true"
                 android:onClick="eventtext4"
+                android:textColor="#EC6501"
                 />
 
 
@@ -342,7 +344,7 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Iluminación artificial"
-                android:textColor="#000000"
+                android:textColor="#EC6501"
                 android:clickable="true"
                 android:onClick="eventtext5"
                 />
@@ -423,6 +425,7 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="CUENTA CON ESCALERS DE EMERGENCIA"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
             <RadioGroup
@@ -522,7 +525,7 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Cuenta con barandal"
-                android:textColor="#000000"
+                android:textColor="#EC6501"
                 android:clickable="true"
                 android:onClick="eventtext7"
                 />
@@ -586,7 +589,7 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Cuenta con pasamanos"
-                android:textColor="#000000"
+                android:textColor="#EC6501"
                 android:clickable="true"
                 android:onClick="eventtext8"/>
 
@@ -652,7 +655,7 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Cuenta con cinta antiderrapante"
-                android:textColor="#000000"
+                android:textColor="#EC6501"
                 android:clickable="true"
                 android:onClick="eventtext9"
                 />
@@ -717,7 +720,7 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="Iluminación artificial"
-                android:textColor="#000000"
+                android:textColor="#EC6501"
                 android:clickable="true"
                 android:onClick="eventtext10"/>
 

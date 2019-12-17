@@ -37,7 +37,7 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quintana_roo_id_riesgo_interno);
-        this.setTitle("Riesgo interno_chetumal");
+        this.setTitle("Riesgo interno 1");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
 

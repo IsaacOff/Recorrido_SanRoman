@@ -62,4 +62,15 @@
         tools:layout_editor_absoluteY="240dp"
         android:gravity="center_horizontal" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_column="0"
+        android:padding="3dip"
+        android:textStyle="bold"
+        android:text="Nota: precionar sobre los nombres en color naranja los hara candidatos para el no aplica"
+        android:textColor="#EC6501"
+        android:textAlignment="center"
+        />
+
 </TableLayout>

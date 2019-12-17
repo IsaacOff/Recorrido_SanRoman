@@ -23,13 +23,12 @@ public class quintanaroo_anexo10 extends AppCompatActivity {
         this.setTitle("Anexo 10");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        directorio2 = new File(getIntent().getStringExtra("File"));
+        directorio2 = new File(index_QuintanaRoo.file());
     }
 
     public void Equipo_Incendio (View view){
         onClick(view, "Equipo contra incendios");
         Intent intent = new Intent(this, quintanaroo_anexo10_EquipoContraIncendio.class);
-        intent.putExtra("File", directorio.getPath());
         startActivity(intent);
     }
 
@@ -37,7 +36,6 @@ public class quintanaroo_anexo10 extends AppCompatActivity {
     public void Detectores_Incendio (View view){
         onClick(view, "Dectectores de incendio");
         Intent intent = new Intent(this, quintanaroo_anexo10_DetectoresContraIncendio.class);
-        intent.putExtra("File", directorio.getPath());
         startActivity(intent);
     }
 
@@ -46,7 +44,6 @@ public class quintanaroo_anexo10 extends AppCompatActivity {
     public void RecursosMateriales (View view){
         onClick(view, "Recursos materiales");
         Intent intent = new Intent(this, quintanaroo_anexo10_RecursosMateriales.class);
-        intent.putExtra("File", directorio.getPath());
         startActivity(intent);
     }
 
@@ -56,6 +53,8 @@ public class quintanaroo_anexo10 extends AppCompatActivity {
     }
 
 
-
+    static public String file(){
+        return directorio.getPath();
+    }
 
 }

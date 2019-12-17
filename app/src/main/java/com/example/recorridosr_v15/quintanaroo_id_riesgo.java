@@ -21,7 +21,7 @@ public class quintanaroo_id_riesgo extends AppCompatActivity {
 
         this.setTitle("Identificacion de Riesgos");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        directorio2 = new File(getIntent().getStringExtra("File"));
+        directorio2 = new File(index_QuintanaRoo.file());
     }
 
 

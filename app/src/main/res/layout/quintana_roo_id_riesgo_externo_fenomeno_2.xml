@@ -25,9 +25,10 @@ android:stretchColumns="1">
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:padding="3dip"
-            android:text="De origen Químico-Tecnológico:"
-            android:textColor="#000000"
-            android:textSize="16sp" />
+            android:text="DE ORIGEN QUÍMICO-TECNOLÓGICO"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
 
 
         <!-- El inmueble cuenta con:  -->
@@ -40,7 +41,9 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="15.- Incendios"
-                android:textColor="#000000" />
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
 
             <RadioGroup
                 android:id="@+id/Rg1"
@@ -541,7 +544,9 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="16.-  Fuga o derrame de materiales químicos peligrosos"
-                android:textColor="#000000" />
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
 
             <RadioGroup
                 android:id="@+id/Rg10"
@@ -626,6 +631,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="17.-  Exposición a materiales radioactivos"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -680,6 +687,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="18.-  Explosiones"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -734,6 +743,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="19.-  Envenenamiento"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -784,9 +795,10 @@ android:stretchColumns="1">
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:padding="3dip"
-            android:text="De origen Hidrometeorológico"
-            android:textColor="#000000"
-            android:textSize="16sp" />
+            android:text="DE ORIGEN HIDROMETEOROLOGICO"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
 
 
 
@@ -799,6 +811,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="20.-  Inundación"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -1063,6 +1077,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="21.-  Vientos fuertes"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -1115,6 +1131,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="22.-  Huracán"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -1167,6 +1185,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="23.-  Marea de tempestad"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -1219,6 +1239,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="24.-  Tormenta eléctrica"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -1273,6 +1295,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="25.-  Lluvia torrencial"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -1333,6 +1357,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="26.-  Tromba"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -1383,6 +1409,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="27.-  Tornado"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -1433,6 +1461,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="28.-  Tormenta de granizo"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -1483,6 +1513,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="29.-  Helada"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -1533,6 +1565,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="30.-  Nevada"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -1583,6 +1617,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="31.-  Sequía"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -1635,6 +1671,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="32.-  Temperaturas extremas"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -1684,9 +1722,10 @@ android:stretchColumns="1">
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:padding="3dip"
-            android:text="De origen Sanitario-Ecológico"
-            android:textColor="#000000"
-            android:textSize="16sp" />
+            android:text="DE ORIGEN SANITARIO-ECOLÓGICO"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
 
 
 
@@ -1698,6 +1737,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="33.-  Epidemia"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -1761,6 +1802,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="34.-  Plaga"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -1824,6 +1867,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="35.-  Envenenamiento"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -1889,6 +1934,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="36.-  Contaminación"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 

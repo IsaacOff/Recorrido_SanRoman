@@ -2,7 +2,9 @@ package com.example.recorridosr_v15;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.github.barteksc.pdfviewer.PDFView;
 
@@ -17,5 +19,11 @@ public class ViewPdf extends AppCompatActivity {
         File pdfFile =  new File(getIntent().getStringExtra("File"));
         PDFView p = (PDFView)findViewById(R.id.pdfView);
         p.fromFile(pdfFile).load();
+    }
+
+    public void regresar (View view) {
+        Intent intent = new Intent(this, index_QuintanaRoo.class);
+        startActivity(intent);
+
     }
 }

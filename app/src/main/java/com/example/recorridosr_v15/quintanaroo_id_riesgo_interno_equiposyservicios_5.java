@@ -48,7 +48,7 @@ public class quintanaroo_id_riesgo_interno_equiposyservicios_5 extends AppCompat
         setContentView(R.layout.quintana_roo_id_riesgo_interno_equiposyservicios_5);
 
 
-        this.setTitle("Riesgo interno_chetumal");
+        this.setTitle("Riesgo interno 6");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
 

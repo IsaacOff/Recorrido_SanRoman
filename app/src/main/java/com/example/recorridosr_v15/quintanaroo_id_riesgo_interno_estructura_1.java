@@ -46,7 +46,7 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quintana_roo_id_riesgo_interno_estructura_1);
 
-        this.setTitle("Riesgo interno_chetumal");
+        this.setTitle("Riesgo interno 2");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
 

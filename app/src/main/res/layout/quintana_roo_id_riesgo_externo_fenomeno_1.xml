@@ -36,14 +36,26 @@ android:stretchColumns="1">
 
 
         <!--- /////////////////////////////////////////////////// -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:padding="3dip"
+            android:text="DE ORIGEN SOCIO-ORGANIZATIVO  "
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:padding="3dip"
             android:text="Elementos a evaluar:"
-            android:textColor="#000000"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
 
 
         <!-- El inmueble cuenta con:  -->
@@ -56,6 +68,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="1.- Accidentes aéreos, terrestres y fluviales"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
             <RadioGroup
@@ -427,6 +441,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="2.- Terrorismo y sabotaje"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
             <RadioGroup
@@ -884,6 +900,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="3.- Concentraciones masivas"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -1150,6 +1168,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="4.- Interrupción de servicios de origen Geológico"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -1177,8 +1197,6 @@ android:stretchColumns="1">
 
         </TableRow>
 
-
-
         <TableRow android:layout_height="122dp">
 
             <EditText
@@ -1193,6 +1211,15 @@ android:stretchColumns="1">
                 android:theme="@style/EditText"/>
         </TableRow>
 
+        <TextView
+            android:layout_width="229dp"
+            android:layout_height="55dp"
+            android:layout_column="0"
+            android:padding="3dip"
+            android:text="DE ORIGEN GEOLÓGICO"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
 
         <TableRow android:layout_height="122dp">
 
@@ -1202,6 +1229,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="5.- Agrietamiento"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -1260,6 +1289,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="6.- Hundimiento de terreno"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -1310,6 +1341,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="7.- Deslave"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -1360,6 +1393,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="8.- Deslizamiento de alud"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -1410,6 +1445,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="9.- Erosión del suelo productivo"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -1460,6 +1497,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="10.- Sobre explotación de fuentes de agua"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -1510,6 +1549,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="11.- Sobre explotación de mantos freáticos"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 
@@ -1561,6 +1602,8 @@ android:stretchColumns="1">
                 android:layout_column="0"
                 android:padding="3dip"
                 android:text="12.- Sismos o Terremotos"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 android:textColor="#000000" />
 
 

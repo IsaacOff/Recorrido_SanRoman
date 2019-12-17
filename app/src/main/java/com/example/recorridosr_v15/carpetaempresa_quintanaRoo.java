@@ -19,7 +19,7 @@ public class carpetaempresa_quintanaRoo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.carpetaempresa_quintana_roo);
-        this.setTitle(R.string.titulo2);
+        this.setTitle("Principal");
         //Pantalla en vertical
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         et1  = (EditText) findViewById(R.id.editText);
@@ -32,7 +32,6 @@ public class carpetaempresa_quintanaRoo extends AppCompatActivity {
         }else{
             onClick(et2.getText().toString()+"_"+et1.getText().toString());
             Intent ext = new Intent(this, index_QuintanaRoo.class);
-            ext.putExtra("File", directorio.getPath());
             startActivity(ext);
         }
     }
@@ -40,6 +39,10 @@ public class carpetaempresa_quintanaRoo extends AppCompatActivity {
     public void onClick(String nombre){
         directorio = new File(this.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS), nombre);
         directorio.mkdir();
+    }
+
+    static public String file(){
+        return directorio.getPath();
     }
 
 }

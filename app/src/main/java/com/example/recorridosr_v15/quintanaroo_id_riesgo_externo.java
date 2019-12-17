@@ -53,7 +53,7 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quintana_roo_id_riesgo_externo);
 
-        this.setTitle("Riesgo Externo_chetumal");
+        this.setTitle("Riesgo Externo 1");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
 

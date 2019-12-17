@@ -49,7 +49,7 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
 
 
 
-        this.setTitle("Riesgo interno_chetumal");
+        this.setTitle("Riesgo interno 5");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
 

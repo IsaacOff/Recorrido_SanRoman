@@ -49,7 +49,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quintana_roo_id_riesgo_interno_escaleraservicio_2);
 
-        this.setTitle("Riesgo interno_chetumal");
+        this.setTitle("Riesgo interno 3");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         // Implementa el menu para que se vea en esta vista en especifico
