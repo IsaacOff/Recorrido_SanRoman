@@ -3,6 +3,7 @@ package com.example.recorridosr_v15;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -2389,10 +2390,7 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
     }
 
 
-
-
-
-    public void final_externo(View view) {
+    static public boolean revisar (Context context){
         boolean bandera = true;
         boolean banderatotal = true;
         String text= "";
@@ -2406,11 +2404,11 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
         }
 
 
-            if (vector[8][0].equals("SI")) {
-                if(vector2[0].equals("")) {
-                    bandera = false;
-                }
+        if (vector[8][0].equals("SI")) {
+            if(vector2[0].equals("")) {
+                bandera = false;
             }
+        }
 
 
 
@@ -2438,10 +2436,10 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
             if(vector2[5].equals("")) {
                 bandera = false;
             }
-            }
+        }
 
 
-       if(!quintanaroo_id_riesgo_externo.externosiguiente1()){
+        if(!quintanaroo_id_riesgo_externo.externosiguiente1()){
             banderatotal = false;
             text = "1,";
         }
@@ -2457,12 +2455,26 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
         }
 
         if(banderatotal){
+            return true;
+        }
+        else{
+            Toast.makeText(context,"Revisa las actividades " +text, Toast.LENGTH_LONG).show();
+            return false;
+        }
+
+    }
+
+
+    public void final_externo(View view) {
+
+
+        if(revisar(getApplicationContext())){
            onClick();
             Toast.makeText(this, "LISTO ", LENGTH_SHORT).show();
 
         }
         else{
-            Toast.makeText(this, "revisa las paginas "+text, LENGTH_SHORT).show();
+
         }
     }
 

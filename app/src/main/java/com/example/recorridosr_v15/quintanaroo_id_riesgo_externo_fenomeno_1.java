@@ -2074,7 +2074,10 @@ public class quintanaroo_id_riesgo_externo_fenomeno_1 extends AppCompatActivity 
             startActivity(intent);
             return true;
         }
-
+        if (id == R.id.opcion4) {
+            quintanaroo_id_riesgo_externo_fenomeno_2.revisar(getApplicationContext());
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 

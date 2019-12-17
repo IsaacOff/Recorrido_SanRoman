@@ -25,7 +25,7 @@
         android:layout_width="296dp"
         android:layout_height="55dp"
         android:ems="10"
-        android:hint="Escribe el nombre del estado"
+        android:hint="Escribe el nombre del estado o municipio"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="83dp"
         tools:layout_editor_absoluteY="193dp"
@@ -43,24 +43,27 @@
         />
 
 
-    <TextView
-        android:layout_width="296dp"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:visibility="visible"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="48dp" />
+    <!--    <TextView
+    android:layout_width="296dp"
+    android:layout_height="wrap_content"
+    android:textSize="24sp"
+    android:visibility="visible"
+    tools:layout_editor_absoluteX="96dp"
+    tools:layout_editor_absoluteY="48dp" />-->
+
+
 
 
     <ImageButton
         android:id="@+id/imageButton2"
-        android:layout_width="240dp"
-        android:layout_height="221dp"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:gravity="center"
         android:onClick="inicio_quintana_roo"
-        app:srcCompat="@drawable/generarcarpeta2"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="240dp"
-        android:gravity="center_horizontal" />
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/generarcarpeta3" />
 
     <TextView
         android:layout_width="wrap_content"
