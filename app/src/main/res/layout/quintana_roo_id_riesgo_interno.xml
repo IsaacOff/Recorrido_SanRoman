@@ -195,7 +195,7 @@ android:stretchColumns="1">
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="ingresa el numero de la calle y numero"
-            android:inputType="text"
+            android:inputType="textPersonName"
             android:textColor="#3260F5"
             android:theme="@style/EditText">
 
