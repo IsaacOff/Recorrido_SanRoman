@@ -44,7 +44,7 @@ public class quintanaroo_anexo10_DetectoresContraIncendio extends AppCompatActiv
         setContentView(R.layout.quintana_roo_anexo10__detectores_contra_incendio);
         this.setTitle("Detectores contra incendio");
 
-        directorio2 = new File(quintanaroo_anexo10.file());
+        directorio2 = new File(index_QuintanaRoo.file());
         if(directorio2 != null) {
             pdfFile = new File(directorio2.getPath(), "Detectores contra incendio.pdf");
         }

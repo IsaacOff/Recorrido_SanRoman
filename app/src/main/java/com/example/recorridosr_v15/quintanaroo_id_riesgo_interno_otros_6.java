@@ -4447,7 +4447,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         if(revisar(getApplicationContext())){
 
 
-                directorio2 = new File(quintanaroo_id_riesgo.file());
+                directorio2 = new File(index_QuintanaRoo.file());
                     if(directorio2 != null) {
                         pdfFile = new File(directorio2.getPath(), "Riesgos Internos.pdf");
                     }

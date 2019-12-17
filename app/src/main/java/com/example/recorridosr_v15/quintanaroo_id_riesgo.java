@@ -21,12 +21,12 @@ public class quintanaroo_id_riesgo extends AppCompatActivity {
 
         this.setTitle("Identificacion de Riesgos");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        directorio2 = new File(index_QuintanaRoo.file());
+       // directorio2 = new File(index_QuintanaRoo.file());
     }
 
 
     public void Riesgos_interno_quintana (View view){
-        onClick(view, "Riesgo interno");
+       // onClick(view, "Riesgo interno");
         //Intent intent = new Intent(this, quintanaroo_id_riesgo_interno.class);
         Intent intent = new Intent(this, quintanaroo_id_riesgo_interno.class);
         startActivity(intent);
@@ -35,18 +35,18 @@ public class quintanaroo_id_riesgo extends AppCompatActivity {
 
 
     public void Riesgos_externo_quintana (View view){
-        onClick(view, "Riesgo Externo");
+       // onClick(view, "Riesgo Externo");
         Intent intent = new Intent(this, quintanaroo_id_riesgo_externo.class);
         startActivity(intent);
     }
 
-    public void onClick(View v, String nombre){
-        directorio = new File(directorio2.getPath(), nombre);
-        directorio.mkdir();
-    }
+   // public void onClick(View v, String nombre){
+     //   directorio = new File(directorio2.getPath(), nombre);
+      //  directorio.mkdir();
+    //}
 
-    public static String file (){
-        return directorio.getPath();
-    }
+    //public static String file (){
+    //    return directorio.getPath();
+    //}
 
 }

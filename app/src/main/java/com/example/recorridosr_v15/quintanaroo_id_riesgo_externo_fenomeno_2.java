@@ -70,7 +70,7 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
         // Make sure the toolbar exists in the activity and is not null
         setSupportActionBar(toolbar);
 
-        directorio2 = new File(quintanaroo_id_riesgo.file());
+        directorio2 = new File(index_QuintanaRoo.file());
         if(directorio2 != null) {
             pdfFile = new File(directorio2.getPath(), "Riesgos Externo.pdf");
         }
