@@ -603,6 +603,10 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
             startActivity(intent);
             return true;
         }
+        if (id == R.id.opcion8) {
+            quintanaroo_id_riesgo_interno_otros_6.revisar(getApplicationContext());
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 

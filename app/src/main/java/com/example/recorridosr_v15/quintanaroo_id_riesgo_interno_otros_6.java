@@ -3,6 +3,7 @@ package com.example.recorridosr_v15;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -53,7 +54,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
     static File directorio2;
     static boolean banderaTotal;
     String tablaConcatenacion="";
-    String aviso = "";
+   static String aviso = "";
 
 
     @Override
@@ -4367,9 +4368,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
-
-    public void final_interno(View view) {
+    static public boolean revisar(Context context){
         aviso ="";
         boolean bandera = true;
         boolean banderanula=true;
@@ -4429,13 +4428,31 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
 
         if(banderaTotal){
 
-            if (bandera) {
+            return true;
+
+
+        }else{
+
+            Toast.makeText(context,"Revisa las actividades " +aviso, Toast.LENGTH_LONG).show();
+            return false;
+
+        }
+
+    }
+
+
+    public void final_interno(View view) {
+
+
+        if(revisar(getApplicationContext())){
+
+
                 directorio2 = new File(quintanaroo_id_riesgo.file());
                     if(directorio2 != null) {
                         pdfFile = new File(directorio2.getPath(), "Riesgos Internos.pdf");
                     }
                 onClick(view);
-            }
+
         }else{
             Toast.makeText(this, "revisa las paginas " + aviso, LENGTH_SHORT).show();
         }

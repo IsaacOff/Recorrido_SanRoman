@@ -1446,6 +1446,10 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
             startActivity(intent);
             return true;
         }
+        if (id == R.id.opcion8) {
+            quintanaroo_id_riesgo_interno_otros_6.revisar(getApplicationContext());
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 

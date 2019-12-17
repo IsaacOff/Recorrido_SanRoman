@@ -30,4 +30,8 @@
         android:id="@+id/opcion7"
         android:title="Actividad 7"
         android:textColor="#3260F5"/>
+    <item
+        android:id="@+id/opcion8"
+        android:title="VERIFICAR"
+        android:textColor="#3260F5"/>
 </menu>

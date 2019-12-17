@@ -41,7 +41,9 @@ android:stretchColumns="1">
             android:layout_column="0"
             android:padding="3dip"
             android:text="Los aspectos de este apartado, se evaluaran por simple apreciación visual."
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
 
         <!--- /////////////////////////////////////////////////// -->

@@ -14,6 +14,10 @@
         android:id="@+id/opcion3"
         android:title="Actividad 3"
         android:textColor="#3260F5"/>
+    <item
+        android:id="@+id/opcion4"
+        android:title="VERIFICAR"
+        android:textColor="#3260F5"/>
 
 
 </menu>
