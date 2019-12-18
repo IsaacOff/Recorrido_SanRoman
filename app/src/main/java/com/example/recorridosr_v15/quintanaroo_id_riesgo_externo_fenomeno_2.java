@@ -70,11 +70,6 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
         // Make sure the toolbar exists in the activity and is not null
         setSupportActionBar(toolbar);
 
-        directorio2 = new File(index_QuintanaRoo.file());
-        if(directorio2 != null) {
-            pdfFile = new File(directorio2.getPath(), "Riesgos Externo.pdf");
-        }
-
         //Asigna los Rg y rb del xml a los de aqui
         rg1= (RadioGroup) findViewById(R.id.Rg1);
         rb1 = (RadioButton) findViewById(R.id.rb1);
@@ -2491,6 +2486,11 @@ public class quintanaroo_id_riesgo_externo_fenomeno_2 extends AppCompatActivity 
 
     public void onClick (){
         try {
+            directorio2 = new File(index_QuintanaRoo.file());
+            if(directorio2 != null) {
+                pdfFile = new File(directorio2.getPath(), "Riesgos Externo.pdf");
+            }
+
             Document document = new Document(PageSize.LETTER);
             PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(pdfFile.getPath()));
 

@@ -46,11 +46,6 @@ public class quintanaroo_anexo10_RecursosMateriales extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quintana_roo_anexo10__recursos_materiales);
 
-        directorio2 = new File(index_QuintanaRoo.file());
-        if(directorio2 != null) {
-            pdfFile = new File(directorio2.getPath(), "Recursos materiales.pdf");
-        }
-
         this.setTitle("Inventario de recursos materiales");
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
@@ -2550,6 +2545,11 @@ public class quintanaroo_anexo10_RecursosMateriales extends AppCompatActivity {
 
     public void Reporte(){
         try {
+            directorio2 = new File(index_QuintanaRoo.file());
+            if(directorio2 != null) {
+                pdfFile = new File(directorio2.getPath(), "Recursos materiales.pdf");
+            }
+
             Document document = new Document(PageSize.LETTER.rotate());
             PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(pdfFile.getPath()));
 

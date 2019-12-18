@@ -54,10 +54,7 @@ private EditText et1, et2, et3, et4, et5, et6, et7;
         setContentView(R.layout.quintana_roo_anexo10__equipo_contra_incendio);
         this.setTitle("Equipo contra incendio");
 
-        directorio2 = new File(index_QuintanaRoo.file());
-        if(directorio2 != null) {
-            pdfFile = new File(directorio2.getPath(), "Equipo contra incendio.pdf");
-        }
+
 
         tv1 = (TextView) findViewById(R.id.tv1);
         tv1.setText(Integer.toString(numero));
@@ -588,6 +585,12 @@ private EditText et1, et2, et3, et4, et5, et6, et7;
 
     public void Reporte(View v){
         try {
+
+            directorio2 = new File(index_QuintanaRoo.file());
+            if(directorio2 != null) {
+                pdfFile = new File(directorio2.getPath(), "Equipo contra incendio.pdf");
+            }
+
             Document document = new Document(PageSize.LETTER.rotate());
             PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(pdfFile.getPath()));
 

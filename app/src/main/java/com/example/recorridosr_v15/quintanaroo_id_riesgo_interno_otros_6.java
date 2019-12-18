@@ -4446,12 +4446,7 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
 
         if(revisar(getApplicationContext())){
 
-
-                directorio2 = new File(index_QuintanaRoo.file());
-                    if(directorio2 != null) {
-                        pdfFile = new File(directorio2.getPath(), "Riesgos Internos.pdf");
-                    }
-                onClick(view);
+            onClick(view);
 
         }else{
             Toast.makeText(this, "revisa las paginas " + aviso, LENGTH_SHORT).show();
@@ -4464,6 +4459,11 @@ public class quintanaroo_id_riesgo_interno_otros_6 extends AppCompatActivity {
 
 
         try {
+            directorio2 = new File(index_QuintanaRoo.file());
+            if(directorio2 != null) {
+                pdfFile = new File(directorio2.getPath(), "Riesgos Internos.pdf");
+            }
+
             Document document = new Document(PageSize.LETTER);
             PdfWriter pdfWriter = PdfWriter.getInstance(document, new FileOutputStream(pdfFile.getPath()));
 
