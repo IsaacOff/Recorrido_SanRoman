@@ -23,28 +23,28 @@ public class index_QuintanaRoo extends AppCompatActivity {
     }
 
     public void Exterior_quintana (View view){
-        onClick(view, "Exterior");
+        //onClick(view, "Exterior");
         Intent ext = new Intent(this, quintanaroo_SeguridadExterior.class);
         ext.putExtra("File", directorio.getPath());
         startActivity(ext);
     }
 
     public void Analisis_quintana (View view){
-        onClick(view, "Analisis_de_recursos");
+        //onClick(view, "Analisis_de_recursos");
         Intent ext = new Intent(this, quintanaroo_AnalisisRecurso.class);
         ext.putExtra("File", directorio.getPath());
         startActivity(ext);
     }
 
     public void Circundantes_quintana (View view){
-        onClick(view, "Circundantes");
+        //onClick(view, "Circundantes");
         Intent ext = new Intent(this, quintanaroo_RecursosCircundantes.class);
         ext.putExtra("File", directorio.getPath());
         startActivity(ext);
     }
 
     public void Anexo10 (View view){
-        onClick(view, "Anexo");
+        //onClick(view, "Anexo");
         Intent ext = new Intent(this, quintanaroo_anexo10.class);
         startActivity(ext);
     }
@@ -52,19 +52,19 @@ public class index_QuintanaRoo extends AppCompatActivity {
 
 
     public void Id_Riesgo (View view){
-        onClick(view, "Riesgos");
+        //onClick(view, "Riesgos");
         Intent ext = new Intent(this, quintanaroo_id_riesgo.class);
         startActivity(ext);
     }
 
 
-    public void onClick(View v, String nombre){
+    /*public void onClick(View v, String nombre){
             directorio = new File(directorio2.getPath(), nombre);
             directorio.mkdir();
-    }
+    }*/
 
     static public String file(){
-        return directorio.getPath();
+        return directorio2.getPath();
     }
 
 }
