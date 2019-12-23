@@ -2190,6 +2190,7 @@ android:stretchColumns="1">
 
         <Button
             android:id="@+id/button"
+            android:drawableRight="@drawable/save"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:onClick="final_externo"

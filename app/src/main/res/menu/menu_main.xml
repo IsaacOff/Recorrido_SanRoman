@@ -34,4 +34,19 @@
         android:id="@+id/opcion8"
         android:title="VERIFICAR"
         android:textColor="#3260F5"/>
+
+
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@android:drawable/ic_menu_add"
+                android:title="prueba" />
+
+        </menu>
+    </item>
 </menu>
+
+
+

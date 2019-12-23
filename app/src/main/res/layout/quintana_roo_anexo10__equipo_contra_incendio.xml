@@ -387,6 +387,8 @@ android:stretchColumns="1">
 
 
 
+
+
         <!--- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 
@@ -394,8 +396,11 @@ android:stretchColumns="1">
         <Button
             android:id="@+id/button"
             style="@android:style/Widget.Button.Inset"
+            android:drawableRight="@drawable/add"
             android:layout_width="30dp"
             android:layout_height="65dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
             android:layout_gravity="center"
             android:onClick="agregar"
             android:text="Agregar"
@@ -412,8 +417,11 @@ android:stretchColumns="1">
 
         <Button
             android:id="@+id/button1"
+            android:drawableRight="@drawable/save"
             android:layout_width="match_parent"
             android:layout_height="70dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
             android:onClick="onClick"
             android:text="Guardar en pdf"
             android:textSize="15sp">

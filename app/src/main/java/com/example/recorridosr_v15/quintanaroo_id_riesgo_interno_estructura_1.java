@@ -546,6 +546,9 @@ public class quintanaroo_id_riesgo_interno_estructura_1  extends AppCompatActivi
             }
         });
 
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
 

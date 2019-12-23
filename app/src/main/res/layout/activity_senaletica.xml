@@ -1,105 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".senaletica">
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".senaletica"
+android:stretchColumns="1">
+
+<TableRow android:background="#128675">
 
     <TextView
-        android:id="@+id/tv1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="16dp"
-        android:text=""
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/et1"
-        android:layout_width="254dp"
-        android:layout_height="56dp"
         android:layout_column="0"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="68dp"
-        android:ems="10"
-        android:hint="Nombre"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.018"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:padding="3dip"
+        android:text="#NO."
+        android:textColor="@android:color/white" />
 
-    </EditText>
 
-    <EditText
-        android:id="@+id/et2"
-        android:layout_width="254dp"
-        android:layout_height="56dp"
-        android:layout_column="0"
-        android:layout_marginTop="44dp"
-        android:ems="10"
-        android:hint="Cantidad"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et1">
 
-    </EditText>
 
-    <EditText
-        android:id="@+id/et3"
-        android:layout_width="254dp"
-        android:layout_height="56dp"
-        android:layout_column="0"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:hint="Ubicación"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et2">
+</TableRow>
 
-    </EditText>
 
-    <Button
-        android:id="@+id/bt1"
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="44dp"
-        android:text="tomar foto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et3"
-        android:onClick="onClickFoto"/>
-
-    <Button
-        android:id="@+id/bt2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="28dp"
-        android:text="agregar señaletica"
-        android:onClick="agregarSeñaletica"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt1" />
-
-    <Button
-        android:id="@+id/bt3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="28dp"
-        android:text="Generar pdf"
-        android:onClick="generarPdf"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt2" />
+        android:layout_height="wrap_content">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TableRow android:layout_height="122dp">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="61dp"
+                android:layout_height="70dp"
+                android:layout_column="0"
+                android:background="#128675"
+                android:text="1"
+                android:textColor="@android:color/white"
+                android:textSize="48sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_column="1"
+                android:background="#128675"
+                android:gravity="center"
+                android:text="Nueva Señaletica"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@android:color/white" />
+
+
+
+        </TableRow>
+
+
+        <EditText
+                android:id="@+id/et1"
+                android:ellipsize="start"
+                android:gravity="center_horizontal"
+                android:layout_width="100dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:ems="10"
+                android:hint="Nombre"
+                android:inputType="textPersonName">
+
+            </EditText>
+
+
+
+
+
+        <EditText
+            android:id="@+id/et2"
+            android:ellipsize="start"
+            android:gravity="center_horizontal"
+            android:layout_width="254dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="Cantidad"
+            android:inputType="textPersonName">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/et3"
+            android:ellipsize="start"
+            android:gravity="center_horizontal"
+            android:layout_width="254dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="Ubicación"
+            android:inputType="textPersonName">
+
+        </EditText>
+
+
+        <TableRow >
+
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="40dp"
+                android:layout_height="70dp"
+                android:layout_column="0"
+                android:background="#128675"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textSize="48sp" />
+
+            <Button
+                android:id="@+id/bt1"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_width="327dp"
+                android:layout_height="fill_parent"
+                android:layout_marginEnd="50dp"
+                android:drawableBottom="@drawable/cemera"
+                android:onClick="onClickFoto"
+                android:text="Tomar foto" />
+
+
+        </TableRow>
+
+
+
+
+            <Button
+                android:id="@+id/bt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:drawableRight="@drawable/add"
+                android:layout_marginTop="10dp"
+                android:text="agregar señaletica"
+                android:onClick="agregarSeñaletica"/>
+
+            <Button
+                android:id="@+id/bt3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_alignParentTop="true"
+                android:drawableRight="@drawable/save"
+                android:layout_marginTop="28dp"
+                android:text="Generar pdf"
+                android:onClick="generarPdf"/>
+
+
+
+
+
+
+
+
+
+
+    </TableLayout>
+
+</ScrollView>
+
+</TableLayout>
