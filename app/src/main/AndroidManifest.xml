@@ -5,9 +5,13 @@
 
     <dist:module dist:instant="true" />
 
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-feature android:name="android.hardware.camera" android:required="true" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -16,26 +20,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".quintanaroo_id_riesgo_externo_fenomeno_2"
-            android:theme="@style/AppTheme2"></activity>
-        <activity android:name=".quintanaroo_id_riesgo_externo_fenomeno_1"
-            android:theme="@style/AppTheme2"/>
-        <activity android:name=".quintanaroo_id_riesgo_interno_otros_6"
-            android:theme="@style/AppTheme2"/>
-        <activity android:name=".quintanaroo_id_riesgo_interno_equiposyservicios_5"
-            android:theme="@style/AppTheme2"/>
-        <activity android:name=".quintanaroo_id_riesgo_interno_noEstructurales_4"
-            android:theme="@style/AppTheme2"/>
-        <activity android:name=".quintanaroo_id_riesgo_interno_instalaciones_3"
-            android:theme="@style/AppTheme2"/>
-        <activity android:name=".quintanaroo_id_riesgo_interno_escaleraservicio_2"
-            android:theme="@style/AppTheme2"/>
-        <activity android:name=".quintanaroo_id_riesgo_interno_estructura_1"
-            android:theme="@style/AppTheme2"/>
-        <activity android:name=".quintanaroo_id_riesgo_interno"
-            android:theme="@style/AppTheme2"/>
-        <activity android:name=".quintanaroo_id_riesgo_externo"
-            android:theme="@style/AppTheme2"/>
+        <activity android:name=".senaletica"></activity>
+        <activity
+            android:name=".quintanaroo_id_riesgo_externo_fenomeno_2"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".quintanaroo_id_riesgo_externo_fenomeno_1"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".quintanaroo_id_riesgo_interno_otros_6"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".quintanaroo_id_riesgo_interno_equiposyservicios_5"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".quintanaroo_id_riesgo_interno_noEstructurales_4"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".quintanaroo_id_riesgo_interno_instalaciones_3"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".quintanaroo_id_riesgo_interno_escaleraservicio_2"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".quintanaroo_id_riesgo_interno_estructura_1"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".quintanaroo_id_riesgo_interno"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".quintanaroo_id_riesgo_externo"
+            android:theme="@style/AppTheme2" />
         <activity android:name=".quintanaroo_id_riesgo" />
         <activity android:name=".quintanaroo_anexo10_RecursosMateriales" />
         <activity android:name=".quintanaroo_anexo10_DetectoresContraIncendio" />
@@ -63,14 +78,14 @@
         <activity android:name=".MainActivity" />
 
         <provider
-            android:authorities="com.example.recorridosr_v15.FileProvider"
             android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.recorridosr_v15.FileProvider"
             android:enabled="true"
             android:exported="false"
             android:grantUriPermissions="true">
-            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_path" />
-
         </provider>
     </application>
 

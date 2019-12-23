@@ -57,6 +57,11 @@ public class index_QuintanaRoo extends AppCompatActivity {
         startActivity(ext);
     }
 
+    public void Id_Señaletica (View view){
+        //onClick(view, "Riesgos");
+        Intent ext = new Intent(this, senaletica.class);
+        startActivity(ext);
+    }
 
     /*public void onClick(View v, String nombre){
             directorio = new File(directorio2.getPath(), nombre);
