@@ -127,7 +127,7 @@ android:stretchColumns="1">
                 android:layout_width="327dp"
                 android:layout_height="fill_parent"
                 android:layout_marginEnd="50dp"
-                android:drawableBottom="@drawable/cemera"
+                android:drawableBottom="@drawable/camara"
                 android:onClick="onClickFoto"
                 android:text="Tomar foto" />
 
