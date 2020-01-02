@@ -33,6 +33,7 @@ public class senaletica extends AppCompatActivity {
     private static File directorio2;
     private static File directorio;
     private static File pdfFile;
+    private static final int CAMARA_RETURN = 1;
     static int numeroFoto = 0;
     static int numeroSeñaletica = 1;
     static String señaleticas = "";
@@ -135,11 +136,21 @@ public class senaletica extends AppCompatActivity {
         cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
         //Retorna a la actividad
 
-        startActivityForResult(cameraIntent, 0);
-        fotosFile.add(numeroFoto,mi_foto.getPath());
-        numeroFoto++;
+        startActivityForResult(cameraIntent, CAMARA_RETURN);
         tv2.setText(Integer.toString(numeroFoto));
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(resultCode == RESULT_OK && CAMARA_RETURN == 1){
+            fotosFile.add(numeroFoto,mi_foto.getPath());
+            numeroFoto++;
+        }else{
+            //nada. si no retorna bien o retorna bien pero no retorna el codigo pedido (camara_return == 1) no hace nada.
+        }
     }
 
     public void generarPdf (View view){
