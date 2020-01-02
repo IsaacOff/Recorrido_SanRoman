@@ -137,7 +137,6 @@ public class senaletica extends AppCompatActivity {
         //Retorna a la actividad
 
         startActivityForResult(cameraIntent, CAMARA_RETURN);
-        tv2.setText(Integer.toString(numeroFoto));
 
     }
 
@@ -148,6 +147,7 @@ public class senaletica extends AppCompatActivity {
         if(resultCode == RESULT_OK && CAMARA_RETURN == 1){
             fotosFile.add(numeroFoto,mi_foto.getPath());
             numeroFoto++;
+            tv2.setText(Integer.toString(numeroFoto));
         }else{
             //nada. si no retorna bien o retorna bien pero no retorna el codigo pedido (camara_return == 1) no hace nada.
         }
@@ -243,6 +243,9 @@ public class senaletica extends AppCompatActivity {
                 fotosFile.clear();
                 numeroSeñaletica++;
                 tv1.setText(Integer.toString(numeroSeñaletica));
+                et1.setText("");
+                et2.setText("");
+                et3.setText("");
             } else {
                 Toast.makeText(this, "La cantidad ingresada, no corresponde al numero de fotos", Toast.LENGTH_SHORT).show();
             }

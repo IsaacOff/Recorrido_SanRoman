@@ -87,7 +87,7 @@ android:stretchColumns="1">
             android:layout_marginTop="10dp"
             android:ems="10"
             android:hint="Cantidad"
-            android:inputType="textPersonName">
+            android:inputType="number">
 
         </EditText>
 
@@ -103,7 +103,6 @@ android:stretchColumns="1">
             android:ems="10"
             android:hint="Ubicación"
             android:inputType="textPersonName">
-
         </EditText>
 
 
