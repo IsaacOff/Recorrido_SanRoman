@@ -1827,8 +1827,13 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
             }
         }
 
+        if (vector[4] == null || vector[4].equals("")) {
+            banderanulo = false;
+            vector[4] = "N/P";
+        }
+
         if(vector3.equals("SI")) {
-        for(int i=4;i<9; i++  ){
+        for(int i=5;i<9; i++  ){
                 if (vector[i] == null || vector[i].equals("")) {
                     banderanulo = false;
                     vector[i] = "N/P";

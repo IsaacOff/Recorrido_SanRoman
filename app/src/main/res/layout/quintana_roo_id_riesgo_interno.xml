@@ -379,7 +379,7 @@ android:stretchColumns="1">
             android:layout_height="42dp"
             android:ems="10"
             android:hint="ingresa la superficie total en m2"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:textColor="#3260F5"
             android:theme="@style/EditText">
 
@@ -406,7 +406,7 @@ android:stretchColumns="1">
             android:layout_height="42dp"
             android:ems="10"
             android:hint="ingresa la superficie construida en m2"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:textColor="#3260F5"
             android:theme="@style/EditText">
 

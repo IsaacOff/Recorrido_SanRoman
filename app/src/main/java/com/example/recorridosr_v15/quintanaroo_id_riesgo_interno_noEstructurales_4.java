@@ -648,7 +648,6 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
             }
         });
 
-
         rg12.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -1329,31 +1328,16 @@ public class quintanaroo_id_riesgo_interno_noEstructurales_4 extends AppCompatAc
 
 
     public static boolean siguiente5() {
-        Boolean banderanula = true;
 
 
         for(int i=0;i<16; i++  ){
             if(vector[i]==null || vector[i].equals("")){
                 vector[i]="N/P";
-                banderanula= false;
             }
         }
+        System.out.println(vector.toString());
 
-
-        if (banderanula) {
-
-            return true;
-            //Toast.makeText(this, "vamos al siguiente", LENGTH_SHORT).show();
-            //onClick(view);
-            //interno_siguiente5(view);
-
-
-        } else {
-            //Toast.makeText(this, "REVISA LOS DATOS", LENGTH_SHORT).show();
-            return false;
-        }
-
-
+        return true;
     }
 
 
