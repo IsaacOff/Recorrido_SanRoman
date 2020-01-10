@@ -1924,6 +1924,44 @@ public class quintanaroo_id_riesgo_externo extends AppCompatActivity {
         }
 
 
+
+
+
+        if (id == R.id.equipovsincendio) {
+
+            Toast.makeText(this, "Equipo de incendio abierto", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_anexo10_EquipoContraIncendio.class);
+            startActivity(intent);
+
+            return true;
+        }
+        if (id == R.id.detectoresvsincendio) {
+            Toast.makeText(this, "Detectores de incendio abierto", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_anexo10_DetectoresContraIncendio.class);
+            startActivity(intent);
+            return true;
+        }
+        if (id == R.id.inventariorecursos) {
+            Toast.makeText(this, "Inventario de recursos abierto", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_anexo10_RecursosMateriales.class);
+            startActivity(intent);
+            return true;
+        }
+        if (id == R.id.riesgointerno) {
+            Toast.makeText(this, "Riesgo externo abierto", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_id_riesgo_interno.class);
+            startActivity(intent);
+            return true;
+        }
+        if (id == R.id.senalitica) {
+            Toast.makeText(this, "Señaletica abierto", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, senaletica.class);
+            startActivity(intent);
+            return true;
+        }
+
+
+
         return super.onOptionsItemSelected(item);
     }
 

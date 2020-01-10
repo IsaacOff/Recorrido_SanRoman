@@ -1,11 +1,15 @@
 package com.example.recorridosr_v15;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -53,8 +57,16 @@ private EditText et1, et2, et3, et4, et5, et6, et7;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quintana_roo_anexo10__equipo_contra_incendio);
         this.setTitle("Equipo contra incendio");
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
 
+
+
+        // Find the toolbar view inside the activity layout
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        // Sets the Toolbar to act as the ActionBar for this Activity window.
+        // Make sure the toolbar exists in the activity and is not null
+        setSupportActionBar(toolbar);
 
         tv1 = (TextView) findViewById(R.id.tv1);
         tv1.setText(Integer.toString(numero));
@@ -475,6 +487,59 @@ private EditText et1, et2, et3, et4, et5, et6, et7;
         mostrar(spin3, et3, 6);
 
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_equipo_incendio, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+
+
+        if (id == R.id.detectoresvsincendio) {
+            Toast.makeText(this, "Detectores de incendio abierto", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_anexo10_DetectoresContraIncendio.class);
+            startActivity(intent);
+            return true;
+        }
+        if (id == R.id.inventariorecursos) {
+            Toast.makeText(this, "Inventario de recursos abierto", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_anexo10_RecursosMateriales.class);
+            startActivity(intent);
+            return true;
+        }
+
+
+
+        if (id == R.id.riesgoexterno) {
+            Toast.makeText(this, "Riesgo Externo abierto", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_id_riesgo_externo.class);
+            startActivity(intent);
+            return true;
+        }
+        if (id == R.id.riesgointerno) {
+            Toast.makeText(this, "Riesgo Interno abierto", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_id_riesgo_interno.class);
+            startActivity(intent);
+            return true;
+        }
+        if (id == R.id.senalitica) {
+            Toast.makeText(this, "Señaletica abierto", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, senaletica.class);
+            startActivity(intent);
+            return true;
+        }
+
+
+        return super.onOptionsItemSelected(item);
+    }
+
+
+
 
 
     public void mostrar(final Spinner x, final EditText o, final int i){

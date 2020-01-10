@@ -12,8 +12,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.PageSize;
@@ -31,6 +33,7 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
     static String tablaConcatenacion="";
     static File pdfFile;
     static File directorio2;
+    LinearLayout layout;
 
 
     @Override
@@ -46,6 +49,9 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
         // Sets the Toolbar to act as the ActionBar for this Activity window.
         // Make sure the toolbar exists in the activity and is not null
         setSupportActionBar(toolbar);
+
+//instancia para saber donde poner el snackbar
+        layout = findViewById(R.id.interno);
 
 
 
@@ -377,6 +383,14 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
+
+        if (id == R.id.ayuda) {
+            Snackbar snackbar =Snackbar.make(layout, "Para los campos de '(N/A)': 'Presiona sobre los campos de color naranja' o solo 'deja vacios esos campos'", Snackbar.LENGTH_LONG);
+            snackbar.show();
+
+
+            return true;
+        }
         if (id == R.id.opcion1) {
             Toast.makeText(this, "Actividad 1 abierta", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(this, quintanaroo_id_riesgo_interno.class);
@@ -425,6 +439,44 @@ public class quintanaroo_id_riesgo_interno extends AppCompatActivity {
             quintanaroo_id_riesgo_interno_otros_6.revisar(getApplicationContext());
             return true;
         }
+
+
+        if (id == R.id.equipovsincendio) {
+
+            Toast.makeText(this, "Equipo de incendio abierto", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_anexo10_EquipoContraIncendio.class);
+            startActivity(intent);
+
+            return true;
+        }
+        if (id == R.id.detectoresvsincendio) {
+            Toast.makeText(this, "Detectores de incendio abierto", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_anexo10_DetectoresContraIncendio.class);
+            startActivity(intent);
+            return true;
+        }
+        if (id == R.id.inventariorecursos) {
+            Toast.makeText(this, "Inventario de recursos abierto", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_anexo10_RecursosMateriales.class);
+            startActivity(intent);
+            return true;
+        }
+        if (id == R.id.riesgoexterno) {
+            Toast.makeText(this, "Riesgo externo abierto", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_id_riesgo_externo.class);
+            startActivity(intent);
+            return true;
+        }
+        if (id == R.id.senalitica) {
+            Toast.makeText(this, "Señaletica abierto", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, senaletica.class);
+            startActivity(intent);
+            return true;
+        }
+
+
+
+
         return super.onOptionsItemSelected(item);
     }
 

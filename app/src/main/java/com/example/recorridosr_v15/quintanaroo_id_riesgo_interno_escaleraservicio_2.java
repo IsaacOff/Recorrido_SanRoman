@@ -14,11 +14,13 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.PageSize;
@@ -43,6 +45,7 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
     static File pdfFile;
     static File directorio2;
     static String tablaConcatenacion="";
+    LinearLayout layout2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +61,10 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
         // Sets the Toolbar to act as the ActionBar for this Activity window.
         // Make sure the toolbar exists in the activity and is not null
         setSupportActionBar(toolbar);
+
+
+        //instancia para saber donde poner el snackbar
+        layout2 = findViewById(R.id.interno2);
 
 
 
@@ -1401,6 +1408,15 @@ public class quintanaroo_id_riesgo_interno_escaleraservicio_2 extends AppCompatA
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
+
+
+        if (id == R.id.ayuda) {
+            Snackbar snackbar =Snackbar.make(layout2, "Para los campos de '(N/A)': 'Presiona sobre los campos de color naranja' o solo 'deja vacios esos campos'", Snackbar.LENGTH_LONG);
+            snackbar.show();
+
+
+            return true;
+        }
 
         if (id == R.id.opcion1) {
             Toast.makeText(this, "Actividad 1 abierta", Toast.LENGTH_LONG).show();

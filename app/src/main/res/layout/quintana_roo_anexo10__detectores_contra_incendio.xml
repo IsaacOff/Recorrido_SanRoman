@@ -6,6 +6,12 @@
     tools:context=".quintanaroo_anexo10_DetectoresContraIncendio"
     android:stretchColumns="1">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
     <TableRow android:background="#128675">
 
         <TextView

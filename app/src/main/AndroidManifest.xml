@@ -20,7 +20,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".senaletica"></activity>
+        <activity
+            android:name=".senaletica"
+            android:theme="@style/AppTheme2"  />
         <activity
             android:name=".quintanaroo_id_riesgo_externo_fenomeno_2"
             android:theme="@style/AppTheme2" />
@@ -52,11 +54,20 @@
             android:name=".quintanaroo_id_riesgo_externo"
             android:theme="@style/AppTheme2" />
         <activity android:name=".quintanaroo_id_riesgo" />
-        <activity android:name=".quintanaroo_anexo10_RecursosMateriales" />
-        <activity android:name=".quintanaroo_anexo10_DetectoresContraIncendio" />
-        <activity android:name=".quintanaroo_anexo10_EquipoContraIncendio" />
+        <activity
+            android:name=".quintanaroo_anexo10_RecursosMateriales"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".quintanaroo_anexo10_DetectoresContraIncendio"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".quintanaroo_anexo10_EquipoContraIncendio"
+            android:theme="@style/AppTheme2" />8
         <activity android:name=".quintanaroo_anexo10" />
-        <activity android:name=".ViewPdf" />
+        <activity
+            android:name=".ViewPdf"
+            android:theme="@style/AppTheme2"
+            android:parentActivityName=".index_QuintanaRoo"/>
         <activity android:name=".carpetaempresa_tabasco" />
         <activity android:name=".carpetaempresa_campeche" />
         <activity android:name=".carpetaempresa_yucatan" />

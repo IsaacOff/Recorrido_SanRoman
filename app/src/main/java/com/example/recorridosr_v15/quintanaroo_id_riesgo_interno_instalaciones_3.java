@@ -12,9 +12,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import java.io.File;
 
@@ -33,6 +36,7 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
     static File pdfFile;
     static File directorio2;
     static String tablaConcatenacion="";
+    LinearLayout layout3;
 
 
     @Override
@@ -50,6 +54,9 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
         // Make sure the toolbar exists in the activity and is not null
         setSupportActionBar(toolbar);
 
+
+        //instancia para saber donde poner el snackbar
+        layout3 = findViewById(R.id.interno3);
 
 
 
@@ -1587,6 +1594,14 @@ public class quintanaroo_id_riesgo_interno_instalaciones_3 extends AppCompatActi
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
+
+        if (id == R.id.ayuda) {
+            Snackbar snackbar =Snackbar.make(layout3, "Para los campos de '(N/A)': 'Presiona sobre los campos de color naranja' o solo 'deja vacios esos campos'", Snackbar.LENGTH_LONG);
+            snackbar.show();
+
+
+            return true;
+        }
         if (id == R.id.opcion1) {
             Toast.makeText(this, "Actividad 1 abierta", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(this, quintanaroo_id_riesgo_interno.class);

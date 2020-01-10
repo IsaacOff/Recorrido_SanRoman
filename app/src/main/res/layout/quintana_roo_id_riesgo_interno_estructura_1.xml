@@ -4,7 +4,8 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context=".quintanaroo_id_riesgo_interno_estructura_1"
-android:stretchColumns="1">
+android:stretchColumns="1"
+android:id="@+id/interno1">
 
 
     <include

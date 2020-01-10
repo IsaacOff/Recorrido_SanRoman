@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import java.io.File;
 
@@ -48,5 +51,10 @@ public class quintanaroo_id_riesgo extends AppCompatActivity {
     //public static String file (){
     //    return directorio.getPath();
     //}
+
+
+
+
+
 
 }

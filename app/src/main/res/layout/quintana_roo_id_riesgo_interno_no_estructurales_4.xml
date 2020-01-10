@@ -4,7 +4,8 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context=".quintanaroo_id_riesgo_interno_noEstructurales_4"
-android:stretchColumns="1">
+android:stretchColumns="1"
+android:id="@+id/interno4">
 
     <include
         android:id="@+id/toolbar"

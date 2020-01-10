@@ -37,15 +37,66 @@
 
 
 
-    <item android:title="Communicate">
+
+
+    <item
+        android:id="@+id/ayuda"
+        android:icon="@android:drawable/ic_menu_help"
+        android:title="ayuda"
+        app:showAsAction="ifRoom" />
+
+
+
+    <item android:title="Ir a...">
         <menu>
+                            <item
+                                android:id="@+id/anexo10"
+                                android:icon="@android:drawable/ic_menu_add"
+                                android:title="Anexo 10">
+
+                                <menu>
+                                    <item
+                                        android:id="@+id/equipovsincendio"
+                                        android:icon="@android:drawable/ic_menu_add"
+                                        android:title="Equipo contra Incendios" />
+                                    <item
+                                        android:id="@+id/detectoresvsincendio"
+                                        android:icon="@android:drawable/ic_menu_add"
+                                        android:title="Detectores contra Incendios" />
+
+                                    <item
+                                        android:id="@+id/inventariorecursos"
+                                        android:icon="@android:drawable/ic_menu_add"
+                                        android:title="Inventario de Recursos Humanos" />
+                                </menu>
+
+                            </item>
+
+
+
             <item
-                android:id="@+id/nav_share"
+                android:id="@+id/riesgoexterno"
                 android:icon="@android:drawable/ic_menu_add"
-                android:title="prueba" />
+                android:title="Riesgo Externo" />
+
+            <item
+                android:id="@+id/senalitica"
+                android:icon="@android:drawable/ic_menu_add"
+                android:title="Señaletica" />
+
+
 
         </menu>
     </item>
+
+
+
+
+
+
+
+
+
 </menu>
 
 

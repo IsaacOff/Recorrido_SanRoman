@@ -2,14 +2,18 @@ package com.example.recorridosr_v15;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -50,12 +54,26 @@ public class senaletica extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_senaletica);
 
+        this.setTitle("Señaletica");
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+
+
+
         directorio2 = new File(index_QuintanaRoo.file());
         if(directorio2 != null) {
             pdfFile = new File(directorio2.getPath(), "Señaletica.pdf");
             directorio = new File(index_QuintanaRoo.file(), "fotos");
             directorio.mkdirs();
         }
+
+
+
+        // Find the toolbar view inside the activity layout
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        // Sets the Toolbar to act as the ActionBar for this Activity window.
+        // Make sure the toolbar exists in the activity and is not null
+        setSupportActionBar(toolbar);
 
         et1  = (EditText) findViewById(R.id.et1);
         et2  = (EditText) findViewById(R.id.et2);
@@ -120,6 +138,75 @@ public class senaletica extends AppCompatActivity {
         });
 
     }
+
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_senaletica, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+
+        if (id == R.id.equipovsincendio) {
+
+            Toast.makeText(this, "Equipo de incendio abierto", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_anexo10_EquipoContraIncendio.class);
+            startActivity(intent);
+
+            return true;
+        }
+        if (id == R.id.detectoresvsincendio) {
+            Toast.makeText(this, "Detectores de incendio abierto", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_anexo10_DetectoresContraIncendio.class);
+            startActivity(intent);
+            return true;
+        }
+        if (id == R.id.inventariorecursos) {
+            Toast.makeText(this, "Inventario de recursos abierto", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_anexo10_RecursosMateriales.class);
+            startActivity(intent);
+            return true;
+        }
+
+
+
+        if (id == R.id.riesgoexterno) {
+            Toast.makeText(this, "Riesgo Externo abierto", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_id_riesgo_externo.class);
+            startActivity(intent);
+            return true;
+        }
+        if (id == R.id.riesgointerno) {
+            Toast.makeText(this, "Riesgo Interno abierto", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, quintanaroo_id_riesgo_interno.class);
+            startActivity(intent);
+            return true;
+        }
+
+
+        return super.onOptionsItemSelected(item);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public void onClickFoto(View view) {
         mi_foto = new File( directorio.getPath(), vector[0]+ numeroFoto +".jpg" );
