@@ -216,15 +216,15 @@ public class senaletica extends AppCompatActivity {
             Log.e("ERROR ", "Error:" + ex);
         }
         //
-        Uri uri = Uri.fromFile( mi_foto );
+        //Uri uri = Uri.fromFile( mi_foto );
         //Abre la camara para tomar la foto
         Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         //Guarda imagen
-        cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
+        cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(mi_foto));
         //Retorna a la actividad
 
-        startActivityForResult(cameraIntent, CAMARA_RETURN);
-
+        //startActivityForResult(cameraIntent, CAMARA_RETURN);
+        startActivityForResult(Intent.createChooser(cameraIntent, "Capture Image"), CAMARA_RETURN);
     }
 
     @Override
