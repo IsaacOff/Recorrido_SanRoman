@@ -209,7 +209,7 @@ public class senaletica extends AppCompatActivity {
 
 
     public void onClickFoto(View view) {
-        mi_foto = new File( directorio.getPath(), vector[0]+ numeroFoto +".jpg" );
+        mi_foto = new File( directorio.getPath(), vector[0]+ "_" + vector[2] + "_" + numeroFoto +".jpg" );
         try {
             mi_foto.createNewFile();
         } catch (IOException ex) {
