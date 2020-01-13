@@ -318,7 +318,7 @@ public class senaletica extends AppCompatActivity {
 
                 for (int x = 0; x < numeroFoto; x++) {
                     señaleticas = señaleticas +
-                            "<img src='" + fotosFile.get(x) + "' width='150' height='150' HSPACE=\"50\" VSPACE=\"50\"></img>";
+                            "<img src='" + fotosFile.get(x) + "' width='150' height='150' ></img>";
                 }
 
                 señaleticas = señaleticas +
